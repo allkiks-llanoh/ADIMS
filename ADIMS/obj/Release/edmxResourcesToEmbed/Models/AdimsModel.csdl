@@ -1,0 +1,486 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="adimsModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityType Name="county">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="name" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="code" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="createdby" Type="Int32" />
+    <Property Name="createdon" Type="DateTime" Precision="0" />
+    <Property Name="status" Type="String" MaxLength="10" FixedLength="true" Unicode="false" />
+    <NavigationProperty Name="farms" Relationship="Self.FK_farm_county" FromRole="county" ToRole="farm" />
+    <NavigationProperty Name="farmers" Relationship="Self.FK_farmer_county" FromRole="county" ToRole="farmer" />
+    <NavigationProperty Name="subcounties" Relationship="Self.FK_subcounty_county" FromRole="county" ToRole="subcounty" />
+  </EntityType>
+  <EntityType Name="crop">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="name" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="icon" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="localnames" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="maturityperiod" Type="Int32" />
+    <Property Name="unitmeasure" Type="Int32" />
+    <Property Name="createdby" Type="Int32" />
+    <Property Name="createdon" Type="DateTime" Precision="0" />
+    <Property Name="status" Type="Int32" />
+    <Property Name="plantingmethod" Type="Int32" />
+    <NavigationProperty Name="plantingmethod1" Relationship="Self.FK_crop_plantingmethod" FromRole="crop" ToRole="plantingmethod" />
+    <NavigationProperty Name="unitofmeasure" Relationship="Self.FK_crop_unitofmeasure" FromRole="crop" ToRole="unitofmeasure" />
+    <NavigationProperty Name="cropacreages" Relationship="Self.FK_cropacreage_crop" FromRole="crop" ToRole="cropacreage" />
+    <NavigationProperty Name="cropvarieties" Relationship="Self.FK_cropvariety_crop" FromRole="crop" ToRole="cropvariety" />
+  </EntityType>
+  <EntityType Name="cropacreage">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="farmid" Type="Int32" />
+    <Property Name="cropid" Type="Int32" />
+    <Property Name="variety" Type="Int32" />
+    <Property Name="acreage" Type="Double" />
+    <Property Name="createdby" Type="Int32" />
+    <Property Name="createdon" Type="DateTime" Precision="0" />
+    <NavigationProperty Name="crop" Relationship="Self.FK_cropacreage_crop" FromRole="cropacreage" ToRole="crop" />
+    <NavigationProperty Name="cropvariety" Relationship="Self.FK_cropacreage_cropvariety" FromRole="cropacreage" ToRole="cropvariety" />
+    <NavigationProperty Name="farm" Relationship="Self.FK_cropacreage_farm" FromRole="cropacreage" ToRole="farm" />
+  </EntityType>
+  <EntityType Name="cropvariety">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="name" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="cropid" Type="Int32" />
+    <NavigationProperty Name="crop" Relationship="Self.FK_cropvariety_crop" FromRole="cropvariety" ToRole="crop" />
+    <NavigationProperty Name="cropacreages" Relationship="Self.FK_cropacreage_cropvariety" FromRole="cropvariety" ToRole="cropacreage" />
+  </EntityType>
+  <EntityType Name="farm">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="name" Type="String" MaxLength="128" FixedLength="false" Unicode="false" />
+    <Property Name="farmerid" Type="Int32" />
+    <Property Name="area" Type="Double" />
+    <Property Name="countyid" Type="Int32" />
+    <Property Name="wardid" Type="Int32" />
+    <Property Name="soiltype" Type="Int32" />
+    <Property Name="lrnumber" Type="String" MaxLength="128" FixedLength="false" Unicode="false" />
+    <Property Name="topography" Type="Int32" />
+    <Property Name="status" Type="String" MaxLength="1" FixedLength="true" Unicode="false" />
+    <Property Name="createdby" Type="Int32" />
+    <Property Name="createdon" Type="DateTime" Precision="0" />
+    <Property Name="farmingmethod" Type="Int32" />
+    <NavigationProperty Name="county" Relationship="Self.FK_farm_county" FromRole="farm" ToRole="county" />
+    <NavigationProperty Name="cropacreages" Relationship="Self.FK_cropacreage_farm" FromRole="farm" ToRole="cropacreage" />
+    <NavigationProperty Name="farmingmethod1" Relationship="Self.FK_farm_farmingmethod" FromRole="farm" ToRole="farmingmethod" />
+    <NavigationProperty Name="soiltype1" Relationship="Self.FK_farm_soiltype" FromRole="farm" ToRole="soiltype" />
+    <NavigationProperty Name="ward" Relationship="Self.FK_farm_ward" FromRole="farm" ToRole="ward" />
+    <NavigationProperty Name="farmcoordinates" Relationship="Self.FK_farmcoordinate_farm" FromRole="farm" ToRole="farmcoordinate" />
+    <NavigationProperty Name="farmer" Relationship="adimsModel.FK_farm_farmer" FromRole="farm" ToRole="farmer" />
+  </EntityType>
+  <EntityType Name="farmcoordinate">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="farmid" Type="Int32" />
+    <Property Name="latitude" Type="Double" />
+    <Property Name="longitude" Type="Double" />
+    <Property Name="altitude" Type="Double" />
+    <NavigationProperty Name="farm" Relationship="Self.FK_farmcoordinate_farm" FromRole="farmcoordinate" ToRole="farm" />
+  </EntityType>
+  <EntityType Name="farmer">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="adimsid" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="idnumber" Type="Int32" />
+    <Property Name="passportno" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="krapin" Type="Int32" />
+    <Property Name="phoneno" Type="Int32" />
+    <Property Name="firstname" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="middlename" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="lastname" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="dob" Type="DateTime" Precision="0" />
+    <Property Name="photo" Type="Int32" />
+    <Property Name="address" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="gender" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="maritalstatus" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="nextofkinname" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="nexofkintype" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="county" Type="Int32" />
+    <Property Name="ward" Type="Int32" />
+    <Property Name="status" Type="String" MaxLength="1" FixedLength="true" Unicode="false" />
+    <Property Name="createdon" Type="DateTime" Precision="0" />
+    <Property Name="createdby" Type="Int32" />
+    <NavigationProperty Name="county1" Relationship="Self.FK_farmer_county" FromRole="farmer" ToRole="county" />
+    <NavigationProperty Name="image" Relationship="Self.FK_farmer_image" FromRole="farmer" ToRole="image" />
+    <NavigationProperty Name="ward1" Relationship="Self.FK_farmer_ward" FromRole="farmer" ToRole="ward" />
+    <NavigationProperty Name="farms" Relationship="adimsModel.FK_farm_farmer" FromRole="farmer" ToRole="farm" />
+  </EntityType>
+  <EntityType Name="farmingmethod">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="name" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <NavigationProperty Name="farms" Relationship="Self.FK_farm_farmingmethod" FromRole="farmingmethod" ToRole="farm" />
+  </EntityType>
+  <EntityType Name="image">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="link" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="metadata" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="createdon" Type="DateTime" Precision="0" />
+    <Property Name="createdby" Type="Int32" />
+    <NavigationProperty Name="farmers" Relationship="Self.FK_farmer_image" FromRole="image" ToRole="farmer" />
+  </EntityType>
+  <EntityType Name="plantingmethod">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="name" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <NavigationProperty Name="crops" Relationship="Self.FK_crop_plantingmethod" FromRole="plantingmethod" ToRole="crop" />
+  </EntityType>
+  <EntityType Name="season">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="name" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="startdate" Type="DateTime" Precision="0" />
+    <Property Name="enddate" Type="DateTime" Precision="0" />
+    <Property Name="createdby" Type="Int32" />
+    <Property Name="createdon" Type="DateTime" Precision="0" />
+  </EntityType>
+  <EntityType Name="soiltype">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="name" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="description" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="createdby" Type="Int32" />
+    <Property Name="createdon" Type="DateTime" Precision="0" />
+    <NavigationProperty Name="farms" Relationship="Self.FK_farm_soiltype" FromRole="soiltype" ToRole="farm" />
+  </EntityType>
+  <EntityType Name="subcounty">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="name" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="code" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="countyid" Type="Int32" />
+    <Property Name="createdby" Type="Int32" />
+    <Property Name="createdon" Type="DateTime" Precision="0" />
+    <NavigationProperty Name="county" Relationship="Self.FK_subcounty_county" FromRole="subcounty" ToRole="county" />
+  </EntityType>
+  <EntityType Name="unitofmeasure">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="name" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="weight" Type="Double" />
+    <Property Name="packaging" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="createdby" Type="Int32" />
+    <Property Name="createdon" Type="DateTime" Precision="0" />
+    <NavigationProperty Name="crops" Relationship="Self.FK_crop_unitofmeasure" FromRole="unitofmeasure" ToRole="crop" />
+  </EntityType>
+  <EntityType Name="ward">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="name" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="code" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="subcounty" Type="Int32" />
+    <Property Name="createdon" Type="DateTime" Precision="0" />
+    <Property Name="createdby" Type="Int32" />
+    <NavigationProperty Name="farms" Relationship="Self.FK_farm_ward" FromRole="ward" ToRole="farm" />
+    <NavigationProperty Name="farmers" Relationship="Self.FK_farmer_ward" FromRole="ward" ToRole="farmer" />
+  </EntityType>
+  <Association Name="FK_farm_county">
+    <End Role="county" Type="Self.county" Multiplicity="0..1" />
+    <End Role="farm" Type="Self.farm" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="county">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="farm">
+        <PropertyRef Name="countyid" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_farmer_county">
+    <End Role="county" Type="Self.county" Multiplicity="0..1" />
+    <End Role="farmer" Type="Self.farmer" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="county">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="farmer">
+        <PropertyRef Name="county" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_subcounty_county">
+    <End Role="county" Type="Self.county" Multiplicity="0..1" />
+    <End Role="subcounty" Type="Self.subcounty" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="county">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="subcounty">
+        <PropertyRef Name="countyid" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_crop_plantingmethod">
+    <End Role="plantingmethod" Type="Self.plantingmethod" Multiplicity="0..1" />
+    <End Role="crop" Type="Self.crop" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="plantingmethod">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="crop">
+        <PropertyRef Name="plantingmethod" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_crop_unitofmeasure">
+    <End Role="unitofmeasure" Type="Self.unitofmeasure" Multiplicity="0..1" />
+    <End Role="crop" Type="Self.crop" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="unitofmeasure">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="crop">
+        <PropertyRef Name="unitmeasure" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_cropacreage_crop">
+    <End Role="crop" Type="Self.crop" Multiplicity="0..1" />
+    <End Role="cropacreage" Type="Self.cropacreage" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="crop">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="cropacreage">
+        <PropertyRef Name="cropid" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_cropvariety_crop">
+    <End Role="crop" Type="Self.crop" Multiplicity="0..1" />
+    <End Role="cropvariety" Type="Self.cropvariety" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="crop">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="cropvariety">
+        <PropertyRef Name="cropid" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_cropacreage_cropvariety">
+    <End Role="cropvariety" Type="Self.cropvariety" Multiplicity="0..1" />
+    <End Role="cropacreage" Type="Self.cropacreage" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="cropvariety">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="cropacreage">
+        <PropertyRef Name="variety" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_cropacreage_farm">
+    <End Role="farm" Type="Self.farm" Multiplicity="0..1" />
+    <End Role="cropacreage" Type="Self.cropacreage" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="farm">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="cropacreage">
+        <PropertyRef Name="farmid" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_farm_farmingmethod">
+    <End Role="farmingmethod" Type="Self.farmingmethod" Multiplicity="0..1" />
+    <End Role="farm" Type="Self.farm" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="farmingmethod">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="farm">
+        <PropertyRef Name="farmingmethod" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_farm_soiltype">
+    <End Role="soiltype" Type="Self.soiltype" Multiplicity="0..1" />
+    <End Role="farm" Type="Self.farm" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="soiltype">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="farm">
+        <PropertyRef Name="soiltype" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_farm_ward">
+    <End Role="ward" Type="Self.ward" Multiplicity="0..1" />
+    <End Role="farm" Type="Self.farm" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="ward">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="farm">
+        <PropertyRef Name="wardid" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_farmcoordinate_farm">
+    <End Role="farm" Type="Self.farm" Multiplicity="0..1" />
+    <End Role="farmcoordinate" Type="Self.farmcoordinate" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="farm">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="farmcoordinate">
+        <PropertyRef Name="farmid" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_farmer_image">
+    <End Role="image" Type="Self.image" Multiplicity="0..1" />
+    <End Role="farmer" Type="Self.farmer" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="image">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="farmer">
+        <PropertyRef Name="photo" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_farmer_ward">
+    <End Role="ward" Type="Self.ward" Multiplicity="0..1" />
+    <End Role="farmer" Type="Self.farmer" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="ward">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="farmer">
+        <PropertyRef Name="ward" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityContainer Name="Entities" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="counties" EntityType="Self.county" />
+    <EntitySet Name="crops" EntityType="Self.crop" />
+    <EntitySet Name="cropacreages" EntityType="Self.cropacreage" />
+    <EntitySet Name="cropvarieties" EntityType="Self.cropvariety" />
+    <EntitySet Name="farms" EntityType="Self.farm" />
+    <EntitySet Name="farmcoordinates" EntityType="Self.farmcoordinate" />
+    <EntitySet Name="farmers" EntityType="Self.farmer" />
+    <EntitySet Name="farmingmethods" EntityType="Self.farmingmethod" />
+    <EntitySet Name="images" EntityType="Self.image" />
+    <EntitySet Name="plantingmethods" EntityType="Self.plantingmethod" />
+    <EntitySet Name="seasons" EntityType="Self.season" />
+    <EntitySet Name="soiltypes" EntityType="Self.soiltype" />
+    <EntitySet Name="subcounties" EntityType="Self.subcounty" />
+    <EntitySet Name="unitofmeasures" EntityType="Self.unitofmeasure" />
+    <EntitySet Name="wards" EntityType="Self.ward" />
+    <AssociationSet Name="FK_farm_county" Association="Self.FK_farm_county">
+      <End Role="county" EntitySet="counties" />
+      <End Role="farm" EntitySet="farms" />
+    </AssociationSet>
+    <AssociationSet Name="FK_farmer_county" Association="Self.FK_farmer_county">
+      <End Role="county" EntitySet="counties" />
+      <End Role="farmer" EntitySet="farmers" />
+    </AssociationSet>
+    <AssociationSet Name="FK_subcounty_county" Association="Self.FK_subcounty_county">
+      <End Role="county" EntitySet="counties" />
+      <End Role="subcounty" EntitySet="subcounties" />
+    </AssociationSet>
+    <AssociationSet Name="FK_crop_plantingmethod" Association="Self.FK_crop_plantingmethod">
+      <End Role="plantingmethod" EntitySet="plantingmethods" />
+      <End Role="crop" EntitySet="crops" />
+    </AssociationSet>
+    <AssociationSet Name="FK_crop_unitofmeasure" Association="Self.FK_crop_unitofmeasure">
+      <End Role="unitofmeasure" EntitySet="unitofmeasures" />
+      <End Role="crop" EntitySet="crops" />
+    </AssociationSet>
+    <AssociationSet Name="FK_cropacreage_crop" Association="Self.FK_cropacreage_crop">
+      <End Role="crop" EntitySet="crops" />
+      <End Role="cropacreage" EntitySet="cropacreages" />
+    </AssociationSet>
+    <AssociationSet Name="FK_cropvariety_crop" Association="Self.FK_cropvariety_crop">
+      <End Role="crop" EntitySet="crops" />
+      <End Role="cropvariety" EntitySet="cropvarieties" />
+    </AssociationSet>
+    <AssociationSet Name="FK_cropacreage_cropvariety" Association="Self.FK_cropacreage_cropvariety">
+      <End Role="cropvariety" EntitySet="cropvarieties" />
+      <End Role="cropacreage" EntitySet="cropacreages" />
+    </AssociationSet>
+    <AssociationSet Name="FK_cropacreage_farm" Association="Self.FK_cropacreage_farm">
+      <End Role="farm" EntitySet="farms" />
+      <End Role="cropacreage" EntitySet="cropacreages" />
+    </AssociationSet>
+    <AssociationSet Name="FK_farm_farmingmethod" Association="Self.FK_farm_farmingmethod">
+      <End Role="farmingmethod" EntitySet="farmingmethods" />
+      <End Role="farm" EntitySet="farms" />
+    </AssociationSet>
+    <AssociationSet Name="FK_farm_soiltype" Association="Self.FK_farm_soiltype">
+      <End Role="soiltype" EntitySet="soiltypes" />
+      <End Role="farm" EntitySet="farms" />
+    </AssociationSet>
+    <AssociationSet Name="FK_farm_ward" Association="Self.FK_farm_ward">
+      <End Role="ward" EntitySet="wards" />
+      <End Role="farm" EntitySet="farms" />
+    </AssociationSet>
+    <AssociationSet Name="FK_farmcoordinate_farm" Association="Self.FK_farmcoordinate_farm">
+      <End Role="farm" EntitySet="farms" />
+      <End Role="farmcoordinate" EntitySet="farmcoordinates" />
+    </AssociationSet>
+    <AssociationSet Name="FK_farmer_image" Association="Self.FK_farmer_image">
+      <End Role="image" EntitySet="images" />
+      <End Role="farmer" EntitySet="farmers" />
+    </AssociationSet>
+    <AssociationSet Name="FK_farmer_ward" Association="Self.FK_farmer_ward">
+      <End Role="ward" EntitySet="wards" />
+      <End Role="farmer" EntitySet="farmers" />
+    </AssociationSet>
+    <AssociationSet Name="FK_farm_farmer" Association="adimsModel.FK_farm_farmer">
+      <End Role="farmer" EntitySet="farmers" />
+      <End Role="farm" EntitySet="farms" />
+    </AssociationSet>
+  </EntityContainer>
+  <Association Name="FK_farm_farmer">
+    <End Type="adimsModel.farmer" Role="farmer" Multiplicity="0..1" />
+    <End Type="adimsModel.farm" Role="farm" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="farmer">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="farm">
+        <PropertyRef Name="farmerid" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+</Schema>

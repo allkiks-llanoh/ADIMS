@@ -1,0 +1,251 @@
+﻿@using ADIMS.Models
+@model ADIMS.ViewModels.AddFarmPolicyViewModel
+
+@{
+    ViewBag.Action = "Add Farm Policy";
+    ViewBag.Controller = "Crop Insurance";
+    ViewBag.Title = "Add Farm Policy";
+
+    Layout = "~/Views/Shared/_AdimsLayout.cshtml";
+
+    var insurers = (List<insurance_company>)ViewBag.insurers;
+    var crops = (List<crop>)ViewBag.crops;
+    var _ward = (ward)ViewBag.ward;
+    int farm = (int)ViewBag.farm;
+    var _farm = (farm)ViewBag.thefarm;
+
+    var _coverageOptions = new List<int>() { 50, 60, 70, 80, 90 };
+}
+
+<script>
+    //variables
+    var coverage = 0, average_yield = 3000, insured_yield = 0,unit_suminsured = 17, sum_insured = 0, premium_rate = 5, subsidy_rate = 40, premium = 0, subsidy_amount = 0;
+    //Initiaize the textboxes
+    var final_premium = 0, total_insured = 0;
+        $(document).ready(function () {
+            console.log("Variables initializing");
+            //Initialize the data here
+            $('#average_yield').val(average_yield);
+            $('#premium_rate').val(premium_rate);
+            $('#subsidy_rate').val(subsidy_rate);
+    });
+
+    function processPremium() {
+        console.log("function has been invoked");
+
+        var coverage = Number.parseInt($('#preferred_coverage').val());
+        var area_insured = Number.parseInt($('#area_insured').val())
+
+        insured_yield = (coverage / 100) * average_yield;
+        $('#insured_yield').val(insured_yield);
+
+        sum_insured = insured_yield * unit_suminsured;
+        $('#sum_insured').val(sum_insured);
+
+        total_insured = sum_insured * area_insured;
+        $('#total_insured').val(total_insured);
+        
+        premium = (premium_rate / 100) * total_insured;
+        $('#total_premium').val(premium);
+
+        subsidy_amount = (subsidy_rate / 100) * premium;
+        $('#subsidy_amount').val(subsidy_amount);
+        
+        final_premium = premium - subsidy_amount;
+        $('#final_premium').val(final_premium);
+    }
+    
+</script>
+
+<div class="row">
+    <div class="col-lg-12">
+        <div class="ibox">
+            <div class="ibox-title">
+                <h5><img height="30" width="30" src="~/icons/user_icon.png" /> &nbsp; &nbsp; New Farm Policy</h5>
+                <div class="ibox-tools">
+                    <a class="collapse-link">
+                        <i class="fa fa-chevron-up"></i>
+                    </a>
+                </div>
+            </div>
+            <div class="ibox-content">
+                @using (Html.BeginForm("AddFarmPolicy", "CropInsurance", new { farm = farm }, FormMethod.Post, new { @style = "margin-left:10px;" }))
+                {
+                    @Html.AntiForgeryToken()
+
+                    <div class="form-horizontal">
+                        @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+
+                        <div class="row">
+                             <div class="col-md-4">
+                                 <div class="form-group">
+                                     <label>Insurance Company</label><br />
+                                     <div class="col-md-12" style="padding-left:0px;">
+                                         @Html.DropDownList("insurance_companyid", new SelectList(insurers, "id", "name"), htmlAttributes: new { @class = "form-control" })
+                                         @Html.ValidationMessageFor(model => model.insurance_companyid, "", new { @class = "text-danger" })
+                                     </div>
+                                 </div>
+                             </div>
+
+                            <div class="col-md-4">
+                                <div class="form-group">
+                                    <label>UAI Name</label><br />
+                                    <div class="col-md-12" style="padding-left:0px;">
+                                        @Html.TextBox("uai_name", Model.uai_name, new { @class = "form-control", @readonly = true })
+                                        @Html.ValidationMessageFor(model => model.uai_name, "", new { @class = "text-danger" })
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="row">
+                            <div class="col-md-4">
+                                <div class="form-group">
+                                    <label>Crop Insured</label><br />
+                                    <div class="col-md-12" style="padding-left:0px;">
+                                        @Html.DropDownList("cropinsured", new SelectList(crops, "id", "name"), htmlAttributes: new { @class = "form-control" })
+                                        @Html.ValidationMessageFor(model => model.cropinsured, "", new { @class = "text-danger" })
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-2">
+                                <div class="form-group">
+                                    <label>Preferred Coverage (%)</label><br />
+                                    <div class="col-md-12" style="padding-left:0px;">
+                                        @Html.DropDownList("preferred_coverage", new SelectList(_coverageOptions), htmlAttributes: new { @class = "form-control", @onchange = "processPremium()" })
+                                        @*@Html.TextBoxFor(model => model.preferred_coverage, new { @class = "form-control" })*@
+                                        @Html.ValidationMessageFor(model => model.preferred_coverage, "", new { @class = "text-danger" })
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <br/>
+                        
+                        <span style="color:#1ab394;font-weight:bold;">Insurance Premium Information</span>
+
+                        <br />
+
+
+                        <div class="row">
+                            <div class="col-md-4">
+                                <div class="form-group">
+                                    <label>Average Yield (Kg/Ha)</label><br />
+                                    <div class="col-md-12" style="padding-left:0px;">
+                                        @Html.TextBoxFor(model => model.average_yield, new { @class = "form-control", @readonly = true })
+                                        @Html.ValidationMessageFor(model => model.average_yield, "", new { @class = "text-danger" })
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="col-md-4">
+                                <div class="form-group">
+                                    <label>Insured Yield</label><br />
+                                    <div class="col-md-12" style="padding-left:0px;">
+                                        @Html.TextBoxFor(model => model.insured_yield, new { @class = "form-control", @readonly = true })
+                                        @Html.ValidationMessageFor(model => model.insured_yield, "", new { @class = "text-danger" })
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="col-md-4">
+                                <div class="form-group">
+                                    <label>Sum Insured</label><br />
+                                    <div class="col-md-12" style="padding-left:0px;">
+                                        @Html.TextBoxFor(model => model.sum_insured, new { @class = "form-control", @readonly = true })
+                                        @Html.ValidationMessageFor(model => model.sum_insured, "", new { @class = "text-danger" })
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+
+
+                        <div class="row">
+                            <div class="col-md-4">
+                                <div class="form-group">
+                                    <label>Area Insured (Hectares)</label><br />
+                                    <div class="col-md-12" style="padding-left:0px;">
+                                        @Html.TextBox("area_insured",_farm.area ,new { @class = "form-control", @readonly = true })
+                                        @Html.ValidationMessageFor(model => model.area_insured, "", new { @class = "text-danger" })
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="col-md-4">
+                                <div class="form-group">
+                                    <label>Premium Rate (%)</label><br />
+                                    <div class="col-md-12" style="padding-left:0px;">
+                                        @Html.TextBoxFor(model => model.premium_rate, new { @class = "form-control", @readonly = true })
+                                        @Html.ValidationMessageFor(model => model.premium_rate, "", new { @class = "text-danger" })
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="col-md-4">
+                                <div class="form-group">
+                                    <label>Subsidy Rate (%)</label><br />
+                                    <div class="col-md-12" style="padding-left:0px;">
+                                        @Html.TextBox("subsidy_rate","" ,new { @class = "form-control", @readonly = true })
+                                       
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="row">
+                            <div class="col-md-4">
+                                    <div class="form-group">
+                                        <label>Premium</label><br />
+                                        <div class="col-md-12" style="padding-left:0px;">
+                                            @Html.TextBox("total_premium","", new { @class = "form-control", @readonly = true })
+                                           
+                                        </div>
+                                    </div>
+                            </div>
+
+                            <div class="col-md-4">
+                                <div class="form-group">
+                                    <label>Subsidy Amount</label><br />
+                                    <div class="col-md-12" style="padding-left:0px;">
+                                        @Html.TextBox("subsidy_amount","", new { @class = "form-control", @readonly = true })
+                                       
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="col-md-4">
+                                <div class="form-group">
+                                    <label>Farmer Premium Due</label><br />
+                                    <div class="col-md-12" style="padding-left:0px;">
+                                        @Html.TextBox("final_premium", "", new { @class = "form-control", @readonly = true })
+
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+
+                        <div class="row">
+                            <div class="col-md-4">
+                                <div class="form-group">
+                                    <label>Total Insured</label><br />
+                                    <div class="col-md-12" style="padding-left:0px;">
+                                        @Html.TextBox("total_insured", "", new { @class = "form-control", @readonly = true })
+
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <div class="col-md-10" style="padding-left:0px;">
+                                <input type="submit" value="Submit" class="btn btn-success" />
+                            </div>
+                        </div>
+                    </div>
+                }
+            </div>
+        </div>
+    </div>
+</div>

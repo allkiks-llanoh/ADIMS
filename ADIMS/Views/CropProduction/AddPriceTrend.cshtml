@@ -1,0 +1,121 @@
+﻿@using ADIMS.Models;
+
+@model ADIMS.ViewModels.DataCapture_CropProduction.AddPriceTrendViewModel
+@{
+    ViewBag.Title = "Commodity Market Price & Trends";
+    ViewBag.Action = "Add Price Trend";
+    ViewBag.Controller = "Crop Production";
+    var user = ViewBag.userinfo as Tuple<string, county, subcounty>;
+
+    var seasons = (List<season>)ViewBag.seasons;
+
+    Layout = "~/Views/Shared/_AdimsLayout.cshtml";
+    string[] months = "January,February,March,April,May,June,July,August,September,October,November,December".Split(',');
+}
+<div class="ibox ibox-more">
+
+    <div class="ibox-title">
+        <h5><i class="fa fa-line-chart" style="font-size:18px;"></i> Price Trends</h5>
+        <div class="ibox-tools">
+            <a class="collapse-link">
+                <i class="fa fa-chevron-up"></i>
+            </a>
+        </div>
+    </div>
+
+    <div class="ibox-content">
+
+        @using (Html.BeginForm("AddPriceTrend", "CropProduction", FormMethod.Post, new { @class = "" }))
+
+        {
+            @Html.AntiForgeryToken()
+            <div class="row">
+                <div class="form-group col-md-4">
+                    <label>County</label>
+                    @Html.HiddenFor(model => model.county)
+                    @Html.TextBox("countyid", @user.Item2.name, new { @class = "form-control", @readonly = true })
+                </div>
+                <div class="form-group col-md-4">
+                    <label>Sub-County</label>
+                    @Html.HiddenFor(model => model.sub_county)
+                    @Html.TextBox("subcountyid", @user.Item2.name, new { @class = "form-control", @readonly = true })
+                </div>                
+                <div class="form-group col-md-3">
+                    <label>Month</label>
+                    <select class="form-control">
+                        <option value="null">Select an item</option>
+                        @{
+                            for (int i = 0; i < months.Length; i++)
+                            {
+                                <option value="@i">@months[i]</option>
+                            }
+                        }
+                    </select>
+                </div>
+                <div class="col-md-3">
+                    <div class="form-group">
+                        <label>Season</label><br />
+                        <div class="col-md-12" style="padding-left:0px;">
+                            @Html.DropDownListFor(model => model.season, new SelectList(seasons, "id", "name"), new { @class = "form-control" })
+
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <br />
+            <div class="row">
+                <div class="form-group col-md-4">
+                    <label>No. Sampled Farmers</label><br />
+                    @Html.TextBoxFor(model => model.total_sampled_farmers, new { @class = "form-control", @placeholder = "e.g 45" })
+                </div>
+                <div class="form-group col-md-4">
+                    <label>No. Sampled Markets</label><br />
+                    <div>
+                        @Html.TextBoxFor(model => model.total_sampled_markets, new { @class = "form-control", @placeholder = "e.g 45" })
+                    </div>
+                </div>
+
+            </div>
+            <br />
+            <div class="row">
+                <div class="col-md-4">
+                    <div class="form-group">
+                        <label>Food Crop</label>
+                        <select class="form-control">
+                            <option>Maize</option>
+                        </select>
+                    </div>
+                </div>
+            </div>
+            <br />
+            <div class="row">
+                <div class="form-group col-md-4">
+                    <label>Wholesale Price (in Kshs)</label><br />
+                    <div>
+                        @Html.TextBoxFor(model => model.wholesale_price, new { @class = "form-control", @placeholder = "e.g 120" })
+
+
+                    </div>
+                </div>
+                <div class="form-group col-md-4">
+                    <label>Farmgate Price (in Kshs)</label><br />
+                    <div>
+                        @Html.TextBoxFor(model => model.farmgate_price, new { @class = "form-control", @placeholder = "e.g 120" })
+
+
+                    </div>
+                </div>
+
+            </div>
+            <br />
+            <br />
+                <div class="col-md-4">
+                    <div class="form-group">
+                        <input type="submit" value="Submit" class="btn btn-primary" />
+                    </div>
+                </div>
+                <br /><br />
+          }
+    </div>
+</div>

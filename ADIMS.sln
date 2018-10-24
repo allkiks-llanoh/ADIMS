@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.27004.2010
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ADIMS", "ADIMS\ADIMS.csproj", "{D491DDBC-1E58-41C3-9A24-4ABA97630462}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ADIMSTest", "ADIMSTest\ADIMSTest.csproj", "{5E7805D7-8115-4DC1-B0CC-8BD033D63AA6}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{D491DDBC-1E58-41C3-9A24-4ABA97630462}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D491DDBC-1E58-41C3-9A24-4ABA97630462}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D491DDBC-1E58-41C3-9A24-4ABA97630462}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D491DDBC-1E58-41C3-9A24-4ABA97630462}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5E7805D7-8115-4DC1-B0CC-8BD033D63AA6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5E7805D7-8115-4DC1-B0CC-8BD033D63AA6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5E7805D7-8115-4DC1-B0CC-8BD033D63AA6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5E7805D7-8115-4DC1-B0CC-8BD033D63AA6}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {5AFDC5EC-853C-4DE1-B1F6-E370DEDF78DC}
+	EndGlobalSection
+EndGlobal

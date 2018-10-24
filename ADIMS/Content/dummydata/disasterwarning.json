@@ -1,0 +1,42 @@
+﻿[
+  {
+    "county": "Bungoma",
+    "sub": "Chivali",
+    "month": "May",
+    "season": "Long Rains",
+    "disaster": "Monkey Attack",
+    "loss": "Kshs 45,000"
+  },
+  {
+    "county": "Meru",
+    "sub": "Gakoromone",
+    "month": "February",
+    "season": "Long Rains",
+    "disaster": "Floods",
+    "loss": "Kshs 300,000"
+  },
+  {
+    "county": "Kericho",
+    "sub": "Baringo North",
+    "month": "July",
+    "season": "Long Rains",
+    "disaster": "Cold bouts",
+    "loss": "Kshs 2,500,000"
+  },
+  {
+    "county": "Runyenjes",
+    "sub": "Mwea",
+    "month": "October",
+    "season": "Long Rains",
+    "disaster": "Fire",
+    "loss": "Kshs 24,000"
+  },
+  {
+    "county": "Turkana",
+    "sub": "Ngamia One",
+    "month": "September",
+    "season": "Short Rains",
+    "disaster": "Drought & Famine",
+    "loss": "Kshs 87,500"
+  }
+]

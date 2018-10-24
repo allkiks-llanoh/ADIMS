@@ -1,0 +1,112 @@
+﻿@{
+    ViewBag.Action = "Settings";
+    ViewBag.Controller = "Admin";
+    ViewBag.Title = "Settings";
+    Layout = "~/Views/Shared/_AdimsLayout.cshtml";
+
+    var subsidy = (string)ViewBag.subsidy;
+    var coverage = (string)ViewBag.coverage;
+    var unitvalue = (string)ViewBag.unitvalue;
+}
+
+<div class="row">
+    <div class="col-lg-4">
+        <div class="ibox">
+            <div class="ibox-title">
+                <h5><img height="30" width="30" src="~/icons/user_icon.png" /> &nbsp; &nbsp;Govt. Insurance Subsidy Percentage</h5>
+                <div class="ibox-tools">
+                    <a class="collapse-link">
+                        <i class="fa fa-chevron-up"></i>
+                    </a>
+                </div>
+            </div>
+            <div class="ibox-content">
+                @using (Html.BeginForm("UpdateSubsidy", "Admin", FormMethod.Post))
+                {
+                    @Html.AntiForgeryToken()
+                    <div class="form-horizontal">
+                        <div class="form-group">
+                            <label>Current Value: @subsidy %</label><br />
+                            <div class="col-md-10">
+                                @Html.TextBox("subsidy","", new { @class = "form-control", @placeholder = "Enter New Value" })
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <div class="col-md-10">
+                                <input type="submit" value="Update" class="btn btn-success" />
+                            </div>
+                        </div>
+                    </div>
+                }
+
+            </div>
+        </div>
+    </div>
+
+    <div class="col-lg-4">
+        <div class="ibox">
+            <div class="ibox-title">
+                <h5><img height="30" width="30" src="~/icons/user_icon.png" /> &nbsp; &nbsp;Unit Sum Insured Value</h5>
+                <div class="ibox-tools">
+                    <a class="collapse-link">
+                        <i class="fa fa-chevron-up"></i>
+                    </a>
+                </div>
+            </div>
+            <div class="ibox-content">
+                @using (Html.BeginForm("UnitValue", "Admin", FormMethod.Post))
+                {
+                    @Html.AntiForgeryToken()
+                    <div class="form-horizontal">
+                        <div class="form-group">
+                            <label>Current Value: @unitvalue Kshs/Kg</label><br />
+                            <div class="col-md-10">
+                                @Html.TextBox("subsidy", "", new { @class = "form-control", @placeholder = "Enter New Value" })
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <div class="col-md-10">
+                                <input type="submit" value="Update" class="btn btn-success" />
+                            </div>
+                        </div>
+                    </div>
+                }
+
+            </div>
+        </div>
+    </div>
+
+    <div class="col-lg-4">
+        <div class="ibox">
+            <div class="ibox-title">
+                <h5><img height="30" width="30" src="~/icons/user_icon.png" /> &nbsp; &nbsp;Unit Sum Insured Value</h5>
+                <div class="ibox-tools">
+                    <a class="collapse-link">
+                        <i class="fa fa-chevron-up"></i>
+                    </a>
+                </div>
+            </div>
+            <div class="ibox-content">
+                @using (Html.BeginForm("Coverage", "Admin", FormMethod.Post))
+                {
+                    @Html.AntiForgeryToken()
+                    <div class="form-horizontal">
+                        <div class="form-group">
+                            <label>Current Value: @coverage %</label><br />
+                            <div class="col-md-10">
+                                @Html.TextBox("coverage", "", new { @class = "form-control", @placeholder = "Enter New Value" })
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <div class="col-md-10">
+                                <input type="submit" value="Update" class="btn btn-success" />
+                            </div>
+                        </div>
+                    </div>
+                }
+
+            </div>
+        </div>
+    </div>
+
+</div>

@@ -1,0 +1,113 @@
+﻿@using ADIMS.Models;
+
+@model ADIMS.ViewModels.EditCropViewModel
+
+@{
+    ViewBag.Title = "Edit Crop";
+    Layout = "~/Views/Shared/_AdimsLayout.cshtml";
+
+    ViewBag.Controller = "Crops";
+    ViewBag.Action = Model.name;
+
+    var unitOfMeasures = (IList<unitofmeasure>)ViewBag.unitsofmeasure;
+    var plantingMethods = (IList<plantingmethod>)ViewBag.plantingmethods;
+}
+
+<div class="row">
+    <div class="col-lg-12">
+        <div class="ibox">
+            <div class="ibox-title">
+                <h5><img height="30" width="30" src="~/icons/user_icon.png" /> &nbsp; &nbsp;  Edit Crop - @Model.name</h5>
+                <div class="ibox-tools">
+
+                    <a href="@Url.Action("AddVariety", new { fromCropList = true, cropId = Model.id})" class="btn btn-primary">
+                        Add a @Model.name variety
+                    </a>
+
+                    <a class="collapse-link">
+                        <i class="fa fa-chevron-up"></i>
+                    </a>
+
+                </div>
+            </div>
+            <div class="ibox-content">
+                @using (Html.BeginForm("Edit", "Crops",new { id = Model.id}, FormMethod.Post))
+                {
+                    @Html.AntiForgeryToken()
+                    @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+
+                    <div class="form-horizontal">
+
+                        <div class="row" style="margin-top:15px;">
+                            <div class="col-md-4">
+                                <div class="form-group">
+                                    <label>Name</label><br />
+                                    <div class="col-md-10" style="padding-left:0px;">
+                                        @Html.TextBoxFor(model => model.name, new { @class = "form-control" })
+                                        @Html.ValidationMessageFor(model => model.name, "", new { @class = "text-danger" })
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+
+                        <div class="row" style="margin-top:15px;">
+                            <div class="col-md-4">
+                                <div class="form-group">
+                                    <label>Local Names</label><br />
+                                    <div class="col-md-10" style="padding-left:0px;">
+                                        @Html.TextBoxFor(model => model.localnames, new { @class = "form-control" })
+                                        @Html.ValidationMessageFor(model => model.localnames, "", new { @class = "text-danger" })
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="row">
+                            <div class="col-md-4">
+                                <div class="form-group">
+                                    <label>Maturity Period (Months)</label><br />
+                                    <div class="col-md-10" style="padding-left:0px;">
+                                        @Html.TextBoxFor(model => model.maturityperiod, new { @class = "form-control" })
+                                        @Html.ValidationMessageFor(model => model.maturityperiod, "", new { @class = "text-danger" })
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="col-md-4">
+                                <div class="form-group">
+                                    <label>Unit Measure</label><br />
+                                    <div class="col-md-10" style="padding-left:0px;">
+                                        @Html.DropDownList("unitmeasure", new SelectList(unitOfMeasures, "id", "name"), htmlAttributes: new { @class = "form-control" })
+                                        @Html.ValidationMessageFor(model => model.unitmeasure, "", new { @class = "text-danger" })
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+
+                        <div class="row">
+                            <div class="col-md-4">
+                                <div class="form-group">
+                                    <label>Planting Method</label><br />
+                                    <div class="col-md-10" style="padding-left:0px;">
+                                        @Html.DropDownList("plantingmethod", new SelectList(plantingMethods, "id", "name"), htmlAttributes: new { @class = "form-control" })
+                                        @Html.ValidationMessageFor(model => model.plantingmethod, "", new { @class = "text-danger" })
+                                    </div>
+                                </div>
+
+                            </div>
+                            
+                        </div>
+
+                        <div class="form-group">
+                            <div class="col-md-10">
+                                <input type="submit" value="Submit" class="btn btn-primary" />
+                            </div>
+                        </div>
+                    </div>
+                }
+            </div>
+        </div>
+    </div>
+</div>

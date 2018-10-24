@@ -1,0 +1,42 @@
+﻿[
+  {
+    "county": "Nakuru",
+    "sub": "Lanet",
+    "month": "April",
+    "station": "Upendo General Store",
+    "email": "upendostore@gmail.com",
+    "rainfall": "1200",
+    "spatial": "400",
+    "season": "Long Rains"
+  },
+  {
+    "county": "Bomet",
+    "sub": "Chepsiror",
+    "month": "December",
+    "station": "Nandiland Greens",
+    "email": "nandilandgreens01@yahoo.com",
+    "rainfall": "1800",
+    "spatial": "700",
+    "season": "Long Rains"
+  },
+  {
+    "county": "Nairobi",
+    "sub": "Dagoretti",
+    "month": "January",
+    "station": "Meteorological Station - Kawangware",
+    "email": "info@meteorologicalkenya.com",
+    "rainfall": "650",
+    "spatial": "150",
+    "season": "Short Rains"
+  },
+  {
+    "county": "Mandera",
+    "sub": "Jufure",
+    "month": "October",
+    "station": "AL HAID & Sons",
+    "email": "alhaid@rocketmail.com",
+    "rainfall": "400",
+    "spatial": "94",
+    "season": "Short Rains"
+  }
+]

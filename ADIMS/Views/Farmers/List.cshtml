@@ -1,0 +1,157 @@
+﻿@using  ADIMS.Services
+@model List<ADIMS.Models.farmer>
+@{
+    ViewBag.Title = "List Farmers";
+
+    ViewBag.Action = "List";
+    ViewBag.Controller = "Farmers";
+
+    Layout = "~/Views/Shared/_AdimsLayout.cshtml";
+}
+<link href="~/css/plugins/dataTables/datatables.min.css" rel="stylesheet">
+<script src="~/js/plugins/dataTables/datatables.min.js"></script>
+
+<div class="row">
+    <div class="col-lg-12">
+        <div class="ibox float-e-margins">
+            <div class="ibox-title">
+                <h5>Farmers</h5>
+                <div class="ibox-tools">
+                    <a href="/farmers/newfarmingentity" style="color:white;" class="btn btn-primary btn-rounded">&nbsp;Add Farmer&nbsp;</a>
+                </div>
+            </div>
+            <div class="ibox-content">
+
+                <div class="table-responsive">
+                    <table style="width:2000px;" class="table table-striped table-bordered table-hover dataTables-example">
+                        <thead>
+                            <tr>
+                                <th>ID</th>
+                                <th>ADIMS ID</th>
+                                <th>Names</th>
+                                <th>ID No.</th>
+                                <th>County</th>
+                                <th>SubCounty</th>
+                                <th>Ward</th>
+                                <th>Age</th>
+                                <th>Gender</th>
+                                <th>Enterprises</th>
+                                <th>Actions</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            @foreach (var farmer in Model)
+                            {
+                                <tr class="gradeX">
+                                    <td style="width:20px;">@farmer.id</td>
+                                    <td>@farmer.adimsid</td>
+                                    <td><a href="/farmers/details/@farmer.id">@(farmer?.name ?? $"{farmer?.firstname} {farmer?.middlename} {farmer?.lastname}")</a></td>
+                                    <td>@(farmer?.idnumber)</td>
+                                    <td>@(farmer?.county1?.name ?? "")</td>
+                                    <td>@(DataHelper.GetSubCountyName(farmer?.ward1?.subcounty))</td>
+                                    <td>@(farmer?.ward1?.name ?? "")</td>
+                                    <td class="center">@{var age = ((DateTime.Now.Year - farmer.dob?.Year));}@age</td>
+                                    <td class="center">@farmer.gender</td>
+                                    <td>
+                                        @{ 
+                                            var crops = farmer.farms.SelectMany(x => x.cropacreages.Select(y => y.crop.name)).ToList();
+                                            var distinct = crops.GroupBy(x => x).Select(x => x.First());
+                                            string cropsdistinct = string.Join(",", distinct);
+                                        }
+                                        <span>@cropsdistinct</span>
+                                    </td>
+                                    <td>
+                                        @*<a href="/farmers/DeleteFarmer?id=@farmer.id" class="btn btn-primary" >Delete</a>*@
+                                        <a href="@Url.Action("DeleteFarmer", new { id = farmer.id})" class="btn btn-danger">Delete</a>
+                                    </td>
+                                </tr>
+                            }
+                           
+                        </tbody>
+                        <tfoot>
+                            <tr>
+                                <th></th>
+                                <th style="width:20px;">ADIMS ID</th>
+                                <th>Names</th>
+                                <th>ID No.</th>
+                                <th>County</th>
+                                <th>SubCounty</th>
+                                <td>Ward</td>
+                                <th>Age</th>
+                                <th>Gender</th>
+                                <th>Enterprises</th>
+                                <th>Actions</th>
+                            </tr>
+                        </tfoot>
+                    </table>
+                </div>
+
+            </div>
+        </div>
+    </div>
+</div>
+
+<script>
+    $(document).ready(function () {
+
+        $('.dataTables-example thead th').each(function () {
+            var title = $(this).text();
+            $(this).html('<input type="text" class="form-control" placeholder="Search ' + title + '" />');
+        });
+
+          var table =  $('.dataTables-example').DataTable({
+              pageLength: 25,
+              order: [[0, "desc"]],
+              columns: [
+                  null,
+                  { width: "20%" },
+                  { width: "20%" },
+                  { width: "20%" },
+                  { width: 20 },
+                  { width: 20 },
+                  { width: 20 },
+                  { width: 20 },
+                  { width: 20 },
+                  { width: 20 },
+                  { width: 20 }
+              ],
+              columnDefs: [{ targets: [0], visible: false, searchable: false }, { width: 20, targets: [1,2,3] }],
+              fixedColumns: false,
+              autoWidth: false,
+                responsive: false,
+                dom: '<"html5buttons"B>lTfgitp',
+                buttons: [
+                    { extend: 'copy'},
+                    {extend: 'csv'},
+                    {extend: 'excel', title: 'ADIMS'},
+                    {extend: 'pdf', title: 'ADIMS'},
+
+                    {extend: 'print',
+                     customize: function (win){
+                            $(win.document.body).addClass('white-bg');
+                            $(win.document.body).css('font-size', '10px');
+
+                            $(win.document.body).find('table')
+                                    .addClass('compact')
+                                    .css('font-size', 'inherit');
+                    }
+                    }
+                ]
+        });
+
+            // Apply the search
+            table.columns().every(function () {
+                var that = this;
+
+                $('input', this.footer()).on('keyup change', function () {
+                    if (that.search() !== this.value) {
+                        that
+                            .search(this.value)
+                            .draw();
+                    }
+                });
+            });
+
+        });
+
+</script>

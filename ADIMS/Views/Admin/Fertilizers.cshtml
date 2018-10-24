@@ -1,0 +1,94 @@
+﻿@model List<ADIMS.Models.fertilizer>
+
+@{
+    ViewBag.Title = "Fertilizer List";
+
+    ViewBag.Action = "All Fertilizers";
+    ViewBag.Controller = "Admin";
+
+    ViewBag.Title = "Fertilizers";
+    Layout = "~/Views/Shared/_AdimsLayout.cshtml";
+}
+
+
+
+<link href="~/css/plugins/dataTables/datatables.min.css" rel="stylesheet">
+<script src="~/js/plugins/dataTables/datatables.min.js"></script>
+
+<div class="row">
+    <div class="col-lg-12">
+        <div class="ibox float-e-margins">
+            <div class="ibox-title">
+                <h5>Fertilizers</h5>
+                <div class="ibox-tools">
+                    <a href="/admin/addfertilizer" style="color:white;" class="btn btn-primary btn-rounded">&nbsp;Add Fertilizer&nbsp;</a>
+                </div>
+            </div>
+            <div class="ibox-content">
+
+                <div class="table-responsive">
+                    <table class="table table-striped table-bordered table-hover dataTables-example">
+                        <thead>
+                            <tr>
+                                <th>Fertilizer Name</th>
+                                <th>Application Method</th>
+                                <th>Actions</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            @foreach (var item in Model)
+                            {
+                                <tr class="gradeX">
+                                    <td>@item.name</td>
+                                    <td>@item.application_method</td>
+                                    <td>
+                                        <a href="@Url.Action("EditFertilizer","Admin", new { id = item.id})" class="btn btn-primary">Edit</a>
+                                        <a href="@Url.Action("DeleteFertilizer","Admin", new { id = item.id})" class="btn btn-danger">Delete</a>
+                                    </td>
+                                </tr>
+                            }
+
+                        </tbody>
+                        <tfoot>
+                            <tr>
+                                <th>Fertilizer Name</th>
+                                <th>Application Method</th>
+                            </tr>
+                        </tfoot>
+                    </table>
+                </div>
+
+            </div>
+        </div>
+    </div>
+</div>
+
+<script>
+        $(document).ready(function(){
+            $('.dataTables-example').DataTable({
+                pageLength: 25,
+                responsive: true,
+                dom: '<"html5buttons"B>lTfgitp',
+                buttons: [
+                    { extend: 'copy'},
+                    {extend: 'csv'},
+                    {extend: 'excel', title: 'Fertilizers'},
+                    {extend: 'pdf', title: 'Fertilizers'},
+
+                    {extend: 'print',
+                     customize: function (win){
+                            $(win.document.body).addClass('white-bg');
+                            $(win.document.body).css('font-size', '12px');
+
+                            $(win.document.body).find('table')
+                                    .addClass('compact')
+                                    .css('font-size', 'inherit');
+                    }
+                    }
+                ]
+
+            });
+
+        });
+
+</script>

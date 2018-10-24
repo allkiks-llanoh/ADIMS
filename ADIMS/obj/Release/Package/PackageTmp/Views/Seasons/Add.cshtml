@@ -1,0 +1,79 @@
+﻿@model ADIMS.ViewModels.AddSeasonViewModel
+@{
+    ViewBag.Title = "Add New Season";
+    ViewBag.Controller = "Seasons";
+    ViewBag.Action = "Add";
+    Layout = "~/Views/Shared/_AdimsLayout.cshtml";
+}
+
+<div class="row">
+    <div class="col-lg-12">
+        <div class="ibox">
+            <div class="ibox-title">
+                <h5><img height="30" width="30" src="~/icons/user_icon.png" /> &nbsp; &nbsp;  Add New Season</h5>
+                <div class="ibox-tools">
+                    <a class="collapse-link">
+                        <i class="fa fa-chevron-up"></i>
+                    </a>
+
+                </div>
+            </div>
+            <div class="ibox-content">
+
+                @using (Html.BeginForm("Add", "Seasons", FormMethod.Post))
+                {
+                    @Html.AntiForgeryToken()
+                    @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+
+                    <div class="form-horizontal">
+
+                        <div class="row">
+                            <div class="col-md-4">
+                                <div class="form-group">
+                                    <label>Name</label><br />
+                                    <div class="col-md-10" style="padding-left:0px;">
+                                        @Html.TextBoxFor(model => model.name, new { @class = "form-control" , @placeholder = "e.g Short rains"})
+                                        @Html.ValidationMessageFor(model => model.name, "", new { @class = "text-danger" })
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+
+                        <div class="row">
+                            <div class="col-md-4">
+                                <div class="form-group">
+                                    <label>Start Date</label><br />
+                                    <div class="col-md-10" style="padding-left:0px;">
+                                        @Html.TextBoxFor(model => model.startdate, new { @class = "form-control", @type="date" })
+                                        @Html.ValidationMessageFor(model => model.startdate, "", new { @class = "text-danger" })
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="col-md-4">
+                                <div class="form-group">
+                                    <label>End Date</label><br />
+                                    <div class="col-md-10" style="padding-left:0px;">
+                                        @Html.TextBoxFor(model => model.enddate, new { @class = "form-control", @type = "date" })
+                                        @Html.ValidationMessageFor(model => model.enddate, "", new { @class = "text-danger"})
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+
+                        <div class="form-group">
+                            <div class="col-md-10">
+                                <input type="submit" value="Submit" class="btn btn-primary" />
+                            </div>
+                        </div>
+
+                    </div>
+
+                }
+
+            </div>
+        </div>
+    </div>
+</div>

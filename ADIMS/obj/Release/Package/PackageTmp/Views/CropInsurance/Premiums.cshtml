@@ -1,0 +1,93 @@
+﻿@model List<ADIMS.Models.farm_policy_premium>
+@{
+    ViewBag.Title = "Premiums";
+    Layout = "~/Views/Shared/_AdimsLayout.cshtml";
+
+    ViewBag.Controller = "Crop Insurance";
+    ViewBag.Action = "Premiums";
+}
+
+<link href="~/css/plugins/dataTables/datatables.min.css" rel="stylesheet">
+<script src="~/js/plugins/dataTables/datatables.min.js"></script>
+
+<div class="row">
+    <div class="col-lg-12">
+        <div class="ibox float-e-margins">
+            <div class="ibox-title">
+                <h5>Premiums</h5>
+                <div class="ibox-tools">
+                    @*<a href="/cropinsurance/addinsurancecompany" style="color:white;" class="btn btn-primary btn-rounded">&nbsp;&nbsp;</a>*@
+                </div>
+            </div>
+            <div class="ibox-content">
+
+                <div class="table-responsive">
+                    <table class="table table-striped table-bordered table-hover dataTables-example">
+                        <thead>
+                            <tr>
+                                <th>ID</th>
+                                <th>Insurer</th>
+                                <th>Farm</th>
+                                <th>Farmer</th>
+                                <th>Date</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            @foreach (var premium in Model)
+                            {
+                                <tr class="gradeX">
+                                    <td>@premium.id</td>
+                                    <td>@premium.farm_policy.insurance_company.name</td>
+                                    <td>@premium.farm_policy.farm.name</td>
+                                    <td>@premium.farmer1.firstname</td>
+                                    <td>@premium.date_created</td>
+                                </tr>
+                            }
+
+                        </tbody>
+                        <tfoot>
+                            <tr>
+                                <th>ID</th>
+                                <th>Insurer</th>
+                                <th>Farm</th>
+                                <th>Farmer</th>
+                                <th>Date</th>
+                            </tr>
+                        </tfoot>
+                    </table>
+                </div>
+
+            </div>
+        </div>
+    </div>
+</div>
+
+<script>
+        $(document).ready(function(){
+            $('.dataTables-example').DataTable({
+                pageLength: 25,
+                responsive: true,
+                dom: '<"html5buttons"B>lTfgitp',
+                buttons: [
+                    { extend: 'copy'},
+                    {extend: 'csv'},
+                    {extend: 'excel', title: 'ExampleFile'},
+                    {extend: 'pdf', title: 'ExampleFile'},
+
+                    {extend: 'print',
+                     customize: function (win){
+                            $(win.document.body).addClass('white-bg');
+                            $(win.document.body).css('font-size', '10px');
+
+                            $(win.document.body).find('table')
+                                    .addClass('compact')
+                                    .css('font-size', 'inherit');
+                    }
+                    }
+                ]
+
+            });
+
+        });
+
+</script>

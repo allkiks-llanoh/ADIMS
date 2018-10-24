@@ -1,0 +1,2338 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="adimsModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012.Azure" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="__MigrationHistory">
+    <Key>
+      <PropertyRef Name="MigrationId" />
+      <PropertyRef Name="ContextKey" />
+    </Key>
+    <Property Name="MigrationId" Type="nvarchar" MaxLength="150" Nullable="false" />
+    <Property Name="ContextKey" Type="nvarchar" MaxLength="300" Nullable="false" />
+    <Property Name="Model" Type="varbinary(max)" Nullable="false" />
+    <Property Name="ProductVersion" Type="nvarchar" MaxLength="32" Nullable="false" />
+  </EntityType>
+  <EntityType Name="actual_cropcutting_exercise">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="season" Type="int" />
+    <Property Name="county" Type="int" />
+    <Property Name="sub_county" Type="int" />
+    <Property Name="ward" Type="int" />
+    <Property Name="cropacreage" Type="int" />
+    <Property Name="enumeration_area_code" Type="varchar" MaxLength="50" />
+    <Property Name="village_name" Type="varchar" MaxLength="50" />
+    <Property Name="respondent_name" Type="varchar" MaxLength="50" />
+    <Property Name="respondent_telephone" Type="varchar" MaxLength="50" />
+    <Property Name="respondent_relation" Type="varchar" MaxLength="50" />
+    <Property Name="date_of_crop_cutting" Type="varchar" MaxLength="50" />
+    <Property Name="time_of_cropcutting_start" Type="varchar" MaxLength="50" />
+    <Property Name="time_of_cropcutting_end" Type="varchar" MaxLength="50" />
+    <Property Name="total_count_maizeplants_inSS" Type="int" />
+    <Property Name="total_count_cobs_inSS" Type="int" />
+    <Property Name="total_count_plants_stage1" Type="int" />
+    <Property Name="total_count_plants_stage2" Type="int" />
+    <Property Name="total_cobs_stage1" Type="int" />
+    <Property Name="total_cobs_stage2" Type="int" />
+    <Property Name="photo_ofSS_before_harvesting" Type="varchar" MaxLength="50" />
+    <Property Name="cobs_harvested" Type="int" />
+    <Property Name="quantity_harvested_wetgrain" Type="decimal" Precision="18" Scale="3" />
+    <Property Name="quantity_harvested_kgpercob" Type="decimal" Precision="18" Scale="3" />
+    <Property Name="final_quantity_wetgrain" Type="varchar" MaxLength="50" />
+    <Property Name="moisture_reading" Type="decimal" Precision="18" Scale="3" />
+    <Property Name="quantity_wet_sample" Type="varchar" MaxLength="50" />
+    <Property Name="video_taken_CCE" Type="varchar" MaxLength="50" />
+    <Property Name="drying_method" Type="varchar" MaxLength="50" />
+    <Property Name="weight_of_wetsample" Type="decimal" Precision="18" Scale="3" />
+    <Property Name="weight_of_driedsample" Type="decimal" Precision="18" Scale="3" />
+    <Property Name="total_weight" Type="decimal" Precision="18" Scale="3" />
+    <Property Name="moisture_percentagedried" Type="decimal" Precision="18" Scale="3" />
+    <Property Name="createdby" Type="int" />
+    <Property Name="createdon" Type="date" />
+  </EntityType>
+  <!--Errors Found During Generation:
+warning 6013: The table/view 'adims.dbo.adims_constraints' does not have a primary key defined and no valid primary key could be inferred. This table/view has been excluded. To use the entity, you will need to review your schema, add the correct keys, and uncomment it.
+        <EntityType Name="adims_constraints">
+          <Property Name="drop_script" Type="nvarchar(max)" />
+          <Property Name="create_script" Type="nvarchar(max)" />
+        </EntityType>-->
+  <EntityType Name="AspNetRoles">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="nvarchar" MaxLength="128" Nullable="false" />
+    <Property Name="Name" Type="nvarchar" MaxLength="256" Nullable="false" />
+  </EntityType>
+  <EntityType Name="AspNetUserClaims">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="UserId" Type="nvarchar" MaxLength="128" Nullable="false" />
+    <Property Name="ClaimType" Type="nvarchar(max)" />
+    <Property Name="ClaimValue" Type="nvarchar(max)" />
+  </EntityType>
+  <EntityType Name="AspNetUserLogins">
+    <Key>
+      <PropertyRef Name="LoginProvider" />
+      <PropertyRef Name="ProviderKey" />
+      <PropertyRef Name="UserId" />
+    </Key>
+    <Property Name="LoginProvider" Type="nvarchar" MaxLength="128" Nullable="false" />
+    <Property Name="ProviderKey" Type="nvarchar" MaxLength="128" Nullable="false" />
+    <Property Name="UserId" Type="nvarchar" MaxLength="128" Nullable="false" />
+  </EntityType>
+  <EntityType Name="AspNetUserRoles">
+    <Key>
+      <PropertyRef Name="UserId" />
+      <PropertyRef Name="RoleId" />
+    </Key>
+    <Property Name="UserId" Type="nvarchar" MaxLength="128" Nullable="false" />
+    <Property Name="RoleId" Type="nvarchar" MaxLength="128" Nullable="false" />
+  </EntityType>
+  <EntityType Name="AspNetUsers">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="nvarchar" MaxLength="128" Nullable="false" />
+    <Property Name="Email" Type="nvarchar" MaxLength="256" />
+    <Property Name="EmailConfirmed" Type="bit" Nullable="false" />
+    <Property Name="PasswordHash" Type="nvarchar(max)" />
+    <Property Name="SecurityStamp" Type="nvarchar(max)" />
+    <Property Name="PhoneNumber" Type="nvarchar(max)" />
+    <Property Name="PhoneNumberConfirmed" Type="bit" Nullable="false" />
+    <Property Name="TwoFactorEnabled" Type="bit" Nullable="false" />
+    <Property Name="LockoutEndDateUtc" Type="datetime" />
+    <Property Name="LockoutEnabled" Type="bit" Nullable="false" />
+    <Property Name="AccessFailedCount" Type="int" Nullable="false" />
+    <Property Name="UserName" Type="nvarchar" MaxLength="256" Nullable="false" />
+    <Property Name="county" Type="int" Nullable="false" />
+    <Property Name="sub_county" Type="int" Nullable="false" />
+    <Property Name="ward" Type="int" Nullable="false" />
+    <Property Name="name" Type="nvarchar(max)" />
+    <Property Name="fresh_user" Type="bit" Nullable="false" />
+  </EntityType>
+  <EntityType Name="auditlog">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="date_created" Type="datetime" />
+    <Property Name="email" Type="varchar" MaxLength="128" />
+    <Property Name="activity" Type="varchar" MaxLength="128" />
+    <Property Name="description" Type="text" />
+    <Property Name="browserinfo" Type="text" />
+  </EntityType>
+  <EntityType Name="ayii_policy">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="ayii_policy_no" Type="varchar" MaxLength="128" />
+    <Property Name="farmer" Type="int" />
+    <Property Name="cropacreage" Type="int" />
+    <Property Name="season" Type="int" />
+    <Property Name="year" Type="int" />
+    <Property Name="uai" Type="int" />
+    <Property Name="datecreated" Type="datetime" />
+  </EntityType>
+  <EntityType Name="cce_actual_progress">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="name" Type="varchar(max)" />
+    <Property Name="progresskey" Type="varchar(max)" />
+    <Property Name="data" Type="nvarchar(max)" />
+    <Property Name="queue" Type="int" />
+    <Property Name="cropacreage" Type="int" />
+    <Property Name="user" Type="varchar(max)" />
+    <Property Name="date_created" Type="datetime2" Precision="7" />
+  </EntityType>
+  <EntityType Name="cce_pre_progress">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="name" Type="varchar(max)" />
+    <Property Name="progresskey" Type="varchar(max)" />
+    <Property Name="data" Type="nvarchar(max)" />
+    <Property Name="queue" Type="int" />
+    <Property Name="cropacreage" Type="int" />
+    <Property Name="user" Type="varchar(max)" />
+    <Property Name="date_created" Type="datetime2" Precision="7" />
+  </EntityType>
+  <EntityType Name="cce_queue_farms">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="queue" Type="int" />
+    <Property Name="cropacreage" Type="int" />
+    <Property Name="preliminary_status" Type="varchar" MaxLength="50" />
+    <Property Name="preliminary_cce" Type="int" />
+    <Property Name="actual_status" Type="varchar" MaxLength="50" />
+    <Property Name="actual_cce" Type="int" />
+    <Property Name="datecreated" Type="datetime" />
+    <Property Name="createdby" Type="int" />
+  </EntityType>
+  <EntityType Name="claimrequest">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="farmid" Type="int" />
+    <Property Name="farm_policyid" Type="int" />
+    <Property Name="status" Type="varchar" MaxLength="50" />
+    <Property Name="remarks" Type="text" />
+    <Property Name="amount" Type="float" />
+    <Property Name="channel" Type="varchar" MaxLength="50" />
+    <Property Name="datecreated" Type="datetime" />
+    <Property Name="createdby" Type="int" />
+  </EntityType>
+  <EntityType Name="county">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="int" Nullable="false" />
+    <Property Name="name" Type="varchar" MaxLength="50" />
+    <Property Name="code" Type="varchar" MaxLength="50" />
+    <Property Name="createdby" Type="int" />
+    <Property Name="createdon" Type="date" />
+    <Property Name="status" Type="char" MaxLength="10" />
+  </EntityType>
+  <EntityType Name="county_weather_data">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="county" Type="int" />
+    <Property Name="sub_county" Type="int" />
+    <Property Name="month" Type="int" />
+    <Property Name="season" Type="int" />
+    <Property Name="station_name" Type="varchar" MaxLength="128" />
+    <Property Name="total_rainfall" Type="float" />
+    <Property Name="total_no_of_rainy_days" Type="int" />
+    <Property Name="spatial_distribution" Type="float" />
+    <Property Name="remarks" Type="text" />
+  </EntityType>
+  <EntityType Name="crop">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="name" Type="varchar" MaxLength="50" />
+    <Property Name="icon" Type="text" />
+    <Property Name="localnames" Type="text" />
+    <Property Name="maturityperiod" Type="int" />
+    <Property Name="unitmeasure" Type="int" />
+    <Property Name="createdby" Type="int" />
+    <Property Name="createdon" Type="date" />
+    <Property Name="status" Type="int" />
+    <Property Name="plantingmethod" Type="int" />
+  </EntityType>
+  <EntityType Name="crop_cutting_queue">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="name" Type="varchar" MaxLength="128" />
+    <Property Name="county" Type="int" />
+    <Property Name="sub_county" Type="int" />
+    <Property Name="ward" Type="int" />
+    <Property Name="uai" Type="int" />
+    <Property Name="year" Type="int" />
+    <Property Name="season" Type="int" />
+    <Property Name="total_status" Type="int" />
+    <Property Name="datecreated" Type="datetime" />
+    <Property Name="createdby" Type="int" />
+    <Property Name="isdeleted" Type="bit" />
+  </EntityType>
+  <EntityType Name="crop_production_statistics">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="county" Type="int" />
+    <Property Name="sub_county" Type="int" />
+    <Property Name="month" Type="int" />
+    <Property Name="season" Type="int" />
+    <Property Name="no_sampled_ls_farms" Type="int" />
+    <Property Name="no_sampled_ci_farms" Type="int" />
+    <Property Name="no_sampled_irrigation_schemes" Type="int" />
+    <Property Name="no_sampled_greenhouses" Type="int" />
+    <Property Name="no_ss_farms" Type="int" />
+    <Property Name="core_crop" Type="int" />
+    <Property Name="hectares_planted" Type="float" />
+    <Property Name="estimated_ha_certified_seeds" Type="int" />
+    <Property Name="estimated_seed_quantity" Type="float" />
+  </EntityType>
+  <EntityType Name="cropacreage">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="farmid" Type="int" />
+    <Property Name="cropid" Type="int" />
+    <Property Name="variety" Type="int" />
+    <Property Name="acreage" Type="float" />
+    <Property Name="season" Type="int" />
+    <Property Name="year" Type="int" />
+    <Property Name="createdby" Type="int" />
+    <Property Name="createdon" Type="date" />
+  </EntityType>
+  <EntityType Name="cropvariety">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="name" Type="varchar" MaxLength="50" />
+    <Property Name="cropid" Type="int" />
+  </EntityType>
+  <EntityType Name="disaster_warning_data">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="county" Type="int" />
+    <Property Name="sub_county" Type="int" />
+    <Property Name="month" Type="int" />
+    <Property Name="season" Type="int" />
+    <Property Name="disaster_type" Type="varchar" MaxLength="128" />
+    <Property Name="crops_damaged" Type="int" />
+    <Property Name="hectares_destroyed" Type="float" />
+    <Property Name="production_loss" Type="float" />
+    <Property Name="estimated_loss_value" Type="float" />
+    <Property Name="remarks" Type="text" />
+  </EntityType>
+  <EntityType Name="document">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="int" Nullable="false" />
+    <Property Name="name" Type="text" />
+    <Property Name="tags" Type="text" />
+    <Property Name="url" Type="text" />
+    <Property Name="description" Type="text" />
+    <Property Name="dateadded" Type="datetime" />
+    <Property Name="createdby" Type="int" />
+  </EntityType>
+  <EntityType Name="early_warning">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="county" Type="int" />
+    <Property Name="sub_county" Type="int" />
+    <Property Name="month" Type="int" />
+    <Property Name="season" Type="int" />
+    <Property Name="crop" Type="int" />
+    <Property Name="crop_growth_stage" Type="int" />
+    <Property Name="rainfall_performance" Type="int" />
+    <Property Name="achieved_acreage" Type="int" />
+    <Property Name="time_of_planting" Type="int" />
+    <Property Name="crop_condition" Type="int" />
+    <Property Name="water_availability" Type="int" />
+    <Property Name="expected_yield_compared_to_LTA" Type="int" />
+    <Property Name="foodstocks_available_compared_toNormal" Type="int" />
+  </EntityType>
+  <EntityType Name="farm">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="name" Type="varchar" MaxLength="128" />
+    <Property Name="farmerid" Type="int" />
+    <Property Name="area" Type="float" />
+    <Property Name="countyid" Type="int" />
+    <Property Name="wardid" Type="int" />
+    <Property Name="soiltype" Type="int" />
+    <Property Name="lrnumber" Type="varchar" MaxLength="128" />
+    <Property Name="topography" Type="varchar" MaxLength="128" />
+    <Property Name="aez" Type="varchar" MaxLength="128" />
+    <Property Name="status" Type="char" MaxLength="1" />
+    <Property Name="createdby" Type="int" />
+    <Property Name="createdon" Type="date" />
+    <Property Name="farmingmethod" Type="int" />
+    <Property Name="irrigationMethod" Type="varchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="farm_actual_cropcutting_exercise">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="cropacreage" Type="int" />
+    <Property Name="actual_cropcutting_exercise" Type="int" />
+    <Property Name="season" Type="int" />
+    <Property Name="createdby" Type="int" />
+    <Property Name="createdon" Type="date" />
+  </EntityType>
+  <EntityType Name="farm_policy">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="farmid" Type="int" />
+    <Property Name="policy_number" Type="varchar(max)" />
+    <Property Name="insurance_companyid" Type="int" />
+    <Property Name="uai_name" Type="varchar" MaxLength="128" />
+    <Property Name="cropinsured" Type="int" />
+    <Property Name="season" Type="int" />
+    <Property Name="preferred_coverage" Type="float" />
+    <Property Name="dateofpolicysale" Type="datetime" />
+    <Property Name="average_yield" Type="float" />
+    <Property Name="insured_yield" Type="float" />
+    <Property Name="sum_insured" Type="float" />
+    <Property Name="area_insured" Type="float" />
+    <Property Name="total_insured" Type="float" />
+    <Property Name="premium_rate" Type="float" />
+    <Property Name="total_premium" Type="float" />
+    <Property Name="subsidy_amount" Type="float" />
+    <Property Name="final_premium" Type="float" />
+    <Property Name="date_created" Type="datetime" />
+  </EntityType>
+  <EntityType Name="farm_policy_premium">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="farm_policy_id" Type="int" />
+    <Property Name="farmer" Type="int" />
+    <Property Name="amount" Type="float" />
+    <Property Name="date_created" Type="datetime" />
+  </EntityType>
+  <EntityType Name="farm_preliminary_cropcutting_exercise">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="cropacreage" Type="int" />
+    <Property Name="preliminary_cropcutting_exercise" Type="int" />
+    <Property Name="season" Type="int" />
+    <Property Name="createdby" Type="int" />
+    <Property Name="createdon" Type="date" />
+  </EntityType>
+  <EntityType Name="farmcoordinate">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="farmid" Type="int" />
+    <Property Name="latitude" Type="float" />
+    <Property Name="longitude" Type="float" />
+    <Property Name="altitude" Type="float" />
+  </EntityType>
+  <EntityType Name="farmer">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="adimsid" Type="varchar" MaxLength="50" />
+    <Property Name="idnumber" Type="int" />
+    <Property Name="passportno" Type="varchar" MaxLength="50" />
+    <Property Name="krapin" Type="varchar" MaxLength="50" />
+    <Property Name="phoneno" Type="int" />
+    <Property Name="entity_type" Type="varchar" MaxLength="50" />
+    <Property Name="name" Type="varchar" MaxLength="128" />
+    <Property Name="group_contact_name" Type="varchar" MaxLength="128" />
+    <Property Name="group_contact_id" Type="varchar" MaxLength="128" />
+    <Property Name="group_first_member" Type="varchar" MaxLength="128" />
+    <Property Name="group_second_member" Type="varchar" MaxLength="128" />
+    <Property Name="group_third_member" Type="varchar" MaxLength="128" />
+    <Property Name="company_incorporation_number" Type="varchar" MaxLength="128" />
+    <Property Name="firstname" Type="varchar" MaxLength="50" />
+    <Property Name="middlename" Type="varchar" MaxLength="50" />
+    <Property Name="lastname" Type="varchar" MaxLength="50" />
+    <Property Name="dob" Type="date" />
+    <Property Name="photo" Type="int" />
+    <Property Name="address" Type="text" />
+    <Property Name="gender" Type="varchar" MaxLength="50" />
+    <Property Name="maritalstatus" Type="varchar" MaxLength="50" />
+    <Property Name="nextofkinname" Type="varchar" MaxLength="50" />
+    <Property Name="nexofkintype" Type="varchar" MaxLength="50" />
+    <Property Name="county" Type="int" />
+    <Property Name="ward" Type="int" />
+    <Property Name="status" Type="char" MaxLength="1" />
+    <Property Name="createdon" Type="date" />
+    <Property Name="createdby" Type="int" />
+    <Property Name="educationLevel" Type="varchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="farmer_corp_progress">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="name" Type="varchar(max)" />
+    <Property Name="progresskey" Type="varchar(max)" />
+    <Property Name="data" Type="nvarchar(max)" />
+    <Property Name="user" Type="varchar(max)" />
+    <Property Name="date_created" Type="datetime2" Precision="7" />
+  </EntityType>
+  <EntityType Name="farmer_grp_progress">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="name" Type="varchar(max)" />
+    <Property Name="progresskey" Type="varchar(max)" />
+    <Property Name="data" Type="nvarchar(max)" />
+    <Property Name="user" Type="varchar(max)" />
+    <Property Name="date_created" Type="datetime2" Precision="7" />
+  </EntityType>
+  <EntityType Name="farmer_ind_progress">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="name" Type="varchar(max)" />
+    <Property Name="progresskey" Type="varchar(max)" />
+    <Property Name="data" Type="nvarchar(max)" />
+    <Property Name="user" Type="varchar(max)" />
+    <Property Name="date_created" Type="datetime2" Precision="7" />
+  </EntityType>
+  <EntityType Name="farmer_insurance">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="farmer" Type="int" />
+    <Property Name="insurance_type" Type="varchar" MaxLength="128" />
+    <Property Name="other_insurance" Type="varchar" MaxLength="128" />
+    <Property Name="insurer" Type="varchar" MaxLength="128" />
+    <Property Name="crop" Type="varchar" MaxLength="64" />
+    <Property Name="policy_number" Type="varchar" MaxLength="128" />
+  </EntityType>
+  <EntityType Name="farmer_photo">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="farmerid" Type="int" />
+    <Property Name="photoid" Type="int" />
+    <Property Name="datecreated" Type="datetime" />
+    <Property Name="createdby" Type="int" />
+  </EntityType>
+  <EntityType Name="farmingmethod">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="name" Type="varchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="fertilizer">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="name" Type="varchar" MaxLength="128" />
+    <Property Name="application_method" Type="varchar" MaxLength="128" />
+    <Property Name="dateadded" Type="datetime" />
+  </EntityType>
+  <EntityType Name="foodstocks_data">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="county" Type="int" />
+    <Property Name="sub_county" Type="int" />
+    <Property Name="month" Type="int" />
+    <Property Name="season" Type="int" />
+    <Property Name="commodity" Type="varchar" MaxLength="128" />
+    <Property Name="total_sampled_farmers" Type="int" />
+    <Property Name="total_sampled_traders" Type="int" />
+    <Property Name="total_sampled_millers" Type="int" />
+    <Property Name="total_ncpb_depots" Type="int" />
+    <Property Name="total_food_aid_agencies" Type="int" />
+    <Property Name="farmer_bags" Type="int" />
+    <Property Name="trader_bags" Type="int" />
+    <Property Name="miller_bags" Type="int" />
+    <Property Name="ncpb_bags" Type="int" />
+    <Property Name="food_aid_bags" Type="int" />
+  </EntityType>
+  <EntityType Name="govt_subsidized_fertilizer">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="county" Type="int" />
+    <Property Name="sub_county" Type="int" />
+    <Property Name="month" Type="int" />
+    <Property Name="season" Type="int" />
+    <Property Name="subsidized_fertilizer" Type="varchar" MaxLength="128" />
+    <Property Name="total_bags_available_toDate" Type="float" />
+    <Property Name="total_bags_issued" Type="float" />
+    <Property Name="total_beneficiary_farmers" Type="int" />
+  </EntityType>
+  <EntityType Name="input_cost_and_availability">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="county" Type="int" />
+    <Property Name="sub_county" Type="int" />
+    <Property Name="month" Type="int" />
+    <Property Name="season" Type="int" />
+    <Property Name="no_sampled_stoclist" Type="int" />
+    <Property Name="nno_sampled_ncpb_stores" Type="int" />
+    <Property Name="type_of_input" Type="varchar" MaxLength="128" />
+    <Property Name="unit" Type="varchar" MaxLength="128" />
+    <Property Name="crop_condition" Type="int" />
+    <Property Name="lowest_retail_price" Type="float" />
+    <Property Name="highest_retail_price" Type="float" />
+    <Property Name="availability" Type="int" />
+  </EntityType>
+  <EntityType Name="insurance_company">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="name" Type="varchar" MaxLength="128" />
+    <Property Name="initials" Type="varchar" MaxLength="64" />
+    <Property Name="krapin" Type="varchar" MaxLength="64" />
+    <Property Name="distribution_channel" Type="varchar" MaxLength="128" />
+    <Property Name="channel_name" Type="varchar" MaxLength="128" />
+    <Property Name="phoneno" Type="varchar" MaxLength="128" />
+    <Property Name="email" Type="varchar" MaxLength="128" />
+    <Property Name="postal_address" Type="varchar" MaxLength="128" />
+    <Property Name="town" Type="varchar" MaxLength="128" />
+    <Property Name="physical_address" Type="varchar" MaxLength="128" />
+    <Property Name="date_created" Type="datetime" />
+  </EntityType>
+  <EntityType Name="photo">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="url" Type="text" />
+    <Property Name="metadat" Type="text" />
+    <Property Name="datecreated" Type="datetime" />
+    <Property Name="createdby" Type="int" />
+  </EntityType>
+  <EntityType Name="planting_fertilizer">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="county" Type="int" />
+    <Property Name="sub_county" Type="int" />
+    <Property Name="month" Type="int" />
+    <Property Name="season" Type="int" />
+    <Property Name="core_crop" Type="int" />
+    <Property Name="hectares_planted" Type="float" />
+    <Property Name="planting_fertilizer_1" Type="varchar" MaxLength="128" />
+    <Property Name="estimated_ha_applied_fertilizer_1" Type="float" />
+    <Property Name="fertilizer_use_rate_1" Type="float" />
+    <Property Name="total_fertilizer_used_1" Type="float" />
+    <Property Name="planting_fertilizer_2" Type="varchar" MaxLength="128" />
+    <Property Name="estimated_ha_applied_fertilizer_2" Type="float" />
+    <Property Name="fertilizer_use_rate_2" Type="float" />
+    <Property Name="total_fertilizer_used_2" Type="float" />
+  </EntityType>
+  <EntityType Name="plantingmethod">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="name" Type="varchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="preliminary_cropcutting_exercise">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="season" Type="int" />
+    <Property Name="county" Type="int" />
+    <Property Name="sub_county" Type="int" />
+    <Property Name="ward" Type="int" />
+    <Property Name="farm" Type="int" />
+    <Property Name="enumeration_area_code" Type="varchar" MaxLength="50" />
+    <Property Name="village_name" Type="varchar" MaxLength="50" />
+    <Property Name="respondent_name" Type="varchar" MaxLength="50" />
+    <Property Name="respondent_telephone" Type="varchar" MaxLength="50" />
+    <Property Name="respondent_relation" Type="varchar" MaxLength="50" />
+    <Property Name="crop" Type="int" />
+    <Property Name="variety" Type="int" />
+    <Property Name="month_of_planting" Type="varchar" MaxLength="50" />
+    <Property Name="week_of_planting" Type="varchar" MaxLength="50" />
+    <Property Name="planting_season" Type="varchar" MaxLength="50" />
+    <Property Name="manure_use" Type="varchar" MaxLength="50" />
+    <Property Name="inorganic_fert_use" Type="varchar" MaxLength="50" />
+    <Property Name="fertilizer_type" Type="varchar" MaxLength="50" />
+    <Property Name="fertilizer_quantity" Type="varchar" MaxLength="50" />
+    <Property Name="top_fertilizer_type" Type="varchar" MaxLength="50" />
+    <Property Name="top_fertilizer_quantity" Type="varchar" MaxLength="50" />
+    <Property Name="mode_of_planting" Type="varchar" MaxLength="50" />
+    <Property Name="other_crops" Type="varchar" MaxLength="50" />
+    <Property Name="planted_holding_type" Type="varchar" MaxLength="50" />
+    <Property Name="planted_holding_area" Type="varchar" MaxLength="50" />
+    <Property Name="sampling_plot_or_parcel" Type="varchar" MaxLength="50" />
+    <Property Name="parcel_geo_ref_no" Type="varchar" MaxLength="50" />
+    <Property Name="ss_length_starting_corner" Type="varchar" MaxLength="50" />
+    <Property Name="ss_length_paces_random_number" Type="varchar" MaxLength="50" />
+    <Property Name="ss_width_starting_corner" Type="varchar" MaxLength="50" />
+    <Property Name="ss_width_paces_random_number" Type="varchar" MaxLength="50" />
+    <Property Name="sketch_map" Type="varchar" MaxLength="50" />
+    <Property Name="crop_stage" Type="varchar" MaxLength="50" />
+    <Property Name="overall_crop_condition" Type="varchar" MaxLength="50" />
+    <Property Name="crop_status" Type="varchar" MaxLength="50" />
+    <Property Name="total_maize_plants" Type="decimal" Precision="18" Scale="0" />
+    <Property Name="total_cobs_count" Type="decimal" Precision="18" Scale="0" />
+    <Property Name="photo_of_crop" Type="varchar" MaxLength="50" />
+    <Property Name="brief_description" Type="text" />
+    <Property Name="key_observations" Type="text" />
+    <Property Name="agreed_date_cutting" Type="varchar" MaxLength="50" />
+    <Property Name="createdby" Type="int" />
+    <Property Name="createdon" Type="date" />
+  </EntityType>
+  <EntityType Name="premium_rate">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="insurance_company" Type="int" />
+    <Property Name="rate" Type="float" />
+  </EntityType>
+  <EntityType Name="price_trend">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="county" Type="int" />
+    <Property Name="sub_county" Type="int" />
+    <Property Name="month" Type="int" />
+    <Property Name="season" Type="int" />
+    <Property Name="commodity" Type="varchar" MaxLength="128" />
+    <Property Name="total_sampled_farmers" Type="int" />
+    <Property Name="total_sampled_markets" Type="int" />
+    <Property Name="wholesale_price" Type="float" />
+    <Property Name="farmgate_price" Type="float" />
+  </EntityType>
+  <EntityType Name="season">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="name" Type="varchar" MaxLength="50" />
+    <Property Name="startdate" Type="date" />
+    <Property Name="enddate" Type="date" />
+    <Property Name="createdby" Type="int" />
+    <Property Name="createdon" Type="date" />
+  </EntityType>
+  <EntityType Name="settings">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="name" Type="varchar" MaxLength="128" />
+    <Property Name="value" Type="varchar" MaxLength="128" />
+    <Property Name="description" Type="text" />
+  </EntityType>
+  <EntityType Name="soiltype">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="name" Type="varchar" MaxLength="50" />
+    <Property Name="description" Type="text" />
+    <Property Name="createdby" Type="int" />
+    <Property Name="createdon" Type="date" />
+  </EntityType>
+  <EntityType Name="subcounty">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="int" Nullable="false" />
+    <Property Name="name" Type="varchar" MaxLength="50" />
+    <Property Name="code" Type="varchar" MaxLength="50" />
+    <Property Name="countyid" Type="int" />
+    <Property Name="createdby" Type="int" />
+    <Property Name="createdon" Type="date" />
+  </EntityType>
+  <EntityType Name="top_dressing_fertilizer">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="county" Type="int" />
+    <Property Name="sub_county" Type="int" />
+    <Property Name="month" Type="int" />
+    <Property Name="season" Type="int" />
+    <Property Name="hectares_planted" Type="float" />
+    <Property Name="top_dressing_fertilizer_1" Type="varchar" MaxLength="128" />
+    <Property Name="estimated_ha_applied_fertilizer_1" Type="float" />
+    <Property Name="fertilizer_use_rate_1" Type="float" />
+    <Property Name="total_fertilizer_used_1" Type="float" />
+    <Property Name="top_dressing_fertilizer_2" Type="varchar" MaxLength="128" />
+    <Property Name="estimated_ha_applied_fertilizer_2" Type="float" />
+    <Property Name="fertilizer_use_rate_2" Type="float" />
+    <Property Name="total_fertilizer_used_2" Type="float" />
+  </EntityType>
+  <EntityType Name="uai">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="name" Type="varchar" MaxLength="64" />
+    <Property Name="code" Type="varchar" MaxLength="64" />
+    <Property Name="ward" Type="int" />
+    <Property Name="datecreated" Type="datetime" />
+    <Property Name="createdby" Type="int" />
+  </EntityType>
+  <EntityType Name="uai_variables">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="uai" Type="int" />
+    <Property Name="season" Type="int" />
+    <Property Name="year" Type="int" />
+    <Property Name="historical_average" Type="float" />
+    <Property Name="average_yield" Type="float" />
+    <Property Name="coverage" Type="float" />
+    <Property Name="unitvalue" Type="float" />
+    <Property Name="datemodified" Type="datetime" />
+  </EntityType>
+  <EntityType Name="uai_yield">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="crop" Type="int" />
+    <Property Name="ward" Type="int" />
+    <Property Name="season" Type="int" />
+    <Property Name="average_yield" Type="float" />
+  </EntityType>
+  <EntityType Name="unitofmeasure">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="name" Type="varchar" MaxLength="50" />
+    <Property Name="weight" Type="float" />
+    <Property Name="packaging" Type="varchar" MaxLength="50" />
+    <Property Name="createdby" Type="int" />
+    <Property Name="createdon" Type="date" />
+  </EntityType>
+  <EntityType Name="ward">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="int" Nullable="false" />
+    <Property Name="name" Type="varchar" MaxLength="50" />
+    <Property Name="code" Type="varchar" MaxLength="50" />
+    <Property Name="subcounty" Type="int" />
+    <Property Name="createdon" Type="date" />
+    <Property Name="createdby" Type="int" />
+  </EntityType>
+  <!--Errors Found During Generation:
+warning 6002: The table/view 'adims.sys.database_firewall_rules' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+  <EntityType Name="database_firewall_rules">
+    <Key>
+      <PropertyRef Name="id" />
+      <PropertyRef Name="name" />
+      <PropertyRef Name="start_ip_address" />
+      <PropertyRef Name="end_ip_address" />
+      <PropertyRef Name="create_date" />
+      <PropertyRef Name="modify_date" />
+    </Key>
+    <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="name" Type="nvarchar" MaxLength="128" Nullable="false" />
+    <Property Name="start_ip_address" Type="varchar" MaxLength="45" Nullable="false" />
+    <Property Name="end_ip_address" Type="varchar" MaxLength="45" Nullable="false" />
+    <Property Name="create_date" Type="datetime" Nullable="false" />
+    <Property Name="modify_date" Type="datetime" Nullable="false" />
+  </EntityType>
+  <Association Name="FK_actual_cropcutting_exercise_county">
+    <End Role="county" Type="Self.county" Multiplicity="0..1" />
+    <End Role="actual_cropcutting_exercise" Type="Self.actual_cropcutting_exercise" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="county">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="actual_cropcutting_exercise">
+        <PropertyRef Name="county" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_actual_cropcutting_exercise_subcounty">
+    <End Role="subcounty" Type="Self.subcounty" Multiplicity="0..1" />
+    <End Role="actual_cropcutting_exercise" Type="Self.actual_cropcutting_exercise" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="subcounty">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="actual_cropcutting_exercise">
+        <PropertyRef Name="sub_county" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_actual_cropcutting_exercise_ward">
+    <End Role="ward" Type="Self.ward" Multiplicity="0..1" />
+    <End Role="actual_cropcutting_exercise" Type="Self.actual_cropcutting_exercise" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="ward">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="actual_cropcutting_exercise">
+        <PropertyRef Name="ward" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="fk_cce_queue_farms_queue">
+    <End Role="crop_cutting_queue" Type="Self.crop_cutting_queue" Multiplicity="0..1" />
+    <End Role="cce_queue_farms" Type="Self.cce_queue_farms" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="crop_cutting_queue">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="cce_queue_farms">
+        <PropertyRef Name="queue" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="fk_ccqcounty">
+    <End Role="county" Type="Self.county" Multiplicity="0..1" />
+    <End Role="crop_cutting_queue" Type="Self.crop_cutting_queue" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="county">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="crop_cutting_queue">
+        <PropertyRef Name="county" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="fk_ccqfarm">
+    <End Role="cropacreage" Type="Self.cropacreage" Multiplicity="0..1" />
+    <End Role="cce_queue_farms" Type="Self.cce_queue_farms" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="cropacreage">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="cce_queue_farms">
+        <PropertyRef Name="cropacreage" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="fk_ccqpreliminary">
+    <End Role="preliminary_cropcutting_exercise" Type="Self.preliminary_cropcutting_exercise" Multiplicity="0..1" />
+    <End Role="cce_queue_farms" Type="Self.cce_queue_farms" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="preliminary_cropcutting_exercise">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="cce_queue_farms">
+        <PropertyRef Name="preliminary_cce" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="fk_ccqseason">
+    <End Role="season" Type="Self.season" Multiplicity="0..1" />
+    <End Role="crop_cutting_queue" Type="Self.crop_cutting_queue" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="season">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="crop_cutting_queue">
+        <PropertyRef Name="season" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="fk_ccqsubcounty">
+    <End Role="subcounty" Type="Self.subcounty" Multiplicity="0..1" />
+    <End Role="crop_cutting_queue" Type="Self.crop_cutting_queue" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="subcounty">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="crop_cutting_queue">
+        <PropertyRef Name="sub_county" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="fk_ccqward">
+    <End Role="ward" Type="Self.ward" Multiplicity="0..1" />
+    <End Role="crop_cutting_queue" Type="Self.crop_cutting_queue" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="ward">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="crop_cutting_queue">
+        <PropertyRef Name="ward" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_claimrequest_farm">
+    <End Role="farm" Type="Self.farm" Multiplicity="0..1" />
+    <End Role="claimrequest" Type="Self.claimrequest" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="farm">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="claimrequest">
+        <PropertyRef Name="farmid" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_claimrequest_farm_policy">
+    <End Role="farm_policy" Type="Self.farm_policy" Multiplicity="0..1" />
+    <End Role="claimrequest" Type="Self.claimrequest" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="farm_policy">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="claimrequest">
+        <PropertyRef Name="farm_policyid" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="fk_countycps">
+    <End Role="county" Type="Self.county" Multiplicity="0..1" />
+    <End Role="crop_production_statistics" Type="Self.crop_production_statistics" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="county">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="crop_production_statistics">
+        <PropertyRef Name="county" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="fk_countycwd">
+    <End Role="county" Type="Self.county" Multiplicity="0..1" />
+    <End Role="county_weather_data" Type="Self.county_weather_data" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="county">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="county_weather_data">
+        <PropertyRef Name="county" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="fk_countydwd">
+    <End Role="county" Type="Self.county" Multiplicity="0..1" />
+    <End Role="disaster_warning_data" Type="Self.disaster_warning_data" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="county">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="disaster_warning_data">
+        <PropertyRef Name="county" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="fk_countyew">
+    <End Role="county" Type="Self.county" Multiplicity="0..1" />
+    <End Role="early_warning" Type="Self.early_warning" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="county">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="early_warning">
+        <PropertyRef Name="county" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="fk_countyfd">
+    <End Role="county" Type="Self.county" Multiplicity="0..1" />
+    <End Role="foodstocks_data" Type="Self.foodstocks_data" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="county">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="foodstocks_data">
+        <PropertyRef Name="county" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="fk_countygsf">
+    <End Role="county" Type="Self.county" Multiplicity="0..1" />
+    <End Role="govt_subsidized_fertilizer" Type="Self.govt_subsidized_fertilizer" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="county">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="govt_subsidized_fertilizer">
+        <PropertyRef Name="county" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="fk_countyica">
+    <End Role="county" Type="Self.county" Multiplicity="0..1" />
+    <End Role="input_cost_and_availability" Type="Self.input_cost_and_availability" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="county">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="input_cost_and_availability">
+        <PropertyRef Name="county" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="fk_countypf">
+    <End Role="county" Type="Self.county" Multiplicity="0..1" />
+    <End Role="planting_fertilizer" Type="Self.planting_fertilizer" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="county">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="planting_fertilizer">
+        <PropertyRef Name="county" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="fk_countypt">
+    <End Role="county" Type="Self.county" Multiplicity="0..1" />
+    <End Role="price_trend" Type="Self.price_trend" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="county">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="price_trend">
+        <PropertyRef Name="county" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="fk_countytdf">
+    <End Role="county" Type="Self.county" Multiplicity="0..1" />
+    <End Role="top_dressing_fertilizer" Type="Self.top_dressing_fertilizer" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="county">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="top_dressing_fertilizer">
+        <PropertyRef Name="county" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_crop_cutting_queue_uai">
+    <End Role="uai" Type="Self.uai" Multiplicity="0..1" />
+    <End Role="crop_cutting_queue" Type="Self.crop_cutting_queue" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="uai">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="crop_cutting_queue">
+        <PropertyRef Name="uai" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_crop_plantingmethod">
+    <End Role="plantingmethod" Type="Self.plantingmethod" Multiplicity="0..1" />
+    <End Role="crop" Type="Self.crop" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="plantingmethod">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="crop">
+        <PropertyRef Name="plantingmethod" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_crop_unitofmeasure">
+    <End Role="unitofmeasure" Type="Self.unitofmeasure" Multiplicity="0..1" />
+    <End Role="crop" Type="Self.crop" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="unitofmeasure">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="crop">
+        <PropertyRef Name="unitmeasure" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="fk_cropacreage_ayii_policy">
+    <End Role="cropacreage" Type="Self.cropacreage" Multiplicity="0..1" />
+    <End Role="ayii_policy" Type="Self.ayii_policy" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="cropacreage">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="ayii_policy">
+        <PropertyRef Name="cropacreage" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_cropacreage_crop">
+    <End Role="crop" Type="Self.crop" Multiplicity="0..1" />
+    <End Role="cropacreage" Type="Self.cropacreage" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="crop">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="cropacreage">
+        <PropertyRef Name="cropid" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_cropacreage_cropvariety">
+    <End Role="cropvariety" Type="Self.cropvariety" Multiplicity="0..1" />
+    <End Role="cropacreage" Type="Self.cropacreage" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="cropvariety">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="cropacreage">
+        <PropertyRef Name="variety" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_cropacreage_farm">
+    <End Role="farm" Type="Self.farm" Multiplicity="0..1" />
+    <End Role="cropacreage" Type="Self.cropacreage" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="farm">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="cropacreage">
+        <PropertyRef Name="farmid" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_cropvariety_crop">
+    <End Role="crop" Type="Self.crop" Multiplicity="0..1" />
+    <End Role="cropvariety" Type="Self.cropvariety" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="crop">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="cropvariety">
+        <PropertyRef Name="cropid" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_dbo_AspNetUserClaims_dbo_AspNetUsers_UserId">
+    <End Role="AspNetUsers" Type="Self.AspNetUsers" Multiplicity="1" />
+    <End Role="AspNetUserClaims" Type="Self.AspNetUserClaims" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="AspNetUsers">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="AspNetUserClaims">
+        <PropertyRef Name="UserId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_dbo_AspNetUserLogins_dbo_AspNetUsers_UserId">
+    <End Role="AspNetUsers" Type="Self.AspNetUsers" Multiplicity="1" />
+    <End Role="AspNetUserLogins" Type="Self.AspNetUserLogins" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="AspNetUsers">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="AspNetUserLogins">
+        <PropertyRef Name="UserId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_dbo_AspNetUserRoles_dbo_AspNetRoles_RoleId">
+    <End Role="AspNetRoles" Type="Self.AspNetRoles" Multiplicity="1" />
+    <End Role="AspNetUserRoles" Type="Self.AspNetUserRoles" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="AspNetRoles">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="AspNetUserRoles">
+        <PropertyRef Name="RoleId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_dbo_AspNetUserRoles_dbo_AspNetUsers_UserId">
+    <End Role="AspNetUsers" Type="Self.AspNetUsers" Multiplicity="1" />
+    <End Role="AspNetUserRoles" Type="Self.AspNetUserRoles" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="AspNetUsers">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="AspNetUserRoles">
+        <PropertyRef Name="UserId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_farm_actual_cropcutting_exercise_farm">
+    <End Role="cropacreage" Type="Self.cropacreage" Multiplicity="0..1" />
+    <End Role="farm_actual_cropcutting_exercise" Type="Self.farm_actual_cropcutting_exercise" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="cropacreage">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="farm_actual_cropcutting_exercise">
+        <PropertyRef Name="cropacreage" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_farm_actual_cropcutting_exercise_season">
+    <End Role="season" Type="Self.season" Multiplicity="0..1" />
+    <End Role="farm_actual_cropcutting_exercise" Type="Self.farm_actual_cropcutting_exercise" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="season">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="farm_actual_cropcutting_exercise">
+        <PropertyRef Name="season" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_farm_county">
+    <End Role="county" Type="Self.county" Multiplicity="0..1" />
+    <End Role="farm" Type="Self.farm" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="county">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="farm">
+        <PropertyRef Name="countyid" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_farm_farmer">
+    <End Role="farmer" Type="Self.farmer" Multiplicity="0..1" />
+    <End Role="farm" Type="Self.farm" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="farmer">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="farm">
+        <PropertyRef Name="farmerid" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_farm_farmingmethod">
+    <End Role="farmingmethod" Type="Self.farmingmethod" Multiplicity="0..1" />
+    <End Role="farm" Type="Self.farm" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="farmingmethod">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="farm">
+        <PropertyRef Name="farmingmethod" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="fk_farm_policy_crop">
+    <End Role="crop" Type="Self.crop" Multiplicity="0..1" />
+    <End Role="farm_policy" Type="Self.farm_policy" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="crop">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="farm_policy">
+        <PropertyRef Name="cropinsured" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="fk_farm_policy_premium">
+    <End Role="farm_policy" Type="Self.farm_policy" Multiplicity="0..1" />
+    <End Role="farm_policy_premium" Type="Self.farm_policy_premium" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="farm_policy">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="farm_policy_premium">
+        <PropertyRef Name="farm_policy_id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_farm_preliminary_cropcutting_exercise_farm">
+    <End Role="cropacreage" Type="Self.cropacreage" Multiplicity="0..1" />
+    <End Role="farm_preliminary_cropcutting_exercise" Type="Self.farm_preliminary_cropcutting_exercise" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="cropacreage">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="farm_preliminary_cropcutting_exercise">
+        <PropertyRef Name="cropacreage" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_farm_preliminary_cropcutting_exercise_preliminary_cropcutting_exercise">
+    <End Role="preliminary_cropcutting_exercise" Type="Self.preliminary_cropcutting_exercise" Multiplicity="0..1" />
+    <End Role="farm_preliminary_cropcutting_exercise" Type="Self.farm_preliminary_cropcutting_exercise" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="preliminary_cropcutting_exercise">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="farm_preliminary_cropcutting_exercise">
+        <PropertyRef Name="preliminary_cropcutting_exercise" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_farm_preliminary_cropcutting_exercise_season">
+    <End Role="season" Type="Self.season" Multiplicity="0..1" />
+    <End Role="farm_preliminary_cropcutting_exercise" Type="Self.farm_preliminary_cropcutting_exercise" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="season">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="farm_preliminary_cropcutting_exercise">
+        <PropertyRef Name="season" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_farm_soiltype">
+    <End Role="soiltype" Type="Self.soiltype" Multiplicity="0..1" />
+    <End Role="farm" Type="Self.farm" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="soiltype">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="farm">
+        <PropertyRef Name="soiltype" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_farm_ward">
+    <End Role="ward" Type="Self.ward" Multiplicity="0..1" />
+    <End Role="farm" Type="Self.farm" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="ward">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="farm">
+        <PropertyRef Name="wardid" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_farmcoordinate_farm">
+    <End Role="farm" Type="Self.farm" Multiplicity="0..1" />
+    <End Role="farmcoordinate" Type="Self.farmcoordinate" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="farm">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="farmcoordinate">
+        <PropertyRef Name="farmid" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="fk_farmer_ayii_policy">
+    <End Role="farmer" Type="Self.farmer" Multiplicity="0..1" />
+    <End Role="ayii_policy" Type="Self.ayii_policy" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="farmer">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="ayii_policy">
+        <PropertyRef Name="farmer" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_farmer_county">
+    <End Role="county" Type="Self.county" Multiplicity="0..1" />
+    <End Role="farmer" Type="Self.farmer" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="county">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="farmer">
+        <PropertyRef Name="county" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="fk_farmer_farmerinsurance">
+    <End Role="farmer" Type="Self.farmer" Multiplicity="0..1" />
+    <End Role="farmer_insurance" Type="Self.farmer_insurance" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="farmer">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="farmer_insurance">
+        <PropertyRef Name="farmer" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="fk_farmer_policypremium">
+    <End Role="farmer" Type="Self.farmer" Multiplicity="0..1" />
+    <End Role="farm_policy_premium" Type="Self.farm_policy_premium" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="farmer">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="farm_policy_premium">
+        <PropertyRef Name="farmer" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_farmer_ward">
+    <End Role="ward" Type="Self.ward" Multiplicity="0..1" />
+    <End Role="farmer" Type="Self.farmer" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="ward">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="farmer">
+        <PropertyRef Name="ward" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="fk_farmerid">
+    <End Role="farmer" Type="Self.farmer" Multiplicity="0..1" />
+    <End Role="farmer_photo" Type="Self.farmer_photo" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="farmer">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="farmer_photo">
+        <PropertyRef Name="farmerid" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="fk_farmid">
+    <End Role="farm" Type="Self.farm" Multiplicity="0..1" />
+    <End Role="farm_policy" Type="Self.farm_policy" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="farm">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="farm_policy">
+        <PropertyRef Name="farmid" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="fk_insurancecompany">
+    <End Role="insurance_company" Type="Self.insurance_company" Multiplicity="0..1" />
+    <End Role="farm_policy" Type="Self.farm_policy" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="insurance_company">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="farm_policy">
+        <PropertyRef Name="insurance_companyid" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="fk_photoid">
+    <End Role="photo" Type="Self.photo" Multiplicity="0..1" />
+    <End Role="farmer_photo" Type="Self.farmer_photo" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="photo">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="farmer_photo">
+        <PropertyRef Name="photoid" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_preliminary_cropcutting_exercise_county">
+    <End Role="county" Type="Self.county" Multiplicity="0..1" />
+    <End Role="preliminary_cropcutting_exercise" Type="Self.preliminary_cropcutting_exercise" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="county">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="preliminary_cropcutting_exercise">
+        <PropertyRef Name="county" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_preliminary_cropcutting_exercise_crop">
+    <End Role="crop" Type="Self.crop" Multiplicity="0..1" />
+    <End Role="preliminary_cropcutting_exercise" Type="Self.preliminary_cropcutting_exercise" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="crop">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="preliminary_cropcutting_exercise">
+        <PropertyRef Name="crop" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_preliminary_cropcutting_exercise_subcounty">
+    <End Role="subcounty" Type="Self.subcounty" Multiplicity="0..1" />
+    <End Role="preliminary_cropcutting_exercise" Type="Self.preliminary_cropcutting_exercise" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="subcounty">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="preliminary_cropcutting_exercise">
+        <PropertyRef Name="sub_county" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_preliminary_cropcutting_exercise_ward">
+    <End Role="ward" Type="Self.ward" Multiplicity="0..1" />
+    <End Role="preliminary_cropcutting_exercise" Type="Self.preliminary_cropcutting_exercise" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="ward">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="preliminary_cropcutting_exercise">
+        <PropertyRef Name="ward" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="fk_season_ayii_policy">
+    <End Role="season" Type="Self.season" Multiplicity="0..1" />
+    <End Role="ayii_policy" Type="Self.ayii_policy" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="season">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="ayii_policy">
+        <PropertyRef Name="season" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="fk_seasoncps">
+    <End Role="season" Type="Self.season" Multiplicity="0..1" />
+    <End Role="crop_production_statistics" Type="Self.crop_production_statistics" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="season">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="crop_production_statistics">
+        <PropertyRef Name="season" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="fk_seasoncwd">
+    <End Role="season" Type="Self.season" Multiplicity="0..1" />
+    <End Role="county_weather_data" Type="Self.county_weather_data" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="season">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="county_weather_data">
+        <PropertyRef Name="season" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="fk_seasondwd">
+    <End Role="season" Type="Self.season" Multiplicity="0..1" />
+    <End Role="disaster_warning_data" Type="Self.disaster_warning_data" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="season">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="disaster_warning_data">
+        <PropertyRef Name="season" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="fk_seasonew">
+    <End Role="season" Type="Self.season" Multiplicity="0..1" />
+    <End Role="early_warning" Type="Self.early_warning" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="season">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="early_warning">
+        <PropertyRef Name="season" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="fk_seasonfd">
+    <End Role="season" Type="Self.season" Multiplicity="0..1" />
+    <End Role="foodstocks_data" Type="Self.foodstocks_data" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="season">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="foodstocks_data">
+        <PropertyRef Name="season" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="fk_seasongsf">
+    <End Role="season" Type="Self.season" Multiplicity="0..1" />
+    <End Role="govt_subsidized_fertilizer" Type="Self.govt_subsidized_fertilizer" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="season">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="govt_subsidized_fertilizer">
+        <PropertyRef Name="season" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="fk_seasonica">
+    <End Role="season" Type="Self.season" Multiplicity="0..1" />
+    <End Role="input_cost_and_availability" Type="Self.input_cost_and_availability" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="season">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="input_cost_and_availability">
+        <PropertyRef Name="season" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="fk_seasonpf">
+    <End Role="season" Type="Self.season" Multiplicity="0..1" />
+    <End Role="planting_fertilizer" Type="Self.planting_fertilizer" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="season">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="planting_fertilizer">
+        <PropertyRef Name="season" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="fk_seasonpt">
+    <End Role="season" Type="Self.season" Multiplicity="0..1" />
+    <End Role="price_trend" Type="Self.price_trend" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="season">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="price_trend">
+        <PropertyRef Name="season" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="fk_seasontdf">
+    <End Role="season" Type="Self.season" Multiplicity="0..1" />
+    <End Role="top_dressing_fertilizer" Type="Self.top_dressing_fertilizer" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="season">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="top_dressing_fertilizer">
+        <PropertyRef Name="season" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_subcounty_county">
+    <End Role="county" Type="Self.county" Multiplicity="0..1" />
+    <End Role="subcounty" Type="Self.subcounty" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="county">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="subcounty">
+        <PropertyRef Name="countyid" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="fk_subcountycps">
+    <End Role="subcounty" Type="Self.subcounty" Multiplicity="0..1" />
+    <End Role="crop_production_statistics" Type="Self.crop_production_statistics" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="subcounty">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="crop_production_statistics">
+        <PropertyRef Name="sub_county" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="fk_subcountycwd">
+    <End Role="subcounty" Type="Self.subcounty" Multiplicity="0..1" />
+    <End Role="county_weather_data" Type="Self.county_weather_data" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="subcounty">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="county_weather_data">
+        <PropertyRef Name="sub_county" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="fk_subcountydwd">
+    <End Role="subcounty" Type="Self.subcounty" Multiplicity="0..1" />
+    <End Role="disaster_warning_data" Type="Self.disaster_warning_data" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="subcounty">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="disaster_warning_data">
+        <PropertyRef Name="sub_county" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="fk_subcountyew">
+    <End Role="subcounty" Type="Self.subcounty" Multiplicity="0..1" />
+    <End Role="early_warning" Type="Self.early_warning" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="subcounty">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="early_warning">
+        <PropertyRef Name="sub_county" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="fk_subcountyfd">
+    <End Role="subcounty" Type="Self.subcounty" Multiplicity="0..1" />
+    <End Role="foodstocks_data" Type="Self.foodstocks_data" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="subcounty">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="foodstocks_data">
+        <PropertyRef Name="sub_county" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="fk_subcountygsf">
+    <End Role="subcounty" Type="Self.subcounty" Multiplicity="0..1" />
+    <End Role="govt_subsidized_fertilizer" Type="Self.govt_subsidized_fertilizer" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="subcounty">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="govt_subsidized_fertilizer">
+        <PropertyRef Name="sub_county" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="fk_subcountyica">
+    <End Role="subcounty" Type="Self.subcounty" Multiplicity="0..1" />
+    <End Role="input_cost_and_availability" Type="Self.input_cost_and_availability" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="subcounty">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="input_cost_and_availability">
+        <PropertyRef Name="sub_county" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="fk_subcountypf">
+    <End Role="subcounty" Type="Self.subcounty" Multiplicity="0..1" />
+    <End Role="planting_fertilizer" Type="Self.planting_fertilizer" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="subcounty">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="planting_fertilizer">
+        <PropertyRef Name="sub_county" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="fk_subcountypt">
+    <End Role="subcounty" Type="Self.subcounty" Multiplicity="0..1" />
+    <End Role="price_trend" Type="Self.price_trend" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="subcounty">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="price_trend">
+        <PropertyRef Name="sub_county" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="fk_subcountytdf">
+    <End Role="subcounty" Type="Self.subcounty" Multiplicity="0..1" />
+    <End Role="top_dressing_fertilizer" Type="Self.top_dressing_fertilizer" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="subcounty">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="top_dressing_fertilizer">
+        <PropertyRef Name="sub_county" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="fk_uai_ayii_policy">
+    <End Role="uai" Type="Self.uai" Multiplicity="0..1" />
+    <End Role="ayii_policy" Type="Self.ayii_policy" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="uai">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="ayii_policy">
+        <PropertyRef Name="uai" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="fk_uai_uai_variables">
+    <End Role="uai" Type="Self.uai" Multiplicity="0..1" />
+    <End Role="uai_variables" Type="Self.uai_variables" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="uai">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="uai_variables">
+        <PropertyRef Name="uai" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_uai_variables_season">
+    <End Role="season" Type="Self.season" Multiplicity="0..1" />
+    <End Role="uai_variables" Type="Self.uai_variables" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="season">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="uai_variables">
+        <PropertyRef Name="season" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="fk_uai_ward">
+    <End Role="ward" Type="Self.ward" Multiplicity="0..1" />
+    <End Role="uai" Type="Self.uai" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="ward">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="uai">
+        <PropertyRef Name="ward" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_uai_yield_crop">
+    <End Role="crop" Type="Self.crop" Multiplicity="0..1" />
+    <End Role="uai_yield" Type="Self.uai_yield" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="crop">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="uai_yield">
+        <PropertyRef Name="crop" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_uai_yield_season">
+    <End Role="season" Type="Self.season" Multiplicity="0..1" />
+    <End Role="uai_yield" Type="Self.uai_yield" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="season">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="uai_yield">
+        <PropertyRef Name="season" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_uai_yield_ward">
+    <End Role="ward" Type="Self.ward" Multiplicity="0..1" />
+    <End Role="uai_yield" Type="Self.uai_yield" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="ward">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="uai_yield">
+        <PropertyRef Name="ward" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityContainer Name="adimsModelStoreContainer">
+    <EntitySet Name="__MigrationHistory" EntityType="Self.__MigrationHistory" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="actual_cropcutting_exercise" EntityType="Self.actual_cropcutting_exercise" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="AspNetRoles" EntityType="Self.AspNetRoles" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="AspNetUserClaims" EntityType="Self.AspNetUserClaims" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="AspNetUserLogins" EntityType="Self.AspNetUserLogins" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="AspNetUserRoles" EntityType="Self.AspNetUserRoles" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="AspNetUsers" EntityType="Self.AspNetUsers" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="auditlog" EntityType="Self.auditlog" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="ayii_policy" EntityType="Self.ayii_policy" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="cce_actual_progress" EntityType="Self.cce_actual_progress" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="cce_pre_progress" EntityType="Self.cce_pre_progress" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="cce_queue_farms" EntityType="Self.cce_queue_farms" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="claimrequest" EntityType="Self.claimrequest" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="county" EntityType="Self.county" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="county_weather_data" EntityType="Self.county_weather_data" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="crop" EntityType="Self.crop" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="crop_cutting_queue" EntityType="Self.crop_cutting_queue" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="crop_production_statistics" EntityType="Self.crop_production_statistics" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="cropacreage" EntityType="Self.cropacreage" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="cropvariety" EntityType="Self.cropvariety" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="disaster_warning_data" EntityType="Self.disaster_warning_data" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="document" EntityType="Self.document" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="early_warning" EntityType="Self.early_warning" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="farm" EntityType="Self.farm" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="farm_actual_cropcutting_exercise" EntityType="Self.farm_actual_cropcutting_exercise" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="farm_policy" EntityType="Self.farm_policy" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="farm_policy_premium" EntityType="Self.farm_policy_premium" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="farm_preliminary_cropcutting_exercise" EntityType="Self.farm_preliminary_cropcutting_exercise" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="farmcoordinate" EntityType="Self.farmcoordinate" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="farmer" EntityType="Self.farmer" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="farmer_corp_progress" EntityType="Self.farmer_corp_progress" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="farmer_grp_progress" EntityType="Self.farmer_grp_progress" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="farmer_ind_progress" EntityType="Self.farmer_ind_progress" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="farmer_insurance" EntityType="Self.farmer_insurance" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="farmer_photo" EntityType="Self.farmer_photo" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="farmingmethod" EntityType="Self.farmingmethod" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="fertilizer" EntityType="Self.fertilizer" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="foodstocks_data" EntityType="Self.foodstocks_data" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="govt_subsidized_fertilizer" EntityType="Self.govt_subsidized_fertilizer" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="input_cost_and_availability" EntityType="Self.input_cost_and_availability" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="insurance_company" EntityType="Self.insurance_company" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="photo" EntityType="Self.photo" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="planting_fertilizer" EntityType="Self.planting_fertilizer" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="plantingmethod" EntityType="Self.plantingmethod" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="preliminary_cropcutting_exercise" EntityType="Self.preliminary_cropcutting_exercise" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="premium_rate" EntityType="Self.premium_rate" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="price_trend" EntityType="Self.price_trend" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="season" EntityType="Self.season" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="settings" EntityType="Self.settings" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="soiltype" EntityType="Self.soiltype" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="subcounty" EntityType="Self.subcounty" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="top_dressing_fertilizer" EntityType="Self.top_dressing_fertilizer" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="uai" EntityType="Self.uai" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="uai_variables" EntityType="Self.uai_variables" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="uai_yield" EntityType="Self.uai_yield" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="unitofmeasure" EntityType="Self.unitofmeasure" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="ward" EntityType="Self.ward" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="database_firewall_rules" EntityType="Self.database_firewall_rules" store:Type="Views" store:Schema="sys">
+      <DefiningQuery>SELECT 
+    [database_firewall_rules].[id] AS [id], 
+    [database_firewall_rules].[name] AS [name], 
+    [database_firewall_rules].[start_ip_address] AS [start_ip_address], 
+    [database_firewall_rules].[end_ip_address] AS [end_ip_address], 
+    [database_firewall_rules].[create_date] AS [create_date], 
+    [database_firewall_rules].[modify_date] AS [modify_date]
+    FROM [sys].[database_firewall_rules] AS [database_firewall_rules]</DefiningQuery>
+    </EntitySet>
+    <AssociationSet Name="FK_actual_cropcutting_exercise_county" Association="Self.FK_actual_cropcutting_exercise_county">
+      <End Role="county" EntitySet="county" />
+      <End Role="actual_cropcutting_exercise" EntitySet="actual_cropcutting_exercise" />
+    </AssociationSet>
+    <AssociationSet Name="FK_actual_cropcutting_exercise_subcounty" Association="Self.FK_actual_cropcutting_exercise_subcounty">
+      <End Role="subcounty" EntitySet="subcounty" />
+      <End Role="actual_cropcutting_exercise" EntitySet="actual_cropcutting_exercise" />
+    </AssociationSet>
+    <AssociationSet Name="FK_actual_cropcutting_exercise_ward" Association="Self.FK_actual_cropcutting_exercise_ward">
+      <End Role="ward" EntitySet="ward" />
+      <End Role="actual_cropcutting_exercise" EntitySet="actual_cropcutting_exercise" />
+    </AssociationSet>
+    <AssociationSet Name="fk_cce_queue_farms_queue" Association="Self.fk_cce_queue_farms_queue">
+      <End Role="crop_cutting_queue" EntitySet="crop_cutting_queue" />
+      <End Role="cce_queue_farms" EntitySet="cce_queue_farms" />
+    </AssociationSet>
+    <AssociationSet Name="fk_ccqcounty" Association="Self.fk_ccqcounty">
+      <End Role="county" EntitySet="county" />
+      <End Role="crop_cutting_queue" EntitySet="crop_cutting_queue" />
+    </AssociationSet>
+    <AssociationSet Name="fk_ccqfarm" Association="Self.fk_ccqfarm">
+      <End Role="cropacreage" EntitySet="cropacreage" />
+      <End Role="cce_queue_farms" EntitySet="cce_queue_farms" />
+    </AssociationSet>
+    <AssociationSet Name="fk_ccqpreliminary" Association="Self.fk_ccqpreliminary">
+      <End Role="preliminary_cropcutting_exercise" EntitySet="preliminary_cropcutting_exercise" />
+      <End Role="cce_queue_farms" EntitySet="cce_queue_farms" />
+    </AssociationSet>
+    <AssociationSet Name="fk_ccqseason" Association="Self.fk_ccqseason">
+      <End Role="season" EntitySet="season" />
+      <End Role="crop_cutting_queue" EntitySet="crop_cutting_queue" />
+    </AssociationSet>
+    <AssociationSet Name="fk_ccqsubcounty" Association="Self.fk_ccqsubcounty">
+      <End Role="subcounty" EntitySet="subcounty" />
+      <End Role="crop_cutting_queue" EntitySet="crop_cutting_queue" />
+    </AssociationSet>
+    <AssociationSet Name="fk_ccqward" Association="Self.fk_ccqward">
+      <End Role="ward" EntitySet="ward" />
+      <End Role="crop_cutting_queue" EntitySet="crop_cutting_queue" />
+    </AssociationSet>
+    <AssociationSet Name="FK_claimrequest_farm" Association="Self.FK_claimrequest_farm">
+      <End Role="farm" EntitySet="farm" />
+      <End Role="claimrequest" EntitySet="claimrequest" />
+    </AssociationSet>
+    <AssociationSet Name="FK_claimrequest_farm_policy" Association="Self.FK_claimrequest_farm_policy">
+      <End Role="farm_policy" EntitySet="farm_policy" />
+      <End Role="claimrequest" EntitySet="claimrequest" />
+    </AssociationSet>
+    <AssociationSet Name="fk_countycps" Association="Self.fk_countycps">
+      <End Role="county" EntitySet="county" />
+      <End Role="crop_production_statistics" EntitySet="crop_production_statistics" />
+    </AssociationSet>
+    <AssociationSet Name="fk_countycwd" Association="Self.fk_countycwd">
+      <End Role="county" EntitySet="county" />
+      <End Role="county_weather_data" EntitySet="county_weather_data" />
+    </AssociationSet>
+    <AssociationSet Name="fk_countydwd" Association="Self.fk_countydwd">
+      <End Role="county" EntitySet="county" />
+      <End Role="disaster_warning_data" EntitySet="disaster_warning_data" />
+    </AssociationSet>
+    <AssociationSet Name="fk_countyew" Association="Self.fk_countyew">
+      <End Role="county" EntitySet="county" />
+      <End Role="early_warning" EntitySet="early_warning" />
+    </AssociationSet>
+    <AssociationSet Name="fk_countyfd" Association="Self.fk_countyfd">
+      <End Role="county" EntitySet="county" />
+      <End Role="foodstocks_data" EntitySet="foodstocks_data" />
+    </AssociationSet>
+    <AssociationSet Name="fk_countygsf" Association="Self.fk_countygsf">
+      <End Role="county" EntitySet="county" />
+      <End Role="govt_subsidized_fertilizer" EntitySet="govt_subsidized_fertilizer" />
+    </AssociationSet>
+    <AssociationSet Name="fk_countyica" Association="Self.fk_countyica">
+      <End Role="county" EntitySet="county" />
+      <End Role="input_cost_and_availability" EntitySet="input_cost_and_availability" />
+    </AssociationSet>
+    <AssociationSet Name="fk_countypf" Association="Self.fk_countypf">
+      <End Role="county" EntitySet="county" />
+      <End Role="planting_fertilizer" EntitySet="planting_fertilizer" />
+    </AssociationSet>
+    <AssociationSet Name="fk_countypt" Association="Self.fk_countypt">
+      <End Role="county" EntitySet="county" />
+      <End Role="price_trend" EntitySet="price_trend" />
+    </AssociationSet>
+    <AssociationSet Name="fk_countytdf" Association="Self.fk_countytdf">
+      <End Role="county" EntitySet="county" />
+      <End Role="top_dressing_fertilizer" EntitySet="top_dressing_fertilizer" />
+    </AssociationSet>
+    <AssociationSet Name="FK_crop_cutting_queue_uai" Association="Self.FK_crop_cutting_queue_uai">
+      <End Role="uai" EntitySet="uai" />
+      <End Role="crop_cutting_queue" EntitySet="crop_cutting_queue" />
+    </AssociationSet>
+    <AssociationSet Name="FK_crop_plantingmethod" Association="Self.FK_crop_plantingmethod">
+      <End Role="plantingmethod" EntitySet="plantingmethod" />
+      <End Role="crop" EntitySet="crop" />
+    </AssociationSet>
+    <AssociationSet Name="FK_crop_unitofmeasure" Association="Self.FK_crop_unitofmeasure">
+      <End Role="unitofmeasure" EntitySet="unitofmeasure" />
+      <End Role="crop" EntitySet="crop" />
+    </AssociationSet>
+    <AssociationSet Name="fk_cropacreage_ayii_policy" Association="Self.fk_cropacreage_ayii_policy">
+      <End Role="cropacreage" EntitySet="cropacreage" />
+      <End Role="ayii_policy" EntitySet="ayii_policy" />
+    </AssociationSet>
+    <AssociationSet Name="FK_cropacreage_crop" Association="Self.FK_cropacreage_crop">
+      <End Role="crop" EntitySet="crop" />
+      <End Role="cropacreage" EntitySet="cropacreage" />
+    </AssociationSet>
+    <AssociationSet Name="FK_cropacreage_cropvariety" Association="Self.FK_cropacreage_cropvariety">
+      <End Role="cropvariety" EntitySet="cropvariety" />
+      <End Role="cropacreage" EntitySet="cropacreage" />
+    </AssociationSet>
+    <AssociationSet Name="FK_cropacreage_farm" Association="Self.FK_cropacreage_farm">
+      <End Role="farm" EntitySet="farm" />
+      <End Role="cropacreage" EntitySet="cropacreage" />
+    </AssociationSet>
+    <AssociationSet Name="FK_cropvariety_crop" Association="Self.FK_cropvariety_crop">
+      <End Role="crop" EntitySet="crop" />
+      <End Role="cropvariety" EntitySet="cropvariety" />
+    </AssociationSet>
+    <AssociationSet Name="FK_dbo_AspNetUserClaims_dbo_AspNetUsers_UserId" Association="Self.FK_dbo_AspNetUserClaims_dbo_AspNetUsers_UserId">
+      <End Role="AspNetUsers" EntitySet="AspNetUsers" />
+      <End Role="AspNetUserClaims" EntitySet="AspNetUserClaims" />
+    </AssociationSet>
+    <AssociationSet Name="FK_dbo_AspNetUserLogins_dbo_AspNetUsers_UserId" Association="Self.FK_dbo_AspNetUserLogins_dbo_AspNetUsers_UserId">
+      <End Role="AspNetUsers" EntitySet="AspNetUsers" />
+      <End Role="AspNetUserLogins" EntitySet="AspNetUserLogins" />
+    </AssociationSet>
+    <AssociationSet Name="FK_dbo_AspNetUserRoles_dbo_AspNetRoles_RoleId" Association="Self.FK_dbo_AspNetUserRoles_dbo_AspNetRoles_RoleId">
+      <End Role="AspNetRoles" EntitySet="AspNetRoles" />
+      <End Role="AspNetUserRoles" EntitySet="AspNetUserRoles" />
+    </AssociationSet>
+    <AssociationSet Name="FK_dbo_AspNetUserRoles_dbo_AspNetUsers_UserId" Association="Self.FK_dbo_AspNetUserRoles_dbo_AspNetUsers_UserId">
+      <End Role="AspNetUsers" EntitySet="AspNetUsers" />
+      <End Role="AspNetUserRoles" EntitySet="AspNetUserRoles" />
+    </AssociationSet>
+    <AssociationSet Name="FK_farm_actual_cropcutting_exercise_farm" Association="Self.FK_farm_actual_cropcutting_exercise_farm">
+      <End Role="cropacreage" EntitySet="cropacreage" />
+      <End Role="farm_actual_cropcutting_exercise" EntitySet="farm_actual_cropcutting_exercise" />
+    </AssociationSet>
+    <AssociationSet Name="FK_farm_actual_cropcutting_exercise_season" Association="Self.FK_farm_actual_cropcutting_exercise_season">
+      <End Role="season" EntitySet="season" />
+      <End Role="farm_actual_cropcutting_exercise" EntitySet="farm_actual_cropcutting_exercise" />
+    </AssociationSet>
+    <AssociationSet Name="FK_farm_county" Association="Self.FK_farm_county">
+      <End Role="county" EntitySet="county" />
+      <End Role="farm" EntitySet="farm" />
+    </AssociationSet>
+    <AssociationSet Name="FK_farm_farmer" Association="Self.FK_farm_farmer">
+      <End Role="farmer" EntitySet="farmer" />
+      <End Role="farm" EntitySet="farm" />
+    </AssociationSet>
+    <AssociationSet Name="FK_farm_farmingmethod" Association="Self.FK_farm_farmingmethod">
+      <End Role="farmingmethod" EntitySet="farmingmethod" />
+      <End Role="farm" EntitySet="farm" />
+    </AssociationSet>
+    <AssociationSet Name="fk_farm_policy_crop" Association="Self.fk_farm_policy_crop">
+      <End Role="crop" EntitySet="crop" />
+      <End Role="farm_policy" EntitySet="farm_policy" />
+    </AssociationSet>
+    <AssociationSet Name="fk_farm_policy_premium" Association="Self.fk_farm_policy_premium">
+      <End Role="farm_policy" EntitySet="farm_policy" />
+      <End Role="farm_policy_premium" EntitySet="farm_policy_premium" />
+    </AssociationSet>
+    <AssociationSet Name="FK_farm_preliminary_cropcutting_exercise_farm" Association="Self.FK_farm_preliminary_cropcutting_exercise_farm">
+      <End Role="cropacreage" EntitySet="cropacreage" />
+      <End Role="farm_preliminary_cropcutting_exercise" EntitySet="farm_preliminary_cropcutting_exercise" />
+    </AssociationSet>
+    <AssociationSet Name="FK_farm_preliminary_cropcutting_exercise_preliminary_cropcutting_exercise" Association="Self.FK_farm_preliminary_cropcutting_exercise_preliminary_cropcutting_exercise">
+      <End Role="preliminary_cropcutting_exercise" EntitySet="preliminary_cropcutting_exercise" />
+      <End Role="farm_preliminary_cropcutting_exercise" EntitySet="farm_preliminary_cropcutting_exercise" />
+    </AssociationSet>
+    <AssociationSet Name="FK_farm_preliminary_cropcutting_exercise_season" Association="Self.FK_farm_preliminary_cropcutting_exercise_season">
+      <End Role="season" EntitySet="season" />
+      <End Role="farm_preliminary_cropcutting_exercise" EntitySet="farm_preliminary_cropcutting_exercise" />
+    </AssociationSet>
+    <AssociationSet Name="FK_farm_soiltype" Association="Self.FK_farm_soiltype">
+      <End Role="soiltype" EntitySet="soiltype" />
+      <End Role="farm" EntitySet="farm" />
+    </AssociationSet>
+    <AssociationSet Name="FK_farm_ward" Association="Self.FK_farm_ward">
+      <End Role="ward" EntitySet="ward" />
+      <End Role="farm" EntitySet="farm" />
+    </AssociationSet>
+    <AssociationSet Name="FK_farmcoordinate_farm" Association="Self.FK_farmcoordinate_farm">
+      <End Role="farm" EntitySet="farm" />
+      <End Role="farmcoordinate" EntitySet="farmcoordinate" />
+    </AssociationSet>
+    <AssociationSet Name="fk_farmer_ayii_policy" Association="Self.fk_farmer_ayii_policy">
+      <End Role="farmer" EntitySet="farmer" />
+      <End Role="ayii_policy" EntitySet="ayii_policy" />
+    </AssociationSet>
+    <AssociationSet Name="FK_farmer_county" Association="Self.FK_farmer_county">
+      <End Role="county" EntitySet="county" />
+      <End Role="farmer" EntitySet="farmer" />
+    </AssociationSet>
+    <AssociationSet Name="fk_farmer_farmerinsurance" Association="Self.fk_farmer_farmerinsurance">
+      <End Role="farmer" EntitySet="farmer" />
+      <End Role="farmer_insurance" EntitySet="farmer_insurance" />
+    </AssociationSet>
+    <AssociationSet Name="fk_farmer_policypremium" Association="Self.fk_farmer_policypremium">
+      <End Role="farmer" EntitySet="farmer" />
+      <End Role="farm_policy_premium" EntitySet="farm_policy_premium" />
+    </AssociationSet>
+    <AssociationSet Name="FK_farmer_ward" Association="Self.FK_farmer_ward">
+      <End Role="ward" EntitySet="ward" />
+      <End Role="farmer" EntitySet="farmer" />
+    </AssociationSet>
+    <AssociationSet Name="fk_farmerid" Association="Self.fk_farmerid">
+      <End Role="farmer" EntitySet="farmer" />
+      <End Role="farmer_photo" EntitySet="farmer_photo" />
+    </AssociationSet>
+    <AssociationSet Name="fk_farmid" Association="Self.fk_farmid">
+      <End Role="farm" EntitySet="farm" />
+      <End Role="farm_policy" EntitySet="farm_policy" />
+    </AssociationSet>
+    <AssociationSet Name="fk_insurancecompany" Association="Self.fk_insurancecompany">
+      <End Role="insurance_company" EntitySet="insurance_company" />
+      <End Role="farm_policy" EntitySet="farm_policy" />
+    </AssociationSet>
+    <AssociationSet Name="fk_photoid" Association="Self.fk_photoid">
+      <End Role="photo" EntitySet="photo" />
+      <End Role="farmer_photo" EntitySet="farmer_photo" />
+    </AssociationSet>
+    <AssociationSet Name="FK_preliminary_cropcutting_exercise_county" Association="Self.FK_preliminary_cropcutting_exercise_county">
+      <End Role="county" EntitySet="county" />
+      <End Role="preliminary_cropcutting_exercise" EntitySet="preliminary_cropcutting_exercise" />
+    </AssociationSet>
+    <AssociationSet Name="FK_preliminary_cropcutting_exercise_crop" Association="Self.FK_preliminary_cropcutting_exercise_crop">
+      <End Role="crop" EntitySet="crop" />
+      <End Role="preliminary_cropcutting_exercise" EntitySet="preliminary_cropcutting_exercise" />
+    </AssociationSet>
+    <AssociationSet Name="FK_preliminary_cropcutting_exercise_subcounty" Association="Self.FK_preliminary_cropcutting_exercise_subcounty">
+      <End Role="subcounty" EntitySet="subcounty" />
+      <End Role="preliminary_cropcutting_exercise" EntitySet="preliminary_cropcutting_exercise" />
+    </AssociationSet>
+    <AssociationSet Name="FK_preliminary_cropcutting_exercise_ward" Association="Self.FK_preliminary_cropcutting_exercise_ward">
+      <End Role="ward" EntitySet="ward" />
+      <End Role="preliminary_cropcutting_exercise" EntitySet="preliminary_cropcutting_exercise" />
+    </AssociationSet>
+    <AssociationSet Name="fk_season_ayii_policy" Association="Self.fk_season_ayii_policy">
+      <End Role="season" EntitySet="season" />
+      <End Role="ayii_policy" EntitySet="ayii_policy" />
+    </AssociationSet>
+    <AssociationSet Name="fk_seasoncps" Association="Self.fk_seasoncps">
+      <End Role="season" EntitySet="season" />
+      <End Role="crop_production_statistics" EntitySet="crop_production_statistics" />
+    </AssociationSet>
+    <AssociationSet Name="fk_seasoncwd" Association="Self.fk_seasoncwd">
+      <End Role="season" EntitySet="season" />
+      <End Role="county_weather_data" EntitySet="county_weather_data" />
+    </AssociationSet>
+    <AssociationSet Name="fk_seasondwd" Association="Self.fk_seasondwd">
+      <End Role="season" EntitySet="season" />
+      <End Role="disaster_warning_data" EntitySet="disaster_warning_data" />
+    </AssociationSet>
+    <AssociationSet Name="fk_seasonew" Association="Self.fk_seasonew">
+      <End Role="season" EntitySet="season" />
+      <End Role="early_warning" EntitySet="early_warning" />
+    </AssociationSet>
+    <AssociationSet Name="fk_seasonfd" Association="Self.fk_seasonfd">
+      <End Role="season" EntitySet="season" />
+      <End Role="foodstocks_data" EntitySet="foodstocks_data" />
+    </AssociationSet>
+    <AssociationSet Name="fk_seasongsf" Association="Self.fk_seasongsf">
+      <End Role="season" EntitySet="season" />
+      <End Role="govt_subsidized_fertilizer" EntitySet="govt_subsidized_fertilizer" />
+    </AssociationSet>
+    <AssociationSet Name="fk_seasonica" Association="Self.fk_seasonica">
+      <End Role="season" EntitySet="season" />
+      <End Role="input_cost_and_availability" EntitySet="input_cost_and_availability" />
+    </AssociationSet>
+    <AssociationSet Name="fk_seasonpf" Association="Self.fk_seasonpf">
+      <End Role="season" EntitySet="season" />
+      <End Role="planting_fertilizer" EntitySet="planting_fertilizer" />
+    </AssociationSet>
+    <AssociationSet Name="fk_seasonpt" Association="Self.fk_seasonpt">
+      <End Role="season" EntitySet="season" />
+      <End Role="price_trend" EntitySet="price_trend" />
+    </AssociationSet>
+    <AssociationSet Name="fk_seasontdf" Association="Self.fk_seasontdf">
+      <End Role="season" EntitySet="season" />
+      <End Role="top_dressing_fertilizer" EntitySet="top_dressing_fertilizer" />
+    </AssociationSet>
+    <AssociationSet Name="FK_subcounty_county" Association="Self.FK_subcounty_county">
+      <End Role="county" EntitySet="county" />
+      <End Role="subcounty" EntitySet="subcounty" />
+    </AssociationSet>
+    <AssociationSet Name="fk_subcountycps" Association="Self.fk_subcountycps">
+      <End Role="subcounty" EntitySet="subcounty" />
+      <End Role="crop_production_statistics" EntitySet="crop_production_statistics" />
+    </AssociationSet>
+    <AssociationSet Name="fk_subcountycwd" Association="Self.fk_subcountycwd">
+      <End Role="subcounty" EntitySet="subcounty" />
+      <End Role="county_weather_data" EntitySet="county_weather_data" />
+    </AssociationSet>
+    <AssociationSet Name="fk_subcountydwd" Association="Self.fk_subcountydwd">
+      <End Role="subcounty" EntitySet="subcounty" />
+      <End Role="disaster_warning_data" EntitySet="disaster_warning_data" />
+    </AssociationSet>
+    <AssociationSet Name="fk_subcountyew" Association="Self.fk_subcountyew">
+      <End Role="subcounty" EntitySet="subcounty" />
+      <End Role="early_warning" EntitySet="early_warning" />
+    </AssociationSet>
+    <AssociationSet Name="fk_subcountyfd" Association="Self.fk_subcountyfd">
+      <End Role="subcounty" EntitySet="subcounty" />
+      <End Role="foodstocks_data" EntitySet="foodstocks_data" />
+    </AssociationSet>
+    <AssociationSet Name="fk_subcountygsf" Association="Self.fk_subcountygsf">
+      <End Role="subcounty" EntitySet="subcounty" />
+      <End Role="govt_subsidized_fertilizer" EntitySet="govt_subsidized_fertilizer" />
+    </AssociationSet>
+    <AssociationSet Name="fk_subcountyica" Association="Self.fk_subcountyica">
+      <End Role="subcounty" EntitySet="subcounty" />
+      <End Role="input_cost_and_availability" EntitySet="input_cost_and_availability" />
+    </AssociationSet>
+    <AssociationSet Name="fk_subcountypf" Association="Self.fk_subcountypf">
+      <End Role="subcounty" EntitySet="subcounty" />
+      <End Role="planting_fertilizer" EntitySet="planting_fertilizer" />
+    </AssociationSet>
+    <AssociationSet Name="fk_subcountypt" Association="Self.fk_subcountypt">
+      <End Role="subcounty" EntitySet="subcounty" />
+      <End Role="price_trend" EntitySet="price_trend" />
+    </AssociationSet>
+    <AssociationSet Name="fk_subcountytdf" Association="Self.fk_subcountytdf">
+      <End Role="subcounty" EntitySet="subcounty" />
+      <End Role="top_dressing_fertilizer" EntitySet="top_dressing_fertilizer" />
+    </AssociationSet>
+    <AssociationSet Name="fk_uai_ayii_policy" Association="Self.fk_uai_ayii_policy">
+      <End Role="uai" EntitySet="uai" />
+      <End Role="ayii_policy" EntitySet="ayii_policy" />
+    </AssociationSet>
+    <AssociationSet Name="fk_uai_uai_variables" Association="Self.fk_uai_uai_variables">
+      <End Role="uai" EntitySet="uai" />
+      <End Role="uai_variables" EntitySet="uai_variables" />
+    </AssociationSet>
+    <AssociationSet Name="FK_uai_variables_season" Association="Self.FK_uai_variables_season">
+      <End Role="season" EntitySet="season" />
+      <End Role="uai_variables" EntitySet="uai_variables" />
+    </AssociationSet>
+    <AssociationSet Name="fk_uai_ward" Association="Self.fk_uai_ward">
+      <End Role="ward" EntitySet="ward" />
+      <End Role="uai" EntitySet="uai" />
+    </AssociationSet>
+    <AssociationSet Name="FK_uai_yield_crop" Association="Self.FK_uai_yield_crop">
+      <End Role="crop" EntitySet="crop" />
+      <End Role="uai_yield" EntitySet="uai_yield" />
+    </AssociationSet>
+    <AssociationSet Name="FK_uai_yield_season" Association="Self.FK_uai_yield_season">
+      <End Role="season" EntitySet="season" />
+      <End Role="uai_yield" EntitySet="uai_yield" />
+    </AssociationSet>
+    <AssociationSet Name="FK_uai_yield_ward" Association="Self.FK_uai_yield_ward">
+      <End Role="ward" EntitySet="ward" />
+      <End Role="uai_yield" EntitySet="uai_yield" />
+    </AssociationSet>
+  </EntityContainer>
+</Schema>

@@ -1,0 +1,166 @@
+﻿@using ADIMS.Models
+@model ADIMS.ViewModels.AYII.UpdateUAIVariablesViewModel
+@{
+    ViewBag.Title = "Update UAI Variables";
+    Layout = "~/Views/Shared/_AdimsLayout.cshtml";
+
+    ViewBag.Controller = "AYII";
+    ViewBag.Action = "Update";
+
+    var uai = (uai)ViewBag.uai;
+    var seasons = (List<season>)ViewBag.seasons;
+}
+
+<script>
+
+    function fetchAverageYield() {
+
+        var APP_URL = location.protocol + "//" + location.host + "/";
+
+        $("#average_yield").empty();
+
+        var uai = $("#uai_code").val();
+        var season = $("#season").val();
+        var year = $("#year").val();
+
+        console.log('Function called here');
+        
+
+        var data_url = APP_URL + "api/ayii/averageyield?uai="+ uai + "&season=" + season + "&year=" + year;
+        console.log(data_url);
+        $.get(data_url, function (data, status) {
+            $("#average_yield").val(data);
+        })
+
+        //$.ajax({
+        //    type: 'GET',
+        //    url: APP_URL +'api/ayii/averageyield?uai='+uai+'&season='+season+'&year='+year,
+        //    datatype: 'json',
+        //    success: function (average) {
+        //        $("#average_yield").val(average);
+        //    },
+        //    error: function (ex) {
+        //        alert('Sorry, no data found' + ex);
+        //    }
+        //});
+
+    };
+
+</script>
+
+<div class="row">
+    <div class="col-lg-12">
+        <div class="ibox float-e-margins">
+
+            <div class="ibox-title">
+                <h5><img style="height:30px;width:30px;" src="~/icons/field.png" />  Update UAI Variables</h5>
+                <div class="ibox-tools">
+                    <a class="collapse-link">
+                        <i class="fa fa-chevron-up"></i>
+                    </a>
+                </div>
+            </div>
+
+            <div class="ibox-content">
+
+                @using (Html.BeginForm("UpdateUAIVariables", "AYII", new { uai = uai.id }, FormMethod.Post))
+                {
+                    @Html.AntiForgeryToken()
+                    <div class="row" style="margin-top:15px;">
+
+                        <div class="col-md-4">
+                            <div class="form-group">
+                                <label>UAI Name</label><br />
+                                <div class="col-md-12" style="padding-left:0px;">
+                                    @Html.TextBox("uai_name",uai.name, new { @class = "form-control" })
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-md-4">
+                            <div class="form-group">
+                                <label>UAI Code</label><br />
+                                <div class="col-md-12" style="padding-left:0px;">
+                                    @Html.TextBox("uai_code",uai.code, new { @class = "form-control" })
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="row" style="margin-top:15px;">
+
+                        <div class="col-md-4">
+                            <div class="form-group">
+                                <label>Season</label><br />
+                                <div class="col-md-12" style="padding-left:0px;">
+                                    @Html.DropDownListFor(model => model.season, new SelectList(seasons, "id", "name"), new { @class = "form-control" })
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-md-4">
+                            <div class="form-group">
+                                <label>Year</label><br />
+                                <div class="col-md-12" style="padding-left:0px;">
+                                    @Html.TextBoxFor(model => model.year, new { @class = "form-control" })
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="row" style="margin-top:15px;">
+
+                        <div class="col-md-4">
+                            <div class="form-group">
+                                <label>Trigger Value (Bags/Acre)</label><br />
+                                <div class="col-md-12" style="padding-left:0px;">
+                                   @Html.TextBoxFor(model => model.historical_average, new { @class = "form-control" })
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-md-4">
+                            <div class="form-group">
+                                <label>Unit Value (Kshs/Kg)</label><br />
+                                <div class="col-md-12" style="padding-left:0px;">
+                                    @Html.TextBoxFor(model => model.unit_value, new { @class = "form-control" })
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    
+                    <div class="row">
+                        <div class="form-group" style="margin-top:15px;">
+                            <div class="col-md-10">
+                                <a href='javascript:;' class="btn btn-primary" onclick='fetchAverageYield();'>Compute Average</a>
+                                <span>(Computed based on data from crop cutting results)</span>
+                            </div>
+                            
+                        </div>
+                    </div>
+
+                    <div class="row" style="margin-top:15px;">
+                        <div class="col-md-4">
+                            <div class="form-group">
+                                <label>Average Yield (Bags/Acre)</label><br />
+                                <div class="col-md-12" style="padding-left:0px;">
+                                    @Html.TextBoxFor(model => model.average_yield, new { @class = "form-control" })
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="row" style="margin-top:15px;">
+                        <div class="col-md-10">
+                            <input type="submit" value="Submit" class="btn btn-primary" />
+                        </div>
+                    </div>
+
+                    
+                  }
+
+                    </div>
+        </div>
+    </div>
+</div>

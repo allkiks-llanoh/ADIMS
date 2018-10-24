@@ -1,0 +1,112 @@
+﻿@model ADIMS.Models.crop_cutting_queue
+@using ADIMS.Models
+@using ADIMS.ViewModels
+@{
+    ViewBag.Title = "CCE Queue Details";
+    ViewBag.Action = "cce queue";
+    ViewBag.Controller = "Crop Insurance";
+
+    Layout = "~/Views/Shared/_AdimsLayout.cshtml";
+
+    //var farms = (List<>)ViewBag.farms;
+}
+
+<div class="row">
+
+</div>
+
+<div class="row">
+    <div class="col-lg-12">
+        <div class="ibox float-e-margins">
+            <div class="ibox-title">
+                <p>Queue name : <strong>@Model.name</strong></p>
+                <div class="ibox-tools">
+                   @if(User.IsInRole("Administrator"))
+                   {
+                    <a href="/cropinsurance/editqueue?id=@Model.id" class="btn btn-primary btn-rounded">&nbsp;Edit Queue&nbsp;</a>
+                    <a href="/cropinsurance/deletequeue?id=@Model.id" class="btn btn-danger btn-rounded">&nbsp;Delete Queue&nbsp;</a>
+                   }
+                    
+                </div>
+            </div>
+            <div class="ibox-content">
+                @* First Row will be Summary *@
+                <div class="row">
+
+                </div>
+
+                <div class="row">
+                    <div>
+                        <table class="table table-striped">
+                            <thead>
+                                <tr>
+                                    <th></th>
+                                    <th>Area (Ha)</th>
+                                    <th>Farmer</th>
+                                    <th>Preliminary </th>
+                                    <th>Actual</th>
+                                    <th>Actions</th>
+
+                                    
+                                </tr>
+                            </thead>
+                            <tbody>
+                                @foreach (var farm in Model.cce_queue_farms)
+                                {
+                                    <tr>
+                                        <td><img height="30" width="30" src="~/icons/field.png" /></td>
+                                        <td><a href="/farmers/details?id=@(farm.cropacreage1?.farm?.farmerid)">@(farm.cropacreage1?.farm?.farmer?.name)</a></td>
+                                        <td>@(farm?.cropacreage1?.acreage) Ha</td>
+                                        <td>
+                                            @* Preliminary Crop Cutting Here *@
+                                            @{
+                                                
+                                                    if (farm.preliminary_status == "Pending" || string.IsNullOrWhiteSpace(farm.preliminary_status))
+                                                    {
+                                                        <a href="/CropInsurance/Preliminary/?cropacreage=@(farm?.cropacreage1?.id)&queue=@Model.id" class="btn btn-sm btn-primary btn-rounded">Preliminary</a>
+
+                                                    }
+                                                    else if (farm.preliminary_status == "Complete")
+                                                    {
+                                                        <a href="#" class="label  label-success">Pleliminary Complete!</a>
+
+                                                    }
+                                             
+                                            }
+                                        </td>
+                                        <td>
+                                            @* Actual Crop Cutting Here *@
+                                            @{
+                                                
+                                                    if (farm.actual_status == "Pending" || string.IsNullOrWhiteSpace(farm.actual_status))
+                                                    {
+                                                        <a href="/CropInsurance/ActualCropCutting/?cropacreage=@(farm?.cropacreage1?.id)&queue=@Model.id" class="btn btn-sm btn-primary btn-rounded">Actual</a>
+                                                    }
+                                                    else if (farm.actual_status == "Complete")
+                                                    {
+                                                        <a href="#" class="label label-success">Actual CCE Completed!</a>
+                                                    }
+                                              
+                                            }
+                                        </td> 
+                                        <td>
+                                            <a href="/cropinsurance/Removefromqueue?queue=@Model.id&item=@farm.id" class="btn btn-rounded btn-danger">Remove from queue</a>
+                                        
+                                            @{
+                                                if (farm.preliminary_status == "Complete" && farm.actual_status == "Complete")
+                                                {
+                                                    <a href="/cropinsurance/CropCuttingResults?cce_farm=@farm.id" class="btn btn-rounded btn-info">View Results</a>
+                                                }
+                                            }
+                                        </td>
+                                    </tr>
+                                }
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+</div>

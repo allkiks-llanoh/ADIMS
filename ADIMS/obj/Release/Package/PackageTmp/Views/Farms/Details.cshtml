@@ -1,0 +1,292 @@
+﻿@model ADIMS.Models.farm
+@using Jmelosegui.Mvc.GoogleMap
+@{
+    ViewBag.Title = "Farm Details";
+
+    ViewBag.Action = "Details";
+    ViewBag.Controller = "Farms";
+
+    Layout = "~/Views/Shared/_AdimsLayout.cshtml";
+    double? longitude = Model?.farmcoordinates?.FirstOrDefault()?.longitude ?? 0.0;
+    double? latitude = Model?.farmcoordinates?.FirstOrDefault()?.latitude ?? 0.0;
+    double? altitude = Model?.farmcoordinates?.FirstOrDefault()?.altitude ?? 0.0;
+
+    string subcounty = (string)ViewBag.subcounty ?? "";
+}
+<style>
+    #map {
+        height: 400px;
+        width: 100%;
+    }
+</style>
+
+<script>
+      function initMap() {
+        var farm = {lat: @latitude, lng: @longitude};
+        var map = new google.maps.Map(document.getElementById('map'), {
+          zoom: 8,
+          center: farm
+        });
+        var marker = new google.maps.Marker({
+          position: farm,
+          map: map
+        });
+      }
+</script>
+
+<script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCQbK0lEQFerli_qFfoXGw8tkKCOXBCgW0&callback=initMap">
+</script>
+
+
+
+<div class="row m-b-lg m-t-lg" style="margin-bottom:5px;">
+    <div class="col-md-6">
+
+        <div class="profile-image">
+            <img src="~/icons/user_icon.png" class="img-circle circle-border m-b-md" alt="profile">
+        </div>
+        <div class="profile-info">
+            <div class="">
+                <div>
+                    <h2 class="no-margins">
+                        @Model.farmer.firstname @Model.farmer.middlename @Model.farmer.lastname
+                    </h2>
+                    <h4>@Model.farmer.adimsid</h4>
+                    <small>
+                        Farmer in @(Model.farmer?.county1?.name ?? "")
+                    </small>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="col-md-3">
+        <table class="table small m-b-xs"></table>
+    </div>
+    <div class="col-md-3">
+
+    </div>
+
+
+</div>
+
+<div class="row">
+    <div class="col-lg-12">
+        <div class="ibox float-e-margins">
+            <div class="ibox-title">
+                <h5>Farm Details</h5>
+                <div class="ibox-tools">
+                    <a href="/farms/edit?id=@Model.id" style="color:white;" class="btn btn-primary btn-rounded">&nbsp;Edit&nbsp;</a>
+
+                </div>
+            </div>
+            <div class="ibox-content">
+
+                <div class="row">
+
+                    <div class="col-md-12">
+
+                        <div class="row">
+                            <div class="col-md-4">
+                                <div class="form-group">
+                                    <label>Identifier:</label>
+                                    <span class="col-md-12" style="padding-left:0px;font-size:20px;font-weight:bold;color:#1ab394;">
+                                        @Model.name
+                                    </span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row" style="margin-top:15px;">
+                            <div class="col-md-3">
+                                <div class="form-group">
+                                    <label style="font-weight:bold;">Farm Area(Hectares)</label><br />
+                                    <span class="col-md-12" style="padding-left:0px;font-size:20px;">
+                                        @Model.area
+                                    </span>
+                                </div>
+                            </div>
+                            <div class="col-md-3">
+                                <div class="form-group">
+                                    <label>LR Number</label><br />
+                                    <span class="col-md-12" style="padding-left:0px;font-size:20px;">
+                                        @Model.lrnumber
+                                    </span>
+                                </div>
+                            </div>
+                            <div class="col-md-3">
+                                <div class="form-group">
+                                    <label>Topography</label><br />
+                                    <span class="col-md-12" style="padding-left:0px;font-size:20px;">
+                                        @Model.topography
+                                    </span>
+                                </div>
+                            </div>
+
+                        </div>
+
+                        <div class="row" style="margin-top:15px;">
+                            <div class="col-md-4">
+                                <div class="form-group">
+                                    <label style="font-weight:bold;">Soil Type</label><br />
+                                    <span class="col-md-12" style="padding-left:0px;font-size:20px;">
+                                        @(Model.soiltype1?.name ?? "")
+                                    </span>
+                                </div>
+                            </div>
+
+                        </div>
+
+                        <div class="row" style="margin-top:15px;">
+                            <div class="col-md-4">
+                                <div class="form-group">
+                                    <label style="font-weight:bold;">County</label><br />
+                                    <span class="col-md-12" style="padding-left:0px;font-size:20px;">
+                                        @(Model.county?.name ?? "")
+                                    </span>
+                                </div>
+                            </div>
+
+                            <div class="col-md-4">
+                                <div class="form-group">
+                                    <label style="font-weight:bold;">Sub County</label><br />
+                                    <span class="col-md-12" style="padding-left:0px;font-size:20px;">
+                                        @subcounty
+                                    </span>
+                                </div>
+                            </div>
+
+                            <div class="col-md-4">
+                                <div class="form-group">
+                                    <label style="font-weight:bold;">Ward</label><br />
+                                    <span class="col-md-12" style="padding-left:0px;font-size:20px;">
+                                        @(Model.ward?.name ?? "")
+                                    </span>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+
+                </div>
+
+                @*<a>Add To </a>*@
+
+            </div>
+
+        </div>
+    </div>
+</div>
+
+<div class="row">
+    <div class="col-lg-6">
+        <div class="ibox">
+            <div class="ibox-title">
+                <h5> Crops</h5>
+                <div class="ibox-tools">
+                    <a href="/farms/addcrops/?farm=@Model.id" style="color:white;" class="btn btn-primary btn-rounded">&nbsp;Add Crops&nbsp;</a>
+                </div>
+            </div>
+            <div class="ibox-content">
+                <div>
+                    <table class="table table-striped">
+                        <tbody>
+                            @foreach (var cropacreage in Model.cropacreages)
+                            {
+                                <tr>
+                                    <td><img height="30px" width="30px" src="~/icons/crop.png" /></td>
+                                    <td style="vertical-align:middle;font-weight:bold;">@cropacreage.crop.name</td>
+                                    <td style="vertical-align:middle;">@cropacreage.cropvariety.name</td>
+                                    <td style="vertical-align:middle;">@cropacreage.acreage (Ha)</td>
+                                    <td> <a href="" class="btn btn-info btn-rounded btn-sm pull-right">&nbsp;View&nbsp;</a> </td>
+                                </tr>
+                            }
+
+
+                        <tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    @* INsurance Goes here *@
+    <div class="col-lg-6">
+        <div class="ibox">
+            <div class="ibox-title">
+                <h5> Insurance</h5>
+                <div class="ibox-tools">
+                    @if (Model.cropacreages.Count > 0)
+                    {
+                        <a href="/cropinsurance/addfarmpolicy/?farm=@Model.id" style="color:white;" class="btn btn-primary btn-rounded">&nbsp;Add Insurance Policy&nbsp;</a>
+                    }
+                    else
+                    {
+                        /**/<a href="" style="color:white;" class="btn btn-danger btn-rounded">&nbsp;No crops to Insure&nbsp;</a>
+                    }
+                </div>
+            </div>
+            <div class="ibox-content">
+                <div>
+                    <table class="table table-striped">
+                        <tbody>
+                            @*@foreach (var policy in Model.farm_policy)
+                            {
+                                <tr>
+                                    <td style="vertical-align:middle;font-weight:bold;">@policy.insurance_company.initials-@policy.id</td>
+                                    <td style="vertical-align:middle;">@policy.insurance_company.name</td>
+                                    <td style="vertical-align:middle;">@policy.sum_insured</td>
+                                    <td> <a href="/cropinsurance/policydetails?id=@policy.id" class="btn btn-info btn-rounded btn-m pull-right">&nbsp;View&nbsp;</a> </td>
+                                </tr>
+                            }*@
+                        <tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="row">
+    
+    <div class="col-lg-6">
+        <div class="ibox">
+            <div class="ibox-title">
+                <h5> Farm Location (Map)</h5>
+                <div class="ibox-tools">
+
+                </div>
+            </div>
+            @{
+
+            }
+            @*<div class="ibox-content">
+                    <p>
+
+                        Longitude : @longitude
+                    </p>
+                    <p>
+                        Latitude : @latitude
+                    </p>
+                    <p>
+                        Altitude : @altitude
+                    </p>
+                </div>*@
+            <div>
+                <div id="map"></div>
+                @*@(Html.GoogleMap()
+                    .Name("map")
+                    .Height(500)
+                    .ApiKey("AIzaSyCQbK0lEQFerli_qFfoXGw8tkKCOXBCgW0")
+                    .Center(c => c.Latitude(latitude.GetValueOrDefault())
+                              .Longitude(longitude.GetValueOrDefault()))
+                    .Markers(m => m.Add().Title(Model.id.ToString()))
+                    )*@
+            </div>
+        </div>
+    </div>
+
+</div>
+
+@*@section scripts
+{
+    @(Html.GoogleMap().ScriptRegistrar())
+}*@

@@ -1,0 +1,432 @@
+﻿@model ADIMS.ViewModels.AddFarmerCorporateViewModel
+@{
+    ViewBag.Title = "Add Farmer Corporate";
+
+    ViewBag.Action = "Add Farmer Corporate";
+    ViewBag.Controller = "FarmingEntities";
+
+    Layout = "~/Views/Shared/_AdimsLayout.cshtml";
+
+    int limit = 100, minimum = 1;
+    int lastYear = (DateTime.Now.Year - minimum) - limit;
+    var years = Enumerable.Range(lastYear, limit).Select(x => x.ToString()).ToList();
+
+    var counties = (List<ADIMS.Models.county>)ViewBag.counties;
+    var subcounties = (List<ADIMS.Models.subcounty>)ViewBag.subcounties;
+    var wards = (List<ADIMS.Models.ward>)ViewBag.wards;
+
+    var insurancetypes = (List<string>)ViewBag.insurancetypes;
+    var insurers = (List<string>)ViewBag.insurers;
+    var crops = (List<string>)ViewBag.crops;
+}
+
+<link href="~/css/plugins/datapicker/datepicker3.css" rel="stylesheet">
+<link href="~/css/plugins/iCheck/custom.css" rel="stylesheet">
+<link href="~/css/plugins/steps/jquery.steps.css" rel="stylesheet">
+
+<script src="~/js/jquery-2.1.1.js"></script>
+<script src="~/js/bootstrap.js"></script>
+<script src="~/js/plugins/datapicker/bootstrap-datepicker.js"></script>
+<!-- Steps -->
+<script src="~/js/plugins/staps/jquery.steps.min.js"></script>
+<!-- Jquery Validate -->
+<script src="~/js/plugins/validate/jquery.validate.min.js"></script>
+
+<script>
+
+    function getSubCounties() {
+        $("#subcounty").empty();
+        $.ajax({
+            type: 'POST',
+            url: '@Url.Action("GetSubCounties","Counties")',
+            datatype: 'json',
+            data: { id: $("#county").val() },
+            success: function (subcounties) {
+                $("#subcounty").append('<option value="' + "0" + '">' + "Select Sub County" + '</option>');
+                debugger;
+                $.each(subcounties, function (i, subcounty) {
+                    $("#subcounty").append('<option value="' + subcounty.Value + '">' + subcounty.Text + '</option>');
+                    // here we are adding option for States
+                });
+            },
+            error: function (ex) {
+                alert('No Sub Counties for the selected counties exist' + ex);
+            }
+        });
+    }
+
+    function getWards() {
+        $("#ward").empty();
+        $.ajax({
+            type: 'POST',
+            url: '@Url.Action("GetWards", "Counties")',
+            datatype: 'json',
+            data: { id: $("#subcounty").val() },
+            success: function (wards) {
+                $("#ward").append('<option value="' + "0" + '">' + "Select Ward" + '</option>');
+                debugger;
+                $.each(wards, function (i, ward) {
+                    $("#ward").append('<option value="' + ward.Value + '">' + ward.Text + '</option>');
+                    // here we are adding option for States
+                });
+            },
+            error: function (ex) {
+                alert('No Wards for the selected Sub County exist' + ex);
+            }
+        });
+    }
+
+
+</script>
+
+<script>
+        $(document).ready(function(){
+
+            $("#wizard").steps();
+            $("#form").steps({
+                bodyTag: "fieldset",
+                onStepChanging: function (event, currentIndex, newIndex)
+                {
+                    // Always allow going backward even if the current step contains invalid fields!
+                    if (currentIndex > newIndex)
+                    {
+                        return true;
+                    }
+
+                    // Forbid suppressing "Warning" step if the user is to young
+                    if (newIndex === 3 && Number($("#age").val()) < 18)
+                    {
+                        return false;
+                    }
+
+                    var form = $(this);
+
+                    // Clean up if user went backward before
+                    if (currentIndex < newIndex)
+                    {
+
+                        // To remove error styles
+                        $(".body:eq(" + newIndex + ") label.error", form).remove();
+                        $(".body:eq(" + newIndex + ") .error", form).removeClass("error");
+                    }
+
+                    // Disable validation on fields that are disabled or hidden.
+                    form.validate().settings.ignore = ":disabled,:hidden";
+
+                    // Start validation; Prevent going forward if false
+                    return form.valid();
+                },
+                onStepChanged: function (event, currentIndex, priorIndex)
+                {
+                    //$("#progress").width( (currentIndex) / 4 * 100 % + "%");
+                    // Suppress (skip) "Warning" step if the user is old enough.
+                    if (currentIndex === 2 && Number($("#age").val()) >= 18)
+                    {
+                        $(this).steps("next");
+                    }
+
+                    // Suppress (skip) "Warning" step if the user is old enough and wants to the previous step.
+                    if (currentIndex === 2 && priorIndex === 3)
+                    {
+                        $(this).steps("previous");
+                    }
+                },
+                onFinishing: function (event, currentIndex)
+                {
+                    var form = $(this);
+
+                    // Disable validation on fields that are disabled.
+                    // At this point it's recommended to do an overall check (mean ignoring only disabled fields)
+                    form.validate().settings.ignore = ":disabled";
+
+                    // Start validation; Prevent form submission if false
+                    return form.valid();
+                },
+                onFinished: function (event, currentIndex)
+                {
+                    var form = $(this);
+
+                    // Submit form input
+                    form.submit();
+                }
+            }).validate({
+                        errorPlacement: function (error, element)
+                        {
+                            element.before(error);
+                        },
+                        rules: {
+                            confirm: {
+                                equalTo: "#password"
+                            }
+                        }
+            });
+
+       });
+</script>
+
+
+<div class="row">
+    <div class="col-lg-12">
+        <div class="ibox">
+            <div class="ibox-title">
+                <h5><img height="30" width="30" src="~/icons/user_icon.png" /> &nbsp; &nbsp;  Add Corporate Farmer</h5>
+                <div class="ibox-tools">
+                    <input type="submit" formaction="/Farmers/SaveCorporate" name="save" value="Save Progress" class="btn btn-primary btn-rounded" form="form" />
+                    <a class="collapse-link">
+                        <i class="fa fa-chevron-up"></i>
+                    </a>
+
+                </div>
+            </div>
+            <div class="ibox-content">
+
+                @*<div class="progress progress-striped active">
+                        <div id="progress" style="width: 25%" aria-valuemax="100" aria-valuemin="0" aria-valuenow="75" role="progressbar" class="progress-bar progress-bar-success">
+                            <span class="sr-only">25% Complete (success)</span>
+                        </div>
+                    </div>*@
+
+                @*<form id="form" action="#" class="wizard-big">*@
+                @using (Html.BeginForm("AddFarmerCorporate", "Farmers", FormMethod.Post, new { @class = "wizard-big", @id = "form", enctype = "multipart/form-data" }))
+                {
+                    <h1>Basic Info</h1>
+                    <fieldset>
+
+                        <div class="row col-lg-12">
+
+                            <div class="col-md-4">
+                                <div class="form-group">
+                                    <label>Company Name (*)</label><br />
+                                    <div class="col-md-12" style="padding-left:0px;">
+                                        @Html.TextBoxFor(model => model.name, new { @class = "form-control", @required = true })
+                                        @Html.ValidationMessageFor(model => model.name, "", new { @class = "text-danger" })
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+
+                        <div class="row col-lg-12" style="margin-top:15px;">
+
+                           
+                        </div>
+
+                        <div class="row col-lg-12" style="margin-top:15px;">
+                            <div class="col-md-4">
+                                <div class="form-group">
+                                    <label>Phone Number (*)</label><br />
+                                    <div class="col-md-12 input-group date" style="padding-left:0px;">
+                                        @Html.TextBoxFor(model => model.phoneno, new { @class = "form-control", @maxlength = "10", @placeholder = "0710...", @required = true, @type = "number" })
+                                        @Html.ValidationMessageFor(model => model.phoneno, "", new { @class = "text-danger" })
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="col-md-4">
+                                <div class="form-group date" data-provide="datepicker">
+                                    <label>Year of Incorporation (*)</label><br />
+                                    <div class="col-md-12" style="padding-left:0px;">
+                                        @Html.DropDownListFor(model => model.date_of_incorporation, new SelectList(years), new { @class = "form-control datepicker", @id = "dob", @required = true })
+                                        @Html.ValidationMessageFor(model => model.date_of_incorporation, "", new { @class = "text-danger" })
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                    </fieldset>
+
+                    <h1>Identification</h1>
+                    <fieldset>
+
+                        <div class="row col-lg-12">
+
+                            <div class="col-md-4">
+                                <div class="form-group">
+                                    <label>Incorporation Number (*)</label><br />
+                                    <div class="col-md-10" style="padding-left:0px;">
+                                        @Html.TextBoxFor(model => model.incorporation_number, new { @class = "form-control", @maxlength = "8", @placeholder = "290..." })
+                                        @Html.ValidationMessageFor(model => model.incorporation_number, "", new { @class = "text-danger" })
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="col-md-4">
+
+                                <div class="form-group">
+                                    <label>KRA Pin</label><br />
+                                    <div class="col-md-10" style="padding-left:0px;">
+                                        @Html.TextBoxFor(model => model.kra_pin, new { @class = "form-control", @maxlength = "11", @placeholder = "P017..." })
+                                        @Html.ValidationMessageFor(model => model.kra_pin, "", new { @class = "text-danger" })
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+
+                        <div class="row col-lg-12">
+                            <div class="col-md-4">
+                                <div class="form-group">
+                                    <label>Photo (*)</label><br />
+                                    <div class="col-md-10" style="padding-left:0px;">
+                                        <input type="file" name="file" id="file" value="" class="form-control" placeholder="Select Photo" />
+                                        
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+
+                    </fieldset>
+                    @*<h1>Next of Kin</h1>
+                    <fieldset>
+
+                        <div class="row col-lg-12">
+
+                            <div class="col-md-4">
+                                <div class="form-group">
+                                    <label>Next of Kin (*)</label><br />
+                                    <div class="col-md-12" style="padding-left:0px;">
+                                        @Html.TextBoxFor(model => model.nextofkinname, new { @class = "form-control", @required = true })
+                                        @Html.ValidationMessageFor(model => model.nextofkinname, "", new { @class = "text-danger" })
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="col-md-4">
+                                <div class="form-group">
+                                    <label>Next of Kin Type</label><br />
+                                    <div class="col-md-12" style="padding-left:0px;">
+                                        @Html.DropDownListFor(model => model.nexofkintype, new SelectList(nextofkintypes), new { @class = "form-control" })
+                                        @Html.ValidationMessageFor(model => model.nexofkintype, "", new { @class = "text-danger" })
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+
+                    </fieldset>*@
+                    <h1>Location</h1>
+                    <fieldset>
+
+                        <div class="row col-lg-12">
+
+                            <div class="col-md-6">
+                                <div class="form-group">
+                                    <label>Address (*)</label><br />
+                                    <div class="col-md-10" style="padding-left:0px;">
+                                        @Html.TextBoxFor(model => model.address, new { @class = "form-control", @required = true })
+                                        @Html.ValidationMessageFor(model => model.address, "", new { @class = "text-danger" })
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="row col-lg-12" style="margin-top:10px;">
+
+                                <div class="col-md-4">
+                                    <div class="form-group">
+                                        <label>County</label><br />
+                                        <div class="col-md-10" style="padding-left:0px;">
+                                            @Html.DropDownListFor(model => model.county, new SelectList(counties, "id", "name"), new { @class = "form-control", @onchange = "getSubCounties()" })
+                                            @Html.ValidationMessageFor(model => model.county, "", new { @class = "text-danger" })
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="col-md-4">
+                                    <div class="form-group">
+                                        <label>Sub County</label><br />
+                                        <div class="col-md-10" style="padding-left:0px;">
+                                            @Html.DropDownList("subcounty", new SelectList(string.Empty, "id", "name"), new { @class = "form-control", @onchange = "getWards()" })
+                                            @*@Html.ValidationMessageFor(model => model.county, "", new { @class = "text-danger" })*@
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="col-md-4">
+                                    <div class="form-group">
+                                        <label>Ward</label><br />
+                                        <div class="col-md-10" style="padding-left:0px;">
+                                            @Html.DropDownListFor(model => model.ward, new SelectList(string.Empty, "id", "name"), new { @class = "form-control" })
+                                            @Html.ValidationMessageFor(model => model.ward, "", new { @class = "text-danger" })
+                                        </div>
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+
+                    </fieldset>
+
+                    <h1>Insurance</h1>
+                    <fieldset>
+
+                        <div class="row col-lg-12">
+
+                            <div class="col-md-6">
+                                <div class="form-group">
+                                    <label>Does Farmer access Crop Insurance? </label><br />
+                                    <div class="col-md-10" style="padding-left:0px;">
+                                        @Html.CheckBoxFor(model => model.hasInsurance, new { @class = "form-control cropInsurance", @required = true })
+                                        @Html.ValidationMessageFor(model => model.hasInsurance, "", new { @class = "text-danger" })
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="row col-lg-12" style="margin-top:10px;">
+
+                                <div class="col-md-4">
+                                    <div class="form-group">
+                                        <label>Insurance Type</label><br />
+                                        <div class="col-md-10" style="padding-left:0px;">
+                                            @Html.DropDownListFor(model => model.insurance_type, new SelectList(insurancetypes), new { @class = "form-control insuranceType" })
+
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="col-md-4">
+                                    <div class="form-group">
+                                        <label>Insurer</label><br />
+                                        <div class="col-md-10" style="padding-left:0px;">
+                                            @Html.DropDownListFor(model => model.insurer, new SelectList(insurers), new { @class = "form-control insurer" })
+
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="col-md-4">
+                                    <div class="form-group">
+                                        <label>Crop</label><br />
+                                        <div class="col-md-10" style="padding-left:0px;">
+                                            @Html.DropDownListFor(model => model.crop, new SelectList(crops), new { @class = "form-control crop" })
+
+                                        </div>
+                                    </div>
+                                </div>
+
+                            </div>
+
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <div class="form-group">
+                                        <label>Policy Number </label><br />
+                                        <div class="col-md-10" style="padding-left:0px;">
+                                            @Html.TextBoxFor(model => model.policy_number, new { @class = "form-control policyNumber" })
+
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+
+                    </fieldset>
+                }
+                @*</form>*@
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<script src="~/app/critical.js"></script>

@@ -1,0 +1,50 @@
+﻿@using ADIMS.Models
+@{
+    Layout = "~/Views/Shared/_AdimsLayout.cshtml";
+
+    ViewBag.Title = "My Profile";
+    ViewBag.Controller = "Account";
+    ViewBag.Action = "Profile";
+
+    var user = ViewBag?.userinfo as Tuple<string, county, subcounty>;
+
+    var name = user.Item1;
+    var county = user.Item2.name;
+    var subcounty = user.Item3.name;
+
+}
+
+<div class="panel">
+    <div class="panel-body">
+        <div class="row">
+            <div class="col-md-3">
+                <label>Names</label>
+
+                <h5>(@name)</h5>
+            </div>
+            
+            <div class="col-md-3">
+                <label>County</label>
+
+                <h5>(@county)</h5>
+            </div>
+            <div class="col-md-3">
+                <label>Sub-County</label>
+
+                <h5>(@subcounty)</h5>
+            </div>
+
+        </div>
+       
+        <br />
+        <br />
+
+        <div class="row">
+            <div class="col-md-3">
+                <a href="/Account/ChangePassword" class="btn btn-primary">
+                    Change Password
+                </a>
+            </div>
+        </div>
+    </div>
+</div>

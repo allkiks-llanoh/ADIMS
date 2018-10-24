@@ -1,0 +1,251 @@
+﻿@model ADIMS.Models.cce_queue_farms
+@{
+    ViewBag.Title = "Crop Cutting Results";
+    Layout = "~/Views/Shared/_AdimsLayout.cshtml";
+
+    ViewBag.Controller = "Crop Insurance";
+    ViewBag.Action = "CCE Result";
+}
+
+<script>
+    function PrintPDF() {
+        console.log("Initiating PDF Conversion");
+        //alert('Starting PDF');
+
+        //start printing
+        var divContents = $("#pdf").html();
+        var printWindow = window.open('', '', 'height=400,width=1200');
+
+        var APP_URL = location.protocol + "//" + location.host + "/";
+
+        printWindow.orientation = "Landscape";
+        printWindow.document.orientation = "Landscape";
+        
+
+        printWindow.document.write('<!DOCTYPE html> <html> <head> <title> Crop Cutting Exercise Results </title>');
+
+        //Print the CSS here
+        printWindow.document.write('<link rel="stylesheet" href="'+ APP_URL +'css/bootstrap.min.css">');
+        printWindow.document.write('<link rel="stylesheet" href="'+ APP_URL +'css/style.css">');
+        printWindow.document.write('<link rel="stylesheet" href="'+ APP_URL +'css/critical.css">');
+
+
+        printWindow.document.write('</head><body>');
+        printWindow.document.write(divContents);
+        printWindow.document.write('</body></html>');
+        printWindow.document.close();
+        printWindow.print();
+
+    }
+
+</script>
+
+<div>
+    <button id="btnPDF" class="btn btn-primary pull-right" onclick="PrintPDF()">Export PDF</button>
+</div>
+
+<div id="pdf">
+    <!--Add the PDF Code Here-->
+    <div class="panel panel-body">
+        <div class="row">
+           <center>
+               <p><h2><u>Crop Cutting Results Report</u></h2> </p>
+           </center>
+        </div>
+        <div class="row">
+            <div class="col-md-4">
+                @Html.Label("Crop Acreage: ")
+                <p>@Model.cropacreage1.acreage acres on farm @Model.cropacreage1.farm.name</p>
+
+                @Html.Label("Farmer Details:")
+                <p>@Model.cropacreage1.farm.farmer.name</p>
+
+                <p><i class="fa fa-phone"></i> +254 @Model.cropacreage1.farm.farmer.phoneno</p>
+            </div>
+
+            <div class="col-md-4">
+                @Html.Label("This exercise was conducted on : ")
+
+                <h3>
+                    <i class="fa fa-clock-o"></i> @Model.datecreated.Value.ToLongDateString()
+                </h3>
+            </div>
+
+            <div class="col-md-4">
+                @{ var photo = $"{Model.actual_cropcutting_exercise.photo_ofSS_before_harvesting}" ?? "~/images/adims_farm.jpg"; }
+                <img style="height:120px;width:220px;" src="@photo" />
+            </div>
+
+        </div>
+        <div class="row">
+            <div class="col-md-6">
+                <h3>Preliminary Crop Cutting Exercise Results :</h3>
+
+                <hr />
+                <div class="col-md-6">
+                    @Html.Label("Total Maize Plants: ")
+                    <p>@Model.preliminary_cropcutting_exercise.total_maize_plants</p>
+
+                    @Html.Label("Total Cobs Plants: ")
+                    <p>@Model.preliminary_cropcutting_exercise.total_cobs_count</p>
+
+                    @Html.Label("Top Dressing Fertilizer Type: ")
+                    <p>@Model.preliminary_cropcutting_exercise.top_fertilizer_type</p>
+
+                    @Html.Label("Total Dressing Fertilizer Quantity (Kgs): ")
+                    <p>@Model.preliminary_cropcutting_exercise.top_fertilizer_quantity</p>
+
+                    @Html.Label("Sampling Plot or Parcel: ")
+                    <p>@Model.preliminary_cropcutting_exercise.sampling_plot_or_parcel</p>
+
+                    @Html.Label("Main Crop: ")
+                    <p>@Model.preliminary_cropcutting_exercise.crop1.name</p>
+
+                    @Html.Label("Crop Stage: ")
+                    <p>@Model.preliminary_cropcutting_exercise.crop_stage</p>
+
+                    @Html.Label("Crop Status: ")
+                    <p>@Model.preliminary_cropcutting_exercise.crop_status</p>
+
+                    @Html.Label("Other Crops: ")
+                    <p>@Model.preliminary_cropcutting_exercise.other_crops</p>
+
+                    @Html.Label("Overall Crop Condition: ")
+                    <p>@Model.preliminary_cropcutting_exercise.overall_crop_condition</p>
+
+                    @Html.Label("Enumeration Area Code: ")
+                    <p>@Model.preliminary_cropcutting_exercise.enumeration_area_code</p>
+
+                    @Html.Label("Mode of Planting: ")
+                    <p>@Model.preliminary_cropcutting_exercise.mode_of_planting</p>
+
+                    @Html.Label("Planting Fertilizer Type: ")
+                    <p>@Model.preliminary_cropcutting_exercise.fertilizer_type</p>
+
+                    @Html.Label("Planting Fertilizer Quantity (Kgs): ")
+                    <p>@(Model.preliminary_cropcutting_exercise.fertilizer_quantity ?? "0")</p>
+
+                </div>
+                <div class="col-md-6">
+                    <h5 class="text-info">Respondent Details</h5>
+                    @Html.Label("Repondent Name: ")
+                    <p>@Model.preliminary_cropcutting_exercise.respondent_name</p>
+
+                    @Html.Label("Respondent Relation: ")
+                    <p>@Model.preliminary_cropcutting_exercise.respondent_relation</p>
+
+                    @Html.Label("Respondent Telephone: ")
+                    <p>@Model.preliminary_cropcutting_exercise.respondent_telephone</p>
+
+                </div>
+            </div>
+            <div class="col-md-6">
+                <h3>Actual Crop Cutting Exercise Results :</h3>
+
+                <hr />
+
+                <div class="col-md-6">
+                    @Html.Label("Cobs Harvested: ")
+                    <p>@Model.actual_cropcutting_exercise.cobs_harvested</p>
+
+                    @Html.Label("Harvested Area (Acres): ")
+                    <p>@Model.cropacreage1.acreage</p>
+
+                    @Html.Label("Date of Crop Cutting: ")
+                    <p>@Model.actual_cropcutting_exercise.date_of_crop_cutting</p>
+
+                    @Html.Label("Drying Method: ")
+                    <p>@(Model.actual_cropcutting_exercise.drying_method ?? "N/A")</p>
+
+                    @Html.Label("Final Quantity Wet Grain (Kgs): ")
+                    <p>@(Model.actual_cropcutting_exercise.final_quantity_wetgrain ?? "N/A")</p>
+
+                    @Html.Label("Moisture Reading (%): ")
+                    @{ 
+                        var moisture = Model.actual_cropcutting_exercise.moisture_reading;
+                        if (Model.actual_cropcutting_exercise.moisture_percentagedried > 0)
+                        {
+                            moisture = Model.actual_cropcutting_exercise.moisture_percentagedried;
+                        }
+                     }}
+                    <p>@moisture</p>
+
+                    @Html.Label("Quantity Harvested (Kg per Cob): ")
+                    <p>@Model.actual_cropcutting_exercise.quantity_harvested_kgpercob</p>
+
+                    @Html.Label("Quantity Harvested Wet Grain(Kgs): ")
+                    <p>@Model.actual_cropcutting_exercise.quantity_harvested_wetgrain</p>
+
+                    @Html.Label("Quantity Wet Sample(Kgs): ")
+                    <p>@(Model.actual_cropcutting_exercise.quantity_wet_sample ?? "N/A")</p>
+
+                    <div class="row">
+                        <h5 class="text-info">Time of Crop Cutting</h5>
+
+                        <div class="col-md-6">
+                            <label>Start</label>
+
+                            @(Model.actual_cropcutting_exercise.time_of_cropcutting_start ?? "N/A")
+                        </div>
+
+                        <div class="col-md-6">
+                            <label>End</label>
+
+                            @(Model.actual_cropcutting_exercise.time_of_cropcutting_end ?? "N/A")
+                        </div>
+                    </div>
+
+                    @Html.Label("Total Cobs From Stage 1: ")
+                    <p>@Model.actual_cropcutting_exercise.total_cobs_stage1</p>
+
+                    @Html.Label("Total Cobs From Stage 2: ")
+                    <p>@Model.actual_cropcutting_exercise.total_cobs_stage2</p>
+
+                    @*@Html.Label("Total Cobs in Sampling Spot: ")
+                    <p>@(Model.actual_cropcutting_exercise.total_count_cobs_inSS ?? 0)</p>*@
+
+                    @Html.Label("Total Plant From Stage 1: ")
+                    <p>@Model.actual_cropcutting_exercise.total_count_plants_stage1</p>
+
+                    @Html.Label("Total Plant From Stage 2: ")
+                    <p>@Model.actual_cropcutting_exercise.total_count_plants_stage2</p>
+
+                    @Html.Label("Weight of Dried Sample (Kgs): ")
+                    <p>@(Model.actual_cropcutting_exercise.weight_of_driedsample ?? 0)</p>
+
+                    @Html.Label("Weight of Wet Sample (Kgs): ")
+                    <p>@(Model.actual_cropcutting_exercise.weight_of_wetsample ?? 0)</p>
+
+                    @*@Html.Label("Total Weight (Sample Spot): ")
+                    <p>@(Model.actual_cropcutting_exercise.total_weight ?? 0)</p>*@
+
+                    @{ 
+                        var dry_weight = Model.actual_cropcutting_exercise.quantity_harvested_wetgrain * (100 - Model.actual_cropcutting_exercise.moisture_reading) / 100;
+                        var equivalent_dryweight = Convert.ToDouble(dry_weight) * 4048.5 / 25;
+                    }
+                    @Html.Label("Dry Weight (Kgs): ")
+                    <p>@(dry_weight ?? 0)</p>
+
+                    @Html.Label("Equivalent Dry Weight (Kgs/Acre): ")
+                    <p>@(equivalent_dryweight)</p>
+
+                </div>
+                <div class="col-md-6">
+                    <h5 class="text-info">Respondent Details</h5>
+                    @Html.Label("Respondent Name: ")
+                    <p>@Model.actual_cropcutting_exercise.respondent_name</p>
+
+                    @Html.Label("Respondent Relation: ")
+                    <p>@Model.actual_cropcutting_exercise.respondent_relation</p>
+
+                    @Html.Label("Respondent Telephone: ")
+                    <p>@Model.actual_cropcutting_exercise.respondent_telephone</p>
+
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+
+</div>

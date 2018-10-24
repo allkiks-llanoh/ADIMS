@@ -1,0 +1,94 @@
+﻿@model List<ADIMS.Models.uai>
+@{
+    ViewBag.Title = "All UAI's";
+    Layout = "~/Views/Shared/_AdimsLayout.cshtml";
+
+    ViewBag.Controller = "AYII";
+    ViewBag.Action = "All UAI's";
+}
+
+<link href="~/css/plugins/dataTables/datatables.min.css" rel="stylesheet">
+<script src="~/js/plugins/dataTables/datatables.min.js"></script>
+
+<div class="row">
+    <div class="col-lg-12">
+        <div class="ibox float-e-margins">
+            <div class="ibox-title">
+                <h5>UAI</h5>
+                <div class="ibox-tools">
+                    <a href="/ayii/adduai" style="color:white;" class="btn btn-primary btn-rounded">&nbsp;Add UAI&nbsp;</a>
+                </div>
+            </div>
+            <div class="ibox-content">
+
+                <div class="table-responsive">
+                    <table class="table table-striped table-bordered table-hover dataTables-example">
+                        <thead>
+                            <tr>
+                                <th>UAI Code</th>
+                                <th>Name</th>
+                                <th>Ward</th>
+                                <th>Action</th>
+
+                            </tr>
+                        </thead>
+                        <tbody>
+                            @foreach (var uai in Model.OrderBy(x => x.name))
+                            {
+                                <tr class="gradeX">
+                                    <td>@(uai.code ?? "N/A")</td>
+                                    <td><a href="/ayii/uaidetails?id=@uai.id">@(uai.name ?? "N/A")</a></td>
+                                    <td>@(uai.ward1.name ?? "")</td>
+                                    <td class="center">
+                                        <a href="/ayii/uaidetails?id=@uai.id" class="btn btn-primary">Details</a>
+                                    </td>
+                                </tr>
+                            }
+
+                        </tbody>
+                        <tfoot>
+                            <tr>
+                                <th>UAI Code</th>
+                                <th>Name</th>
+                                <th>Ward</th>
+                                <th>Action</th>
+                            </tr>
+                        </tfoot>
+                    </table>
+                </div>
+
+            </div>
+        </div>
+    </div>
+</div>
+
+<script>
+        $(document).ready(function(){
+            $('.dataTables-example').DataTable({
+                pageLength: 25,
+                order: [[1, "asc"]],
+                responsive: true,
+                dom: '<"html5buttons"B>lTfgitp',
+                buttons: [
+                    { extend: 'copy'},
+                    {extend: 'csv'},
+                    {extend: 'excel', title: 'ExampleFile'},
+                    {extend: 'pdf', title: 'ExampleFile'},
+
+                    {extend: 'print',
+                     customize: function (win){
+                            $(win.document.body).addClass('white-bg');
+                            $(win.document.body).css('font-size', '10px');
+
+                            $(win.document.body).find('table')
+                                    .addClass('compact')
+                                    .css('font-size', 'inherit');
+                    }
+                    }
+                ]
+
+            });
+
+        });
+
+</script>

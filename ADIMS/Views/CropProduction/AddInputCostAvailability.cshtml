@@ -1,0 +1,175 @@
+﻿@using ADIMS.Models;
+
+@model ADIMS.ViewModels.DataCapture_CropProduction.AddInputCostAndAvailabilityViewModel
+@{
+    ViewBag.Title = "Input Cost & Availability";
+    ViewBag.Action = "Add Input Cost Availability";
+    ViewBag.Controller = "Crop Production";
+    var user = ViewBag.userinfo as Tuple<string, county, subcounty>;
+
+    var seasons = (List<season>)ViewBag.seasons;
+
+    Layout = "~/Views/Shared/_AdimsLayout.cshtml";
+    string[] months = "January,February,March,April,May,June,July,August,September,October,November,December".Split(',');
+}
+<div class="ibox ibox-more">
+
+    <div class="ibox-title">
+        <h5><i class="fa fa-tag" style="font-size:18px;"></i> Cost &amp; Availability</h5>
+        <div class="ibox-tools">
+            <a class="collapse-link">
+                <i class="fa fa-chevron-up"></i>
+            </a>
+        </div>
+    </div>
+
+    <div class="ibox-content">
+
+        @using (Html.BeginForm("AddInputCostAvailability", "CropProduction", FormMethod.Post, new { @class = "" }))
+
+        {
+            @Html.AntiForgeryToken()
+            <div class="row">
+                <div class="form-group col-md-4">
+                    <label>County</label>
+                    @Html.HiddenFor(model => model.county)
+                    @Html.TextBox("countyid", @user.Item2.name, new { @class = "form-control", @readonly = true })
+                </div>
+                <div class="form-group col-md-4">
+                    <label>Sub-County</label>
+                    @Html.HiddenFor(model => model.sub_county)
+                    @Html.TextBox("subcountyid", @user.Item2.name, new { @class = "form-control", @readonly = true })
+                </div>                
+                <div class="form-group col-md-3">
+                    <label>Month</label>
+                    <select class="form-control">
+                        <option value="null">Select an item</option>
+                        @{
+                            for (int i = 0; i < months.Length; i++)
+                            {
+                                <option value="@i">@months[i]</option>
+                            }
+                        }
+                    </select>
+                </div>
+                <div class="col-md-3">
+                    <div class="form-group">
+                        <label>Season</label><br />
+                        <div class="col-md-12" style="padding-left:0px;">
+                            @Html.DropDownListFor(model => model.season, new SelectList(seasons, "id", "name"), new { @class = "form-control" })
+
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <br />
+            <div class="row">
+                <div class="form-group col-md-4">
+                    <label>No. sampled stocklist</label><br />
+                    <div>
+                        @Html.TextBoxFor(model => model.no_sampled_stocklist, new { @class = "form-control", @placeholder = "e.g 120" })
+
+
+                    </div>
+                </div>
+                <div class="form-group col-md-4">
+                    <label>No. sampled NCPB stores</label><br />
+                    <div>
+                        @Html.TextBoxFor(model => model.no_sampled_ncpb_stores, new { @class = "form-control", @placeholder = "e.g 45" })
+
+
+                    </div>
+                </div>
+
+            </div>
+                <br />
+                <div class="row">
+                    <div class="col-md-4">
+                        <div class="form-group">
+                            <label class="">Core Crop</label>
+                            <div class="">
+                                <select class="form-control">
+                                    <option>Maize</option>
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="form-group">
+                            <label class="control-label">Units</label>
+                            <div class="">
+                                <input type="number" class="form-control" id="inputEmail3" placeholder="e.g 800">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-4">
+                        <div class="form-group">
+                            <h4 style="color:#ed5565;">Average Retail Price (in Kshs)</h4>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="form-inline">
+                        <div class="col-md-3">
+                            <div class="form-group">
+                                <label>Low</label>
+                                @Html.TextBoxFor(x => x.lowest_retail_price, new { @class = "form-control", @placeholder = "e.g 150", type = "number" })
+                            </div>
+                        </div>
+                        <div class="col-md-3">
+                            <div class="form-group">
+                                <label>High</label>
+                                @Html.TextBoxFor(x => x.highest_retail_price, new { @class = "form-control", @placeholder = "e.g 186", type = "number" })
+                            </div>
+                        </div>
+
+                    </div>
+
+                </div>
+                <br />
+                <div class="row">
+                    <div class="col-md-12">
+                        <label>Availability</label>
+                        
+                    </div>
+                </div>
+                <br/>
+                <div class="row">
+                    <div class="col-md-2">
+                        <div class="radio radio-info radio-inline">
+                            @Html.RadioButtonFor(x => x.availability, "0", new { @id = "plenty" })
+                            <label for="plenty">
+                                Plenty
+                            </label>
+                        </div>
+                    </div>
+                    <div class="col-md-2">
+                        <div class="radio radio-info radio-inline">
+                            @Html.RadioButtonFor(x => x.availability, "1", new { @id = "fair" })
+                            <label for="fair">
+                                Fair
+                            </label>
+                        </div> 
+                    </div>
+                    <div class="col-md-2">
+                        <div class="radio radio-info radio-inline">
+                            @Html.RadioButtonFor(x => x.availability, "2", new { @id = "scarce" })
+                            <label for="scarce">
+                                Scarce
+                            </label>
+                        </div>
+                    </div>
+                </div>
+                <br/>
+                <div class="col-md-4">
+                    <div class="form-group">
+                        <input type="submit" value="Submit" class="btn btn-primary" />
+                    </div>
+                </div>
+                <br /><br />
+           }
+    </div>
+</div>

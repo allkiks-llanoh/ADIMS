@@ -1,0 +1,236 @@
+﻿@{
+    ViewBag.Action = "Claims Bordereaux";
+    ViewBag.Controller = "Crop Insurance";
+    ViewBag.Title = "Claims Bordereaux";
+    Layout = "~/Views/Shared/_AdimsLayout.cshtml";
+
+    var bd = (List<ADIMS.Controllers.CropInsuranceController.ClaimsBordereauxItem>)ViewBag.bordereaux;
+
+    var insurer = (ADIMS.Models.insurance_company)ViewBag.insurer;
+    var crop = (ADIMS.Models.crop)ViewBag.crop;
+    var year = (int)ViewBag.year;
+
+    var county = (ADIMS.Models.county)ViewBag.county;
+    var subcounty = (ADIMS.Models.subcounty)ViewBag.subcounty;
+    var ward = (ADIMS.Models.ward)ViewBag.ward;
+
+    var actual_yield = (float)ViewBag.actual_yield;
+
+    var policies = (List<ADIMS.Models.farm_policy>)ViewBag.policies;
+
+}
+<style>
+    .bordreaux-header {
+        font-weight: bold;
+    }
+</style>
+
+
+<div class="row">
+    <div class="col-lg-12">
+        <div class="ibox">
+            <div class="ibox-title">
+                <h5><img height="30" width="30" src="~/icons/user_icon.png" /> &nbsp; &nbsp;Claims Bordereaux for @crop.name</h5>
+                <div class="ibox-tools">
+                    <a class="collapse-link">
+                        <i class="fa fa-chevron-up"></i>
+                    </a>
+                </div>
+            </div>
+            <div class="ibox-content">
+
+                <div class="row">
+                    <span class="bordreaux-header"> 1. Insurance Company:</span> <span>@insurer.name</span>
+                </div>
+                <br />
+                <div class="row">
+                    <div class="col-md-3" style="padding-left:0px;">
+                        <span class="bordreaux-header"> 2. County:</span> <span>@county.name</span>
+                    </div>
+                    <div class="col-md-3">
+                        <span class="bordreaux-header"> 3. Sub-County:</span>  <span>@county.name</span>
+                    </div>
+                    <div class="col-md-3">
+                        <span class="bordreaux-header"> 4. Ward :</span> <span>@ward.name</span>
+                    </div>
+                    <div class="col-md-3">
+                        <span class="bordreaux-header"> 5. UAI:</span> <span>@ward.name</span>
+                    </div>
+                </div>
+                <br />
+                <div class="row">
+                    <div class="col-md-3" style="padding-left:0px;">
+                        <span class="bordreaux-header"> 6. Insurance Year:</span> <span>@year</span>
+                    </div>
+                    <div class="col-md-3">
+                        <span class="bordreaux-header"> 7. Crop Season:</span> <span>Long Rains</span>
+                    </div>
+                    <div class="col-md-3">
+                        <span class="bordreaux-header"> 8. Insured Crop: </span><span>@crop.name</span>
+                    </div>
+                    <div class="col-md-3">
+                        <span class="bordreaux-header"> 9. Reference Average Yield (Kg/Ha) </span> <span>3000</span>
+                    </div>
+                </div>
+                <br />
+                <div class="row">
+                    <div class="table-responsive">
+                        <table class="table table-bordered">
+                            <tr>
+                                <td class="bordreaux-header"> 10. Insured Yield Coverage Options</td>
+
+                                @foreach (var item in bd.Select(x => x.coverage))
+                                {
+                                    <td>@item %</td>
+                                }
+
+                            </tr>
+                            <tr>
+                                <td class="bordreaux-header"> 11. Insured Yield</td>
+                                @foreach (var item in bd.Select(x => x.insured_yield))
+                                {
+                                    <td>@item</td>
+                                }
+
+                            </tr>
+                            <tr>
+                                <td class="bordreaux-header"> 12. Unit Sum Insured Value</td>
+                                @foreach (var item in bd.Select(x => x.unit_sum))
+                                {
+                                    <td>@item</td>
+                                }
+                            </tr>
+                            <tr>
+                                <td class="bordreaux-header"> 13. Sum Insured (Kshs/Ha)</td>
+                                @foreach (var item in bd.Select(x => x.sum_insured))
+                                {
+                                    <td>@item</td>
+                                }
+                            </tr>
+                            <tr>
+                                <td class="bordreaux-header"> 14. Premium Rate %</td>
+                                @foreach (var item in bd.Select(x => x.premium_rate))
+                                {
+                                    <td>@item</td>
+                                }
+                            </tr>
+                            <tr>
+                                <td class="bordreaux-header"> 15. Premium (Kshs/Ha)</td>
+                                @foreach (var item in bd.Select(x => x.premium))
+                                {
+                                    <td>@item</td>
+                                }
+                            </tr>
+                            <tr>
+                                <td class="bordreaux-header"> 16. Subsidy Rate %</td>
+                                @foreach (var item in bd.Select(x => x.subsidy_rate))
+                                {
+                                    <td>@item</td>
+                                }
+                            </tr>
+                            <tr>
+                                <td class="bordreaux-header"> 17. Premium Subsidy (Kshs/Ha</td>
+                                @foreach (var item in bd.Select(x => x.premium_subsidy))
+                                {
+                                    <td>@item</td>
+                                }
+                            </tr>
+                            <tr>
+                                <td class="bordreaux-header"> 18. Share of premium to be paid by Farmer (insured)</td>
+                                @foreach (var item in bd.Select(x => x.share_premium_farmer))
+                                {
+                                    <td>@item</td>
+                                }
+                            </tr>
+                            <tr>
+                                <td class="bordreaux-header"> 19. Agreed Coverage Options for current season</td>
+                                <td></td>
+                                <td></td>
+                                <td>70%</td>
+                                <td>80%</td>
+                                <td></td>
+                            </tr>
+
+                            <tr>
+                                <td class="bordreaux-header"> 20. Actual Average Yield Current Season (Kg/Ha)</td>
+                                @for(int i = 0; i < bd.Count; i++)
+                                {
+                                    <td>@actual_yield</td>
+                                }
+                                
+                            </tr>
+
+                            <tr>
+                                <td class="bordreaux-header"> 21. Amount of Yield Shortfall (Kg/Ha)</td>
+                                @foreach (var item in bd.Select(x => x.shortfall))
+                                {
+                                    <td>@item</td>
+                                }
+                            </tr>
+
+
+                        </table>
+                    </div>
+                </div>
+                <br />
+                <div class="row">
+                    <div class="table-responsive">
+                        <table class="table table-bordered">
+                            <thead>
+                                <tr>
+                                    <th>Serial Number</th>
+                                    <th>Policy Number</th>
+                                    <th>Name of Insured Farmer</th>
+                                    <th>Date of Policy Sale</th>
+                                    <th>Coverage Level</th>
+                                    <th>Insured Yield</th>
+                                    <th>Sum Insured (Kshs/Ha)</th>
+                                    <th>Insured Area (Ha)</th>
+                                    <th>Total Sum Insured (Kshs)</th>
+                                    <th>Premium Rate %</th>
+                                    <th>100% Premium due (Kshs)</th>
+                                   
+                                    <th>Amount of Yield Shortfall</th>
+                                    <th>Percentage Yield Shortfall to Settle (%)</th>
+                                    <th>Amount of Payout per insured (Kshs)</th>
+                                    <th>Loss Ratio %</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                @foreach (var item in policies)
+                                {
+                                    double shortfall = (item.insured_yield.Value - actual_yield) <= 0 ? 0 : item.insured_yield.Value - actual_yield;
+                                    double _percentage = Math.Round((shortfall / item.insured_yield.Value) * 100, 2);
+                                    
+                                    double _payout = (_percentage / 100) * item.total_insured.Value;
+
+                                    double _lossRatio = Math.Round((_payout / item.total_premium.Value) * 100,2);
+                                    <tr>
+                                        <td>@item.id</td>
+                                        <td>@item.policy_number</td>
+                                        <td>@item.farm.farmer.firstname @item.farm.farmer.lastname</td>
+                                        <td>@item.dateofpolicysale.Value.ToShortDateString()</td>
+                                        <td>@item.preferred_coverage %</td>
+                                        <td>@item.insured_yield</td>
+                                        <td>@item.sum_insured</td>
+                                        <td>@item.area_insured</td>
+                                        <td>@item.total_insured </td>
+                                        <td>@item.premium_rate</td>
+                                        <td>@item.final_premium</td>
+                                        
+                                        <td>@shortfall</td>
+                                        <td>@_percentage %</td>
+                                        <td>@_payout</td>
+                                        <td>@_lossRatio %</td>
+                                    </tr>
+
+                                }
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+</div>

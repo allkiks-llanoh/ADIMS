@@ -1,0 +1,6 @@
+C:\Users\ERNEST\Documents\Visual Studio 2017\Projects\ADIMS\ADIMSTest\bin\Release\ADIMSTest.dll
+C:\Users\ERNEST\Documents\Visual Studio 2017\Projects\ADIMS\ADIMSTest\bin\Release\ADIMSTest.pdb
+C:\Users\ERNEST\Documents\Visual Studio 2017\Projects\ADIMS\ADIMSTest\obj\Release\ADIMSTest.csprojResolveAssemblyReference.cache
+C:\Users\ERNEST\Documents\Visual Studio 2017\Projects\ADIMS\ADIMSTest\obj\Release\ADIMSTest.csproj.CoreCompileInputs.cache
+C:\Users\ERNEST\Documents\Visual Studio 2017\Projects\ADIMS\ADIMSTest\obj\Release\ADIMSTest.dll
+C:\Users\ERNEST\Documents\Visual Studio 2017\Projects\ADIMS\ADIMSTest\obj\Release\ADIMSTest.pdb

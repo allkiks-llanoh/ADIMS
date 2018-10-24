@@ -1,0 +1,1164 @@
+c:\users\ernest\documents\visual studio 2015\Projects\ADIMS\ADIMS\bin\roslyn\csc.exe
+c:\users\ernest\documents\visual studio 2015\Projects\ADIMS\ADIMS\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+c:\users\ernest\documents\visual studio 2015\Projects\ADIMS\ADIMS\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+c:\users\ernest\documents\visual studio 2015\Projects\ADIMS\ADIMS\bin\roslyn\Microsoft.CodeAnalysis.dll
+c:\users\ernest\documents\visual studio 2015\Projects\ADIMS\ADIMS\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+c:\users\ernest\documents\visual studio 2015\Projects\ADIMS\ADIMS\bin\roslyn\Microsoft.CSharp.Core.targets
+c:\users\ernest\documents\visual studio 2015\Projects\ADIMS\ADIMS\bin\roslyn\Microsoft.VisualBasic.Core.targets
+c:\users\ernest\documents\visual studio 2015\Projects\ADIMS\ADIMS\bin\roslyn\System.Collections.Immutable.dll
+c:\users\ernest\documents\visual studio 2015\Projects\ADIMS\ADIMS\bin\roslyn\System.Reflection.Metadata.dll
+c:\users\ernest\documents\visual studio 2015\Projects\ADIMS\ADIMS\bin\roslyn\vbc.exe
+c:\users\ernest\documents\visual studio 2015\Projects\ADIMS\ADIMS\bin\roslyn\VBCSCompiler.exe
+c:\users\ernest\documents\visual studio 2015\Projects\ADIMS\ADIMS\bin\roslyn\VBCSCompiler.exe.config
+c:\users\ernest\documents\visual studio 2015\Projects\ADIMS\ADIMS\bin\ADIMS.dll.config
+c:\users\ernest\documents\visual studio 2015\Projects\ADIMS\ADIMS\bin\ADIMS.dll
+c:\users\ernest\documents\visual studio 2015\Projects\ADIMS\ADIMS\bin\ADIMS.pdb
+c:\users\ernest\documents\visual studio 2015\Projects\ADIMS\ADIMS\bin\Antlr3.Runtime.dll
+c:\users\ernest\documents\visual studio 2015\Projects\ADIMS\ADIMS\bin\EntityFramework.dll
+c:\users\ernest\documents\visual studio 2015\Projects\ADIMS\ADIMS\bin\EntityFramework.SqlServer.dll
+c:\users\ernest\documents\visual studio 2015\Projects\ADIMS\ADIMS\bin\Microsoft.AspNet.Identity.Core.dll
+c:\users\ernest\documents\visual studio 2015\Projects\ADIMS\ADIMS\bin\Microsoft.AspNet.Identity.EntityFramework.dll
+c:\users\ernest\documents\visual studio 2015\Projects\ADIMS\ADIMS\bin\Microsoft.AspNet.Identity.Owin.dll
+c:\users\ernest\documents\visual studio 2015\Projects\ADIMS\ADIMS\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+c:\users\ernest\documents\visual studio 2015\Projects\ADIMS\ADIMS\bin\Microsoft.Owin.dll
+c:\users\ernest\documents\visual studio 2015\Projects\ADIMS\ADIMS\bin\Microsoft.Owin.Host.SystemWeb.dll
+c:\users\ernest\documents\visual studio 2015\Projects\ADIMS\ADIMS\bin\Microsoft.Owin.Security.Cookies.dll
+c:\users\ernest\documents\visual studio 2015\Projects\ADIMS\ADIMS\bin\Microsoft.Owin.Security.dll
+c:\users\ernest\documents\visual studio 2015\Projects\ADIMS\ADIMS\bin\Microsoft.Owin.Security.Facebook.dll
+c:\users\ernest\documents\visual studio 2015\Projects\ADIMS\ADIMS\bin\Microsoft.Owin.Security.Google.dll
+c:\users\ernest\documents\visual studio 2015\Projects\ADIMS\ADIMS\bin\Microsoft.Owin.Security.MicrosoftAccount.dll
+c:\users\ernest\documents\visual studio 2015\Projects\ADIMS\ADIMS\bin\Microsoft.Owin.Security.OAuth.dll
+c:\users\ernest\documents\visual studio 2015\Projects\ADIMS\ADIMS\bin\Microsoft.Owin.Security.Twitter.dll
+c:\users\ernest\documents\visual studio 2015\Projects\ADIMS\ADIMS\bin\Microsoft.Web.Infrastructure.dll
+c:\users\ernest\documents\visual studio 2015\Projects\ADIMS\ADIMS\bin\Newtonsoft.Json.dll
+c:\users\ernest\documents\visual studio 2015\Projects\ADIMS\ADIMS\bin\Owin.dll
+c:\users\ernest\documents\visual studio 2015\Projects\ADIMS\ADIMS\bin\System.Net.Http.Formatting.dll
+c:\users\ernest\documents\visual studio 2015\Projects\ADIMS\ADIMS\bin\System.Web.Helpers.dll
+c:\users\ernest\documents\visual studio 2015\Projects\ADIMS\ADIMS\bin\System.Web.Http.dll
+c:\users\ernest\documents\visual studio 2015\Projects\ADIMS\ADIMS\bin\System.Web.Http.WebHost.dll
+c:\users\ernest\documents\visual studio 2015\Projects\ADIMS\ADIMS\bin\System.Web.Mvc.dll
+c:\users\ernest\documents\visual studio 2015\Projects\ADIMS\ADIMS\bin\System.Web.Optimization.dll
+c:\users\ernest\documents\visual studio 2015\Projects\ADIMS\ADIMS\bin\System.Web.Razor.dll
+c:\users\ernest\documents\visual studio 2015\Projects\ADIMS\ADIMS\bin\System.Web.WebPages.Deployment.dll
+c:\users\ernest\documents\visual studio 2015\Projects\ADIMS\ADIMS\bin\System.Web.WebPages.dll
+c:\users\ernest\documents\visual studio 2015\Projects\ADIMS\ADIMS\bin\System.Web.WebPages.Razor.dll
+c:\users\ernest\documents\visual studio 2015\Projects\ADIMS\ADIMS\bin\WebGrease.dll
+c:\users\ernest\documents\visual studio 2015\Projects\ADIMS\ADIMS\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+c:\users\ernest\documents\visual studio 2015\Projects\ADIMS\ADIMS\bin\System.Web.Helpers.xml
+c:\users\ernest\documents\visual studio 2015\Projects\ADIMS\ADIMS\bin\System.Web.Mvc.xml
+c:\users\ernest\documents\visual studio 2015\Projects\ADIMS\ADIMS\bin\System.Web.Optimization.xml
+c:\users\ernest\documents\visual studio 2015\Projects\ADIMS\ADIMS\bin\System.Web.Razor.xml
+c:\users\ernest\documents\visual studio 2015\Projects\ADIMS\ADIMS\bin\System.Web.WebPages.xml
+c:\users\ernest\documents\visual studio 2015\Projects\ADIMS\ADIMS\bin\System.Web.WebPages.Deployment.xml
+c:\users\ernest\documents\visual studio 2015\Projects\ADIMS\ADIMS\bin\System.Web.WebPages.Razor.xml
+c:\users\ernest\documents\visual studio 2015\Projects\ADIMS\ADIMS\bin\Antlr3.Runtime.pdb
+c:\users\ernest\documents\visual studio 2015\Projects\ADIMS\ADIMS\bin\Newtonsoft.Json.xml
+c:\users\ernest\documents\visual studio 2015\Projects\ADIMS\ADIMS\bin\System.Net.Http.Formatting.xml
+c:\users\ernest\documents\visual studio 2015\Projects\ADIMS\ADIMS\bin\System.Web.Http.xml
+c:\users\ernest\documents\visual studio 2015\Projects\ADIMS\ADIMS\bin\System.Web.Http.WebHost.xml
+c:\users\ernest\documents\visual studio 2015\Projects\ADIMS\ADIMS\bin\EntityFramework.xml
+c:\users\ernest\documents\visual studio 2015\Projects\ADIMS\ADIMS\bin\EntityFramework.SqlServer.xml
+c:\users\ernest\documents\visual studio 2015\Projects\ADIMS\ADIMS\bin\Microsoft.AspNet.Identity.Core.xml
+c:\users\ernest\documents\visual studio 2015\Projects\ADIMS\ADIMS\bin\Microsoft.AspNet.Identity.Owin.xml
+c:\users\ernest\documents\visual studio 2015\Projects\ADIMS\ADIMS\bin\Microsoft.AspNet.Identity.EntityFramework.xml
+c:\users\ernest\documents\visual studio 2015\Projects\ADIMS\ADIMS\bin\Microsoft.Owin.xml
+c:\users\ernest\documents\visual studio 2015\Projects\ADIMS\ADIMS\bin\Microsoft.Owin.Host.SystemWeb.xml
+c:\users\ernest\documents\visual studio 2015\Projects\ADIMS\ADIMS\bin\Microsoft.Owin.Security.xml
+c:\users\ernest\documents\visual studio 2015\Projects\ADIMS\ADIMS\bin\Microsoft.Owin.Security.Facebook.xml
+c:\users\ernest\documents\visual studio 2015\Projects\ADIMS\ADIMS\bin\Microsoft.Owin.Security.Cookies.xml
+c:\users\ernest\documents\visual studio 2015\Projects\ADIMS\ADIMS\bin\Microsoft.Owin.Security.OAuth.xml
+c:\users\ernest\documents\visual studio 2015\Projects\ADIMS\ADIMS\bin\Microsoft.Owin.Security.Google.xml
+c:\users\ernest\documents\visual studio 2015\Projects\ADIMS\ADIMS\bin\Microsoft.Owin.Security.Twitter.xml
+c:\users\ernest\documents\visual studio 2015\Projects\ADIMS\ADIMS\bin\Microsoft.Owin.Security.MicrosoftAccount.xml
+c:\users\ernest\documents\visual studio 2015\Projects\ADIMS\ADIMS\obj\Debug\ADIMS.dll
+c:\users\ernest\documents\visual studio 2015\Projects\ADIMS\ADIMS\obj\Debug\ADIMS.pdb
+C:\Users\ERNEST\Documents\Visual Studio 2015\Projects\ADIMS\ADIMS\obj\Debug\ADIMS.csprojResolveAssemblyReference.cache
+C:\Users\ERNEST\Documents\Visual Studio 2015\Projects\ADIMS\ADIMS\obj\Debug\ADIMS.Migrations.init_identity.resources
+C:\Users\ERNEST\Documents\Visual Studio 2015\Projects\ADIMS\ADIMS\obj\Debug\ADIMS.csproj.GenerateResource.Cache
+C:\Users\ERNEST\Documents\Visual Studio 2015\Projects\ADIMS\ADIMS\bin\Microsoft.Azure.ActiveDirectory.GraphClient.dll
+C:\Users\ERNEST\Documents\Visual Studio 2015\Projects\ADIMS\ADIMS\bin\Microsoft.Data.Edm.dll
+C:\Users\ERNEST\Documents\Visual Studio 2015\Projects\ADIMS\ADIMS\bin\Microsoft.Data.OData.dll
+C:\Users\ERNEST\Documents\Visual Studio 2015\Projects\ADIMS\ADIMS\bin\Microsoft.Data.Services.Client.dll
+C:\Users\ERNEST\Documents\Visual Studio 2015\Projects\ADIMS\ADIMS\bin\Microsoft.IdentityModel.Clients.ActiveDirectory.dll
+C:\Users\ERNEST\Documents\Visual Studio 2015\Projects\ADIMS\ADIMS\bin\Microsoft.IdentityModel.Clients.ActiveDirectory.WindowsForms.dll
+C:\Users\ERNEST\Documents\Visual Studio 2015\Projects\ADIMS\ADIMS\bin\Microsoft.OData.Client.dll
+C:\Users\ERNEST\Documents\Visual Studio 2015\Projects\ADIMS\ADIMS\bin\Microsoft.OData.Core.dll
+C:\Users\ERNEST\Documents\Visual Studio 2015\Projects\ADIMS\ADIMS\bin\Microsoft.OData.Edm.dll
+C:\Users\ERNEST\Documents\Visual Studio 2015\Projects\ADIMS\ADIMS\bin\Microsoft.OData.ProxyExtensions.dll
+C:\Users\ERNEST\Documents\Visual Studio 2015\Projects\ADIMS\ADIMS\bin\Microsoft.Office365.Discovery.dll
+C:\Users\ERNEST\Documents\Visual Studio 2015\Projects\ADIMS\ADIMS\bin\Microsoft.Office365.OutlookServices.Portable.dll
+C:\Users\ERNEST\Documents\Visual Studio 2015\Projects\ADIMS\ADIMS\bin\Microsoft.Office365.SharePoint.dll
+C:\Users\ERNEST\Documents\Visual Studio 2015\Projects\ADIMS\ADIMS\bin\Microsoft.Owin.Security.ActiveDirectory.dll
+C:\Users\ERNEST\Documents\Visual Studio 2015\Projects\ADIMS\ADIMS\bin\Microsoft.Owin.Security.Jwt.dll
+C:\Users\ERNEST\Documents\Visual Studio 2015\Projects\ADIMS\ADIMS\bin\Microsoft.Spatial.dll
+C:\Users\ERNEST\Documents\Visual Studio 2015\Projects\ADIMS\ADIMS\bin\System.IdentityModel.Tokens.Jwt.dll
+C:\Users\ERNEST\Documents\Visual Studio 2015\Projects\ADIMS\ADIMS\bin\System.Spatial.dll
+C:\Users\ERNEST\Documents\Visual Studio 2015\Projects\ADIMS\ADIMS\bin\Microsoft.Data.Edm.xml
+C:\Users\ERNEST\Documents\Visual Studio 2015\Projects\ADIMS\ADIMS\bin\Microsoft.Data.OData.xml
+C:\Users\ERNEST\Documents\Visual Studio 2015\Projects\ADIMS\ADIMS\bin\Microsoft.Data.Services.Client.xml
+C:\Users\ERNEST\Documents\Visual Studio 2015\Projects\ADIMS\ADIMS\bin\Microsoft.IdentityModel.Clients.ActiveDirectory.xml
+C:\Users\ERNEST\Documents\Visual Studio 2015\Projects\ADIMS\ADIMS\bin\Microsoft.OData.Client.xml
+C:\Users\ERNEST\Documents\Visual Studio 2015\Projects\ADIMS\ADIMS\bin\Microsoft.OData.Core.xml
+C:\Users\ERNEST\Documents\Visual Studio 2015\Projects\ADIMS\ADIMS\bin\Microsoft.OData.Edm.xml
+C:\Users\ERNEST\Documents\Visual Studio 2015\Projects\ADIMS\ADIMS\bin\Microsoft.Owin.Security.ActiveDirectory.xml
+C:\Users\ERNEST\Documents\Visual Studio 2015\Projects\ADIMS\ADIMS\bin\Microsoft.Owin.Security.Jwt.xml
+C:\Users\ERNEST\Documents\Visual Studio 2015\Projects\ADIMS\ADIMS\bin\Microsoft.Spatial.xml
+C:\Users\ERNEST\Documents\Visual Studio 2015\Projects\ADIMS\ADIMS\bin\System.IdentityModel.Tokens.Jwt.xml
+C:\Users\ERNEST\Documents\Visual Studio 2015\Projects\ADIMS\ADIMS\bin\System.Spatial.xml
+C:\Users\ERNEST\Documents\Visual Studio 2015\Projects\ADIMS\ADIMS\bin\de\Microsoft.Data.Edm.resources.dll
+C:\Users\ERNEST\Documents\Visual Studio 2015\Projects\ADIMS\ADIMS\bin\es\Microsoft.Data.Edm.resources.dll
+C:\Users\ERNEST\Documents\Visual Studio 2015\Projects\ADIMS\ADIMS\bin\fr\Microsoft.Data.Edm.resources.dll
+C:\Users\ERNEST\Documents\Visual Studio 2015\Projects\ADIMS\ADIMS\bin\it\Microsoft.Data.Edm.resources.dll
+C:\Users\ERNEST\Documents\Visual Studio 2015\Projects\ADIMS\ADIMS\bin\ja\Microsoft.Data.Edm.resources.dll
+C:\Users\ERNEST\Documents\Visual Studio 2015\Projects\ADIMS\ADIMS\bin\ko\Microsoft.Data.Edm.resources.dll
+C:\Users\ERNEST\Documents\Visual Studio 2015\Projects\ADIMS\ADIMS\bin\ru\Microsoft.Data.Edm.resources.dll
+C:\Users\ERNEST\Documents\Visual Studio 2015\Projects\ADIMS\ADIMS\bin\zh-Hans\Microsoft.Data.Edm.resources.dll
+C:\Users\ERNEST\Documents\Visual Studio 2015\Projects\ADIMS\ADIMS\bin\zh-Hant\Microsoft.Data.Edm.resources.dll
+C:\Users\ERNEST\Documents\Visual Studio 2015\Projects\ADIMS\ADIMS\bin\de\Microsoft.Data.OData.resources.dll
+C:\Users\ERNEST\Documents\Visual Studio 2015\Projects\ADIMS\ADIMS\bin\es\Microsoft.Data.OData.resources.dll
+C:\Users\ERNEST\Documents\Visual Studio 2015\Projects\ADIMS\ADIMS\bin\fr\Microsoft.Data.OData.resources.dll
+C:\Users\ERNEST\Documents\Visual Studio 2015\Projects\ADIMS\ADIMS\bin\it\Microsoft.Data.OData.resources.dll
+C:\Users\ERNEST\Documents\Visual Studio 2015\Projects\ADIMS\ADIMS\bin\ja\Microsoft.Data.OData.resources.dll
+C:\Users\ERNEST\Documents\Visual Studio 2015\Projects\ADIMS\ADIMS\bin\ko\Microsoft.Data.OData.resources.dll
+C:\Users\ERNEST\Documents\Visual Studio 2015\Projects\ADIMS\ADIMS\bin\ru\Microsoft.Data.OData.resources.dll
+C:\Users\ERNEST\Documents\Visual Studio 2015\Projects\ADIMS\ADIMS\bin\zh-Hans\Microsoft.Data.OData.resources.dll
+C:\Users\ERNEST\Documents\Visual Studio 2015\Projects\ADIMS\ADIMS\bin\zh-Hant\Microsoft.Data.OData.resources.dll
+C:\Users\ERNEST\Documents\Visual Studio 2015\Projects\ADIMS\ADIMS\bin\de\Microsoft.Data.Services.Client.resources.dll
+C:\Users\ERNEST\Documents\Visual Studio 2015\Projects\ADIMS\ADIMS\bin\es\Microsoft.Data.Services.Client.resources.dll
+C:\Users\ERNEST\Documents\Visual Studio 2015\Projects\ADIMS\ADIMS\bin\fr\Microsoft.Data.Services.Client.resources.dll
+C:\Users\ERNEST\Documents\Visual Studio 2015\Projects\ADIMS\ADIMS\bin\it\Microsoft.Data.Services.Client.resources.dll
+C:\Users\ERNEST\Documents\Visual Studio 2015\Projects\ADIMS\ADIMS\bin\ja\Microsoft.Data.Services.Client.resources.dll
+C:\Users\ERNEST\Documents\Visual Studio 2015\Projects\ADIMS\ADIMS\bin\ko\Microsoft.Data.Services.Client.resources.dll
+C:\Users\ERNEST\Documents\Visual Studio 2015\Projects\ADIMS\ADIMS\bin\ru\Microsoft.Data.Services.Client.resources.dll
+C:\Users\ERNEST\Documents\Visual Studio 2015\Projects\ADIMS\ADIMS\bin\zh-Hans\Microsoft.Data.Services.Client.resources.dll
+C:\Users\ERNEST\Documents\Visual Studio 2015\Projects\ADIMS\ADIMS\bin\zh-Hant\Microsoft.Data.Services.Client.resources.dll
+C:\Users\ERNEST\Documents\Visual Studio 2015\Projects\ADIMS\ADIMS\bin\de\Microsoft.OData.Client.resources.dll
+C:\Users\ERNEST\Documents\Visual Studio 2015\Projects\ADIMS\ADIMS\bin\es\Microsoft.OData.Client.resources.dll
+C:\Users\ERNEST\Documents\Visual Studio 2015\Projects\ADIMS\ADIMS\bin\fr\Microsoft.OData.Client.resources.dll
+C:\Users\ERNEST\Documents\Visual Studio 2015\Projects\ADIMS\ADIMS\bin\it\Microsoft.OData.Client.resources.dll
+C:\Users\ERNEST\Documents\Visual Studio 2015\Projects\ADIMS\ADIMS\bin\ja\Microsoft.OData.Client.resources.dll
+C:\Users\ERNEST\Documents\Visual Studio 2015\Projects\ADIMS\ADIMS\bin\ko\Microsoft.OData.Client.resources.dll
+C:\Users\ERNEST\Documents\Visual Studio 2015\Projects\ADIMS\ADIMS\bin\ru\Microsoft.OData.Client.resources.dll
+C:\Users\ERNEST\Documents\Visual Studio 2015\Projects\ADIMS\ADIMS\bin\zh-Hans\Microsoft.OData.Client.resources.dll
+C:\Users\ERNEST\Documents\Visual Studio 2015\Projects\ADIMS\ADIMS\bin\zh-Hant\Microsoft.OData.Client.resources.dll
+C:\Users\ERNEST\Documents\Visual Studio 2015\Projects\ADIMS\ADIMS\bin\de\Microsoft.OData.Core.resources.dll
+C:\Users\ERNEST\Documents\Visual Studio 2015\Projects\ADIMS\ADIMS\bin\es\Microsoft.OData.Core.resources.dll
+C:\Users\ERNEST\Documents\Visual Studio 2015\Projects\ADIMS\ADIMS\bin\fr\Microsoft.OData.Core.resources.dll
+C:\Users\ERNEST\Documents\Visual Studio 2015\Projects\ADIMS\ADIMS\bin\it\Microsoft.OData.Core.resources.dll
+C:\Users\ERNEST\Documents\Visual Studio 2015\Projects\ADIMS\ADIMS\bin\ja\Microsoft.OData.Core.resources.dll
+C:\Users\ERNEST\Documents\Visual Studio 2015\Projects\ADIMS\ADIMS\bin\ko\Microsoft.OData.Core.resources.dll
+C:\Users\ERNEST\Documents\Visual Studio 2015\Projects\ADIMS\ADIMS\bin\ru\Microsoft.OData.Core.resources.dll
+C:\Users\ERNEST\Documents\Visual Studio 2015\Projects\ADIMS\ADIMS\bin\zh-Hans\Microsoft.OData.Core.resources.dll
+C:\Users\ERNEST\Documents\Visual Studio 2015\Projects\ADIMS\ADIMS\bin\zh-Hant\Microsoft.OData.Core.resources.dll
+C:\Users\ERNEST\Documents\Visual Studio 2015\Projects\ADIMS\ADIMS\bin\de\Microsoft.OData.Edm.resources.dll
+C:\Users\ERNEST\Documents\Visual Studio 2015\Projects\ADIMS\ADIMS\bin\es\Microsoft.OData.Edm.resources.dll
+C:\Users\ERNEST\Documents\Visual Studio 2015\Projects\ADIMS\ADIMS\bin\fr\Microsoft.OData.Edm.resources.dll
+C:\Users\ERNEST\Documents\Visual Studio 2015\Projects\ADIMS\ADIMS\bin\it\Microsoft.OData.Edm.resources.dll
+C:\Users\ERNEST\Documents\Visual Studio 2015\Projects\ADIMS\ADIMS\bin\ja\Microsoft.OData.Edm.resources.dll
+C:\Users\ERNEST\Documents\Visual Studio 2015\Projects\ADIMS\ADIMS\bin\ko\Microsoft.OData.Edm.resources.dll
+C:\Users\ERNEST\Documents\Visual Studio 2015\Projects\ADIMS\ADIMS\bin\ru\Microsoft.OData.Edm.resources.dll
+C:\Users\ERNEST\Documents\Visual Studio 2015\Projects\ADIMS\ADIMS\bin\zh-Hans\Microsoft.OData.Edm.resources.dll
+C:\Users\ERNEST\Documents\Visual Studio 2015\Projects\ADIMS\ADIMS\bin\zh-Hant\Microsoft.OData.Edm.resources.dll
+C:\Users\ERNEST\Documents\Visual Studio 2015\Projects\ADIMS\ADIMS\bin\de\Microsoft.Spatial.resources.dll
+C:\Users\ERNEST\Documents\Visual Studio 2015\Projects\ADIMS\ADIMS\bin\es\Microsoft.Spatial.resources.dll
+C:\Users\ERNEST\Documents\Visual Studio 2015\Projects\ADIMS\ADIMS\bin\fr\Microsoft.Spatial.resources.dll
+C:\Users\ERNEST\Documents\Visual Studio 2015\Projects\ADIMS\ADIMS\bin\it\Microsoft.Spatial.resources.dll
+C:\Users\ERNEST\Documents\Visual Studio 2015\Projects\ADIMS\ADIMS\bin\ja\Microsoft.Spatial.resources.dll
+C:\Users\ERNEST\Documents\Visual Studio 2015\Projects\ADIMS\ADIMS\bin\ko\Microsoft.Spatial.resources.dll
+C:\Users\ERNEST\Documents\Visual Studio 2015\Projects\ADIMS\ADIMS\bin\ru\Microsoft.Spatial.resources.dll
+C:\Users\ERNEST\Documents\Visual Studio 2015\Projects\ADIMS\ADIMS\bin\zh-Hans\Microsoft.Spatial.resources.dll
+C:\Users\ERNEST\Documents\Visual Studio 2015\Projects\ADIMS\ADIMS\bin\zh-Hant\Microsoft.Spatial.resources.dll
+C:\Users\ERNEST\Documents\Visual Studio 2015\Projects\ADIMS\ADIMS\bin\de\System.Spatial.resources.dll
+C:\Users\ERNEST\Documents\Visual Studio 2015\Projects\ADIMS\ADIMS\bin\es\System.Spatial.resources.dll
+C:\Users\ERNEST\Documents\Visual Studio 2015\Projects\ADIMS\ADIMS\bin\fr\System.Spatial.resources.dll
+C:\Users\ERNEST\Documents\Visual Studio 2015\Projects\ADIMS\ADIMS\bin\it\System.Spatial.resources.dll
+C:\Users\ERNEST\Documents\Visual Studio 2015\Projects\ADIMS\ADIMS\bin\ja\System.Spatial.resources.dll
+C:\Users\ERNEST\Documents\Visual Studio 2015\Projects\ADIMS\ADIMS\bin\ko\System.Spatial.resources.dll
+C:\Users\ERNEST\Documents\Visual Studio 2015\Projects\ADIMS\ADIMS\bin\ru\System.Spatial.resources.dll
+C:\Users\ERNEST\Documents\Visual Studio 2015\Projects\ADIMS\ADIMS\bin\zh-Hans\System.Spatial.resources.dll
+C:\Users\ERNEST\Documents\Visual Studio 2015\Projects\ADIMS\ADIMS\bin\zh-Hant\System.Spatial.resources.dll
+C:\Users\ERNEST\Documents\Visual Studio 2015\Projects\ADIMS\ADIMS\bin\AutoMapper.dll
+C:\Users\ERNEST\Documents\Visual Studio 2015\Projects\ADIMS\ADIMS\bin\AutoMapper.xml
+C:\Users\ernjo\Documents\Visual Studio 2017\Projects\ADIMS\ADIMS\bin\roslyn\csc.exe
+C:\Users\ernjo\Documents\Visual Studio 2017\Projects\ADIMS\ADIMS\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+C:\Users\ernjo\Documents\Visual Studio 2017\Projects\ADIMS\ADIMS\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+C:\Users\ernjo\Documents\Visual Studio 2017\Projects\ADIMS\ADIMS\bin\roslyn\Microsoft.CodeAnalysis.dll
+C:\Users\ernjo\Documents\Visual Studio 2017\Projects\ADIMS\ADIMS\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+C:\Users\ernjo\Documents\Visual Studio 2017\Projects\ADIMS\ADIMS\bin\roslyn\Microsoft.CSharp.Core.targets
+C:\Users\ernjo\Documents\Visual Studio 2017\Projects\ADIMS\ADIMS\bin\roslyn\Microsoft.VisualBasic.Core.targets
+C:\Users\ernjo\Documents\Visual Studio 2017\Projects\ADIMS\ADIMS\bin\roslyn\System.Collections.Immutable.dll
+C:\Users\ernjo\Documents\Visual Studio 2017\Projects\ADIMS\ADIMS\bin\roslyn\System.Reflection.Metadata.dll
+C:\Users\ernjo\Documents\Visual Studio 2017\Projects\ADIMS\ADIMS\bin\roslyn\vbc.exe
+C:\Users\ernjo\Documents\Visual Studio 2017\Projects\ADIMS\ADIMS\bin\roslyn\VBCSCompiler.exe
+C:\Users\ernjo\Documents\Visual Studio 2017\Projects\ADIMS\ADIMS\bin\roslyn\VBCSCompiler.exe.config
+C:\Users\ernjo\Documents\Visual Studio 2017\Projects\ADIMS\ADIMS\bin\ADIMS.dll.config
+C:\Users\ernjo\Documents\Visual Studio 2017\Projects\ADIMS\ADIMS\bin\ADIMS.dll
+C:\Users\ernjo\Documents\Visual Studio 2017\Projects\ADIMS\ADIMS\bin\ADIMS.pdb
+C:\Users\ernjo\Documents\Visual Studio 2017\Projects\ADIMS\ADIMS\bin\Antlr3.Runtime.dll
+C:\Users\ernjo\Documents\Visual Studio 2017\Projects\ADIMS\ADIMS\bin\AutoMapper.dll
+C:\Users\ernjo\Documents\Visual Studio 2017\Projects\ADIMS\ADIMS\bin\EasyNetQ.dll
+C:\Users\ernjo\Documents\Visual Studio 2017\Projects\ADIMS\ADIMS\bin\EntityFramework.dll
+C:\Users\ernjo\Documents\Visual Studio 2017\Projects\ADIMS\ADIMS\bin\EntityFramework.SqlServer.dll
+C:\Users\ernjo\Documents\Visual Studio 2017\Projects\ADIMS\ADIMS\bin\FoolproofValidation.dll
+C:\Users\ernjo\Documents\Visual Studio 2017\Projects\ADIMS\ADIMS\bin\Jmelosegui.Mvc.GoogleMap.dll
+C:\Users\ernjo\Documents\Visual Studio 2017\Projects\ADIMS\ADIMS\bin\Microsoft.AspNet.Identity.Core.dll
+C:\Users\ernjo\Documents\Visual Studio 2017\Projects\ADIMS\ADIMS\bin\Microsoft.AspNet.Identity.EntityFramework.dll
+C:\Users\ernjo\Documents\Visual Studio 2017\Projects\ADIMS\ADIMS\bin\Microsoft.AspNet.Identity.Owin.dll
+C:\Users\ernjo\Documents\Visual Studio 2017\Projects\ADIMS\ADIMS\bin\Microsoft.Azure.ActiveDirectory.GraphClient.dll
+C:\Users\ernjo\Documents\Visual Studio 2017\Projects\ADIMS\ADIMS\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+C:\Users\ernjo\Documents\Visual Studio 2017\Projects\ADIMS\ADIMS\bin\Microsoft.Data.Edm.dll
+C:\Users\ernjo\Documents\Visual Studio 2017\Projects\ADIMS\ADIMS\bin\Microsoft.Data.OData.dll
+C:\Users\ernjo\Documents\Visual Studio 2017\Projects\ADIMS\ADIMS\bin\Microsoft.Data.Services.Client.dll
+C:\Users\ernjo\Documents\Visual Studio 2017\Projects\ADIMS\ADIMS\bin\Microsoft.IdentityModel.Clients.ActiveDirectory.dll
+C:\Users\ernjo\Documents\Visual Studio 2017\Projects\ADIMS\ADIMS\bin\Microsoft.IdentityModel.Clients.ActiveDirectory.WindowsForms.dll
+C:\Users\ernjo\Documents\Visual Studio 2017\Projects\ADIMS\ADIMS\bin\Microsoft.OData.Client.dll
+C:\Users\ernjo\Documents\Visual Studio 2017\Projects\ADIMS\ADIMS\bin\Microsoft.OData.Core.dll
+C:\Users\ernjo\Documents\Visual Studio 2017\Projects\ADIMS\ADIMS\bin\Microsoft.OData.Edm.dll
+C:\Users\ernjo\Documents\Visual Studio 2017\Projects\ADIMS\ADIMS\bin\Microsoft.OData.ProxyExtensions.dll
+C:\Users\ernjo\Documents\Visual Studio 2017\Projects\ADIMS\ADIMS\bin\Microsoft.Office365.Discovery.dll
+C:\Users\ernjo\Documents\Visual Studio 2017\Projects\ADIMS\ADIMS\bin\Microsoft.Office365.OutlookServices.Portable.dll
+C:\Users\ernjo\Documents\Visual Studio 2017\Projects\ADIMS\ADIMS\bin\Microsoft.Office365.SharePoint.dll
+C:\Users\ernjo\Documents\Visual Studio 2017\Projects\ADIMS\ADIMS\bin\Microsoft.Owin.dll
+C:\Users\ernjo\Documents\Visual Studio 2017\Projects\ADIMS\ADIMS\bin\Microsoft.Owin.Host.SystemWeb.dll
+C:\Users\ernjo\Documents\Visual Studio 2017\Projects\ADIMS\ADIMS\bin\Microsoft.Owin.Security.ActiveDirectory.dll
+C:\Users\ernjo\Documents\Visual Studio 2017\Projects\ADIMS\ADIMS\bin\Microsoft.Owin.Security.Cookies.dll
+C:\Users\ernjo\Documents\Visual Studio 2017\Projects\ADIMS\ADIMS\bin\Microsoft.Owin.Security.dll
+C:\Users\ernjo\Documents\Visual Studio 2017\Projects\ADIMS\ADIMS\bin\Microsoft.Owin.Security.Facebook.dll
+C:\Users\ernjo\Documents\Visual Studio 2017\Projects\ADIMS\ADIMS\bin\Microsoft.Owin.Security.Google.dll
+C:\Users\ernjo\Documents\Visual Studio 2017\Projects\ADIMS\ADIMS\bin\Microsoft.Owin.Security.Jwt.dll
+C:\Users\ernjo\Documents\Visual Studio 2017\Projects\ADIMS\ADIMS\bin\Microsoft.Owin.Security.MicrosoftAccount.dll
+C:\Users\ernjo\Documents\Visual Studio 2017\Projects\ADIMS\ADIMS\bin\Microsoft.Owin.Security.OAuth.dll
+C:\Users\ernjo\Documents\Visual Studio 2017\Projects\ADIMS\ADIMS\bin\Microsoft.Owin.Security.Twitter.dll
+C:\Users\ernjo\Documents\Visual Studio 2017\Projects\ADIMS\ADIMS\bin\Microsoft.QualityTools.Testing.Fakes.dll
+C:\Users\ernjo\Documents\Visual Studio 2017\Projects\ADIMS\ADIMS\bin\Microsoft.Spatial.dll
+C:\Users\ernjo\Documents\Visual Studio 2017\Projects\ADIMS\ADIMS\bin\Microsoft.Web.Infrastructure.dll
+C:\Users\ernjo\Documents\Visual Studio 2017\Projects\ADIMS\ADIMS\bin\Newtonsoft.Json.dll
+C:\Users\ernjo\Documents\Visual Studio 2017\Projects\ADIMS\ADIMS\bin\Owin.dll
+C:\Users\ernjo\Documents\Visual Studio 2017\Projects\ADIMS\ADIMS\bin\RabbitMQ.Client.dll
+C:\Users\ernjo\Documents\Visual Studio 2017\Projects\ADIMS\ADIMS\bin\Swashbuckle.Core.dll
+C:\Users\ernjo\Documents\Visual Studio 2017\Projects\ADIMS\ADIMS\bin\System.IdentityModel.Tokens.Jwt.dll
+C:\Users\ernjo\Documents\Visual Studio 2017\Projects\ADIMS\ADIMS\bin\System.Net.Http.Formatting.dll
+C:\Users\ernjo\Documents\Visual Studio 2017\Projects\ADIMS\ADIMS\bin\System.Spatial.dll
+C:\Users\ernjo\Documents\Visual Studio 2017\Projects\ADIMS\ADIMS\bin\System.ValueTuple.dll
+C:\Users\ernjo\Documents\Visual Studio 2017\Projects\ADIMS\ADIMS\bin\System.Web.Helpers.dll
+C:\Users\ernjo\Documents\Visual Studio 2017\Projects\ADIMS\ADIMS\bin\System.Web.Http.dll
+C:\Users\ernjo\Documents\Visual Studio 2017\Projects\ADIMS\ADIMS\bin\System.Web.Http.WebHost.dll
+C:\Users\ernjo\Documents\Visual Studio 2017\Projects\ADIMS\ADIMS\bin\System.Web.Mvc.dll
+C:\Users\ernjo\Documents\Visual Studio 2017\Projects\ADIMS\ADIMS\bin\System.Web.Optimization.dll
+C:\Users\ernjo\Documents\Visual Studio 2017\Projects\ADIMS\ADIMS\bin\System.Web.Razor.dll
+C:\Users\ernjo\Documents\Visual Studio 2017\Projects\ADIMS\ADIMS\bin\System.Web.WebPages.Deployment.dll
+C:\Users\ernjo\Documents\Visual Studio 2017\Projects\ADIMS\ADIMS\bin\System.Web.WebPages.dll
+C:\Users\ernjo\Documents\Visual Studio 2017\Projects\ADIMS\ADIMS\bin\System.Web.WebPages.Razor.dll
+C:\Users\ernjo\Documents\Visual Studio 2017\Projects\ADIMS\ADIMS\bin\WebActivatorEx.dll
+C:\Users\ernjo\Documents\Visual Studio 2017\Projects\ADIMS\ADIMS\bin\WebGrease.dll
+C:\Users\ernjo\Documents\Visual Studio 2017\Projects\ADIMS\ADIMS\bin\AutoMapper.xml
+C:\Users\ernjo\Documents\Visual Studio 2017\Projects\ADIMS\ADIMS\bin\EasyNetQ.xml
+C:\Users\ernjo\Documents\Visual Studio 2017\Projects\ADIMS\ADIMS\bin\Microsoft.AspNet.Identity.Core.xml
+C:\Users\ernjo\Documents\Visual Studio 2017\Projects\ADIMS\ADIMS\bin\Microsoft.AspNet.Identity.EntityFramework.xml
+C:\Users\ernjo\Documents\Visual Studio 2017\Projects\ADIMS\ADIMS\bin\Microsoft.AspNet.Identity.Owin.xml
+C:\Users\ernjo\Documents\Visual Studio 2017\Projects\ADIMS\ADIMS\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+C:\Users\ernjo\Documents\Visual Studio 2017\Projects\ADIMS\ADIMS\bin\Microsoft.Data.Edm.xml
+C:\Users\ernjo\Documents\Visual Studio 2017\Projects\ADIMS\ADIMS\bin\Microsoft.Data.OData.xml
+C:\Users\ernjo\Documents\Visual Studio 2017\Projects\ADIMS\ADIMS\bin\Microsoft.Data.Services.Client.xml
+C:\Users\ernjo\Documents\Visual Studio 2017\Projects\ADIMS\ADIMS\bin\Microsoft.IdentityModel.Clients.ActiveDirectory.xml
+C:\Users\ernjo\Documents\Visual Studio 2017\Projects\ADIMS\ADIMS\bin\Microsoft.OData.Client.xml
+C:\Users\ernjo\Documents\Visual Studio 2017\Projects\ADIMS\ADIMS\bin\Microsoft.OData.Core.xml
+C:\Users\ernjo\Documents\Visual Studio 2017\Projects\ADIMS\ADIMS\bin\Microsoft.OData.Edm.xml
+C:\Users\ernjo\Documents\Visual Studio 2017\Projects\ADIMS\ADIMS\bin\Microsoft.Owin.Security.ActiveDirectory.xml
+C:\Users\ernjo\Documents\Visual Studio 2017\Projects\ADIMS\ADIMS\bin\Microsoft.Owin.Security.Jwt.xml
+C:\Users\ernjo\Documents\Visual Studio 2017\Projects\ADIMS\ADIMS\bin\Microsoft.Spatial.xml
+C:\Users\ernjo\Documents\Visual Studio 2017\Projects\ADIMS\ADIMS\bin\Newtonsoft.Json.xml
+C:\Users\ernjo\Documents\Visual Studio 2017\Projects\ADIMS\ADIMS\bin\RabbitMQ.Client.xml
+C:\Users\ernjo\Documents\Visual Studio 2017\Projects\ADIMS\ADIMS\bin\System.IdentityModel.Tokens.Jwt.xml
+C:\Users\ernjo\Documents\Visual Studio 2017\Projects\ADIMS\ADIMS\bin\System.Spatial.xml
+C:\Users\ernjo\Documents\Visual Studio 2017\Projects\ADIMS\ADIMS\bin\System.Web.Helpers.xml
+C:\Users\ernjo\Documents\Visual Studio 2017\Projects\ADIMS\ADIMS\bin\System.Web.Mvc.xml
+C:\Users\ernjo\Documents\Visual Studio 2017\Projects\ADIMS\ADIMS\bin\System.Web.Optimization.xml
+C:\Users\ernjo\Documents\Visual Studio 2017\Projects\ADIMS\ADIMS\bin\System.Web.Razor.xml
+C:\Users\ernjo\Documents\Visual Studio 2017\Projects\ADIMS\ADIMS\bin\System.Web.WebPages.xml
+C:\Users\ernjo\Documents\Visual Studio 2017\Projects\ADIMS\ADIMS\bin\System.Web.WebPages.Deployment.xml
+C:\Users\ernjo\Documents\Visual Studio 2017\Projects\ADIMS\ADIMS\bin\System.Web.WebPages.Razor.xml
+C:\Users\ernjo\Documents\Visual Studio 2017\Projects\ADIMS\ADIMS\bin\Antlr3.Runtime.pdb
+C:\Users\ernjo\Documents\Visual Studio 2017\Projects\ADIMS\ADIMS\bin\System.Net.Http.Formatting.xml
+C:\Users\ernjo\Documents\Visual Studio 2017\Projects\ADIMS\ADIMS\bin\System.Web.Http.xml
+C:\Users\ernjo\Documents\Visual Studio 2017\Projects\ADIMS\ADIMS\bin\System.Web.Http.WebHost.xml
+C:\Users\ernjo\Documents\Visual Studio 2017\Projects\ADIMS\ADIMS\bin\EntityFramework.xml
+C:\Users\ernjo\Documents\Visual Studio 2017\Projects\ADIMS\ADIMS\bin\EntityFramework.SqlServer.xml
+C:\Users\ernjo\Documents\Visual Studio 2017\Projects\ADIMS\ADIMS\bin\Microsoft.Owin.xml
+C:\Users\ernjo\Documents\Visual Studio 2017\Projects\ADIMS\ADIMS\bin\Microsoft.Owin.Host.SystemWeb.xml
+C:\Users\ernjo\Documents\Visual Studio 2017\Projects\ADIMS\ADIMS\bin\Microsoft.Owin.Security.xml
+C:\Users\ernjo\Documents\Visual Studio 2017\Projects\ADIMS\ADIMS\bin\Microsoft.Owin.Security.Facebook.xml
+C:\Users\ernjo\Documents\Visual Studio 2017\Projects\ADIMS\ADIMS\bin\Microsoft.Owin.Security.Cookies.xml
+C:\Users\ernjo\Documents\Visual Studio 2017\Projects\ADIMS\ADIMS\bin\Microsoft.Owin.Security.OAuth.xml
+C:\Users\ernjo\Documents\Visual Studio 2017\Projects\ADIMS\ADIMS\bin\Microsoft.Owin.Security.Google.xml
+C:\Users\ernjo\Documents\Visual Studio 2017\Projects\ADIMS\ADIMS\bin\Microsoft.Owin.Security.Twitter.xml
+C:\Users\ernjo\Documents\Visual Studio 2017\Projects\ADIMS\ADIMS\bin\Microsoft.Owin.Security.MicrosoftAccount.xml
+C:\Users\ernjo\Documents\Visual Studio 2017\Projects\ADIMS\ADIMS\bin\de\Microsoft.Data.Edm.resources.dll
+C:\Users\ernjo\Documents\Visual Studio 2017\Projects\ADIMS\ADIMS\bin\es\Microsoft.Data.Edm.resources.dll
+C:\Users\ernjo\Documents\Visual Studio 2017\Projects\ADIMS\ADIMS\bin\fr\Microsoft.Data.Edm.resources.dll
+C:\Users\ernjo\Documents\Visual Studio 2017\Projects\ADIMS\ADIMS\bin\it\Microsoft.Data.Edm.resources.dll
+C:\Users\ernjo\Documents\Visual Studio 2017\Projects\ADIMS\ADIMS\bin\ja\Microsoft.Data.Edm.resources.dll
+C:\Users\ernjo\Documents\Visual Studio 2017\Projects\ADIMS\ADIMS\bin\ko\Microsoft.Data.Edm.resources.dll
+C:\Users\ernjo\Documents\Visual Studio 2017\Projects\ADIMS\ADIMS\bin\ru\Microsoft.Data.Edm.resources.dll
+C:\Users\ernjo\Documents\Visual Studio 2017\Projects\ADIMS\ADIMS\bin\zh-Hans\Microsoft.Data.Edm.resources.dll
+C:\Users\ernjo\Documents\Visual Studio 2017\Projects\ADIMS\ADIMS\bin\zh-Hant\Microsoft.Data.Edm.resources.dll
+C:\Users\ernjo\Documents\Visual Studio 2017\Projects\ADIMS\ADIMS\bin\de\Microsoft.Data.OData.resources.dll
+C:\Users\ernjo\Documents\Visual Studio 2017\Projects\ADIMS\ADIMS\bin\es\Microsoft.Data.OData.resources.dll
+C:\Users\ernjo\Documents\Visual Studio 2017\Projects\ADIMS\ADIMS\bin\fr\Microsoft.Data.OData.resources.dll
+C:\Users\ernjo\Documents\Visual Studio 2017\Projects\ADIMS\ADIMS\bin\it\Microsoft.Data.OData.resources.dll
+C:\Users\ernjo\Documents\Visual Studio 2017\Projects\ADIMS\ADIMS\bin\ja\Microsoft.Data.OData.resources.dll
+C:\Users\ernjo\Documents\Visual Studio 2017\Projects\ADIMS\ADIMS\bin\ko\Microsoft.Data.OData.resources.dll
+C:\Users\ernjo\Documents\Visual Studio 2017\Projects\ADIMS\ADIMS\bin\ru\Microsoft.Data.OData.resources.dll
+C:\Users\ernjo\Documents\Visual Studio 2017\Projects\ADIMS\ADIMS\bin\zh-Hans\Microsoft.Data.OData.resources.dll
+C:\Users\ernjo\Documents\Visual Studio 2017\Projects\ADIMS\ADIMS\bin\zh-Hant\Microsoft.Data.OData.resources.dll
+C:\Users\ernjo\Documents\Visual Studio 2017\Projects\ADIMS\ADIMS\bin\de\Microsoft.Data.Services.Client.resources.dll
+C:\Users\ernjo\Documents\Visual Studio 2017\Projects\ADIMS\ADIMS\bin\es\Microsoft.Data.Services.Client.resources.dll
+C:\Users\ernjo\Documents\Visual Studio 2017\Projects\ADIMS\ADIMS\bin\fr\Microsoft.Data.Services.Client.resources.dll
+C:\Users\ernjo\Documents\Visual Studio 2017\Projects\ADIMS\ADIMS\bin\it\Microsoft.Data.Services.Client.resources.dll
+C:\Users\ernjo\Documents\Visual Studio 2017\Projects\ADIMS\ADIMS\bin\ja\Microsoft.Data.Services.Client.resources.dll
+C:\Users\ernjo\Documents\Visual Studio 2017\Projects\ADIMS\ADIMS\bin\ko\Microsoft.Data.Services.Client.resources.dll
+C:\Users\ernjo\Documents\Visual Studio 2017\Projects\ADIMS\ADIMS\bin\ru\Microsoft.Data.Services.Client.resources.dll
+C:\Users\ernjo\Documents\Visual Studio 2017\Projects\ADIMS\ADIMS\bin\zh-Hans\Microsoft.Data.Services.Client.resources.dll
+C:\Users\ernjo\Documents\Visual Studio 2017\Projects\ADIMS\ADIMS\bin\zh-Hant\Microsoft.Data.Services.Client.resources.dll
+C:\Users\ernjo\Documents\Visual Studio 2017\Projects\ADIMS\ADIMS\bin\de\Microsoft.OData.Client.resources.dll
+C:\Users\ernjo\Documents\Visual Studio 2017\Projects\ADIMS\ADIMS\bin\es\Microsoft.OData.Client.resources.dll
+C:\Users\ernjo\Documents\Visual Studio 2017\Projects\ADIMS\ADIMS\bin\fr\Microsoft.OData.Client.resources.dll
+C:\Users\ernjo\Documents\Visual Studio 2017\Projects\ADIMS\ADIMS\bin\it\Microsoft.OData.Client.resources.dll
+C:\Users\ernjo\Documents\Visual Studio 2017\Projects\ADIMS\ADIMS\bin\ja\Microsoft.OData.Client.resources.dll
+C:\Users\ernjo\Documents\Visual Studio 2017\Projects\ADIMS\ADIMS\bin\ko\Microsoft.OData.Client.resources.dll
+C:\Users\ernjo\Documents\Visual Studio 2017\Projects\ADIMS\ADIMS\bin\ru\Microsoft.OData.Client.resources.dll
+C:\Users\ernjo\Documents\Visual Studio 2017\Projects\ADIMS\ADIMS\bin\zh-Hans\Microsoft.OData.Client.resources.dll
+C:\Users\ernjo\Documents\Visual Studio 2017\Projects\ADIMS\ADIMS\bin\zh-Hant\Microsoft.OData.Client.resources.dll
+C:\Users\ernjo\Documents\Visual Studio 2017\Projects\ADIMS\ADIMS\bin\de\Microsoft.OData.Core.resources.dll
+C:\Users\ernjo\Documents\Visual Studio 2017\Projects\ADIMS\ADIMS\bin\es\Microsoft.OData.Core.resources.dll
+C:\Users\ernjo\Documents\Visual Studio 2017\Projects\ADIMS\ADIMS\bin\fr\Microsoft.OData.Core.resources.dll
+C:\Users\ernjo\Documents\Visual Studio 2017\Projects\ADIMS\ADIMS\bin\it\Microsoft.OData.Core.resources.dll
+C:\Users\ernjo\Documents\Visual Studio 2017\Projects\ADIMS\ADIMS\bin\ja\Microsoft.OData.Core.resources.dll
+C:\Users\ernjo\Documents\Visual Studio 2017\Projects\ADIMS\ADIMS\bin\ko\Microsoft.OData.Core.resources.dll
+C:\Users\ernjo\Documents\Visual Studio 2017\Projects\ADIMS\ADIMS\bin\ru\Microsoft.OData.Core.resources.dll
+C:\Users\ernjo\Documents\Visual Studio 2017\Projects\ADIMS\ADIMS\bin\zh-Hans\Microsoft.OData.Core.resources.dll
+C:\Users\ernjo\Documents\Visual Studio 2017\Projects\ADIMS\ADIMS\bin\zh-Hant\Microsoft.OData.Core.resources.dll
+C:\Users\ernjo\Documents\Visual Studio 2017\Projects\ADIMS\ADIMS\bin\de\Microsoft.OData.Edm.resources.dll
+C:\Users\ernjo\Documents\Visual Studio 2017\Projects\ADIMS\ADIMS\bin\es\Microsoft.OData.Edm.resources.dll
+C:\Users\ernjo\Documents\Visual Studio 2017\Projects\ADIMS\ADIMS\bin\fr\Microsoft.OData.Edm.resources.dll
+C:\Users\ernjo\Documents\Visual Studio 2017\Projects\ADIMS\ADIMS\bin\it\Microsoft.OData.Edm.resources.dll
+C:\Users\ernjo\Documents\Visual Studio 2017\Projects\ADIMS\ADIMS\bin\ja\Microsoft.OData.Edm.resources.dll
+C:\Users\ernjo\Documents\Visual Studio 2017\Projects\ADIMS\ADIMS\bin\ko\Microsoft.OData.Edm.resources.dll
+C:\Users\ernjo\Documents\Visual Studio 2017\Projects\ADIMS\ADIMS\bin\ru\Microsoft.OData.Edm.resources.dll
+C:\Users\ernjo\Documents\Visual Studio 2017\Projects\ADIMS\ADIMS\bin\zh-Hans\Microsoft.OData.Edm.resources.dll
+C:\Users\ernjo\Documents\Visual Studio 2017\Projects\ADIMS\ADIMS\bin\zh-Hant\Microsoft.OData.Edm.resources.dll
+C:\Users\ernjo\Documents\Visual Studio 2017\Projects\ADIMS\ADIMS\bin\de\Microsoft.Spatial.resources.dll
+C:\Users\ernjo\Documents\Visual Studio 2017\Projects\ADIMS\ADIMS\bin\es\Microsoft.Spatial.resources.dll
+C:\Users\ernjo\Documents\Visual Studio 2017\Projects\ADIMS\ADIMS\bin\fr\Microsoft.Spatial.resources.dll
+C:\Users\ernjo\Documents\Visual Studio 2017\Projects\ADIMS\ADIMS\bin\it\Microsoft.Spatial.resources.dll
+C:\Users\ernjo\Documents\Visual Studio 2017\Projects\ADIMS\ADIMS\bin\ja\Microsoft.Spatial.resources.dll
+C:\Users\ernjo\Documents\Visual Studio 2017\Projects\ADIMS\ADIMS\bin\ko\Microsoft.Spatial.resources.dll
+C:\Users\ernjo\Documents\Visual Studio 2017\Projects\ADIMS\ADIMS\bin\ru\Microsoft.Spatial.resources.dll
+C:\Users\ernjo\Documents\Visual Studio 2017\Projects\ADIMS\ADIMS\bin\zh-Hans\Microsoft.Spatial.resources.dll
+C:\Users\ernjo\Documents\Visual Studio 2017\Projects\ADIMS\ADIMS\bin\zh-Hant\Microsoft.Spatial.resources.dll
+C:\Users\ernjo\Documents\Visual Studio 2017\Projects\ADIMS\ADIMS\bin\de\System.Spatial.resources.dll
+C:\Users\ernjo\Documents\Visual Studio 2017\Projects\ADIMS\ADIMS\bin\es\System.Spatial.resources.dll
+C:\Users\ernjo\Documents\Visual Studio 2017\Projects\ADIMS\ADIMS\bin\fr\System.Spatial.resources.dll
+C:\Users\ernjo\Documents\Visual Studio 2017\Projects\ADIMS\ADIMS\bin\it\System.Spatial.resources.dll
+C:\Users\ernjo\Documents\Visual Studio 2017\Projects\ADIMS\ADIMS\bin\ja\System.Spatial.resources.dll
+C:\Users\ernjo\Documents\Visual Studio 2017\Projects\ADIMS\ADIMS\bin\ko\System.Spatial.resources.dll
+C:\Users\ernjo\Documents\Visual Studio 2017\Projects\ADIMS\ADIMS\bin\ru\System.Spatial.resources.dll
+C:\Users\ernjo\Documents\Visual Studio 2017\Projects\ADIMS\ADIMS\bin\zh-Hans\System.Spatial.resources.dll
+C:\Users\ernjo\Documents\Visual Studio 2017\Projects\ADIMS\ADIMS\bin\zh-Hant\System.Spatial.resources.dll
+C:\Users\ernjo\Documents\Visual Studio 2017\Projects\ADIMS\ADIMS\obj\Debug\ADIMS.Migrations.fresh_user_model.resources
+C:\Users\ernjo\Documents\Visual Studio 2017\Projects\ADIMS\ADIMS\obj\Debug\ADIMS.csproj.GenerateResource.Cache
+C:\Users\ernjo\Documents\Visual Studio 2017\Projects\ADIMS\ADIMS\obj\Debug\ADIMS.dll
+C:\Users\ernjo\Documents\Visual Studio 2017\Projects\ADIMS\ADIMS\obj\Debug\ADIMS.pdb
+C:\Users\ernjo\Documents\Visual Studio 2017\Projects\ADIMS\ADIMS\obj\Debug\ADIMS.csprojResolveAssemblyReference.cache
+C:\Users\ERNEST\Documents\Visual Studio 2017\Projects\ADIMS\ADIMS\bin\roslyn\csc.exe
+C:\Users\ERNEST\Documents\Visual Studio 2017\Projects\ADIMS\ADIMS\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+C:\Users\ERNEST\Documents\Visual Studio 2017\Projects\ADIMS\ADIMS\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+C:\Users\ERNEST\Documents\Visual Studio 2017\Projects\ADIMS\ADIMS\bin\roslyn\Microsoft.CodeAnalysis.dll
+C:\Users\ERNEST\Documents\Visual Studio 2017\Projects\ADIMS\ADIMS\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+C:\Users\ERNEST\Documents\Visual Studio 2017\Projects\ADIMS\ADIMS\bin\roslyn\Microsoft.CSharp.Core.targets
+C:\Users\ERNEST\Documents\Visual Studio 2017\Projects\ADIMS\ADIMS\bin\roslyn\Microsoft.VisualBasic.Core.targets
+C:\Users\ERNEST\Documents\Visual Studio 2017\Projects\ADIMS\ADIMS\bin\roslyn\System.Collections.Immutable.dll
+C:\Users\ERNEST\Documents\Visual Studio 2017\Projects\ADIMS\ADIMS\bin\roslyn\System.Reflection.Metadata.dll
+C:\Users\ERNEST\Documents\Visual Studio 2017\Projects\ADIMS\ADIMS\bin\roslyn\vbc.exe
+C:\Users\ERNEST\Documents\Visual Studio 2017\Projects\ADIMS\ADIMS\bin\roslyn\VBCSCompiler.exe
+C:\Users\ERNEST\Documents\Visual Studio 2017\Projects\ADIMS\ADIMS\bin\roslyn\VBCSCompiler.exe.config
+C:\Users\ERNEST\Documents\Visual Studio 2017\Projects\ADIMS\ADIMS\bin\ADIMS.dll.config
+C:\Users\ERNEST\Documents\Visual Studio 2017\Projects\ADIMS\ADIMS\bin\ADIMS.dll
+C:\Users\ERNEST\Documents\Visual Studio 2017\Projects\ADIMS\ADIMS\bin\ADIMS.pdb
+C:\Users\ERNEST\Documents\Visual Studio 2017\Projects\ADIMS\ADIMS\bin\Antlr3.Runtime.dll
+C:\Users\ERNEST\Documents\Visual Studio 2017\Projects\ADIMS\ADIMS\bin\AutoMapper.dll
+C:\Users\ERNEST\Documents\Visual Studio 2017\Projects\ADIMS\ADIMS\bin\CacheCow.Common.dll
+C:\Users\ERNEST\Documents\Visual Studio 2017\Projects\ADIMS\ADIMS\bin\CacheCow.Server.dll
+C:\Users\ERNEST\Documents\Visual Studio 2017\Projects\ADIMS\ADIMS\bin\EasyNetQ.dll
+C:\Users\ERNEST\Documents\Visual Studio 2017\Projects\ADIMS\ADIMS\bin\EntityFramework.dll
+C:\Users\ERNEST\Documents\Visual Studio 2017\Projects\ADIMS\ADIMS\bin\EntityFramework.SqlServer.dll
+C:\Users\ERNEST\Documents\Visual Studio 2017\Projects\ADIMS\ADIMS\bin\FoolproofValidation.dll
+C:\Users\ERNEST\Documents\Visual Studio 2017\Projects\ADIMS\ADIMS\bin\Jmelosegui.Mvc.GoogleMap.dll
+C:\Users\ERNEST\Documents\Visual Studio 2017\Projects\ADIMS\ADIMS\bin\Microsoft.AspNet.Identity.Core.dll
+C:\Users\ERNEST\Documents\Visual Studio 2017\Projects\ADIMS\ADIMS\bin\Microsoft.AspNet.Identity.EntityFramework.dll
+C:\Users\ERNEST\Documents\Visual Studio 2017\Projects\ADIMS\ADIMS\bin\Microsoft.AspNet.Identity.Owin.dll
+C:\Users\ERNEST\Documents\Visual Studio 2017\Projects\ADIMS\ADIMS\bin\Microsoft.Azure.ActiveDirectory.GraphClient.dll
+C:\Users\ERNEST\Documents\Visual Studio 2017\Projects\ADIMS\ADIMS\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+C:\Users\ERNEST\Documents\Visual Studio 2017\Projects\ADIMS\ADIMS\bin\Microsoft.Data.Edm.dll
+C:\Users\ERNEST\Documents\Visual Studio 2017\Projects\ADIMS\ADIMS\bin\Microsoft.Data.OData.dll
+C:\Users\ERNEST\Documents\Visual Studio 2017\Projects\ADIMS\ADIMS\bin\Microsoft.Data.Services.Client.dll
+C:\Users\ERNEST\Documents\Visual Studio 2017\Projects\ADIMS\ADIMS\bin\Microsoft.IdentityModel.Clients.ActiveDirectory.dll
+C:\Users\ERNEST\Documents\Visual Studio 2017\Projects\ADIMS\ADIMS\bin\Microsoft.IdentityModel.Clients.ActiveDirectory.WindowsForms.dll
+C:\Users\ERNEST\Documents\Visual Studio 2017\Projects\ADIMS\ADIMS\bin\Microsoft.OData.Client.dll
+C:\Users\ERNEST\Documents\Visual Studio 2017\Projects\ADIMS\ADIMS\bin\Microsoft.OData.Core.dll
+C:\Users\ERNEST\Documents\Visual Studio 2017\Projects\ADIMS\ADIMS\bin\Microsoft.OData.Edm.dll
+C:\Users\ERNEST\Documents\Visual Studio 2017\Projects\ADIMS\ADIMS\bin\Microsoft.OData.ProxyExtensions.dll
+C:\Users\ERNEST\Documents\Visual Studio 2017\Projects\ADIMS\ADIMS\bin\Microsoft.Office365.Discovery.dll
+C:\Users\ERNEST\Documents\Visual Studio 2017\Projects\ADIMS\ADIMS\bin\Microsoft.Office365.OutlookServices.Portable.dll
+C:\Users\ERNEST\Documents\Visual Studio 2017\Projects\ADIMS\ADIMS\bin\Microsoft.Office365.SharePoint.dll
+C:\Users\ERNEST\Documents\Visual Studio 2017\Projects\ADIMS\ADIMS\bin\Microsoft.Owin.dll
+C:\Users\ERNEST\Documents\Visual Studio 2017\Projects\ADIMS\ADIMS\bin\Microsoft.Owin.Host.SystemWeb.dll
+C:\Users\ERNEST\Documents\Visual Studio 2017\Projects\ADIMS\ADIMS\bin\Microsoft.Owin.Security.ActiveDirectory.dll
+C:\Users\ERNEST\Documents\Visual Studio 2017\Projects\ADIMS\ADIMS\bin\Microsoft.Owin.Security.Cookies.dll
+C:\Users\ERNEST\Documents\Visual Studio 2017\Projects\ADIMS\ADIMS\bin\Microsoft.Owin.Security.dll
+C:\Users\ERNEST\Documents\Visual Studio 2017\Projects\ADIMS\ADIMS\bin\Microsoft.Owin.Security.Facebook.dll
+C:\Users\ERNEST\Documents\Visual Studio 2017\Projects\ADIMS\ADIMS\bin\Microsoft.Owin.Security.Google.dll
+C:\Users\ERNEST\Documents\Visual Studio 2017\Projects\ADIMS\ADIMS\bin\Microsoft.Owin.Security.Jwt.dll
+C:\Users\ERNEST\Documents\Visual Studio 2017\Projects\ADIMS\ADIMS\bin\Microsoft.Owin.Security.MicrosoftAccount.dll
+C:\Users\ERNEST\Documents\Visual Studio 2017\Projects\ADIMS\ADIMS\bin\Microsoft.Owin.Security.OAuth.dll
+C:\Users\ERNEST\Documents\Visual Studio 2017\Projects\ADIMS\ADIMS\bin\Microsoft.Owin.Security.Twitter.dll
+C:\Users\ERNEST\Documents\Visual Studio 2017\Projects\ADIMS\ADIMS\bin\Microsoft.QualityTools.Testing.Fakes.dll
+C:\Users\ERNEST\Documents\Visual Studio 2017\Projects\ADIMS\ADIMS\bin\Microsoft.Spatial.dll
+C:\Users\ERNEST\Documents\Visual Studio 2017\Projects\ADIMS\ADIMS\bin\Microsoft.Web.Infrastructure.dll
+C:\Users\ERNEST\Documents\Visual Studio 2017\Projects\ADIMS\ADIMS\bin\Newtonsoft.Json.dll
+C:\Users\ERNEST\Documents\Visual Studio 2017\Projects\ADIMS\ADIMS\bin\Owin.dll
+C:\Users\ERNEST\Documents\Visual Studio 2017\Projects\ADIMS\ADIMS\bin\RabbitMQ.Client.dll
+C:\Users\ERNEST\Documents\Visual Studio 2017\Projects\ADIMS\ADIMS\bin\Swashbuckle.Core.dll
+C:\Users\ERNEST\Documents\Visual Studio 2017\Projects\ADIMS\ADIMS\bin\System.IdentityModel.Tokens.Jwt.dll
+C:\Users\ERNEST\Documents\Visual Studio 2017\Projects\ADIMS\ADIMS\bin\System.Net.Http.Formatting.dll
+C:\Users\ERNEST\Documents\Visual Studio 2017\Projects\ADIMS\ADIMS\bin\System.Spatial.dll
+C:\Users\ERNEST\Documents\Visual Studio 2017\Projects\ADIMS\ADIMS\bin\System.ValueTuple.dll
+C:\Users\ERNEST\Documents\Visual Studio 2017\Projects\ADIMS\ADIMS\bin\System.Web.Helpers.dll
+C:\Users\ERNEST\Documents\Visual Studio 2017\Projects\ADIMS\ADIMS\bin\System.Web.Http.dll
+C:\Users\ERNEST\Documents\Visual Studio 2017\Projects\ADIMS\ADIMS\bin\System.Web.Http.WebHost.dll
+C:\Users\ERNEST\Documents\Visual Studio 2017\Projects\ADIMS\ADIMS\bin\System.Web.Mvc.dll
+C:\Users\ERNEST\Documents\Visual Studio 2017\Projects\ADIMS\ADIMS\bin\System.Web.Optimization.dll
+C:\Users\ERNEST\Documents\Visual Studio 2017\Projects\ADIMS\ADIMS\bin\System.Web.Razor.dll
+C:\Users\ERNEST\Documents\Visual Studio 2017\Projects\ADIMS\ADIMS\bin\System.Web.WebPages.Deployment.dll
+C:\Users\ERNEST\Documents\Visual Studio 2017\Projects\ADIMS\ADIMS\bin\System.Web.WebPages.dll
+C:\Users\ERNEST\Documents\Visual Studio 2017\Projects\ADIMS\ADIMS\bin\System.Web.WebPages.Razor.dll
+C:\Users\ERNEST\Documents\Visual Studio 2017\Projects\ADIMS\ADIMS\bin\WebActivatorEx.dll
+C:\Users\ERNEST\Documents\Visual Studio 2017\Projects\ADIMS\ADIMS\bin\WebApi.OutputCache.Core.dll
+C:\Users\ERNEST\Documents\Visual Studio 2017\Projects\ADIMS\ADIMS\bin\WebApi.OutputCache.V2.dll
+C:\Users\ERNEST\Documents\Visual Studio 2017\Projects\ADIMS\ADIMS\bin\WebGrease.dll
+C:\Users\ERNEST\Documents\Visual Studio 2017\Projects\ADIMS\ADIMS\bin\AutoMapper.xml
+C:\Users\ERNEST\Documents\Visual Studio 2017\Projects\ADIMS\ADIMS\bin\CacheCow.Common.xml
+C:\Users\ERNEST\Documents\Visual Studio 2017\Projects\ADIMS\ADIMS\bin\CacheCow.Server.xml
+C:\Users\ERNEST\Documents\Visual Studio 2017\Projects\ADIMS\ADIMS\bin\EasyNetQ.xml
+C:\Users\ERNEST\Documents\Visual Studio 2017\Projects\ADIMS\ADIMS\bin\Microsoft.AspNet.Identity.Core.xml
+C:\Users\ERNEST\Documents\Visual Studio 2017\Projects\ADIMS\ADIMS\bin\Microsoft.AspNet.Identity.EntityFramework.xml
+C:\Users\ERNEST\Documents\Visual Studio 2017\Projects\ADIMS\ADIMS\bin\Microsoft.AspNet.Identity.Owin.xml
+C:\Users\ERNEST\Documents\Visual Studio 2017\Projects\ADIMS\ADIMS\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+C:\Users\ERNEST\Documents\Visual Studio 2017\Projects\ADIMS\ADIMS\bin\Microsoft.Data.Edm.xml
+C:\Users\ERNEST\Documents\Visual Studio 2017\Projects\ADIMS\ADIMS\bin\Microsoft.Data.OData.xml
+C:\Users\ERNEST\Documents\Visual Studio 2017\Projects\ADIMS\ADIMS\bin\Microsoft.Data.Services.Client.xml
+C:\Users\ERNEST\Documents\Visual Studio 2017\Projects\ADIMS\ADIMS\bin\Microsoft.IdentityModel.Clients.ActiveDirectory.xml
+C:\Users\ERNEST\Documents\Visual Studio 2017\Projects\ADIMS\ADIMS\bin\Microsoft.OData.Client.xml
+C:\Users\ERNEST\Documents\Visual Studio 2017\Projects\ADIMS\ADIMS\bin\Microsoft.OData.Core.xml
+C:\Users\ERNEST\Documents\Visual Studio 2017\Projects\ADIMS\ADIMS\bin\Microsoft.OData.Edm.xml
+C:\Users\ERNEST\Documents\Visual Studio 2017\Projects\ADIMS\ADIMS\bin\Microsoft.Owin.Security.ActiveDirectory.xml
+C:\Users\ERNEST\Documents\Visual Studio 2017\Projects\ADIMS\ADIMS\bin\Microsoft.Owin.Security.Jwt.xml
+C:\Users\ERNEST\Documents\Visual Studio 2017\Projects\ADIMS\ADIMS\bin\Microsoft.Spatial.xml
+C:\Users\ERNEST\Documents\Visual Studio 2017\Projects\ADIMS\ADIMS\bin\Newtonsoft.Json.xml
+C:\Users\ERNEST\Documents\Visual Studio 2017\Projects\ADIMS\ADIMS\bin\RabbitMQ.Client.xml
+C:\Users\ERNEST\Documents\Visual Studio 2017\Projects\ADIMS\ADIMS\bin\System.IdentityModel.Tokens.Jwt.xml
+C:\Users\ERNEST\Documents\Visual Studio 2017\Projects\ADIMS\ADIMS\bin\System.Spatial.xml
+C:\Users\ERNEST\Documents\Visual Studio 2017\Projects\ADIMS\ADIMS\bin\System.Web.Helpers.xml
+C:\Users\ERNEST\Documents\Visual Studio 2017\Projects\ADIMS\ADIMS\bin\System.Web.Mvc.xml
+C:\Users\ERNEST\Documents\Visual Studio 2017\Projects\ADIMS\ADIMS\bin\System.Web.Optimization.xml
+C:\Users\ERNEST\Documents\Visual Studio 2017\Projects\ADIMS\ADIMS\bin\System.Web.Razor.xml
+C:\Users\ERNEST\Documents\Visual Studio 2017\Projects\ADIMS\ADIMS\bin\System.Web.WebPages.xml
+C:\Users\ERNEST\Documents\Visual Studio 2017\Projects\ADIMS\ADIMS\bin\System.Web.WebPages.Deployment.xml
+C:\Users\ERNEST\Documents\Visual Studio 2017\Projects\ADIMS\ADIMS\bin\System.Web.WebPages.Razor.xml
+C:\Users\ERNEST\Documents\Visual Studio 2017\Projects\ADIMS\ADIMS\bin\Antlr3.Runtime.pdb
+C:\Users\ERNEST\Documents\Visual Studio 2017\Projects\ADIMS\ADIMS\bin\System.Net.Http.Formatting.xml
+C:\Users\ERNEST\Documents\Visual Studio 2017\Projects\ADIMS\ADIMS\bin\System.Web.Http.xml
+C:\Users\ERNEST\Documents\Visual Studio 2017\Projects\ADIMS\ADIMS\bin\System.Web.Http.WebHost.xml
+C:\Users\ERNEST\Documents\Visual Studio 2017\Projects\ADIMS\ADIMS\bin\EntityFramework.xml
+C:\Users\ERNEST\Documents\Visual Studio 2017\Projects\ADIMS\ADIMS\bin\EntityFramework.SqlServer.xml
+C:\Users\ERNEST\Documents\Visual Studio 2017\Projects\ADIMS\ADIMS\bin\Microsoft.Owin.xml
+C:\Users\ERNEST\Documents\Visual Studio 2017\Projects\ADIMS\ADIMS\bin\Microsoft.Owin.Host.SystemWeb.xml
+C:\Users\ERNEST\Documents\Visual Studio 2017\Projects\ADIMS\ADIMS\bin\Microsoft.Owin.Security.xml
+C:\Users\ERNEST\Documents\Visual Studio 2017\Projects\ADIMS\ADIMS\bin\Microsoft.Owin.Security.Facebook.xml
+C:\Users\ERNEST\Documents\Visual Studio 2017\Projects\ADIMS\ADIMS\bin\Microsoft.Owin.Security.Cookies.xml
+C:\Users\ERNEST\Documents\Visual Studio 2017\Projects\ADIMS\ADIMS\bin\Microsoft.Owin.Security.OAuth.xml
+C:\Users\ERNEST\Documents\Visual Studio 2017\Projects\ADIMS\ADIMS\bin\Microsoft.Owin.Security.Google.xml
+C:\Users\ERNEST\Documents\Visual Studio 2017\Projects\ADIMS\ADIMS\bin\Microsoft.Owin.Security.Twitter.xml
+C:\Users\ERNEST\Documents\Visual Studio 2017\Projects\ADIMS\ADIMS\bin\Microsoft.Owin.Security.MicrosoftAccount.xml
+C:\Users\ERNEST\Documents\Visual Studio 2017\Projects\ADIMS\ADIMS\bin\de\Microsoft.Data.Edm.resources.dll
+C:\Users\ERNEST\Documents\Visual Studio 2017\Projects\ADIMS\ADIMS\bin\es\Microsoft.Data.Edm.resources.dll
+C:\Users\ERNEST\Documents\Visual Studio 2017\Projects\ADIMS\ADIMS\bin\fr\Microsoft.Data.Edm.resources.dll
+C:\Users\ERNEST\Documents\Visual Studio 2017\Projects\ADIMS\ADIMS\bin\it\Microsoft.Data.Edm.resources.dll
+C:\Users\ERNEST\Documents\Visual Studio 2017\Projects\ADIMS\ADIMS\bin\ja\Microsoft.Data.Edm.resources.dll
+C:\Users\ERNEST\Documents\Visual Studio 2017\Projects\ADIMS\ADIMS\bin\ko\Microsoft.Data.Edm.resources.dll
+C:\Users\ERNEST\Documents\Visual Studio 2017\Projects\ADIMS\ADIMS\bin\ru\Microsoft.Data.Edm.resources.dll
+C:\Users\ERNEST\Documents\Visual Studio 2017\Projects\ADIMS\ADIMS\bin\zh-Hans\Microsoft.Data.Edm.resources.dll
+C:\Users\ERNEST\Documents\Visual Studio 2017\Projects\ADIMS\ADIMS\bin\zh-Hant\Microsoft.Data.Edm.resources.dll
+C:\Users\ERNEST\Documents\Visual Studio 2017\Projects\ADIMS\ADIMS\bin\de\Microsoft.Data.OData.resources.dll
+C:\Users\ERNEST\Documents\Visual Studio 2017\Projects\ADIMS\ADIMS\bin\es\Microsoft.Data.OData.resources.dll
+C:\Users\ERNEST\Documents\Visual Studio 2017\Projects\ADIMS\ADIMS\bin\fr\Microsoft.Data.OData.resources.dll
+C:\Users\ERNEST\Documents\Visual Studio 2017\Projects\ADIMS\ADIMS\bin\it\Microsoft.Data.OData.resources.dll
+C:\Users\ERNEST\Documents\Visual Studio 2017\Projects\ADIMS\ADIMS\bin\ja\Microsoft.Data.OData.resources.dll
+C:\Users\ERNEST\Documents\Visual Studio 2017\Projects\ADIMS\ADIMS\bin\ko\Microsoft.Data.OData.resources.dll
+C:\Users\ERNEST\Documents\Visual Studio 2017\Projects\ADIMS\ADIMS\bin\ru\Microsoft.Data.OData.resources.dll
+C:\Users\ERNEST\Documents\Visual Studio 2017\Projects\ADIMS\ADIMS\bin\zh-Hans\Microsoft.Data.OData.resources.dll
+C:\Users\ERNEST\Documents\Visual Studio 2017\Projects\ADIMS\ADIMS\bin\zh-Hant\Microsoft.Data.OData.resources.dll
+C:\Users\ERNEST\Documents\Visual Studio 2017\Projects\ADIMS\ADIMS\bin\de\Microsoft.Data.Services.Client.resources.dll
+C:\Users\ERNEST\Documents\Visual Studio 2017\Projects\ADIMS\ADIMS\bin\es\Microsoft.Data.Services.Client.resources.dll
+C:\Users\ERNEST\Documents\Visual Studio 2017\Projects\ADIMS\ADIMS\bin\fr\Microsoft.Data.Services.Client.resources.dll
+C:\Users\ERNEST\Documents\Visual Studio 2017\Projects\ADIMS\ADIMS\bin\it\Microsoft.Data.Services.Client.resources.dll
+C:\Users\ERNEST\Documents\Visual Studio 2017\Projects\ADIMS\ADIMS\bin\ja\Microsoft.Data.Services.Client.resources.dll
+C:\Users\ERNEST\Documents\Visual Studio 2017\Projects\ADIMS\ADIMS\bin\ko\Microsoft.Data.Services.Client.resources.dll
+C:\Users\ERNEST\Documents\Visual Studio 2017\Projects\ADIMS\ADIMS\bin\ru\Microsoft.Data.Services.Client.resources.dll
+C:\Users\ERNEST\Documents\Visual Studio 2017\Projects\ADIMS\ADIMS\bin\zh-Hans\Microsoft.Data.Services.Client.resources.dll
+C:\Users\ERNEST\Documents\Visual Studio 2017\Projects\ADIMS\ADIMS\bin\zh-Hant\Microsoft.Data.Services.Client.resources.dll
+C:\Users\ERNEST\Documents\Visual Studio 2017\Projects\ADIMS\ADIMS\bin\de\Microsoft.OData.Client.resources.dll
+C:\Users\ERNEST\Documents\Visual Studio 2017\Projects\ADIMS\ADIMS\bin\es\Microsoft.OData.Client.resources.dll
+C:\Users\ERNEST\Documents\Visual Studio 2017\Projects\ADIMS\ADIMS\bin\fr\Microsoft.OData.Client.resources.dll
+C:\Users\ERNEST\Documents\Visual Studio 2017\Projects\ADIMS\ADIMS\bin\it\Microsoft.OData.Client.resources.dll
+C:\Users\ERNEST\Documents\Visual Studio 2017\Projects\ADIMS\ADIMS\bin\ja\Microsoft.OData.Client.resources.dll
+C:\Users\ERNEST\Documents\Visual Studio 2017\Projects\ADIMS\ADIMS\bin\ko\Microsoft.OData.Client.resources.dll
+C:\Users\ERNEST\Documents\Visual Studio 2017\Projects\ADIMS\ADIMS\bin\ru\Microsoft.OData.Client.resources.dll
+C:\Users\ERNEST\Documents\Visual Studio 2017\Projects\ADIMS\ADIMS\bin\zh-Hans\Microsoft.OData.Client.resources.dll
+C:\Users\ERNEST\Documents\Visual Studio 2017\Projects\ADIMS\ADIMS\bin\zh-Hant\Microsoft.OData.Client.resources.dll
+C:\Users\ERNEST\Documents\Visual Studio 2017\Projects\ADIMS\ADIMS\bin\de\Microsoft.OData.Core.resources.dll
+C:\Users\ERNEST\Documents\Visual Studio 2017\Projects\ADIMS\ADIMS\bin\es\Microsoft.OData.Core.resources.dll
+C:\Users\ERNEST\Documents\Visual Studio 2017\Projects\ADIMS\ADIMS\bin\fr\Microsoft.OData.Core.resources.dll
+C:\Users\ERNEST\Documents\Visual Studio 2017\Projects\ADIMS\ADIMS\bin\it\Microsoft.OData.Core.resources.dll
+C:\Users\ERNEST\Documents\Visual Studio 2017\Projects\ADIMS\ADIMS\bin\ja\Microsoft.OData.Core.resources.dll
+C:\Users\ERNEST\Documents\Visual Studio 2017\Projects\ADIMS\ADIMS\bin\ko\Microsoft.OData.Core.resources.dll
+C:\Users\ERNEST\Documents\Visual Studio 2017\Projects\ADIMS\ADIMS\bin\ru\Microsoft.OData.Core.resources.dll
+C:\Users\ERNEST\Documents\Visual Studio 2017\Projects\ADIMS\ADIMS\bin\zh-Hans\Microsoft.OData.Core.resources.dll
+C:\Users\ERNEST\Documents\Visual Studio 2017\Projects\ADIMS\ADIMS\bin\zh-Hant\Microsoft.OData.Core.resources.dll
+C:\Users\ERNEST\Documents\Visual Studio 2017\Projects\ADIMS\ADIMS\bin\de\Microsoft.OData.Edm.resources.dll
+C:\Users\ERNEST\Documents\Visual Studio 2017\Projects\ADIMS\ADIMS\bin\es\Microsoft.OData.Edm.resources.dll
+C:\Users\ERNEST\Documents\Visual Studio 2017\Projects\ADIMS\ADIMS\bin\fr\Microsoft.OData.Edm.resources.dll
+C:\Users\ERNEST\Documents\Visual Studio 2017\Projects\ADIMS\ADIMS\bin\it\Microsoft.OData.Edm.resources.dll
+C:\Users\ERNEST\Documents\Visual Studio 2017\Projects\ADIMS\ADIMS\bin\ja\Microsoft.OData.Edm.resources.dll
+C:\Users\ERNEST\Documents\Visual Studio 2017\Projects\ADIMS\ADIMS\bin\ko\Microsoft.OData.Edm.resources.dll
+C:\Users\ERNEST\Documents\Visual Studio 2017\Projects\ADIMS\ADIMS\bin\ru\Microsoft.OData.Edm.resources.dll
+C:\Users\ERNEST\Documents\Visual Studio 2017\Projects\ADIMS\ADIMS\bin\zh-Hans\Microsoft.OData.Edm.resources.dll
+C:\Users\ERNEST\Documents\Visual Studio 2017\Projects\ADIMS\ADIMS\bin\zh-Hant\Microsoft.OData.Edm.resources.dll
+C:\Users\ERNEST\Documents\Visual Studio 2017\Projects\ADIMS\ADIMS\bin\de\Microsoft.Spatial.resources.dll
+C:\Users\ERNEST\Documents\Visual Studio 2017\Projects\ADIMS\ADIMS\bin\es\Microsoft.Spatial.resources.dll
+C:\Users\ERNEST\Documents\Visual Studio 2017\Projects\ADIMS\ADIMS\bin\fr\Microsoft.Spatial.resources.dll
+C:\Users\ERNEST\Documents\Visual Studio 2017\Projects\ADIMS\ADIMS\bin\it\Microsoft.Spatial.resources.dll
+C:\Users\ERNEST\Documents\Visual Studio 2017\Projects\ADIMS\ADIMS\bin\ja\Microsoft.Spatial.resources.dll
+C:\Users\ERNEST\Documents\Visual Studio 2017\Projects\ADIMS\ADIMS\bin\ko\Microsoft.Spatial.resources.dll
+C:\Users\ERNEST\Documents\Visual Studio 2017\Projects\ADIMS\ADIMS\bin\ru\Microsoft.Spatial.resources.dll
+C:\Users\ERNEST\Documents\Visual Studio 2017\Projects\ADIMS\ADIMS\bin\zh-Hans\Microsoft.Spatial.resources.dll
+C:\Users\ERNEST\Documents\Visual Studio 2017\Projects\ADIMS\ADIMS\bin\zh-Hant\Microsoft.Spatial.resources.dll
+C:\Users\ERNEST\Documents\Visual Studio 2017\Projects\ADIMS\ADIMS\bin\de\System.Spatial.resources.dll
+C:\Users\ERNEST\Documents\Visual Studio 2017\Projects\ADIMS\ADIMS\bin\es\System.Spatial.resources.dll
+C:\Users\ERNEST\Documents\Visual Studio 2017\Projects\ADIMS\ADIMS\bin\fr\System.Spatial.resources.dll
+C:\Users\ERNEST\Documents\Visual Studio 2017\Projects\ADIMS\ADIMS\bin\it\System.Spatial.resources.dll
+C:\Users\ERNEST\Documents\Visual Studio 2017\Projects\ADIMS\ADIMS\bin\ja\System.Spatial.resources.dll
+C:\Users\ERNEST\Documents\Visual Studio 2017\Projects\ADIMS\ADIMS\bin\ko\System.Spatial.resources.dll
+C:\Users\ERNEST\Documents\Visual Studio 2017\Projects\ADIMS\ADIMS\bin\ru\System.Spatial.resources.dll
+C:\Users\ERNEST\Documents\Visual Studio 2017\Projects\ADIMS\ADIMS\bin\zh-Hans\System.Spatial.resources.dll
+C:\Users\ERNEST\Documents\Visual Studio 2017\Projects\ADIMS\ADIMS\bin\zh-Hant\System.Spatial.resources.dll
+C:\Users\ERNEST\Documents\Visual Studio 2017\Projects\ADIMS\ADIMS\obj\Debug\ADIMS.Migrations.fresh_user_model.resources
+C:\Users\ERNEST\Documents\Visual Studio 2017\Projects\ADIMS\ADIMS\obj\Debug\ADIMS.csproj.GenerateResource.Cache
+C:\Users\ERNEST\Documents\Visual Studio 2017\Projects\ADIMS\ADIMS\obj\Debug\ADIMS.csproj.CoreCompileInputs.cache
+C:\Users\ERNEST\Documents\Visual Studio 2017\Projects\ADIMS\ADIMS\obj\Debug\ADIMS.dll
+C:\Users\ERNEST\Documents\Visual Studio 2017\Projects\ADIMS\ADIMS\obj\Debug\ADIMS.pdb
+C:\Users\ERNEST\Documents\Visual Studio 2017\Projects\ADIMS\ADIMS\obj\Debug\ADIMS.csprojResolveAssemblyReference.cache
+C:\Users\collo\OneDrive - Miyabi Africa\Product development\Novel Technologies\ADIMS Project\code\ADIMS\ADIMS\bin\roslyn\csc.exe
+C:\Users\collo\OneDrive - Miyabi Africa\Product development\Novel Technologies\ADIMS Project\code\ADIMS\ADIMS\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+C:\Users\collo\OneDrive - Miyabi Africa\Product development\Novel Technologies\ADIMS Project\code\ADIMS\ADIMS\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+C:\Users\collo\OneDrive - Miyabi Africa\Product development\Novel Technologies\ADIMS Project\code\ADIMS\ADIMS\bin\roslyn\Microsoft.CodeAnalysis.dll
+C:\Users\collo\OneDrive - Miyabi Africa\Product development\Novel Technologies\ADIMS Project\code\ADIMS\ADIMS\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+C:\Users\collo\OneDrive - Miyabi Africa\Product development\Novel Technologies\ADIMS Project\code\ADIMS\ADIMS\bin\roslyn\Microsoft.CSharp.Core.targets
+C:\Users\collo\OneDrive - Miyabi Africa\Product development\Novel Technologies\ADIMS Project\code\ADIMS\ADIMS\bin\roslyn\Microsoft.VisualBasic.Core.targets
+C:\Users\collo\OneDrive - Miyabi Africa\Product development\Novel Technologies\ADIMS Project\code\ADIMS\ADIMS\bin\roslyn\System.Collections.Immutable.dll
+C:\Users\collo\OneDrive - Miyabi Africa\Product development\Novel Technologies\ADIMS Project\code\ADIMS\ADIMS\bin\roslyn\System.Reflection.Metadata.dll
+C:\Users\collo\OneDrive - Miyabi Africa\Product development\Novel Technologies\ADIMS Project\code\ADIMS\ADIMS\bin\roslyn\vbc.exe
+C:\Users\collo\OneDrive - Miyabi Africa\Product development\Novel Technologies\ADIMS Project\code\ADIMS\ADIMS\bin\roslyn\VBCSCompiler.exe
+C:\Users\collo\OneDrive - Miyabi Africa\Product development\Novel Technologies\ADIMS Project\code\ADIMS\ADIMS\bin\roslyn\VBCSCompiler.exe.config
+C:\Users\collo\OneDrive - Miyabi Africa\Product development\Novel Technologies\ADIMS Project\code\ADIMS\ADIMS\bin\ADIMS.dll.config
+C:\Users\collo\OneDrive - Miyabi Africa\Product development\Novel Technologies\ADIMS Project\code\ADIMS\ADIMS\bin\ADIMS.dll
+C:\Users\collo\OneDrive - Miyabi Africa\Product development\Novel Technologies\ADIMS Project\code\ADIMS\ADIMS\bin\ADIMS.pdb
+C:\Users\collo\OneDrive - Miyabi Africa\Product development\Novel Technologies\ADIMS Project\code\ADIMS\ADIMS\bin\Antlr3.Runtime.dll
+C:\Users\collo\OneDrive - Miyabi Africa\Product development\Novel Technologies\ADIMS Project\code\ADIMS\ADIMS\bin\AutoMapper.dll
+C:\Users\collo\OneDrive - Miyabi Africa\Product development\Novel Technologies\ADIMS Project\code\ADIMS\ADIMS\bin\CacheCow.Common.dll
+C:\Users\collo\OneDrive - Miyabi Africa\Product development\Novel Technologies\ADIMS Project\code\ADIMS\ADIMS\bin\CacheCow.Server.dll
+C:\Users\collo\OneDrive - Miyabi Africa\Product development\Novel Technologies\ADIMS Project\code\ADIMS\ADIMS\bin\EasyNetQ.dll
+C:\Users\collo\OneDrive - Miyabi Africa\Product development\Novel Technologies\ADIMS Project\code\ADIMS\ADIMS\bin\EntityFramework.dll
+C:\Users\collo\OneDrive - Miyabi Africa\Product development\Novel Technologies\ADIMS Project\code\ADIMS\ADIMS\bin\EntityFramework.SqlServer.dll
+C:\Users\collo\OneDrive - Miyabi Africa\Product development\Novel Technologies\ADIMS Project\code\ADIMS\ADIMS\bin\FoolproofValidation.dll
+C:\Users\collo\OneDrive - Miyabi Africa\Product development\Novel Technologies\ADIMS Project\code\ADIMS\ADIMS\bin\Jmelosegui.Mvc.GoogleMap.dll
+C:\Users\collo\OneDrive - Miyabi Africa\Product development\Novel Technologies\ADIMS Project\code\ADIMS\ADIMS\bin\Microsoft.AspNet.Identity.Core.dll
+C:\Users\collo\OneDrive - Miyabi Africa\Product development\Novel Technologies\ADIMS Project\code\ADIMS\ADIMS\bin\Microsoft.AspNet.Identity.EntityFramework.dll
+C:\Users\collo\OneDrive - Miyabi Africa\Product development\Novel Technologies\ADIMS Project\code\ADIMS\ADIMS\bin\Microsoft.AspNet.Identity.Owin.dll
+C:\Users\collo\OneDrive - Miyabi Africa\Product development\Novel Technologies\ADIMS Project\code\ADIMS\ADIMS\bin\Microsoft.Azure.ActiveDirectory.GraphClient.dll
+C:\Users\collo\OneDrive - Miyabi Africa\Product development\Novel Technologies\ADIMS Project\code\ADIMS\ADIMS\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+C:\Users\collo\OneDrive - Miyabi Africa\Product development\Novel Technologies\ADIMS Project\code\ADIMS\ADIMS\bin\Microsoft.Data.Edm.dll
+C:\Users\collo\OneDrive - Miyabi Africa\Product development\Novel Technologies\ADIMS Project\code\ADIMS\ADIMS\bin\Microsoft.Data.OData.dll
+C:\Users\collo\OneDrive - Miyabi Africa\Product development\Novel Technologies\ADIMS Project\code\ADIMS\ADIMS\bin\Microsoft.Data.Services.Client.dll
+C:\Users\collo\OneDrive - Miyabi Africa\Product development\Novel Technologies\ADIMS Project\code\ADIMS\ADIMS\bin\Microsoft.IdentityModel.Clients.ActiveDirectory.dll
+C:\Users\collo\OneDrive - Miyabi Africa\Product development\Novel Technologies\ADIMS Project\code\ADIMS\ADIMS\bin\Microsoft.IdentityModel.Clients.ActiveDirectory.WindowsForms.dll
+C:\Users\collo\OneDrive - Miyabi Africa\Product development\Novel Technologies\ADIMS Project\code\ADIMS\ADIMS\bin\Microsoft.OData.Client.dll
+C:\Users\collo\OneDrive - Miyabi Africa\Product development\Novel Technologies\ADIMS Project\code\ADIMS\ADIMS\bin\Microsoft.OData.Core.dll
+C:\Users\collo\OneDrive - Miyabi Africa\Product development\Novel Technologies\ADIMS Project\code\ADIMS\ADIMS\bin\Microsoft.OData.Edm.dll
+C:\Users\collo\OneDrive - Miyabi Africa\Product development\Novel Technologies\ADIMS Project\code\ADIMS\ADIMS\bin\Microsoft.Office365.Discovery.dll
+C:\Users\collo\OneDrive - Miyabi Africa\Product development\Novel Technologies\ADIMS Project\code\ADIMS\ADIMS\bin\Microsoft.Office365.OutlookServices.Portable.dll
+C:\Users\collo\OneDrive - Miyabi Africa\Product development\Novel Technologies\ADIMS Project\code\ADIMS\ADIMS\bin\Microsoft.Office365.SharePoint.dll
+C:\Users\collo\OneDrive - Miyabi Africa\Product development\Novel Technologies\ADIMS Project\code\ADIMS\ADIMS\bin\Microsoft.Owin.dll
+C:\Users\collo\OneDrive - Miyabi Africa\Product development\Novel Technologies\ADIMS Project\code\ADIMS\ADIMS\bin\Microsoft.Owin.Host.SystemWeb.dll
+C:\Users\collo\OneDrive - Miyabi Africa\Product development\Novel Technologies\ADIMS Project\code\ADIMS\ADIMS\bin\Microsoft.Owin.Security.ActiveDirectory.dll
+C:\Users\collo\OneDrive - Miyabi Africa\Product development\Novel Technologies\ADIMS Project\code\ADIMS\ADIMS\bin\Microsoft.Owin.Security.Cookies.dll
+C:\Users\collo\OneDrive - Miyabi Africa\Product development\Novel Technologies\ADIMS Project\code\ADIMS\ADIMS\bin\Microsoft.Owin.Security.dll
+C:\Users\collo\OneDrive - Miyabi Africa\Product development\Novel Technologies\ADIMS Project\code\ADIMS\ADIMS\bin\Microsoft.Owin.Security.Facebook.dll
+C:\Users\collo\OneDrive - Miyabi Africa\Product development\Novel Technologies\ADIMS Project\code\ADIMS\ADIMS\bin\Microsoft.Owin.Security.Google.dll
+C:\Users\collo\OneDrive - Miyabi Africa\Product development\Novel Technologies\ADIMS Project\code\ADIMS\ADIMS\bin\Microsoft.Owin.Security.Jwt.dll
+C:\Users\collo\OneDrive - Miyabi Africa\Product development\Novel Technologies\ADIMS Project\code\ADIMS\ADIMS\bin\Microsoft.Owin.Security.MicrosoftAccount.dll
+C:\Users\collo\OneDrive - Miyabi Africa\Product development\Novel Technologies\ADIMS Project\code\ADIMS\ADIMS\bin\Microsoft.Owin.Security.OAuth.dll
+C:\Users\collo\OneDrive - Miyabi Africa\Product development\Novel Technologies\ADIMS Project\code\ADIMS\ADIMS\bin\Microsoft.Owin.Security.Twitter.dll
+C:\Users\collo\OneDrive - Miyabi Africa\Product development\Novel Technologies\ADIMS Project\code\ADIMS\ADIMS\bin\Microsoft.QualityTools.Testing.Fakes.dll
+C:\Users\collo\OneDrive - Miyabi Africa\Product development\Novel Technologies\ADIMS Project\code\ADIMS\ADIMS\bin\Microsoft.Spatial.dll
+C:\Users\collo\OneDrive - Miyabi Africa\Product development\Novel Technologies\ADIMS Project\code\ADIMS\ADIMS\bin\Microsoft.Web.Infrastructure.dll
+C:\Users\collo\OneDrive - Miyabi Africa\Product development\Novel Technologies\ADIMS Project\code\ADIMS\ADIMS\bin\Newtonsoft.Json.dll
+C:\Users\collo\OneDrive - Miyabi Africa\Product development\Novel Technologies\ADIMS Project\code\ADIMS\ADIMS\bin\Owin.dll
+C:\Users\collo\OneDrive - Miyabi Africa\Product development\Novel Technologies\ADIMS Project\code\ADIMS\ADIMS\bin\RabbitMQ.Client.dll
+C:\Users\collo\OneDrive - Miyabi Africa\Product development\Novel Technologies\ADIMS Project\code\ADIMS\ADIMS\bin\Swashbuckle.Core.dll
+C:\Users\collo\OneDrive - Miyabi Africa\Product development\Novel Technologies\ADIMS Project\code\ADIMS\ADIMS\bin\System.IdentityModel.Tokens.Jwt.dll
+C:\Users\collo\OneDrive - Miyabi Africa\Product development\Novel Technologies\ADIMS Project\code\ADIMS\ADIMS\bin\System.Net.Http.Formatting.dll
+C:\Users\collo\OneDrive - Miyabi Africa\Product development\Novel Technologies\ADIMS Project\code\ADIMS\ADIMS\bin\System.Spatial.dll
+C:\Users\collo\OneDrive - Miyabi Africa\Product development\Novel Technologies\ADIMS Project\code\ADIMS\ADIMS\bin\System.ValueTuple.dll
+C:\Users\collo\OneDrive - Miyabi Africa\Product development\Novel Technologies\ADIMS Project\code\ADIMS\ADIMS\bin\System.Web.Helpers.dll
+C:\Users\collo\OneDrive - Miyabi Africa\Product development\Novel Technologies\ADIMS Project\code\ADIMS\ADIMS\bin\System.Web.Http.dll
+C:\Users\collo\OneDrive - Miyabi Africa\Product development\Novel Technologies\ADIMS Project\code\ADIMS\ADIMS\bin\System.Web.Http.WebHost.dll
+C:\Users\collo\OneDrive - Miyabi Africa\Product development\Novel Technologies\ADIMS Project\code\ADIMS\ADIMS\bin\System.Web.Mvc.dll
+C:\Users\collo\OneDrive - Miyabi Africa\Product development\Novel Technologies\ADIMS Project\code\ADIMS\ADIMS\bin\System.Web.Optimization.dll
+C:\Users\collo\OneDrive - Miyabi Africa\Product development\Novel Technologies\ADIMS Project\code\ADIMS\ADIMS\bin\System.Web.Razor.dll
+C:\Users\collo\OneDrive - Miyabi Africa\Product development\Novel Technologies\ADIMS Project\code\ADIMS\ADIMS\bin\System.Web.WebPages.Deployment.dll
+C:\Users\collo\OneDrive - Miyabi Africa\Product development\Novel Technologies\ADIMS Project\code\ADIMS\ADIMS\bin\System.Web.WebPages.dll
+C:\Users\collo\OneDrive - Miyabi Africa\Product development\Novel Technologies\ADIMS Project\code\ADIMS\ADIMS\bin\System.Web.WebPages.Razor.dll
+C:\Users\collo\OneDrive - Miyabi Africa\Product development\Novel Technologies\ADIMS Project\code\ADIMS\ADIMS\bin\WebActivatorEx.dll
+C:\Users\collo\OneDrive - Miyabi Africa\Product development\Novel Technologies\ADIMS Project\code\ADIMS\ADIMS\bin\WebApi.OutputCache.Core.dll
+C:\Users\collo\OneDrive - Miyabi Africa\Product development\Novel Technologies\ADIMS Project\code\ADIMS\ADIMS\bin\WebApi.OutputCache.V2.dll
+C:\Users\collo\OneDrive - Miyabi Africa\Product development\Novel Technologies\ADIMS Project\code\ADIMS\ADIMS\bin\WebGrease.dll
+C:\Users\collo\OneDrive - Miyabi Africa\Product development\Novel Technologies\ADIMS Project\code\ADIMS\ADIMS\bin\AutoMapper.xml
+C:\Users\collo\OneDrive - Miyabi Africa\Product development\Novel Technologies\ADIMS Project\code\ADIMS\ADIMS\bin\CacheCow.Common.xml
+C:\Users\collo\OneDrive - Miyabi Africa\Product development\Novel Technologies\ADIMS Project\code\ADIMS\ADIMS\bin\CacheCow.Server.xml
+C:\Users\collo\OneDrive - Miyabi Africa\Product development\Novel Technologies\ADIMS Project\code\ADIMS\ADIMS\bin\EasyNetQ.xml
+C:\Users\collo\OneDrive - Miyabi Africa\Product development\Novel Technologies\ADIMS Project\code\ADIMS\ADIMS\bin\Microsoft.AspNet.Identity.Core.xml
+C:\Users\collo\OneDrive - Miyabi Africa\Product development\Novel Technologies\ADIMS Project\code\ADIMS\ADIMS\bin\Microsoft.AspNet.Identity.EntityFramework.xml
+C:\Users\collo\OneDrive - Miyabi Africa\Product development\Novel Technologies\ADIMS Project\code\ADIMS\ADIMS\bin\Microsoft.AspNet.Identity.Owin.xml
+C:\Users\collo\OneDrive - Miyabi Africa\Product development\Novel Technologies\ADIMS Project\code\ADIMS\ADIMS\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+C:\Users\collo\OneDrive - Miyabi Africa\Product development\Novel Technologies\ADIMS Project\code\ADIMS\ADIMS\bin\Microsoft.Data.Edm.xml
+C:\Users\collo\OneDrive - Miyabi Africa\Product development\Novel Technologies\ADIMS Project\code\ADIMS\ADIMS\bin\Microsoft.Data.OData.xml
+C:\Users\collo\OneDrive - Miyabi Africa\Product development\Novel Technologies\ADIMS Project\code\ADIMS\ADIMS\bin\Microsoft.Data.Services.Client.xml
+C:\Users\collo\OneDrive - Miyabi Africa\Product development\Novel Technologies\ADIMS Project\code\ADIMS\ADIMS\bin\Microsoft.IdentityModel.Clients.ActiveDirectory.xml
+C:\Users\collo\OneDrive - Miyabi Africa\Product development\Novel Technologies\ADIMS Project\code\ADIMS\ADIMS\bin\Microsoft.OData.Client.xml
+C:\Users\collo\OneDrive - Miyabi Africa\Product development\Novel Technologies\ADIMS Project\code\ADIMS\ADIMS\bin\Microsoft.OData.Core.xml
+C:\Users\collo\OneDrive - Miyabi Africa\Product development\Novel Technologies\ADIMS Project\code\ADIMS\ADIMS\bin\Microsoft.OData.Edm.xml
+C:\Users\collo\OneDrive - Miyabi Africa\Product development\Novel Technologies\ADIMS Project\code\ADIMS\ADIMS\bin\Microsoft.Owin.Security.ActiveDirectory.xml
+C:\Users\collo\OneDrive - Miyabi Africa\Product development\Novel Technologies\ADIMS Project\code\ADIMS\ADIMS\bin\Microsoft.Owin.Security.Jwt.xml
+C:\Users\collo\OneDrive - Miyabi Africa\Product development\Novel Technologies\ADIMS Project\code\ADIMS\ADIMS\bin\Microsoft.Spatial.xml
+C:\Users\collo\OneDrive - Miyabi Africa\Product development\Novel Technologies\ADIMS Project\code\ADIMS\ADIMS\bin\Newtonsoft.Json.xml
+C:\Users\collo\OneDrive - Miyabi Africa\Product development\Novel Technologies\ADIMS Project\code\ADIMS\ADIMS\bin\RabbitMQ.Client.xml
+C:\Users\collo\OneDrive - Miyabi Africa\Product development\Novel Technologies\ADIMS Project\code\ADIMS\ADIMS\bin\System.IdentityModel.Tokens.Jwt.xml
+C:\Users\collo\OneDrive - Miyabi Africa\Product development\Novel Technologies\ADIMS Project\code\ADIMS\ADIMS\bin\System.Spatial.xml
+C:\Users\collo\OneDrive - Miyabi Africa\Product development\Novel Technologies\ADIMS Project\code\ADIMS\ADIMS\bin\System.Web.Helpers.xml
+C:\Users\collo\OneDrive - Miyabi Africa\Product development\Novel Technologies\ADIMS Project\code\ADIMS\ADIMS\bin\System.Web.Mvc.xml
+C:\Users\collo\OneDrive - Miyabi Africa\Product development\Novel Technologies\ADIMS Project\code\ADIMS\ADIMS\bin\System.Web.Optimization.xml
+C:\Users\collo\OneDrive - Miyabi Africa\Product development\Novel Technologies\ADIMS Project\code\ADIMS\ADIMS\bin\System.Web.Razor.xml
+C:\Users\collo\OneDrive - Miyabi Africa\Product development\Novel Technologies\ADIMS Project\code\ADIMS\ADIMS\bin\System.Web.WebPages.xml
+C:\Users\collo\OneDrive - Miyabi Africa\Product development\Novel Technologies\ADIMS Project\code\ADIMS\ADIMS\bin\System.Web.WebPages.Deployment.xml
+C:\Users\collo\OneDrive - Miyabi Africa\Product development\Novel Technologies\ADIMS Project\code\ADIMS\ADIMS\bin\System.Web.WebPages.Razor.xml
+C:\Users\collo\OneDrive - Miyabi Africa\Product development\Novel Technologies\ADIMS Project\code\ADIMS\ADIMS\bin\Antlr3.Runtime.pdb
+C:\Users\collo\OneDrive - Miyabi Africa\Product development\Novel Technologies\ADIMS Project\code\ADIMS\ADIMS\bin\System.Net.Http.Formatting.xml
+C:\Users\collo\OneDrive - Miyabi Africa\Product development\Novel Technologies\ADIMS Project\code\ADIMS\ADIMS\bin\System.Web.Http.xml
+C:\Users\collo\OneDrive - Miyabi Africa\Product development\Novel Technologies\ADIMS Project\code\ADIMS\ADIMS\bin\System.Web.Http.WebHost.xml
+C:\Users\collo\OneDrive - Miyabi Africa\Product development\Novel Technologies\ADIMS Project\code\ADIMS\ADIMS\bin\EntityFramework.xml
+C:\Users\collo\OneDrive - Miyabi Africa\Product development\Novel Technologies\ADIMS Project\code\ADIMS\ADIMS\bin\EntityFramework.SqlServer.xml
+C:\Users\collo\OneDrive - Miyabi Africa\Product development\Novel Technologies\ADIMS Project\code\ADIMS\ADIMS\bin\Microsoft.Owin.xml
+C:\Users\collo\OneDrive - Miyabi Africa\Product development\Novel Technologies\ADIMS Project\code\ADIMS\ADIMS\bin\Microsoft.Owin.Host.SystemWeb.xml
+C:\Users\collo\OneDrive - Miyabi Africa\Product development\Novel Technologies\ADIMS Project\code\ADIMS\ADIMS\bin\Microsoft.Owin.Security.xml
+C:\Users\collo\OneDrive - Miyabi Africa\Product development\Novel Technologies\ADIMS Project\code\ADIMS\ADIMS\bin\Microsoft.Owin.Security.Facebook.xml
+C:\Users\collo\OneDrive - Miyabi Africa\Product development\Novel Technologies\ADIMS Project\code\ADIMS\ADIMS\bin\Microsoft.Owin.Security.Cookies.xml
+C:\Users\collo\OneDrive - Miyabi Africa\Product development\Novel Technologies\ADIMS Project\code\ADIMS\ADIMS\bin\Microsoft.Owin.Security.OAuth.xml
+C:\Users\collo\OneDrive - Miyabi Africa\Product development\Novel Technologies\ADIMS Project\code\ADIMS\ADIMS\bin\Microsoft.Owin.Security.Google.xml
+C:\Users\collo\OneDrive - Miyabi Africa\Product development\Novel Technologies\ADIMS Project\code\ADIMS\ADIMS\bin\Microsoft.Owin.Security.Twitter.xml
+C:\Users\collo\OneDrive - Miyabi Africa\Product development\Novel Technologies\ADIMS Project\code\ADIMS\ADIMS\bin\Microsoft.Owin.Security.MicrosoftAccount.xml
+C:\Users\collo\OneDrive - Miyabi Africa\Product development\Novel Technologies\ADIMS Project\code\ADIMS\ADIMS\bin\de\Microsoft.Data.Edm.resources.dll
+C:\Users\collo\OneDrive - Miyabi Africa\Product development\Novel Technologies\ADIMS Project\code\ADIMS\ADIMS\bin\es\Microsoft.Data.Edm.resources.dll
+C:\Users\collo\OneDrive - Miyabi Africa\Product development\Novel Technologies\ADIMS Project\code\ADIMS\ADIMS\bin\fr\Microsoft.Data.Edm.resources.dll
+C:\Users\collo\OneDrive - Miyabi Africa\Product development\Novel Technologies\ADIMS Project\code\ADIMS\ADIMS\bin\it\Microsoft.Data.Edm.resources.dll
+C:\Users\collo\OneDrive - Miyabi Africa\Product development\Novel Technologies\ADIMS Project\code\ADIMS\ADIMS\bin\ja\Microsoft.Data.Edm.resources.dll
+C:\Users\collo\OneDrive - Miyabi Africa\Product development\Novel Technologies\ADIMS Project\code\ADIMS\ADIMS\bin\ko\Microsoft.Data.Edm.resources.dll
+C:\Users\collo\OneDrive - Miyabi Africa\Product development\Novel Technologies\ADIMS Project\code\ADIMS\ADIMS\bin\ru\Microsoft.Data.Edm.resources.dll
+C:\Users\collo\OneDrive - Miyabi Africa\Product development\Novel Technologies\ADIMS Project\code\ADIMS\ADIMS\bin\zh-Hans\Microsoft.Data.Edm.resources.dll
+C:\Users\collo\OneDrive - Miyabi Africa\Product development\Novel Technologies\ADIMS Project\code\ADIMS\ADIMS\bin\zh-Hant\Microsoft.Data.Edm.resources.dll
+C:\Users\collo\OneDrive - Miyabi Africa\Product development\Novel Technologies\ADIMS Project\code\ADIMS\ADIMS\bin\de\Microsoft.Data.OData.resources.dll
+C:\Users\collo\OneDrive - Miyabi Africa\Product development\Novel Technologies\ADIMS Project\code\ADIMS\ADIMS\bin\es\Microsoft.Data.OData.resources.dll
+C:\Users\collo\OneDrive - Miyabi Africa\Product development\Novel Technologies\ADIMS Project\code\ADIMS\ADIMS\bin\fr\Microsoft.Data.OData.resources.dll
+C:\Users\collo\OneDrive - Miyabi Africa\Product development\Novel Technologies\ADIMS Project\code\ADIMS\ADIMS\bin\it\Microsoft.Data.OData.resources.dll
+C:\Users\collo\OneDrive - Miyabi Africa\Product development\Novel Technologies\ADIMS Project\code\ADIMS\ADIMS\bin\ja\Microsoft.Data.OData.resources.dll
+C:\Users\collo\OneDrive - Miyabi Africa\Product development\Novel Technologies\ADIMS Project\code\ADIMS\ADIMS\bin\ko\Microsoft.Data.OData.resources.dll
+C:\Users\collo\OneDrive - Miyabi Africa\Product development\Novel Technologies\ADIMS Project\code\ADIMS\ADIMS\bin\ru\Microsoft.Data.OData.resources.dll
+C:\Users\collo\OneDrive - Miyabi Africa\Product development\Novel Technologies\ADIMS Project\code\ADIMS\ADIMS\bin\zh-Hans\Microsoft.Data.OData.resources.dll
+C:\Users\collo\OneDrive - Miyabi Africa\Product development\Novel Technologies\ADIMS Project\code\ADIMS\ADIMS\bin\zh-Hant\Microsoft.Data.OData.resources.dll
+C:\Users\collo\OneDrive - Miyabi Africa\Product development\Novel Technologies\ADIMS Project\code\ADIMS\ADIMS\bin\de\Microsoft.Data.Services.Client.resources.dll
+C:\Users\collo\OneDrive - Miyabi Africa\Product development\Novel Technologies\ADIMS Project\code\ADIMS\ADIMS\bin\es\Microsoft.Data.Services.Client.resources.dll
+C:\Users\collo\OneDrive - Miyabi Africa\Product development\Novel Technologies\ADIMS Project\code\ADIMS\ADIMS\bin\fr\Microsoft.Data.Services.Client.resources.dll
+C:\Users\collo\OneDrive - Miyabi Africa\Product development\Novel Technologies\ADIMS Project\code\ADIMS\ADIMS\bin\it\Microsoft.Data.Services.Client.resources.dll
+C:\Users\collo\OneDrive - Miyabi Africa\Product development\Novel Technologies\ADIMS Project\code\ADIMS\ADIMS\bin\ja\Microsoft.Data.Services.Client.resources.dll
+C:\Users\collo\OneDrive - Miyabi Africa\Product development\Novel Technologies\ADIMS Project\code\ADIMS\ADIMS\bin\ko\Microsoft.Data.Services.Client.resources.dll
+C:\Users\collo\OneDrive - Miyabi Africa\Product development\Novel Technologies\ADIMS Project\code\ADIMS\ADIMS\bin\ru\Microsoft.Data.Services.Client.resources.dll
+C:\Users\collo\OneDrive - Miyabi Africa\Product development\Novel Technologies\ADIMS Project\code\ADIMS\ADIMS\bin\zh-Hans\Microsoft.Data.Services.Client.resources.dll
+C:\Users\collo\OneDrive - Miyabi Africa\Product development\Novel Technologies\ADIMS Project\code\ADIMS\ADIMS\bin\zh-Hant\Microsoft.Data.Services.Client.resources.dll
+C:\Users\collo\OneDrive - Miyabi Africa\Product development\Novel Technologies\ADIMS Project\code\ADIMS\ADIMS\bin\de\Microsoft.OData.Client.resources.dll
+C:\Users\collo\OneDrive - Miyabi Africa\Product development\Novel Technologies\ADIMS Project\code\ADIMS\ADIMS\bin\es\Microsoft.OData.Client.resources.dll
+C:\Users\collo\OneDrive - Miyabi Africa\Product development\Novel Technologies\ADIMS Project\code\ADIMS\ADIMS\bin\fr\Microsoft.OData.Client.resources.dll
+C:\Users\collo\OneDrive - Miyabi Africa\Product development\Novel Technologies\ADIMS Project\code\ADIMS\ADIMS\bin\it\Microsoft.OData.Client.resources.dll
+C:\Users\collo\OneDrive - Miyabi Africa\Product development\Novel Technologies\ADIMS Project\code\ADIMS\ADIMS\bin\ja\Microsoft.OData.Client.resources.dll
+C:\Users\collo\OneDrive - Miyabi Africa\Product development\Novel Technologies\ADIMS Project\code\ADIMS\ADIMS\bin\ko\Microsoft.OData.Client.resources.dll
+C:\Users\collo\OneDrive - Miyabi Africa\Product development\Novel Technologies\ADIMS Project\code\ADIMS\ADIMS\bin\ru\Microsoft.OData.Client.resources.dll
+C:\Users\collo\OneDrive - Miyabi Africa\Product development\Novel Technologies\ADIMS Project\code\ADIMS\ADIMS\bin\zh-Hans\Microsoft.OData.Client.resources.dll
+C:\Users\collo\OneDrive - Miyabi Africa\Product development\Novel Technologies\ADIMS Project\code\ADIMS\ADIMS\bin\zh-Hant\Microsoft.OData.Client.resources.dll
+C:\Users\collo\OneDrive - Miyabi Africa\Product development\Novel Technologies\ADIMS Project\code\ADIMS\ADIMS\bin\de\Microsoft.OData.Core.resources.dll
+C:\Users\collo\OneDrive - Miyabi Africa\Product development\Novel Technologies\ADIMS Project\code\ADIMS\ADIMS\bin\es\Microsoft.OData.Core.resources.dll
+C:\Users\collo\OneDrive - Miyabi Africa\Product development\Novel Technologies\ADIMS Project\code\ADIMS\ADIMS\bin\fr\Microsoft.OData.Core.resources.dll
+C:\Users\collo\OneDrive - Miyabi Africa\Product development\Novel Technologies\ADIMS Project\code\ADIMS\ADIMS\bin\it\Microsoft.OData.Core.resources.dll
+C:\Users\collo\OneDrive - Miyabi Africa\Product development\Novel Technologies\ADIMS Project\code\ADIMS\ADIMS\bin\ja\Microsoft.OData.Core.resources.dll
+C:\Users\collo\OneDrive - Miyabi Africa\Product development\Novel Technologies\ADIMS Project\code\ADIMS\ADIMS\bin\ko\Microsoft.OData.Core.resources.dll
+C:\Users\collo\OneDrive - Miyabi Africa\Product development\Novel Technologies\ADIMS Project\code\ADIMS\ADIMS\bin\ru\Microsoft.OData.Core.resources.dll
+C:\Users\collo\OneDrive - Miyabi Africa\Product development\Novel Technologies\ADIMS Project\code\ADIMS\ADIMS\bin\zh-Hans\Microsoft.OData.Core.resources.dll
+C:\Users\collo\OneDrive - Miyabi Africa\Product development\Novel Technologies\ADIMS Project\code\ADIMS\ADIMS\bin\zh-Hant\Microsoft.OData.Core.resources.dll
+C:\Users\collo\OneDrive - Miyabi Africa\Product development\Novel Technologies\ADIMS Project\code\ADIMS\ADIMS\bin\de\Microsoft.OData.Edm.resources.dll
+C:\Users\collo\OneDrive - Miyabi Africa\Product development\Novel Technologies\ADIMS Project\code\ADIMS\ADIMS\bin\es\Microsoft.OData.Edm.resources.dll
+C:\Users\collo\OneDrive - Miyabi Africa\Product development\Novel Technologies\ADIMS Project\code\ADIMS\ADIMS\bin\fr\Microsoft.OData.Edm.resources.dll
+C:\Users\collo\OneDrive - Miyabi Africa\Product development\Novel Technologies\ADIMS Project\code\ADIMS\ADIMS\bin\it\Microsoft.OData.Edm.resources.dll
+C:\Users\collo\OneDrive - Miyabi Africa\Product development\Novel Technologies\ADIMS Project\code\ADIMS\ADIMS\bin\ja\Microsoft.OData.Edm.resources.dll
+C:\Users\collo\OneDrive - Miyabi Africa\Product development\Novel Technologies\ADIMS Project\code\ADIMS\ADIMS\bin\ko\Microsoft.OData.Edm.resources.dll
+C:\Users\collo\OneDrive - Miyabi Africa\Product development\Novel Technologies\ADIMS Project\code\ADIMS\ADIMS\bin\ru\Microsoft.OData.Edm.resources.dll
+C:\Users\collo\OneDrive - Miyabi Africa\Product development\Novel Technologies\ADIMS Project\code\ADIMS\ADIMS\bin\zh-Hans\Microsoft.OData.Edm.resources.dll
+C:\Users\collo\OneDrive - Miyabi Africa\Product development\Novel Technologies\ADIMS Project\code\ADIMS\ADIMS\bin\zh-Hant\Microsoft.OData.Edm.resources.dll
+C:\Users\collo\OneDrive - Miyabi Africa\Product development\Novel Technologies\ADIMS Project\code\ADIMS\ADIMS\bin\de\Microsoft.Spatial.resources.dll
+C:\Users\collo\OneDrive - Miyabi Africa\Product development\Novel Technologies\ADIMS Project\code\ADIMS\ADIMS\bin\es\Microsoft.Spatial.resources.dll
+C:\Users\collo\OneDrive - Miyabi Africa\Product development\Novel Technologies\ADIMS Project\code\ADIMS\ADIMS\bin\fr\Microsoft.Spatial.resources.dll
+C:\Users\collo\OneDrive - Miyabi Africa\Product development\Novel Technologies\ADIMS Project\code\ADIMS\ADIMS\bin\it\Microsoft.Spatial.resources.dll
+C:\Users\collo\OneDrive - Miyabi Africa\Product development\Novel Technologies\ADIMS Project\code\ADIMS\ADIMS\bin\ja\Microsoft.Spatial.resources.dll
+C:\Users\collo\OneDrive - Miyabi Africa\Product development\Novel Technologies\ADIMS Project\code\ADIMS\ADIMS\bin\ko\Microsoft.Spatial.resources.dll
+C:\Users\collo\OneDrive - Miyabi Africa\Product development\Novel Technologies\ADIMS Project\code\ADIMS\ADIMS\bin\ru\Microsoft.Spatial.resources.dll
+C:\Users\collo\OneDrive - Miyabi Africa\Product development\Novel Technologies\ADIMS Project\code\ADIMS\ADIMS\bin\zh-Hans\Microsoft.Spatial.resources.dll
+C:\Users\collo\OneDrive - Miyabi Africa\Product development\Novel Technologies\ADIMS Project\code\ADIMS\ADIMS\bin\zh-Hant\Microsoft.Spatial.resources.dll
+C:\Users\collo\OneDrive - Miyabi Africa\Product development\Novel Technologies\ADIMS Project\code\ADIMS\ADIMS\bin\de\System.Spatial.resources.dll
+C:\Users\collo\OneDrive - Miyabi Africa\Product development\Novel Technologies\ADIMS Project\code\ADIMS\ADIMS\bin\es\System.Spatial.resources.dll
+C:\Users\collo\OneDrive - Miyabi Africa\Product development\Novel Technologies\ADIMS Project\code\ADIMS\ADIMS\bin\fr\System.Spatial.resources.dll
+C:\Users\collo\OneDrive - Miyabi Africa\Product development\Novel Technologies\ADIMS Project\code\ADIMS\ADIMS\bin\it\System.Spatial.resources.dll
+C:\Users\collo\OneDrive - Miyabi Africa\Product development\Novel Technologies\ADIMS Project\code\ADIMS\ADIMS\bin\ja\System.Spatial.resources.dll
+C:\Users\collo\OneDrive - Miyabi Africa\Product development\Novel Technologies\ADIMS Project\code\ADIMS\ADIMS\bin\ko\System.Spatial.resources.dll
+C:\Users\collo\OneDrive - Miyabi Africa\Product development\Novel Technologies\ADIMS Project\code\ADIMS\ADIMS\bin\ru\System.Spatial.resources.dll
+C:\Users\collo\OneDrive - Miyabi Africa\Product development\Novel Technologies\ADIMS Project\code\ADIMS\ADIMS\bin\zh-Hans\System.Spatial.resources.dll
+C:\Users\collo\OneDrive - Miyabi Africa\Product development\Novel Technologies\ADIMS Project\code\ADIMS\ADIMS\bin\zh-Hant\System.Spatial.resources.dll
+C:\Users\collo\OneDrive - Miyabi Africa\Product development\Novel Technologies\ADIMS Project\code\ADIMS\ADIMS\obj\Debug\ADIMS.csprojResolveAssemblyReference.cache
+C:\Users\collo\OneDrive - Miyabi Africa\Product development\Novel Technologies\ADIMS Project\code\ADIMS\ADIMS\obj\Debug\ADIMS.Migrations.fresh_user_model.resources
+C:\Users\collo\OneDrive - Miyabi Africa\Product development\Novel Technologies\ADIMS Project\code\ADIMS\ADIMS\obj\Debug\ADIMS.csproj.GenerateResource.cache
+C:\Users\collo\OneDrive - Miyabi Africa\Product development\Novel Technologies\ADIMS Project\code\ADIMS\ADIMS\obj\Debug\ADIMS.csproj.CoreCompileInputs.cache
+C:\Users\collo\OneDrive - Miyabi Africa\Product development\Novel Technologies\ADIMS Project\code\ADIMS\ADIMS\obj\Debug\ADIMS.csproj.CopyComplete
+C:\Users\collo\OneDrive - Miyabi Africa\Product development\Novel Technologies\ADIMS Project\code\ADIMS\ADIMS\obj\Debug\ADIMS.dll
+C:\Users\collo\OneDrive - Miyabi Africa\Product development\Novel Technologies\ADIMS Project\code\ADIMS\ADIMS\obj\Debug\ADIMS.pdb
+C:\Users\collo\Source\Repos\ADIMS\ADIMS\bin\roslyn\csc.exe
+C:\Users\collo\Source\Repos\ADIMS\ADIMS\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+C:\Users\collo\Source\Repos\ADIMS\ADIMS\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+C:\Users\collo\Source\Repos\ADIMS\ADIMS\bin\roslyn\Microsoft.CodeAnalysis.dll
+C:\Users\collo\Source\Repos\ADIMS\ADIMS\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+C:\Users\collo\Source\Repos\ADIMS\ADIMS\bin\roslyn\Microsoft.CSharp.Core.targets
+C:\Users\collo\Source\Repos\ADIMS\ADIMS\bin\roslyn\Microsoft.VisualBasic.Core.targets
+C:\Users\collo\Source\Repos\ADIMS\ADIMS\bin\roslyn\System.Collections.Immutable.dll
+C:\Users\collo\Source\Repos\ADIMS\ADIMS\bin\roslyn\System.Reflection.Metadata.dll
+C:\Users\collo\Source\Repos\ADIMS\ADIMS\bin\roslyn\vbc.exe
+C:\Users\collo\Source\Repos\ADIMS\ADIMS\bin\roslyn\VBCSCompiler.exe
+C:\Users\collo\Source\Repos\ADIMS\ADIMS\bin\roslyn\VBCSCompiler.exe.config
+C:\Users\collo\Source\Repos\ADIMS\ADIMS\bin\ADIMS.dll.config
+C:\Users\collo\Source\Repos\ADIMS\ADIMS\bin\ADIMS.dll
+C:\Users\collo\Source\Repos\ADIMS\ADIMS\bin\ADIMS.pdb
+C:\Users\collo\Source\Repos\ADIMS\ADIMS\bin\Antlr3.Runtime.dll
+C:\Users\collo\Source\Repos\ADIMS\ADIMS\bin\AutoMapper.dll
+C:\Users\collo\Source\Repos\ADIMS\ADIMS\bin\CacheCow.Common.dll
+C:\Users\collo\Source\Repos\ADIMS\ADIMS\bin\CacheCow.Server.dll
+C:\Users\collo\Source\Repos\ADIMS\ADIMS\bin\EasyNetQ.dll
+C:\Users\collo\Source\Repos\ADIMS\ADIMS\bin\EntityFramework.dll
+C:\Users\collo\Source\Repos\ADIMS\ADIMS\bin\EntityFramework.SqlServer.dll
+C:\Users\collo\Source\Repos\ADIMS\ADIMS\bin\FoolproofValidation.dll
+C:\Users\collo\Source\Repos\ADIMS\ADIMS\bin\Jmelosegui.Mvc.GoogleMap.dll
+C:\Users\collo\Source\Repos\ADIMS\ADIMS\bin\Microsoft.AspNet.Identity.Core.dll
+C:\Users\collo\Source\Repos\ADIMS\ADIMS\bin\Microsoft.AspNet.Identity.EntityFramework.dll
+C:\Users\collo\Source\Repos\ADIMS\ADIMS\bin\Microsoft.AspNet.Identity.Owin.dll
+C:\Users\collo\Source\Repos\ADIMS\ADIMS\bin\Microsoft.Azure.ActiveDirectory.GraphClient.dll
+C:\Users\collo\Source\Repos\ADIMS\ADIMS\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+C:\Users\collo\Source\Repos\ADIMS\ADIMS\bin\Microsoft.Data.Edm.dll
+C:\Users\collo\Source\Repos\ADIMS\ADIMS\bin\Microsoft.Data.OData.dll
+C:\Users\collo\Source\Repos\ADIMS\ADIMS\bin\Microsoft.Data.Services.Client.dll
+C:\Users\collo\Source\Repos\ADIMS\ADIMS\bin\Microsoft.IdentityModel.Clients.ActiveDirectory.dll
+C:\Users\collo\Source\Repos\ADIMS\ADIMS\bin\Microsoft.IdentityModel.Clients.ActiveDirectory.WindowsForms.dll
+C:\Users\collo\Source\Repos\ADIMS\ADIMS\bin\Microsoft.OData.Client.dll
+C:\Users\collo\Source\Repos\ADIMS\ADIMS\bin\Microsoft.OData.Core.dll
+C:\Users\collo\Source\Repos\ADIMS\ADIMS\bin\Microsoft.OData.Edm.dll
+C:\Users\collo\Source\Repos\ADIMS\ADIMS\bin\Microsoft.OData.ProxyExtensions.dll
+C:\Users\collo\Source\Repos\ADIMS\ADIMS\bin\Microsoft.Office365.Discovery.dll
+C:\Users\collo\Source\Repos\ADIMS\ADIMS\bin\Microsoft.Office365.OutlookServices.Portable.dll
+C:\Users\collo\Source\Repos\ADIMS\ADIMS\bin\Microsoft.Office365.SharePoint.dll
+C:\Users\collo\Source\Repos\ADIMS\ADIMS\bin\Microsoft.Owin.dll
+C:\Users\collo\Source\Repos\ADIMS\ADIMS\bin\Microsoft.Owin.Host.SystemWeb.dll
+C:\Users\collo\Source\Repos\ADIMS\ADIMS\bin\Microsoft.Owin.Security.ActiveDirectory.dll
+C:\Users\collo\Source\Repos\ADIMS\ADIMS\bin\Microsoft.Owin.Security.Cookies.dll
+C:\Users\collo\Source\Repos\ADIMS\ADIMS\bin\Microsoft.Owin.Security.dll
+C:\Users\collo\Source\Repos\ADIMS\ADIMS\bin\Microsoft.Owin.Security.Facebook.dll
+C:\Users\collo\Source\Repos\ADIMS\ADIMS\bin\Microsoft.Owin.Security.Google.dll
+C:\Users\collo\Source\Repos\ADIMS\ADIMS\bin\Microsoft.Owin.Security.Jwt.dll
+C:\Users\collo\Source\Repos\ADIMS\ADIMS\bin\Microsoft.Owin.Security.MicrosoftAccount.dll
+C:\Users\collo\Source\Repos\ADIMS\ADIMS\bin\Microsoft.Owin.Security.OAuth.dll
+C:\Users\collo\Source\Repos\ADIMS\ADIMS\bin\Microsoft.Owin.Security.Twitter.dll
+C:\Users\collo\Source\Repos\ADIMS\ADIMS\bin\Microsoft.QualityTools.Testing.Fakes.dll
+C:\Users\collo\Source\Repos\ADIMS\ADIMS\bin\Microsoft.Spatial.dll
+C:\Users\collo\Source\Repos\ADIMS\ADIMS\bin\Microsoft.Web.Infrastructure.dll
+C:\Users\collo\Source\Repos\ADIMS\ADIMS\bin\Newtonsoft.Json.dll
+C:\Users\collo\Source\Repos\ADIMS\ADIMS\bin\Owin.dll
+C:\Users\collo\Source\Repos\ADIMS\ADIMS\bin\RabbitMQ.Client.dll
+C:\Users\collo\Source\Repos\ADIMS\ADIMS\bin\Swashbuckle.Core.dll
+C:\Users\collo\Source\Repos\ADIMS\ADIMS\bin\System.IdentityModel.Tokens.Jwt.dll
+C:\Users\collo\Source\Repos\ADIMS\ADIMS\bin\System.Net.Http.Formatting.dll
+C:\Users\collo\Source\Repos\ADIMS\ADIMS\bin\System.Spatial.dll
+C:\Users\collo\Source\Repos\ADIMS\ADIMS\bin\System.ValueTuple.dll
+C:\Users\collo\Source\Repos\ADIMS\ADIMS\bin\System.Web.Helpers.dll
+C:\Users\collo\Source\Repos\ADIMS\ADIMS\bin\System.Web.Http.dll
+C:\Users\collo\Source\Repos\ADIMS\ADIMS\bin\System.Web.Http.WebHost.dll
+C:\Users\collo\Source\Repos\ADIMS\ADIMS\bin\System.Web.Mvc.dll
+C:\Users\collo\Source\Repos\ADIMS\ADIMS\bin\System.Web.Optimization.dll
+C:\Users\collo\Source\Repos\ADIMS\ADIMS\bin\System.Web.Razor.dll
+C:\Users\collo\Source\Repos\ADIMS\ADIMS\bin\System.Web.WebPages.Deployment.dll
+C:\Users\collo\Source\Repos\ADIMS\ADIMS\bin\System.Web.WebPages.dll
+C:\Users\collo\Source\Repos\ADIMS\ADIMS\bin\System.Web.WebPages.Razor.dll
+C:\Users\collo\Source\Repos\ADIMS\ADIMS\bin\WebActivatorEx.dll
+C:\Users\collo\Source\Repos\ADIMS\ADIMS\bin\WebApi.OutputCache.Core.dll
+C:\Users\collo\Source\Repos\ADIMS\ADIMS\bin\WebApi.OutputCache.V2.dll
+C:\Users\collo\Source\Repos\ADIMS\ADIMS\bin\WebGrease.dll
+C:\Users\collo\Source\Repos\ADIMS\ADIMS\bin\AutoMapper.xml
+C:\Users\collo\Source\Repos\ADIMS\ADIMS\bin\CacheCow.Common.xml
+C:\Users\collo\Source\Repos\ADIMS\ADIMS\bin\CacheCow.Server.xml
+C:\Users\collo\Source\Repos\ADIMS\ADIMS\bin\EasyNetQ.xml
+C:\Users\collo\Source\Repos\ADIMS\ADIMS\bin\Microsoft.AspNet.Identity.Core.xml
+C:\Users\collo\Source\Repos\ADIMS\ADIMS\bin\Microsoft.AspNet.Identity.EntityFramework.xml
+C:\Users\collo\Source\Repos\ADIMS\ADIMS\bin\Microsoft.AspNet.Identity.Owin.xml
+C:\Users\collo\Source\Repos\ADIMS\ADIMS\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+C:\Users\collo\Source\Repos\ADIMS\ADIMS\bin\Microsoft.Data.Edm.xml
+C:\Users\collo\Source\Repos\ADIMS\ADIMS\bin\Microsoft.Data.OData.xml
+C:\Users\collo\Source\Repos\ADIMS\ADIMS\bin\Microsoft.Data.Services.Client.xml
+C:\Users\collo\Source\Repos\ADIMS\ADIMS\bin\Microsoft.IdentityModel.Clients.ActiveDirectory.xml
+C:\Users\collo\Source\Repos\ADIMS\ADIMS\bin\Microsoft.OData.Client.xml
+C:\Users\collo\Source\Repos\ADIMS\ADIMS\bin\Microsoft.OData.Core.xml
+C:\Users\collo\Source\Repos\ADIMS\ADIMS\bin\Microsoft.OData.Edm.xml
+C:\Users\collo\Source\Repos\ADIMS\ADIMS\bin\Microsoft.Owin.Security.ActiveDirectory.xml
+C:\Users\collo\Source\Repos\ADIMS\ADIMS\bin\Microsoft.Owin.Security.Jwt.xml
+C:\Users\collo\Source\Repos\ADIMS\ADIMS\bin\Microsoft.Spatial.xml
+C:\Users\collo\Source\Repos\ADIMS\ADIMS\bin\Newtonsoft.Json.xml
+C:\Users\collo\Source\Repos\ADIMS\ADIMS\bin\RabbitMQ.Client.xml
+C:\Users\collo\Source\Repos\ADIMS\ADIMS\bin\System.IdentityModel.Tokens.Jwt.xml
+C:\Users\collo\Source\Repos\ADIMS\ADIMS\bin\System.Spatial.xml
+C:\Users\collo\Source\Repos\ADIMS\ADIMS\bin\System.Web.Helpers.xml
+C:\Users\collo\Source\Repos\ADIMS\ADIMS\bin\System.Web.Mvc.xml
+C:\Users\collo\Source\Repos\ADIMS\ADIMS\bin\System.Web.Optimization.xml
+C:\Users\collo\Source\Repos\ADIMS\ADIMS\bin\System.Web.Razor.xml
+C:\Users\collo\Source\Repos\ADIMS\ADIMS\bin\System.Web.WebPages.xml
+C:\Users\collo\Source\Repos\ADIMS\ADIMS\bin\System.Web.WebPages.Deployment.xml
+C:\Users\collo\Source\Repos\ADIMS\ADIMS\bin\System.Web.WebPages.Razor.xml
+C:\Users\collo\Source\Repos\ADIMS\ADIMS\bin\Antlr3.Runtime.pdb
+C:\Users\collo\Source\Repos\ADIMS\ADIMS\bin\System.Net.Http.Formatting.xml
+C:\Users\collo\Source\Repos\ADIMS\ADIMS\bin\System.Web.Http.xml
+C:\Users\collo\Source\Repos\ADIMS\ADIMS\bin\System.Web.Http.WebHost.xml
+C:\Users\collo\Source\Repos\ADIMS\ADIMS\bin\EntityFramework.xml
+C:\Users\collo\Source\Repos\ADIMS\ADIMS\bin\EntityFramework.SqlServer.xml
+C:\Users\collo\Source\Repos\ADIMS\ADIMS\bin\Microsoft.Owin.xml
+C:\Users\collo\Source\Repos\ADIMS\ADIMS\bin\Microsoft.Owin.Host.SystemWeb.xml
+C:\Users\collo\Source\Repos\ADIMS\ADIMS\bin\Microsoft.Owin.Security.xml
+C:\Users\collo\Source\Repos\ADIMS\ADIMS\bin\Microsoft.Owin.Security.Facebook.xml
+C:\Users\collo\Source\Repos\ADIMS\ADIMS\bin\Microsoft.Owin.Security.Cookies.xml
+C:\Users\collo\Source\Repos\ADIMS\ADIMS\bin\Microsoft.Owin.Security.OAuth.xml
+C:\Users\collo\Source\Repos\ADIMS\ADIMS\bin\Microsoft.Owin.Security.Google.xml
+C:\Users\collo\Source\Repos\ADIMS\ADIMS\bin\Microsoft.Owin.Security.Twitter.xml
+C:\Users\collo\Source\Repos\ADIMS\ADIMS\bin\Microsoft.Owin.Security.MicrosoftAccount.xml
+C:\Users\collo\Source\Repos\ADIMS\ADIMS\bin\de\Microsoft.Data.Edm.resources.dll
+C:\Users\collo\Source\Repos\ADIMS\ADIMS\bin\es\Microsoft.Data.Edm.resources.dll
+C:\Users\collo\Source\Repos\ADIMS\ADIMS\bin\fr\Microsoft.Data.Edm.resources.dll
+C:\Users\collo\Source\Repos\ADIMS\ADIMS\bin\it\Microsoft.Data.Edm.resources.dll
+C:\Users\collo\Source\Repos\ADIMS\ADIMS\bin\ja\Microsoft.Data.Edm.resources.dll
+C:\Users\collo\Source\Repos\ADIMS\ADIMS\bin\ko\Microsoft.Data.Edm.resources.dll
+C:\Users\collo\Source\Repos\ADIMS\ADIMS\bin\ru\Microsoft.Data.Edm.resources.dll
+C:\Users\collo\Source\Repos\ADIMS\ADIMS\bin\zh-Hans\Microsoft.Data.Edm.resources.dll
+C:\Users\collo\Source\Repos\ADIMS\ADIMS\bin\zh-Hant\Microsoft.Data.Edm.resources.dll
+C:\Users\collo\Source\Repos\ADIMS\ADIMS\bin\de\Microsoft.Data.OData.resources.dll
+C:\Users\collo\Source\Repos\ADIMS\ADIMS\bin\es\Microsoft.Data.OData.resources.dll
+C:\Users\collo\Source\Repos\ADIMS\ADIMS\bin\fr\Microsoft.Data.OData.resources.dll
+C:\Users\collo\Source\Repos\ADIMS\ADIMS\bin\it\Microsoft.Data.OData.resources.dll
+C:\Users\collo\Source\Repos\ADIMS\ADIMS\bin\ja\Microsoft.Data.OData.resources.dll
+C:\Users\collo\Source\Repos\ADIMS\ADIMS\bin\ko\Microsoft.Data.OData.resources.dll
+C:\Users\collo\Source\Repos\ADIMS\ADIMS\bin\ru\Microsoft.Data.OData.resources.dll
+C:\Users\collo\Source\Repos\ADIMS\ADIMS\bin\zh-Hans\Microsoft.Data.OData.resources.dll
+C:\Users\collo\Source\Repos\ADIMS\ADIMS\bin\zh-Hant\Microsoft.Data.OData.resources.dll
+C:\Users\collo\Source\Repos\ADIMS\ADIMS\bin\de\Microsoft.Data.Services.Client.resources.dll
+C:\Users\collo\Source\Repos\ADIMS\ADIMS\bin\es\Microsoft.Data.Services.Client.resources.dll
+C:\Users\collo\Source\Repos\ADIMS\ADIMS\bin\fr\Microsoft.Data.Services.Client.resources.dll
+C:\Users\collo\Source\Repos\ADIMS\ADIMS\bin\it\Microsoft.Data.Services.Client.resources.dll
+C:\Users\collo\Source\Repos\ADIMS\ADIMS\bin\ja\Microsoft.Data.Services.Client.resources.dll
+C:\Users\collo\Source\Repos\ADIMS\ADIMS\bin\ko\Microsoft.Data.Services.Client.resources.dll
+C:\Users\collo\Source\Repos\ADIMS\ADIMS\bin\ru\Microsoft.Data.Services.Client.resources.dll
+C:\Users\collo\Source\Repos\ADIMS\ADIMS\bin\zh-Hans\Microsoft.Data.Services.Client.resources.dll
+C:\Users\collo\Source\Repos\ADIMS\ADIMS\bin\zh-Hant\Microsoft.Data.Services.Client.resources.dll
+C:\Users\collo\Source\Repos\ADIMS\ADIMS\bin\de\Microsoft.OData.Client.resources.dll
+C:\Users\collo\Source\Repos\ADIMS\ADIMS\bin\es\Microsoft.OData.Client.resources.dll
+C:\Users\collo\Source\Repos\ADIMS\ADIMS\bin\fr\Microsoft.OData.Client.resources.dll
+C:\Users\collo\Source\Repos\ADIMS\ADIMS\bin\it\Microsoft.OData.Client.resources.dll
+C:\Users\collo\Source\Repos\ADIMS\ADIMS\bin\ja\Microsoft.OData.Client.resources.dll
+C:\Users\collo\Source\Repos\ADIMS\ADIMS\bin\ko\Microsoft.OData.Client.resources.dll
+C:\Users\collo\Source\Repos\ADIMS\ADIMS\bin\ru\Microsoft.OData.Client.resources.dll
+C:\Users\collo\Source\Repos\ADIMS\ADIMS\bin\zh-Hans\Microsoft.OData.Client.resources.dll
+C:\Users\collo\Source\Repos\ADIMS\ADIMS\bin\zh-Hant\Microsoft.OData.Client.resources.dll
+C:\Users\collo\Source\Repos\ADIMS\ADIMS\bin\de\Microsoft.OData.Core.resources.dll
+C:\Users\collo\Source\Repos\ADIMS\ADIMS\bin\es\Microsoft.OData.Core.resources.dll
+C:\Users\collo\Source\Repos\ADIMS\ADIMS\bin\fr\Microsoft.OData.Core.resources.dll
+C:\Users\collo\Source\Repos\ADIMS\ADIMS\bin\it\Microsoft.OData.Core.resources.dll
+C:\Users\collo\Source\Repos\ADIMS\ADIMS\bin\ja\Microsoft.OData.Core.resources.dll
+C:\Users\collo\Source\Repos\ADIMS\ADIMS\bin\ko\Microsoft.OData.Core.resources.dll
+C:\Users\collo\Source\Repos\ADIMS\ADIMS\bin\ru\Microsoft.OData.Core.resources.dll
+C:\Users\collo\Source\Repos\ADIMS\ADIMS\bin\zh-Hans\Microsoft.OData.Core.resources.dll
+C:\Users\collo\Source\Repos\ADIMS\ADIMS\bin\zh-Hant\Microsoft.OData.Core.resources.dll
+C:\Users\collo\Source\Repos\ADIMS\ADIMS\bin\de\Microsoft.OData.Edm.resources.dll
+C:\Users\collo\Source\Repos\ADIMS\ADIMS\bin\es\Microsoft.OData.Edm.resources.dll
+C:\Users\collo\Source\Repos\ADIMS\ADIMS\bin\fr\Microsoft.OData.Edm.resources.dll
+C:\Users\collo\Source\Repos\ADIMS\ADIMS\bin\it\Microsoft.OData.Edm.resources.dll
+C:\Users\collo\Source\Repos\ADIMS\ADIMS\bin\ja\Microsoft.OData.Edm.resources.dll
+C:\Users\collo\Source\Repos\ADIMS\ADIMS\bin\ko\Microsoft.OData.Edm.resources.dll
+C:\Users\collo\Source\Repos\ADIMS\ADIMS\bin\ru\Microsoft.OData.Edm.resources.dll
+C:\Users\collo\Source\Repos\ADIMS\ADIMS\bin\zh-Hans\Microsoft.OData.Edm.resources.dll
+C:\Users\collo\Source\Repos\ADIMS\ADIMS\bin\zh-Hant\Microsoft.OData.Edm.resources.dll
+C:\Users\collo\Source\Repos\ADIMS\ADIMS\bin\de\Microsoft.Spatial.resources.dll
+C:\Users\collo\Source\Repos\ADIMS\ADIMS\bin\es\Microsoft.Spatial.resources.dll
+C:\Users\collo\Source\Repos\ADIMS\ADIMS\bin\fr\Microsoft.Spatial.resources.dll
+C:\Users\collo\Source\Repos\ADIMS\ADIMS\bin\it\Microsoft.Spatial.resources.dll
+C:\Users\collo\Source\Repos\ADIMS\ADIMS\bin\ja\Microsoft.Spatial.resources.dll
+C:\Users\collo\Source\Repos\ADIMS\ADIMS\bin\ko\Microsoft.Spatial.resources.dll
+C:\Users\collo\Source\Repos\ADIMS\ADIMS\bin\ru\Microsoft.Spatial.resources.dll
+C:\Users\collo\Source\Repos\ADIMS\ADIMS\bin\zh-Hans\Microsoft.Spatial.resources.dll
+C:\Users\collo\Source\Repos\ADIMS\ADIMS\bin\zh-Hant\Microsoft.Spatial.resources.dll
+C:\Users\collo\Source\Repos\ADIMS\ADIMS\bin\de\System.Spatial.resources.dll
+C:\Users\collo\Source\Repos\ADIMS\ADIMS\bin\es\System.Spatial.resources.dll
+C:\Users\collo\Source\Repos\ADIMS\ADIMS\bin\fr\System.Spatial.resources.dll
+C:\Users\collo\Source\Repos\ADIMS\ADIMS\bin\it\System.Spatial.resources.dll
+C:\Users\collo\Source\Repos\ADIMS\ADIMS\bin\ja\System.Spatial.resources.dll
+C:\Users\collo\Source\Repos\ADIMS\ADIMS\bin\ko\System.Spatial.resources.dll
+C:\Users\collo\Source\Repos\ADIMS\ADIMS\bin\ru\System.Spatial.resources.dll
+C:\Users\collo\Source\Repos\ADIMS\ADIMS\bin\zh-Hans\System.Spatial.resources.dll
+C:\Users\collo\Source\Repos\ADIMS\ADIMS\bin\zh-Hant\System.Spatial.resources.dll
+C:\Users\collo\Source\Repos\ADIMS\ADIMS\obj\Debug\ADIMS.csprojResolveAssemblyReference.cache
+C:\Users\collo\Source\Repos\ADIMS\ADIMS\obj\Debug\ADIMS.Migrations.fresh_user_model.resources
+C:\Users\collo\Source\Repos\ADIMS\ADIMS\obj\Debug\ADIMS.csproj.GenerateResource.cache
+C:\Users\collo\Source\Repos\ADIMS\ADIMS\obj\Debug\ADIMS.csproj.CoreCompileInputs.cache
+C:\Users\collo\Source\Repos\ADIMS\ADIMS\obj\Debug\ADIMS.csproj.CopyComplete
+C:\Users\collo\Source\Repos\ADIMS\ADIMS\obj\Debug\ADIMS.dll
+C:\Users\collo\Source\Repos\ADIMS\ADIMS\obj\Debug\ADIMS.pdb
+C:\Users\LLANOH\Source\Repos\ADIMS\ADIMS\bin\roslyn\csc.exe
+C:\Users\LLANOH\Source\Repos\ADIMS\ADIMS\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+C:\Users\LLANOH\Source\Repos\ADIMS\ADIMS\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+C:\Users\LLANOH\Source\Repos\ADIMS\ADIMS\bin\roslyn\Microsoft.CodeAnalysis.dll
+C:\Users\LLANOH\Source\Repos\ADIMS\ADIMS\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+C:\Users\LLANOH\Source\Repos\ADIMS\ADIMS\bin\roslyn\Microsoft.CSharp.Core.targets
+C:\Users\LLANOH\Source\Repos\ADIMS\ADIMS\bin\roslyn\Microsoft.VisualBasic.Core.targets
+C:\Users\LLANOH\Source\Repos\ADIMS\ADIMS\bin\roslyn\System.Collections.Immutable.dll
+C:\Users\LLANOH\Source\Repos\ADIMS\ADIMS\bin\roslyn\System.Reflection.Metadata.dll
+C:\Users\LLANOH\Source\Repos\ADIMS\ADIMS\bin\roslyn\vbc.exe
+C:\Users\LLANOH\Source\Repos\ADIMS\ADIMS\bin\roslyn\VBCSCompiler.exe
+C:\Users\LLANOH\Source\Repos\ADIMS\ADIMS\bin\roslyn\VBCSCompiler.exe.config
+C:\Users\LLANOH\Source\Repos\ADIMS\ADIMS\bin\ADIMS.dll.config
+C:\Users\LLANOH\Source\Repos\ADIMS\ADIMS\bin\ADIMS.dll
+C:\Users\LLANOH\Source\Repos\ADIMS\ADIMS\bin\ADIMS.pdb
+C:\Users\LLANOH\Source\Repos\ADIMS\ADIMS\bin\Antlr3.Runtime.dll
+C:\Users\LLANOH\Source\Repos\ADIMS\ADIMS\bin\AutoMapper.dll
+C:\Users\LLANOH\Source\Repos\ADIMS\ADIMS\bin\CacheCow.Common.dll
+C:\Users\LLANOH\Source\Repos\ADIMS\ADIMS\bin\CacheCow.Server.dll
+C:\Users\LLANOH\Source\Repos\ADIMS\ADIMS\bin\EasyNetQ.dll
+C:\Users\LLANOH\Source\Repos\ADIMS\ADIMS\bin\EntityFramework.dll
+C:\Users\LLANOH\Source\Repos\ADIMS\ADIMS\bin\EntityFramework.SqlServer.dll
+C:\Users\LLANOH\Source\Repos\ADIMS\ADIMS\bin\FoolproofValidation.dll
+C:\Users\LLANOH\Source\Repos\ADIMS\ADIMS\bin\Jmelosegui.Mvc.GoogleMap.dll
+C:\Users\LLANOH\Source\Repos\ADIMS\ADIMS\bin\Microsoft.AspNet.Identity.Core.dll
+C:\Users\LLANOH\Source\Repos\ADIMS\ADIMS\bin\Microsoft.AspNet.Identity.EntityFramework.dll
+C:\Users\LLANOH\Source\Repos\ADIMS\ADIMS\bin\Microsoft.AspNet.Identity.Owin.dll
+C:\Users\LLANOH\Source\Repos\ADIMS\ADIMS\bin\Microsoft.Azure.ActiveDirectory.GraphClient.dll
+C:\Users\LLANOH\Source\Repos\ADIMS\ADIMS\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+C:\Users\LLANOH\Source\Repos\ADIMS\ADIMS\bin\Microsoft.Data.Edm.dll
+C:\Users\LLANOH\Source\Repos\ADIMS\ADIMS\bin\Microsoft.Data.OData.dll
+C:\Users\LLANOH\Source\Repos\ADIMS\ADIMS\bin\Microsoft.Data.Services.Client.dll
+C:\Users\LLANOH\Source\Repos\ADIMS\ADIMS\bin\Microsoft.IdentityModel.Clients.ActiveDirectory.dll
+C:\Users\LLANOH\Source\Repos\ADIMS\ADIMS\bin\Microsoft.IdentityModel.Clients.ActiveDirectory.WindowsForms.dll
+C:\Users\LLANOH\Source\Repos\ADIMS\ADIMS\bin\Microsoft.OData.Client.dll
+C:\Users\LLANOH\Source\Repos\ADIMS\ADIMS\bin\Microsoft.OData.Core.dll
+C:\Users\LLANOH\Source\Repos\ADIMS\ADIMS\bin\Microsoft.OData.Edm.dll
+C:\Users\LLANOH\Source\Repos\ADIMS\ADIMS\bin\Microsoft.OData.ProxyExtensions.dll
+C:\Users\LLANOH\Source\Repos\ADIMS\ADIMS\bin\Microsoft.Office365.Discovery.dll
+C:\Users\LLANOH\Source\Repos\ADIMS\ADIMS\bin\Microsoft.Office365.OutlookServices.Portable.dll
+C:\Users\LLANOH\Source\Repos\ADIMS\ADIMS\bin\Microsoft.Office365.SharePoint.dll
+C:\Users\LLANOH\Source\Repos\ADIMS\ADIMS\bin\Microsoft.Owin.dll
+C:\Users\LLANOH\Source\Repos\ADIMS\ADIMS\bin\Microsoft.Owin.Host.SystemWeb.dll
+C:\Users\LLANOH\Source\Repos\ADIMS\ADIMS\bin\Microsoft.Owin.Security.ActiveDirectory.dll
+C:\Users\LLANOH\Source\Repos\ADIMS\ADIMS\bin\Microsoft.Owin.Security.Cookies.dll
+C:\Users\LLANOH\Source\Repos\ADIMS\ADIMS\bin\Microsoft.Owin.Security.dll
+C:\Users\LLANOH\Source\Repos\ADIMS\ADIMS\bin\Microsoft.Owin.Security.Facebook.dll
+C:\Users\LLANOH\Source\Repos\ADIMS\ADIMS\bin\Microsoft.Owin.Security.Google.dll
+C:\Users\LLANOH\Source\Repos\ADIMS\ADIMS\bin\Microsoft.Owin.Security.Jwt.dll
+C:\Users\LLANOH\Source\Repos\ADIMS\ADIMS\bin\Microsoft.Owin.Security.MicrosoftAccount.dll
+C:\Users\LLANOH\Source\Repos\ADIMS\ADIMS\bin\Microsoft.Owin.Security.OAuth.dll
+C:\Users\LLANOH\Source\Repos\ADIMS\ADIMS\bin\Microsoft.Owin.Security.Twitter.dll
+C:\Users\LLANOH\Source\Repos\ADIMS\ADIMS\bin\Microsoft.QualityTools.Testing.Fakes.dll
+C:\Users\LLANOH\Source\Repos\ADIMS\ADIMS\bin\Microsoft.Spatial.dll
+C:\Users\LLANOH\Source\Repos\ADIMS\ADIMS\bin\Microsoft.Web.Infrastructure.dll
+C:\Users\LLANOH\Source\Repos\ADIMS\ADIMS\bin\Newtonsoft.Json.dll
+C:\Users\LLANOH\Source\Repos\ADIMS\ADIMS\bin\Owin.dll
+C:\Users\LLANOH\Source\Repos\ADIMS\ADIMS\bin\RabbitMQ.Client.dll
+C:\Users\LLANOH\Source\Repos\ADIMS\ADIMS\bin\Swashbuckle.Core.dll
+C:\Users\LLANOH\Source\Repos\ADIMS\ADIMS\bin\System.IdentityModel.Tokens.Jwt.dll
+C:\Users\LLANOH\Source\Repos\ADIMS\ADIMS\bin\System.Net.Http.Formatting.dll
+C:\Users\LLANOH\Source\Repos\ADIMS\ADIMS\bin\System.Spatial.dll
+C:\Users\LLANOH\Source\Repos\ADIMS\ADIMS\bin\System.ValueTuple.dll
+C:\Users\LLANOH\Source\Repos\ADIMS\ADIMS\bin\System.Web.Helpers.dll
+C:\Users\LLANOH\Source\Repos\ADIMS\ADIMS\bin\System.Web.Http.dll
+C:\Users\LLANOH\Source\Repos\ADIMS\ADIMS\bin\System.Web.Http.WebHost.dll
+C:\Users\LLANOH\Source\Repos\ADIMS\ADIMS\bin\System.Web.Mvc.dll
+C:\Users\LLANOH\Source\Repos\ADIMS\ADIMS\bin\System.Web.Optimization.dll
+C:\Users\LLANOH\Source\Repos\ADIMS\ADIMS\bin\System.Web.Razor.dll
+C:\Users\LLANOH\Source\Repos\ADIMS\ADIMS\bin\System.Web.WebPages.Deployment.dll
+C:\Users\LLANOH\Source\Repos\ADIMS\ADIMS\bin\System.Web.WebPages.dll
+C:\Users\LLANOH\Source\Repos\ADIMS\ADIMS\bin\System.Web.WebPages.Razor.dll
+C:\Users\LLANOH\Source\Repos\ADIMS\ADIMS\bin\WebActivatorEx.dll
+C:\Users\LLANOH\Source\Repos\ADIMS\ADIMS\bin\WebApi.OutputCache.Core.dll
+C:\Users\LLANOH\Source\Repos\ADIMS\ADIMS\bin\WebApi.OutputCache.V2.dll
+C:\Users\LLANOH\Source\Repos\ADIMS\ADIMS\bin\WebGrease.dll
+C:\Users\LLANOH\Source\Repos\ADIMS\ADIMS\bin\AutoMapper.xml
+C:\Users\LLANOH\Source\Repos\ADIMS\ADIMS\bin\CacheCow.Common.xml
+C:\Users\LLANOH\Source\Repos\ADIMS\ADIMS\bin\CacheCow.Server.xml
+C:\Users\LLANOH\Source\Repos\ADIMS\ADIMS\bin\EasyNetQ.xml
+C:\Users\LLANOH\Source\Repos\ADIMS\ADIMS\bin\Microsoft.AspNet.Identity.Core.xml
+C:\Users\LLANOH\Source\Repos\ADIMS\ADIMS\bin\Microsoft.AspNet.Identity.EntityFramework.xml
+C:\Users\LLANOH\Source\Repos\ADIMS\ADIMS\bin\Microsoft.AspNet.Identity.Owin.xml
+C:\Users\LLANOH\Source\Repos\ADIMS\ADIMS\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+C:\Users\LLANOH\Source\Repos\ADIMS\ADIMS\bin\Microsoft.Data.Edm.xml
+C:\Users\LLANOH\Source\Repos\ADIMS\ADIMS\bin\Microsoft.Data.OData.xml
+C:\Users\LLANOH\Source\Repos\ADIMS\ADIMS\bin\Microsoft.Data.Services.Client.xml
+C:\Users\LLANOH\Source\Repos\ADIMS\ADIMS\bin\Microsoft.IdentityModel.Clients.ActiveDirectory.xml
+C:\Users\LLANOH\Source\Repos\ADIMS\ADIMS\bin\Microsoft.OData.Client.xml
+C:\Users\LLANOH\Source\Repos\ADIMS\ADIMS\bin\Microsoft.OData.Core.xml
+C:\Users\LLANOH\Source\Repos\ADIMS\ADIMS\bin\Microsoft.OData.Edm.xml
+C:\Users\LLANOH\Source\Repos\ADIMS\ADIMS\bin\Microsoft.Owin.Security.ActiveDirectory.xml
+C:\Users\LLANOH\Source\Repos\ADIMS\ADIMS\bin\Microsoft.Owin.Security.Jwt.xml
+C:\Users\LLANOH\Source\Repos\ADIMS\ADIMS\bin\Microsoft.Spatial.xml
+C:\Users\LLANOH\Source\Repos\ADIMS\ADIMS\bin\Newtonsoft.Json.xml
+C:\Users\LLANOH\Source\Repos\ADIMS\ADIMS\bin\RabbitMQ.Client.xml
+C:\Users\LLANOH\Source\Repos\ADIMS\ADIMS\bin\System.IdentityModel.Tokens.Jwt.xml
+C:\Users\LLANOH\Source\Repos\ADIMS\ADIMS\bin\System.Spatial.xml
+C:\Users\LLANOH\Source\Repos\ADIMS\ADIMS\bin\System.Web.Helpers.xml
+C:\Users\LLANOH\Source\Repos\ADIMS\ADIMS\bin\System.Web.Mvc.xml
+C:\Users\LLANOH\Source\Repos\ADIMS\ADIMS\bin\System.Web.Optimization.xml
+C:\Users\LLANOH\Source\Repos\ADIMS\ADIMS\bin\System.Web.Razor.xml
+C:\Users\LLANOH\Source\Repos\ADIMS\ADIMS\bin\System.Web.WebPages.xml
+C:\Users\LLANOH\Source\Repos\ADIMS\ADIMS\bin\System.Web.WebPages.Deployment.xml
+C:\Users\LLANOH\Source\Repos\ADIMS\ADIMS\bin\System.Web.WebPages.Razor.xml
+C:\Users\LLANOH\Source\Repos\ADIMS\ADIMS\bin\Antlr3.Runtime.pdb
+C:\Users\LLANOH\Source\Repos\ADIMS\ADIMS\bin\System.Net.Http.Formatting.xml
+C:\Users\LLANOH\Source\Repos\ADIMS\ADIMS\bin\System.Web.Http.xml
+C:\Users\LLANOH\Source\Repos\ADIMS\ADIMS\bin\System.Web.Http.WebHost.xml
+C:\Users\LLANOH\Source\Repos\ADIMS\ADIMS\bin\EntityFramework.xml
+C:\Users\LLANOH\Source\Repos\ADIMS\ADIMS\bin\EntityFramework.SqlServer.xml
+C:\Users\LLANOH\Source\Repos\ADIMS\ADIMS\bin\Microsoft.Owin.xml
+C:\Users\LLANOH\Source\Repos\ADIMS\ADIMS\bin\Microsoft.Owin.Host.SystemWeb.xml
+C:\Users\LLANOH\Source\Repos\ADIMS\ADIMS\bin\Microsoft.Owin.Security.xml
+C:\Users\LLANOH\Source\Repos\ADIMS\ADIMS\bin\Microsoft.Owin.Security.Facebook.xml
+C:\Users\LLANOH\Source\Repos\ADIMS\ADIMS\bin\Microsoft.Owin.Security.Cookies.xml
+C:\Users\LLANOH\Source\Repos\ADIMS\ADIMS\bin\Microsoft.Owin.Security.OAuth.xml
+C:\Users\LLANOH\Source\Repos\ADIMS\ADIMS\bin\Microsoft.Owin.Security.Google.xml
+C:\Users\LLANOH\Source\Repos\ADIMS\ADIMS\bin\Microsoft.Owin.Security.Twitter.xml
+C:\Users\LLANOH\Source\Repos\ADIMS\ADIMS\bin\Microsoft.Owin.Security.MicrosoftAccount.xml
+C:\Users\LLANOH\Source\Repos\ADIMS\ADIMS\bin\de\Microsoft.Data.Edm.resources.dll
+C:\Users\LLANOH\Source\Repos\ADIMS\ADIMS\bin\es\Microsoft.Data.Edm.resources.dll
+C:\Users\LLANOH\Source\Repos\ADIMS\ADIMS\bin\fr\Microsoft.Data.Edm.resources.dll
+C:\Users\LLANOH\Source\Repos\ADIMS\ADIMS\bin\it\Microsoft.Data.Edm.resources.dll
+C:\Users\LLANOH\Source\Repos\ADIMS\ADIMS\bin\ja\Microsoft.Data.Edm.resources.dll
+C:\Users\LLANOH\Source\Repos\ADIMS\ADIMS\bin\ko\Microsoft.Data.Edm.resources.dll
+C:\Users\LLANOH\Source\Repos\ADIMS\ADIMS\bin\ru\Microsoft.Data.Edm.resources.dll
+C:\Users\LLANOH\Source\Repos\ADIMS\ADIMS\bin\zh-Hans\Microsoft.Data.Edm.resources.dll
+C:\Users\LLANOH\Source\Repos\ADIMS\ADIMS\bin\zh-Hant\Microsoft.Data.Edm.resources.dll
+C:\Users\LLANOH\Source\Repos\ADIMS\ADIMS\bin\de\Microsoft.Data.OData.resources.dll
+C:\Users\LLANOH\Source\Repos\ADIMS\ADIMS\bin\es\Microsoft.Data.OData.resources.dll
+C:\Users\LLANOH\Source\Repos\ADIMS\ADIMS\bin\fr\Microsoft.Data.OData.resources.dll
+C:\Users\LLANOH\Source\Repos\ADIMS\ADIMS\bin\it\Microsoft.Data.OData.resources.dll
+C:\Users\LLANOH\Source\Repos\ADIMS\ADIMS\bin\ja\Microsoft.Data.OData.resources.dll
+C:\Users\LLANOH\Source\Repos\ADIMS\ADIMS\bin\ko\Microsoft.Data.OData.resources.dll
+C:\Users\LLANOH\Source\Repos\ADIMS\ADIMS\bin\ru\Microsoft.Data.OData.resources.dll
+C:\Users\LLANOH\Source\Repos\ADIMS\ADIMS\bin\zh-Hans\Microsoft.Data.OData.resources.dll
+C:\Users\LLANOH\Source\Repos\ADIMS\ADIMS\bin\zh-Hant\Microsoft.Data.OData.resources.dll
+C:\Users\LLANOH\Source\Repos\ADIMS\ADIMS\bin\de\Microsoft.Data.Services.Client.resources.dll
+C:\Users\LLANOH\Source\Repos\ADIMS\ADIMS\bin\es\Microsoft.Data.Services.Client.resources.dll
+C:\Users\LLANOH\Source\Repos\ADIMS\ADIMS\bin\fr\Microsoft.Data.Services.Client.resources.dll
+C:\Users\LLANOH\Source\Repos\ADIMS\ADIMS\bin\it\Microsoft.Data.Services.Client.resources.dll
+C:\Users\LLANOH\Source\Repos\ADIMS\ADIMS\bin\ja\Microsoft.Data.Services.Client.resources.dll
+C:\Users\LLANOH\Source\Repos\ADIMS\ADIMS\bin\ko\Microsoft.Data.Services.Client.resources.dll
+C:\Users\LLANOH\Source\Repos\ADIMS\ADIMS\bin\ru\Microsoft.Data.Services.Client.resources.dll
+C:\Users\LLANOH\Source\Repos\ADIMS\ADIMS\bin\zh-Hans\Microsoft.Data.Services.Client.resources.dll
+C:\Users\LLANOH\Source\Repos\ADIMS\ADIMS\bin\zh-Hant\Microsoft.Data.Services.Client.resources.dll
+C:\Users\LLANOH\Source\Repos\ADIMS\ADIMS\bin\de\Microsoft.OData.Client.resources.dll
+C:\Users\LLANOH\Source\Repos\ADIMS\ADIMS\bin\es\Microsoft.OData.Client.resources.dll
+C:\Users\LLANOH\Source\Repos\ADIMS\ADIMS\bin\fr\Microsoft.OData.Client.resources.dll
+C:\Users\LLANOH\Source\Repos\ADIMS\ADIMS\bin\it\Microsoft.OData.Client.resources.dll
+C:\Users\LLANOH\Source\Repos\ADIMS\ADIMS\bin\ja\Microsoft.OData.Client.resources.dll
+C:\Users\LLANOH\Source\Repos\ADIMS\ADIMS\bin\ko\Microsoft.OData.Client.resources.dll
+C:\Users\LLANOH\Source\Repos\ADIMS\ADIMS\bin\ru\Microsoft.OData.Client.resources.dll
+C:\Users\LLANOH\Source\Repos\ADIMS\ADIMS\bin\zh-Hans\Microsoft.OData.Client.resources.dll
+C:\Users\LLANOH\Source\Repos\ADIMS\ADIMS\bin\zh-Hant\Microsoft.OData.Client.resources.dll
+C:\Users\LLANOH\Source\Repos\ADIMS\ADIMS\bin\de\Microsoft.OData.Core.resources.dll
+C:\Users\LLANOH\Source\Repos\ADIMS\ADIMS\bin\es\Microsoft.OData.Core.resources.dll
+C:\Users\LLANOH\Source\Repos\ADIMS\ADIMS\bin\fr\Microsoft.OData.Core.resources.dll
+C:\Users\LLANOH\Source\Repos\ADIMS\ADIMS\bin\it\Microsoft.OData.Core.resources.dll
+C:\Users\LLANOH\Source\Repos\ADIMS\ADIMS\bin\ja\Microsoft.OData.Core.resources.dll
+C:\Users\LLANOH\Source\Repos\ADIMS\ADIMS\bin\ko\Microsoft.OData.Core.resources.dll
+C:\Users\LLANOH\Source\Repos\ADIMS\ADIMS\bin\ru\Microsoft.OData.Core.resources.dll
+C:\Users\LLANOH\Source\Repos\ADIMS\ADIMS\bin\zh-Hans\Microsoft.OData.Core.resources.dll
+C:\Users\LLANOH\Source\Repos\ADIMS\ADIMS\bin\zh-Hant\Microsoft.OData.Core.resources.dll
+C:\Users\LLANOH\Source\Repos\ADIMS\ADIMS\bin\de\Microsoft.OData.Edm.resources.dll
+C:\Users\LLANOH\Source\Repos\ADIMS\ADIMS\bin\es\Microsoft.OData.Edm.resources.dll
+C:\Users\LLANOH\Source\Repos\ADIMS\ADIMS\bin\fr\Microsoft.OData.Edm.resources.dll
+C:\Users\LLANOH\Source\Repos\ADIMS\ADIMS\bin\it\Microsoft.OData.Edm.resources.dll
+C:\Users\LLANOH\Source\Repos\ADIMS\ADIMS\bin\ja\Microsoft.OData.Edm.resources.dll
+C:\Users\LLANOH\Source\Repos\ADIMS\ADIMS\bin\ko\Microsoft.OData.Edm.resources.dll
+C:\Users\LLANOH\Source\Repos\ADIMS\ADIMS\bin\ru\Microsoft.OData.Edm.resources.dll
+C:\Users\LLANOH\Source\Repos\ADIMS\ADIMS\bin\zh-Hans\Microsoft.OData.Edm.resources.dll
+C:\Users\LLANOH\Source\Repos\ADIMS\ADIMS\bin\zh-Hant\Microsoft.OData.Edm.resources.dll
+C:\Users\LLANOH\Source\Repos\ADIMS\ADIMS\bin\de\Microsoft.Spatial.resources.dll
+C:\Users\LLANOH\Source\Repos\ADIMS\ADIMS\bin\es\Microsoft.Spatial.resources.dll
+C:\Users\LLANOH\Source\Repos\ADIMS\ADIMS\bin\fr\Microsoft.Spatial.resources.dll
+C:\Users\LLANOH\Source\Repos\ADIMS\ADIMS\bin\it\Microsoft.Spatial.resources.dll
+C:\Users\LLANOH\Source\Repos\ADIMS\ADIMS\bin\ja\Microsoft.Spatial.resources.dll
+C:\Users\LLANOH\Source\Repos\ADIMS\ADIMS\bin\ko\Microsoft.Spatial.resources.dll
+C:\Users\LLANOH\Source\Repos\ADIMS\ADIMS\bin\ru\Microsoft.Spatial.resources.dll
+C:\Users\LLANOH\Source\Repos\ADIMS\ADIMS\bin\zh-Hans\Microsoft.Spatial.resources.dll
+C:\Users\LLANOH\Source\Repos\ADIMS\ADIMS\bin\zh-Hant\Microsoft.Spatial.resources.dll
+C:\Users\LLANOH\Source\Repos\ADIMS\ADIMS\bin\de\System.Spatial.resources.dll
+C:\Users\LLANOH\Source\Repos\ADIMS\ADIMS\bin\es\System.Spatial.resources.dll
+C:\Users\LLANOH\Source\Repos\ADIMS\ADIMS\bin\fr\System.Spatial.resources.dll
+C:\Users\LLANOH\Source\Repos\ADIMS\ADIMS\bin\it\System.Spatial.resources.dll
+C:\Users\LLANOH\Source\Repos\ADIMS\ADIMS\bin\ja\System.Spatial.resources.dll
+C:\Users\LLANOH\Source\Repos\ADIMS\ADIMS\bin\ko\System.Spatial.resources.dll
+C:\Users\LLANOH\Source\Repos\ADIMS\ADIMS\bin\ru\System.Spatial.resources.dll
+C:\Users\LLANOH\Source\Repos\ADIMS\ADIMS\bin\zh-Hans\System.Spatial.resources.dll
+C:\Users\LLANOH\Source\Repos\ADIMS\ADIMS\bin\zh-Hant\System.Spatial.resources.dll
+C:\Users\LLANOH\Source\Repos\ADIMS\ADIMS\obj\Debug\ADIMS.csproj.CoreCompileInputs.cache
+C:\Users\LLANOH\Source\Repos\ADIMS\ADIMS\obj\Debug\ADIMS.csproj.CopyComplete
+C:\Users\LLANOH\Source\Repos\ADIMS\ADIMS\obj\Debug\ADIMS.dll
+C:\Users\LLANOH\Source\Repos\ADIMS\ADIMS\obj\Debug\ADIMS.pdb
+C:\Users\LLANOH\source\repos\ADIMS\ADIMS\obj\Debug\ADIMS.csprojAssemblyReference.cache

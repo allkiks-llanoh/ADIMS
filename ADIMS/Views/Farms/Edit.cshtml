@@ -1,0 +1,276 @@
+﻿@model ADIMS.ViewModels.AddFarmViewModel
+
+@{
+    ViewBag.Title = "Edit Farm";
+
+    ViewBag.Action = "Edit";
+    ViewBag.Controller = "Farms";
+
+    Layout = "~/Views/Shared/_AdimsLayout.cshtml";
+
+    //Get the farmer object
+    var farmer = (ADIMS.Models.farmer)(ViewBag.farmer);
+
+    var farmerid = (int)ViewBag.farmerid;
+    var topographies = new List<string>() { "Flat", "Slopy", "Hilly" };
+    var counties = (List<ADIMS.Models.county>)ViewBag.counties;
+    var wards = (List<ADIMS.Models.ward>)ViewBag.wards;
+    var soiltypes = (List<ADIMS.Models.soiltype>)ViewBag.soiltypes;
+    var farmingmethods = (List<ADIMS.Models.farmingmethod>)ViewBag.farmingmethods;
+
+}
+
+<script>
+    function getSubCounties() {
+        $("#subcounty").empty();
+        $.ajax({
+            type: 'POST',
+            url: '@Url.Action("GetSubCounties","Counties")',
+            datatype: 'json',
+            data: { id: $("#countyid").val() },
+            success: function (subcounties) {
+                $("#subcounty").append('<option value="' + "0" + '">' + "Select Sub County" + '</option>');
+                debugger;
+                $.each(subcounties, function (i, subcounty) {
+                    $("#subcounty").append('<option value="' + subcounty.Value + '">' + subcounty.Text + '</option>');
+                    // here we are adding option for States
+                });
+            },
+            error: function (ex) {
+                alert('No Sub Counties for the selected counties exist' + ex);
+            }
+        });
+    }
+
+     function getWards() {
+        $("#wardid").empty();
+        $.ajax({
+            type: 'POST',
+            url: '@Url.Action("GetWards", "Counties")',
+            datatype: 'json',
+            data: { id: $("#subcounty").val() },
+            success: function (wards) {
+                $("#wardid").append('<option value="' + "0" + '">' + "Select Ward" + '</option>');
+                debugger;
+                $.each(wards, function (i, ward) {
+                    $("#wardid").append('<option value="' + ward.Value + '">' + ward.Text + '</option>');
+                    // here we are adding option for States
+                });
+            },
+            error: function (ex) {
+                alert('No Wards for the selected Sub County exist' + ex);
+            }
+        });
+    }
+</script>
+
+<div class="row m-b-lg m-t-lg" style="margin-bottom:5px;">
+    <div class="col-md-6">
+
+        <div class="profile-image">
+            <img src="~/icons/user_icon.png" class="img-circle circle-border m-b-md" alt="profile">
+        </div>
+        <div class="profile-info">
+            <div class="">
+                <div>
+                    <h2 class="no-margins">
+                        @farmer.firstname &nbsp; @farmer.middlename &nbsp; @farmer.lastname
+                    </h2>
+                    <h4>@farmer.adimsid</h4>
+                    <small>
+                        Farmer in @farmer.county1.name
+                    </small>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="col-md-3">
+        <table class="table small m-b-xs"></table>
+    </div>
+    <div class="col-md-3">
+
+    </div>
+
+</div>
+
+<div class="row">
+    <div class="col-lg-12">
+        <div class="ibox float-e-margins">
+
+            <div class="ibox-title">
+                <h5><img height="30px" width="30px" src="~/icons/field.png" />  Edit Farm</h5>
+                <div class="ibox-tools">
+                    <a class="collapse-link">
+                        <i class="fa fa-chevron-up"></i>
+                    </a>
+                </div>
+            </div>
+
+            <div class="ibox-content">
+                @using (Html.BeginForm("Edit", "Farms", new { id = Model.id }, FormMethod.Post))
+                {
+                    @Html.AntiForgeryToken()
+                    @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+
+
+
+                    ///#Hidden Field
+                    ///ID
+                    ///#End
+                    @Html.HiddenFor(x => x.id)
+
+                    <div class="">
+                        <div class="row" style="margin-top:15px;">
+
+                            <div class="col-md-4">
+                                <div class="form-group">
+                                    <label>Name / Identifier</label><br />
+                                    <div class="col-md-12" style="padding-left:0px;">
+                                        @Html.TextBoxFor(model => model.name, new { @class = "form-control", @disabled = true, @placeholder = "Will be generated" })
+                                        @Html.ValidationMessageFor(model => model.name, "", new { @class = "text-danger" })
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="col-md-4">
+
+                            </div>
+
+                        </div>
+
+                        <div class="row" style="margin-top:15px;">
+                            <div class="col-md-4">
+                                <div class="form-group">
+                                    <label>Area (In Acres)</label><br />
+                                    <div class="col-md-12" style="padding-left:0px;">
+                                        @Html.TextBoxFor(model => model.area, new { @class = "form-control" })
+                                        @Html.ValidationMessageFor(model => model.area, "", new { @class = "text-danger" })
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="col-md-4">
+                                <div class="form-group">
+                                    <label>Land R. Number</label><br />
+                                    <div class="col-md-12" style="padding-left:0px;">
+                                        @Html.TextBoxFor(model => model.lrnumber, new { @class = "form-control" })
+                                        @Html.ValidationMessageFor(model => model.lrnumber, "", new { @class = "text-danger" })
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+
+                        <div class="row" style="margin-top:15px;">
+                            <div class="col-md-4">
+                                <div class="form-group">
+                                    <label>Topography</label><br />
+                                    <div class="col-md-12" style="padding-left:0px;">
+                                        @Html.DropDownListFor(model => model.topography, new SelectList(topographies), new { @class = "form-control" })
+                                        @Html.ValidationMessageFor(model => model.topography, "", new { @class = "text-danger" })
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-4">
+                                <div class="form-group">
+                                    <label>Soil Type</label>
+                                    <div class="col-md-12" style="padding-left:0px;">
+                                        @Html.DropDownList("soiltype", new SelectList(soiltypes, "id", "name"), new { @class = "form-control" })
+                                        @Html.ValidationMessageFor(model => model.soiltype, "", new { @class = "text-danger" })
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="row" style="margin-top:15px;">
+
+                            <div class="col-md-4">
+                                <div class="form-group">
+                                    <label>County</label><br />
+                                    <div class="col-md-12" style="padding-left:0px;">
+                                        @Html.DropDownList("countyid", new SelectList(counties, "id", "name"), new { @class = "form-control", @onchange = "getSubCounties()" })
+                                        @Html.ValidationMessageFor(model => model.countyid, "", new { @class = "text-danger" })
+                                    </div>
+                                </div>
+                            </div>
+
+                          
+
+                            <div class="col-md-4">
+                                <div class="form-group">
+                                    <label>Ward</label><br />
+                                    <div class="col-md-12" style="padding-left:0px;">
+                                        @Html.DropDownList("wardid", new SelectList(wards, "id", "name"), new { @class = "form-control" })
+                                        @Html.ValidationMessageFor(model => model.wardid, "", new { @class = "text-danger" })
+                                    </div>
+                                </div>
+                            </div>
+
+
+                        </div>
+
+
+                        <div class="row" style="margin-top:15px;">
+                            <div class="col-md-4">
+                                <div class="form-group">
+                                    <label>Farming Method</label>
+                                    <div class="col-md-12" style="padding-left:0px;">
+                                        @Html.DropDownList("farmingmethod", new SelectList(farmingmethods, "id", "name"), new { @class = "form-control" })
+                                        @Html.ValidationMessageFor(model => model.farmingmethod, "", new { @class = "text-danger" })
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+
+                        <div class="row" style="margin-top:15px;">
+
+                            <div class="col-md-4">
+                                <div class="form-group">
+                                    <label>Latitude (Decimal Degrees)</label><br />
+                                    <div class="col-md-12" style="padding-left:0px;">
+                                        @Html.TextBoxFor(model => model.latitude, new { @class = "form-control" })
+                                        @Html.ValidationMessageFor(model => model.latitude, "", new { @class = "text-danger" })
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="col-md-4">
+                                <div class="form-group">
+                                    <label>Longitude (Decimal Degrees)</label><br />
+                                    <div class="col-md-12" style="padding-left:0px;">
+                                        @Html.TextBoxFor(model => model.longitude, new { @class = "form-control" })
+                                        @Html.ValidationMessageFor(model => model.longitude, "", new { @class = "text-danger" })
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="col-md-4">
+                                <div class="form-group">
+                                    <label>Altitude (Metres)</label><br />
+                                    <div class="col-md-12" style="padding-left:0px;">
+                                        @Html.TextBoxFor(model => model.altitude, new { @class = "form-control" })
+                                        @Html.ValidationMessageFor(model => model.altitude, "", new { @class = "text-danger" })
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+
+
+                        <div class="row">
+                            <div class="form-group" style="margin-top:15px;">
+                                <div class="col-md-10">
+                                    <input type="submit" value="Submit" class="btn btn-primary" />
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                }
+
+            </div>
+
+        </div>
+    </div>
+</div>

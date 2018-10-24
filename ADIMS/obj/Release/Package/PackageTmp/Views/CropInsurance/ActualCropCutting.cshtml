@@ -1,0 +1,617 @@
+﻿@using ADIMS.Models;
+@model ADIMS.ViewModels.ActualCropCuttingViewModel
+
+@{
+    ViewBag.Title = "Actual Crop Cutting";
+
+    ViewBag.Action = "Actual Crop Cutting";
+    ViewBag.Controller = "Crop Insurance";
+
+    Layout = "~/Views/Shared/_AdimsLayout.cshtml";
+
+    county _county = (county)ViewBag.county;
+    subcounty _subCounty = (subcounty)ViewBag.subcounty;
+    ward _ward = (ward)ViewBag.ward;
+    farm _farm = (farm)ViewBag.farm;
+    farmer _farmer = (farmer)ViewBag.farmer;
+
+    int queue = (int)ViewBag.queue;
+    int cropacreage = (int)ViewBag.cropacreage;
+
+    var relations = new List<string>() { "The Farmer", "Spouse", "Farm Worker", "Son / Daughter", "Any Other" };
+    var variety = new List<string>() { "Hybrid", "Improved", "Local" };
+    var plantingseasons = new List<string>() { "L.R", "S.R" };
+    var plantingmode = new List<string>() { "Pure Stand", "Mixed" };
+    var cropstages = new List<string>() { "Flowering", "Early Maturity", "Mature" };
+    var cropcondition = new List<string>() { "Very good", "Average", "Poor" };
+    var cropstatus = new List<string>() { "Normal", "Not normal" };
+}
+
+<link href="~/css/plugins/datapicker/datepicker3.css" rel="stylesheet">
+<link href="~/css/plugins/iCheck/custom.css" rel="stylesheet">
+<link href="~/css/plugins/steps/jquery.steps.css" rel="stylesheet">
+
+<script src="~/js/jquery-2.1.1.js"></script>
+<script src="~/js/bootstrap.js"></script>
+<script src="~/js/plugins/datapicker/bootstrap-datepicker.js"></script>
+<!-- Steps -->
+<script src="~/js/plugins/staps/jquery.steps.min.js"></script>
+<!-- Jquery Validate -->
+<script src="~/js/plugins/validate/jquery.validate.min.js"></script>
+
+<script>
+
+    function getSubCounties() {
+        $("#subcounty").empty();
+        $.ajax({
+            type: 'POST',
+            url: '@Url.Action("GetSubCounties","Counties")',
+            datatype: 'json',
+            data: { id: $("#county").val() },
+            success: function (subcounties) {
+                $("#subcounty").append('<option value="' + "0" + '">' + "Select Sub County" + '</option>');
+                debugger;
+                $.each(subcounties, function (i, subcounty) {
+                    $("#subcounty").append('<option value="' + subcounty.Value + '">' + subcounty.Text + '</option>');
+                    // here we are adding option for States
+                });
+            },
+            error: function (ex) {
+                alert('No Sub Counties for the selected counties exist' + ex);
+            }
+        });
+    }
+
+    function getWards() {
+        $("#ward").empty();
+        $.ajax({
+            type: 'POST',
+            url: '@Url.Action("GetWards", "Counties")',
+            datatype: 'json',
+            data: { id: $("#subcounty").val() },
+            success: function (wards) {
+                $("#ward").append('<option value="' + "0" + '">' + "Select Ward" + '</option>');
+                debugger;
+                $.each(wards, function (i, ward) {
+                    $("#ward").append('<option value="' + ward.Value + '">' + ward.Text + '</option>');
+                    // here we are adding option for States
+                });
+            },
+            error: function (ex) {
+                alert('No Wards for the selected Sub County exist' + ex);
+            }
+        });
+    }
+
+    function CalculateAvgWetWeight() {
+
+        var totalCobs = parseFloat($("#cobs_harvested").val());
+        var threshedWeight = parseFloat($("#quantity_harvested_wetgrain").val());
+
+        var avgWeight = threshedWeight / totalCobs;
+
+        $("#quantity_harvested_kgpercob").val(avgWeight.toFixed(2));
+    }
+
+    function CalculateVariables()
+    {
+        var wetSample = parseFloat($("#weight_of_wetsample").val());
+        var drySample = parseFloat($("#weight_of_driedsample").val());
+        var threshedWeight = parseFloat($("#quantity_harvested_wetgrain").val());
+
+        var wetWeight = wetSample - drySample;
+
+        var resultValue = (drySample / wetSample) * threshedWeight;
+
+        //var moisture = ((wetWeight / wetSample) * 100).toFixed(2);
+        
+        $("#total_weight").val(resultValue);
+        //$("#moisture_percentagedried").val(moisture);
+    }
+
+    function CopySampleValue() {
+        var value = $("#quantity_wet_sample").val();
+        $("#weight_wet_sample").val(value);
+    }
+
+    function HideNoMoistureReadingFields() {
+        var moisture_done = $("#moisture_successful").val();
+
+        console.log("moisture value is " + moisture_done);
+
+        var final = false;
+
+        if (moisture_done == "Yes") {
+            final = true;
+            $("#other_info").css("display", "none");
+        }
+        else {
+            final = false;
+            $("#moisture_reading").prop('disabled', final);
+            $("#other_info").css("display", "block");
+        }
+
+        
+        $("#drying_method").prop('disabled', final);
+        $("#weight_of_wetsample").prop('disabled', final);
+        $("#weight_of_driedsample").prop('disabled', final);
+        $("#total_weight").prop('disabled', final);
+        $("#moisture_percentagedried").prop('disabled', final);
+        $("#quantity_wet_sample").prop('disabled', final);
+    }
+    
+    
+</script>
+
+<script>
+        $(document).ready(function(){
+
+            $("#wizard").steps();
+            $("#form").steps({
+                bodyTag: "fieldset",
+                onStepChanging: function (event, currentIndex, newIndex)
+                {
+                    // Always allow going backward even if the current step contains invalid fields!
+                    if (currentIndex > newIndex)
+                    {
+                        return true;
+                    }
+
+                    // Forbid suppressing "Warning" step if the user is to young
+                    if (newIndex === 3 && Number($("#age").val()) < 18)
+                    {
+                        return false;
+                    }
+
+                    var form = $(this);
+
+                    // Clean up if user went backward before
+                    if (currentIndex < newIndex)
+                    {
+
+                        // To remove error styles
+                        $(".body:eq(" + newIndex + ") label.error", form).remove();
+                        $(".body:eq(" + newIndex + ") .error", form).removeClass("error");
+                    }
+
+                    // Disable validation on fields that are disabled or hidden.
+                    form.validate().settings.ignore = ":disabled,:hidden";
+
+                    // Start validation; Prevent going forward if false
+                    return form.valid();
+                },
+                onStepChanged: function (event, currentIndex, priorIndex)
+                {
+                    //$("#progress").width( (currentIndex) / 4 * 100 % + "%");
+                    // Suppress (skip) "Warning" step if the user is old enough.
+                    if (currentIndex === 2 && Number($("#age").val()) >= 18)
+                    {
+                        $(this).steps("next");
+                    }
+
+                    // Suppress (skip) "Warning" step if the user is old enough and wants to the previous step.
+                    if (currentIndex === 2 && priorIndex === 3)
+                    {
+                        $(this).steps("previous");
+                    }
+                },
+                onFinishing: function (event, currentIndex)
+                {
+                    var form = $(this);
+
+                    // Disable validation on fields that are disabled.
+                    // At this point it's recommended to do an overall check (mean ignoring only disabled fields)
+                    form.validate().settings.ignore = ":disabled";
+
+                    // Start validation; Prevent form submission if false
+                    return form.valid();
+                },
+                onFinished: function (event, currentIndex)
+                {
+                    var form = $(this);
+
+                    // Submit form input
+                    form.submit();
+                }
+            }).validate({
+                        errorPlacement: function (error, element)
+                        {
+                            element.before(error);
+                        },
+                        rules: {
+                            confirm: {
+                                equalTo: "#password"
+                            }
+                        }
+            });
+
+       });
+</script>
+
+
+<div class="row">
+    <div class="col-lg-12">
+        <div class="ibox">
+            <div class="ibox-title">
+                <h5><img height="30" width="30" src="~/icons/user_icon.png" /> &nbsp; &nbsp;  Actual Crop Cutting</h5>
+                <div class="ibox-tools">
+                    <input type="submit" formaction="/cropinsurance/saveactual" name="save" value="Save Progress" class="btn btn-primary btn-rounded" form="form" />
+                    <a class="collapse-link">
+                        <i class="fa fa-chevron-up"></i>
+                    </a>
+
+                </div>
+            </div>
+            <div class="ibox-content">
+
+                @*<div class="progress progress-striped active">
+                        <div id="progress" style="width: 25%" aria-valuemax="100" aria-valuemin="0" aria-valuenow="75" role="progressbar" class="progress-bar progress-bar-success">
+                            <span class="sr-only">25% Complete (success)</span>
+                        </div>
+                    </div>*@
+
+                @*<form id="form" action="#" class="wizard-big">*@
+                @using (Html.BeginForm("ActualCropCutting", "Cropinsurance", new { ward = _ward.id, farm = _farm.id, queue = queue, cropacreage = cropacreage }, FormMethod.Post, new { @class = "wizard-big", @id = "form" }))
+                {
+                    @Html.HiddenFor(model => model.progresskey)
+                    @Html.HiddenFor(model => model.queue)
+                    @Html.HiddenFor(model => model.cropacerage)
+                    <h1>Location (1 &amp; 2)</h1>
+                    <fieldset>
+
+                        <div class="row col-lg-12">
+
+                            <div class="col-md-4">
+                                <div class="form-group">
+                                    <label>County Name</label><br />
+                                    <div class="col-md-12" style="padding-left:0px;">
+                                        @Html.TextBox("countyname", _county.name, new { @class = "form-control" })
+                                    </div>
+                                </div>
+                            </div>
+
+                           
+
+                            <div class="col-md-4">
+                                <div class="form-group">
+                                    <label>SubCounty Name</label><br />
+                                    <div class="col-md-12" style="padding-left:0px;">
+                                        @Html.TextBox("subcountyname", _subCounty.name, new { @class = "form-control" })
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="col-md-4">
+                                <div class="form-group">
+                                    <label>Ward Name</label><br />
+                                    <div class="col-md-12" style="padding-left:0px;">
+                                        @Html.TextBox("wardname", _ward.name, new { @class = "form-control" })
+                                    </div>
+                                </div>
+                            </div>
+
+
+                        </div>
+
+
+                        <div class="row col-lg-12" style="margin-top:15px;">
+                            <div class="col-md-4">
+                                <div class="form-group">
+                                    <label>Enumeration Area Code</label><br />
+                                    <div class="col-md-12" style="padding-left:0px;">
+                                        @Html.TextBoxFor(model => model.enumeration_area_code, new { @class = "form-control" })
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="col-md-4">
+                                <div class="form-group">
+                                    <label>Name of Village</label><br />
+                                    <div class="col-md-12" style="padding-left:0px;">
+                                        @Html.TextBoxFor(model => model.village_name, new { @class = "form-control" })
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                    </fieldset>
+
+                    <h1>Farmer</h1>
+                    <fieldset>
+                        <div class="row col-lg-12">
+                            <div class="col-md-4">
+                                <div class="form-group">
+                                    <label>Farmer Name</label><br />
+                                    <div class="col-md-12" style="padding-left:0px;">
+                                        @_farmer.firstname &nbsp; @_farmer.middlename &nbsp; @_farmer.lastname
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="rwo col-lg-12">
+                            <div class="col-md-4">
+                                <div class="form-group">
+                                    <label>Respondent Name</label><br />
+                                    <div class="col-md-12" style="padding-left:0px;">
+                                        @Html.TextBoxFor(model => model.respondent_name, new { @class = "form-control" })
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="col-md-4">
+                                <div class="form-group">
+                                    <label>Tel No Respondent</label><br />
+                                    <div class="col-md-12" style="padding-left:0px;">
+                                        @Html.TextBoxFor(model => model.respondent_telephone, new { @class = "form-control" })
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="col-md-4">
+                                <div class="form-group">
+                                    <label>Respondent Relation</label><br />
+                                    <div class="col-md-12" style="padding-left:0px;">
+                                        @Html.DropDownListFor(model => model.respondent_relation, new SelectList(relations), new { @class = "form-control" })
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+                    </fieldset>
+
+                    <h1>Actual Harvest</h1>
+                    <fieldset>
+
+                        <div class="row col-lg-12">
+                            <div class="col-md-4">
+                                <div class="form-group">
+                                    <label>Date of Crop Cutting</label><br />
+                                    <div class="col-md-12" style="padding-left:0px;">
+                                        @Html.TextBoxFor(model => model.date_of_crop_cutting, new { @class = "form-control",@type="date" })
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="col-md-4">
+                                <div class="form-group">
+                                    <label>Start time of Crop Cutting</label><br />
+                                    <div class="col-md-12" style="padding-left:0px;">
+                                        @Html.TextBoxFor(model => model.time_of_cropcutting_start, new { @class = "form-control",@type="time" })
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="col-md-4">
+                                <div class="form-group">
+                                    <label>End time of Crop Cutting</label><br />
+                                    <div class="col-md-12" style="padding-left:0px;">
+                                        @Html.TextBoxFor(model => model.time_of_cropcutting_end, new { @class = "form-control",@type="time" })
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+
+                        
+                        <div class="row col-lg-12">
+                            <div class="col-md-4">
+                                <div class="form-group">
+                                    <label>Total Plant Count (preliminary)</label><br />
+                                    <div class="col-md-12" style="padding-left:0px;">
+                                        @Html.TextBoxFor(model => model.total_count_plants_stage1, new { @class = "form-control", @type = "number" })
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="col-md-4">
+                                <div class="form-group">
+                                    <label>Total Plant Count (actual)</label><br />
+                                    <div class="col-md-12" style="padding-left:0px;">
+                                        @Html.TextBoxFor(model => model.total_count_plants_stage2, new { @class = "form-control", @type = "number" })
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+
+                        <div class="row col-lg-12">
+
+                            <div class="col-md-4">
+                                <div class="form-group">
+                                    <label>Total Cobs Count (preliminary)</label><br />
+                                    <div class="col-md-12" style="padding-left:0px;">
+                                        @Html.TextBoxFor(model => model.total_cobs_stage1, new { @class = "form-control", @type = "number" })
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="col-md-4">
+                                <div class="form-group">
+                                    <label>Total Cobs Count (actual)</label><br />
+                                    <div class="col-md-12" style="padding-left:0px;">
+                                       @Html.TextBoxFor(model => model.total_cobs_stage2, new { @class = "form-control", @type = "number" })
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+
+                        <div class="row col-lg-12">
+                            <div class="col-md-4">
+                                <div class="form-group">
+                                    <label>Photo of SS Before Harvesting</label><br />
+                                    <div class="col-md-10" style="padding-left:0px;">
+                                        <input type="file" name="file" id="file" value="" class="form-control" placeholder="Select Photo" />
+                                        @*@Html.(model => model.photo_ofSS_before_harvesting, new { @class = "form-control",@type="file" })*@
+                                    </div>
+                                </div>
+                            </div>
+                            
+                        </div>
+
+                    </fieldset>
+
+                    <h1>Produce Information</h1>
+                    <fieldset>
+                        <div class="row col-lg-12">
+                            <div class="col-md-4">
+                                <div class="form-group">
+                                    <label>Total Cobs harvested</label><br />
+                                    <div class="col-md-12" style="padding-left:0px;">
+                                        @Html.TextBoxFor(model => model.cobs_harvested, new { @class = "form-control", @type = "number", @onchange = "CalculateAvgWetWeight()" })
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="col-md-4">
+                                <div class="form-group">
+                                    <label>Qty. Threshed wet grains (Kgs)</label><br />
+                                    <div class="col-md-12" style="padding-left:0px;">
+                                        @Html.TextBoxFor(model => model.quantity_harvested_wetgrain, new { @class = "form-control", @type = "number", @onchange = "CalculateAvgWetWeight()" })
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="col-md-4">
+                                <div class="form-group">
+                                    <label>Avg. Kg Wet grain per cob</label><br />
+                                    <div class="col-md-12" style="padding-left:0px;">
+                                        @Html.TextBoxFor(model => model.quantity_harvested_kgpercob, new { @class = "form-control", @type = "number" })
+                                    </div>
+                                </div>
+                            </div>
+                            </div>
+
+                            <div class="row col-lg-12">
+                                <div class="col-md-4">
+                                    <div class="form-group">
+                                        <label>Final Quantity Wet Grains (Kgs)</label><br />
+                                        <div class="col-md-10" style="padding-left:0px;">
+                                            @Html.TextBoxFor(model => model.final_quantity_wetgrain, new { @class = "form-control", @type = "number" })
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                           
+
+                          <div class="row col-lg-12">
+                            <div class="col-md-4">
+                                <div class="form-group">
+                                    <label>Moisture reading done Successfully? </label><br />
+                                    <div class="col-md-12" style="padding-left:0px;">
+                                        @Html.DropDownList("moisture_successful", new List<SelectListItem>()
+                                       {
+                                           new SelectListItem(){Text="Select an item", Value="0"},
+                                           new SelectListItem(){Text="YES", Value="Yes"},
+                                           new SelectListItem(){Text="NO",Value="No"}
+                                       }, new { @class= "form-control moistureReadingDone", @onchange = "HideNoMoistureReadingFields()" })
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="col-md-4">
+                                <div class="form-group">
+                                    <label>Avg. Moisture Content (in %)</label><br />
+                                    <div class="col-md-12" style="padding-left:0px;">
+                                        @Html.TextBoxFor(model => model.moisture_reading, new { @class = "form-control", @type = "number" })
+                                    </div>
+                                </div>
+                            </div>
+
+                            
+
+                            @*<div class="col-md-4 moistureContentInGrain" style="display:none;">
+                                <div class="form-group">
+                                    <label>Moisture Content in Grain (mg)</label><br />
+                                    <div class="col-md-10" style="padding-left:0px;">
+                                        @Html.TextBoxFor(model => model.moisture_reading, new { @class = "form-control" })
+                                    </div>
+                                </div>
+                            </div>*@
+                        </div>
+
+                    </fieldset>
+
+                    <h1>Other Info</h1>
+                    <fieldset id="other_info">
+                        <div class="row col-lg-12">
+                            <div class="col-md-4">
+                                <div class="form-group">
+                                    <label>Drying Method</label><br />
+                                    <div class="col-md-10" style="padding-left:0px;">
+                                        @Html.DropDownListFor(x => x.drying_method, new List<SelectListItem>()
+                                       {
+                                           new SelectListItem(){Text="Sun",Value="Sun"},
+                                           new SelectListItem(){Text="Machine",Value="Machine"}
+                                       },"Select drying method", new { @class="form-control"})
+                                    </div>
+                                </div>
+                            </div>
+
+                            </div>
+
+                        <div class="row col-lg-12">
+                            <div class="col-md-4">
+                                <div class="form-group">
+                                    <label>Quantity of wet sample taken (Kgs)</label><br />
+                                    <div class="col-md-10" style="padding-left:0px;">
+                                        @Html.TextBoxFor(model => model.quantity_wet_sample, new { @class = "form-control", @type = "number" , @onchange = "CopySampleValue()" })
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="row col-lg-12">
+                            <div class="col-md-4">
+                                <div class="form-group">
+                                    <label>Average Weight of Wet Sample (Kgs)</label><br />
+                                    <div class="col-md-10" style="padding-left:0px;">
+                                        @Html.TextBoxFor(model => model.weight_of_wetsample, new { @class = "form-control", @type = "number" })
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="col-md-4">
+                                <div class="form-group">
+                                    <label>Average Weight of sample after drying (Kgs)</label><br />
+                                    <div class="col-md-10" style="padding-left:0px;">
+                                        @Html.TextBoxFor(model => model.weight_of_driedsample, new { @class = "form-control", @type = "number" , @onchange = "CalculateVariables()"})
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="row col-lg-12">
+
+                            <div class="col-md-4">
+                                <div class="form-group">
+                                    <label>Weight after Drying (Kgs)</label><br />
+                                    <div class="col-md-10" style="padding-left:0px;">
+                                        @Html.TextBoxFor(model => model.total_weight, new { @class = "form-control" })
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="col-md-4">
+                                <div class="form-group">
+                                    <label>Moisture content in maize (%)</label><br />
+                                    <div class="col-md-10" style="padding-left:0px;">
+                                        @Html.TextBoxFor(model => model.moisture_percentagedried, new { @class = "form-control" })
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+
+                    </fieldset>
+
+                }
+                @*</form>*@
+            </div>
+        </div>
+    </div>
+</div>
+
+<script src="~/app/critical.js"></script>

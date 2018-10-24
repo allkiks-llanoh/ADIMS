@@ -1,0 +1,125 @@
+﻿@model ADIMS.ViewModels.SearchViewModel
+@{
+    ViewBag.Title = "Search Farmer to Claim";
+
+    ViewBag.Action = "Search";
+    ViewBag.Controller = "Farmers";
+
+    Layout = "~/Views/Shared/_AdimsLayout.cshtml";
+
+    var results = (List<ADIMS.Models.farmer>)ViewBag.results;
+
+}
+
+<div class="ibox-content m-b-sm border-bottom">
+    <div class="row">
+        <div>
+            <h2>Find Farmer to Add Claim</h2>
+        </div>
+        @using (Html.BeginForm("SearchFarmer", "CropInsurance", FormMethod.Post))
+        {
+            <div class="col-sm-4">
+                <div class="form-group">
+                    <label class="control-label" for="product_name">Name</label>
+                    @*<input type="text" id="product_name" name="product_name" value="" placeholder="Some Name" class="form-control">*@
+                    @Html.TextBoxFor(model => model.name, new { @class = "form-control", @placeholder = "Some Name" })
+                </div>
+            </div>
+            <div class="col-sm-2">
+                <div class="form-group">
+                    <label class="control-label" for="price">ADIMS ID</label>
+                    @*<input type="text" id="price" name="price" value="" placeholder="ID" class="form-control">*@
+                    @Html.TextBoxFor(model => model.adimsid, new { @class = "form-control", @placeholder = "ADIMS ID" })
+                </div>
+            </div>
+            <div class="col-sm-2">
+                <div class="form-group">
+                    <label class="control-label" for="quantity">ID Number</label>
+                    @*<input type="text" id="quantity" name="quantity" value="" placeholder="ID" class="form-control">*@
+                    @Html.TextBoxFor(model => model.idnumber, new { @class = "form-control", @placeholder = "ID Number" })
+                </div>
+            </div>
+
+            <div class="col-sm-2">
+                <div class="form-group">
+                    <label class="control-label" for="quantity">Phone Number</label>
+                    @*<input type="text" id="quantity" name="quantity" value="" placeholder="07..." class="form-control">*@
+                    @Html.TextBoxFor(model => model.phone_number, new { @class = "form-control", @placeholder = "Phone Number" })
+                </div>
+            </div>
+            <br />
+            <input style="" type="submit" value="Submit" class="btn btn-primary" />
+        }
+
+    </div>
+
+</div>
+
+@* Have another divison for the results *@
+<div class="row">
+    <div class="col-lg-12">
+        <div class="ibox">
+            <div class="ibox-content">
+
+                <table class="footable table table-stripped toggle-arrow-tiny" data-page-size="15">
+                    <thead>
+                        <tr>
+
+                            <th data-toggle="true">ADIMS ID</th>
+                            <th data-hide="phone">Names</th>
+                            <th data-hide="all">County</th>
+                            <th data-hide="phone">Age</th>
+                            <th data-hide="phone,tablet">Farms</th>
+                            <th data-hide="phone">Status</th>
+                            <th class="text-right" data-sort-ignore="true">Action</th>
+
+                        </tr>
+                    </thead>
+                    <tbody>
+
+                        @if (results != null)
+                        {
+                            foreach (var farmer in results)
+                            {
+                                <tr>
+                                    <td>
+                                        @farmer.adimsid
+                                    </td>
+                                    <td>
+                                        <a href="/farmers/details/@farmer.id">@farmer.firstname &nbsp; @farmer.middlename &nbsp; @farmer.lastname</a>
+                                    </td>
+                                    <td>@farmer.county1.name</td>
+                                    <td>
+                                        @{var age = ((DateTime.Now.Year - farmer.dob?.Year));}@age
+                                    </td>
+                                    <td>
+                                        @farmer.farms.Count Farms
+                                    </td>
+                                    <td>
+                                        <span class="label label-primary">Active</span>
+                                    </td>
+                                    <td class="text-right">
+                                        <div class="btn-group">
+                                            <a href="/cropinsurance/farmerpolicies/@farmer.id" class="btn btn-primary btn-rounded btn-xs"> &nbsp;View Policies&nbsp;</a>
+                                        </div>
+                                    </td>
+                                </tr>
+                             }
+                        }
+
+                    </tbody>
+                    <tfoot>
+                        <tr>
+                            <td colspan="6">
+                                <ul class="pagination pull-right"></ul>
+                            </td>
+                        </tr>
+                    </tfoot>
+                </table>
+
+            </div>
+        </div>
+    </div>
+</div>
+
+

@@ -1,0 +1,126 @@
+﻿@using ADIMS.Models
+@model List<crop_production_statistics>
+@{
+    ViewBag.Title = "Crop Production Statistics Report";
+    ViewBag.Controller = "Reports";
+    ViewBag.Action = "Crop Production Statistics Report";
+    Layout = "~/Views/Shared/_AdimsLayout.cshtml";
+
+    string[] months = "January,February,March,April,May,June,July,August,September,October,November,December".Split(',');
+
+    //var file = File.Open(@"D:\MIYABI\ADIMS\ADIMS\ADIMS\Content\dummydata\productionstatistics.json", FileMode.Open);
+    //string json = "";
+
+    //using (StreamReader sr = new StreamReader(file))
+    //{
+    //    json = sr.ReadToEnd();
+    //}
+
+    //dynamic reports = JsonConvert.DeserializeObject(json);
+}
+<title>Crop Production Statistics Report - ADIMS</title>
+<link href="~/css/plugins/dataTables/datatables.min.css" rel="stylesheet">
+
+<div class="row">
+    <div class="col-lg-12">
+        <div class="ibox ibox-more">
+            <div class="ibox-title">
+                <h5><i class="fa fa-flask" style="font-size:18px;"></i> <i class="ion-arrow-right-c" style="margin:0px 3px;"></i> <i class="ion-document" style="font-size:18px; margin-right:5px;"></i> Crop Production Statistics Reports</h5>
+                <div class="ibox-tools">
+                    <a class="collapse-link">
+                        <i class="fa fa-chevron-up"></i>
+                    </a>
+                    <a href="/CropProduction/AddCropProductionStatistics">
+                        <i class="fa fa-plus"></i>
+                    </a>
+                </div>
+            </div>
+            <div class="ibox-content">
+
+                <div class="table-responsive">
+                    <table class="table table-striped table-bordered table-hover dataTables-example">
+                        <thead>
+                            <tr>
+                                <th style="font-size:17px;">County</th>
+                                <th style="font-size:17px;">Sub-County</th>
+                                <th style="font-size:17px;">Month</th>
+                                <th style="font-size:17px;">Season</th>
+                                <th style="font-size:17px;">Core Crop</th>
+                                <th style="font-size:17px;">No. sampled LS Farms</th>
+                                <th style="font-size:17px;">No. sampled CI Farms</th>
+                                <th style="font-size:17px;">No. of sampled irrigation schemes</th>
+                                <th style="font-size:17px;">No. of sampled Greenhouses</th>
+                                <th style="font-size:17px;">No. of SS farms</th>
+
+                                <th style="font-size:17px;">Hectares Planted</th>
+                                <th style="font-size:17px;">Estimated Hectares with certified seed</th>
+                                <th style="font-size:17px;">Estimate Quantity of seed (MT)</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            @{ 
+                                var random = new Random();
+
+                                foreach (var item in Model)
+                                {
+                                    <tr>
+                                        <td>@item.county</td>
+                                        <td>@item.sub_county</td>
+                                        <td>@item.month</td>
+                                        <td>@item.season</td>
+                                        <td>@item.core_crop</td>
+
+                                        <td>@item.no_sampled_ls_farms</td>
+                                        <td>@item.no_sampled_ci_farms</td>
+                                        <td>@item.no_sampled_irrigation_schemes</td>
+                                        <td>@item.no_sampled_greenhouses</td>
+                                        <td>@item.no_ss_farms</td>
+                                        <td>@item.hectares_planted</td>
+                                        <td>@item.estimated_ha_certified_seeds</td>
+                                        <td>@item.estimated_seed_quantity</td>
+                                    </tr>
+                                }
+                            }
+                        </tbody>
+                    </table>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+</div>
+<script src="~/js/plugins/dataTables/datatables.min.js"></script>
+
+<!-- Page-Level Scripts -->
+<script>
+        $(document).ready(function(){
+            $('.dataTables-example').DataTable({
+                dom: '<"html5buttons"B>lTfgitp',
+                buttons: [
+                    { extend: 'copy'},
+                    {extend: 'csv'},
+                    {extend: 'excel', title: 'Crop Production Statistics Report - ADIMS'},
+                    { extend: 'pdf', title: 'Crop Production Statistics Report - ADIMS'},
+
+                    {
+                        extend: 'print', title: 'Crop Production Statistics Report - ADIMS',
+                     customize: function (win){
+                            $(win.document.body).addClass('white-bg');
+                            $(win.document.body).css('font-sizse', '11px');
+
+                            $(win.document.body).find('table')
+                                    .addClass('compact')
+                                    .css('font-size', 'inherit');
+                    }
+                    }
+                ]
+
+            });
+
+
+
+        });
+
+
+</script>

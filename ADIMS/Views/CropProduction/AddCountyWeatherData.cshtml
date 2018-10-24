@@ -1,0 +1,124 @@
+﻿@using System.Security.Claims
+@using ADIMS.Models;
+@model ADIMS.ViewModels.DataCapture_CropProduction.AddCountyWeatherDataViewModel
+@{
+    ViewBag.Title = "Add County Weather Data";
+    ViewBag.Action = "Add County Weather Data";
+    ViewBag.Controller = "Crop Production";
+
+    var user = ViewBag.userinfo as Tuple<string, county, subcounty>;
+
+    var seasons = (List<season>)ViewBag.seasons;
+
+    Layout = "~/Views/Shared/_AdimsLayout.cshtml";
+    string[] months = "January,February,March,April,May,June,July,August,September,October,November,December".Split(',');
+}
+<div class="ibox ibox-more">
+
+    <div class="ibox-title">
+        <h5><i class="fa fa-sun-o" style="font-size:18px;"></i> Weather Data</h5>
+        <div class="ibox-tools">
+            <a class="collapse-link">
+                <i class="fa fa-chevron-up"></i>
+            </a>
+        </div>
+    </div>
+
+<div class="ibox-content">
+
+        @using (Html.BeginForm("AddCountyWeatherData","CropProduction", FormMethod.Post, new { @class=""}))
+        {
+            @Html.AntiForgeryToken()
+            <div class="row">
+                <div class="form-group col-md-4">
+                    <label>County</label>
+                    @Html.HiddenFor(model => model.county)
+                    @Html.TextBox("countyid", @user.Item2.name, new {@class="form-control", @readonly = true})
+                </div>
+                <div class="form-group col-md-4">
+                    <label>Sub-County</label>
+                    @Html.HiddenFor(model => model.sub_county)
+                    @Html.TextBox("subcountyid", @user.Item2.name, new { @class = "form-control", @readonly = true })
+                </div>
+                
+                <div class="form-group col-md-4">
+                    <label>Month</label>
+                    <select name="month" class="form-control">
+                        <option value="null">Select an item</option>
+                        @{
+                            for (int i = 0; i < months.Length; i++)
+                            {
+                                <option value="@i">@months[i]</option>
+                            }
+                        }
+                    </select>
+                </div>
+
+            </div>
+            <br/>
+                <div class="form-group center-block">
+                    <label>Station Name</label><br />
+                    <div style="width:200px;">
+                        @Html.TextBoxFor(x => x.station_name,new { @class = "form-control", @placeholder = "e.g Kimende Centre" })
+
+
+                    </div>
+                </div>
+                <br/>
+            <div class="row">
+                <div class="col-md-4">
+                    <div class="form-group">
+                        <label class="">Total Rainfall (mm)</label>
+                        <div class="">
+                            @Html.TextBoxFor(x => x.total_rainfall, new { @class = "form-control", @placeholder = "e.g Kimende Centre" })
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="form-group">
+                        <label class="control-label">Email</label>
+                        <div class="">
+                            <input type="email" class="form-control" id="inputEmail3" placeholder="someone@example.com">
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-4">
+                    <div class="form-group">
+                        <label class="">Spatial Distribution</label>
+                        <div class="">
+                            @Html.TextBoxFor(x => x.spatial_distribution, new { @class = "form-control", @placeholder = "e.g Kimende Centre" })
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="form-group">
+                        <label>Season</label><br />
+                        <div class="col-md-12" style="padding-left:0px;">
+                            @Html.DropDownListFor(model => model.season, new SelectList(seasons, "id", "name"), new { @class = "form-control" })
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <br/>
+            <div class="row">
+                <div class="col-md-8">
+                    <div class="form-group">
+                        <label>Remarks</label>
+                        @Html.TextAreaFor(x => x.remarks, new { @class="form-control",@placeholder="Not less than 10 words",rows="5"})
+                    </div>
+                </div>
+            </div>
+            <div class="">
+                <div class="form-group">
+                    <input type="submit" value="Submit" class="btn btn-primary" />
+                </div>
+
+            </div>
+            <br/><br/>
+        }
+</div>
+</div>
+

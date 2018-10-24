@@ -1,0 +1,164 @@
+﻿@model ADIMS.Models.RegisterViewModel
+@{
+
+    ViewBag.Title = "Register New User";
+
+    ViewBag.Action = "User";
+    ViewBag.Controller = "Admin";
+    Layout = "~/Views/Shared/_AdimsLayout.cshtml";
+    var counties = (List<ADIMS.Models.county>)ViewBag.counties;
+    var roles = (List<string>)ViewBag.roles;
+}
+
+<script>
+    function getSubCounties() {
+        $("#sub_county").empty();
+        $.ajax({
+            type: 'POST',
+            url: '@Url.Action("GetSubCounties","Counties")',
+            datatype: 'json',
+            data: { id: $("#county").val() },
+            success: function (subcounties) {
+                $("#sub_county").append('<option value="' + "0" + '">' + "Select Sub County" + '</option>');
+                debugger;
+                $.each(subcounties, function (i, subcounty) {
+                    $("#sub_county").append('<option value="' + subcounty.Value + '">' + subcounty.Text + '</option>');
+                    // here we are adding option for States
+                });
+            },
+            error: function (ex) {
+                alert('No Sub Counties for the selected counties exist' + ex);
+            }
+        });
+    }
+
+    function getWards() {
+        $("#ward").empty();
+        $.ajax({
+            type: 'POST',
+            url: '@Url.Action("GetWards", "Counties")',
+            datatype: 'json',
+            data: { id: $("#sub_county").val() },
+            success: function (wards) {
+                $("#ward").append('<option value="' + "0" + '">' + "Select Ward" + '</option>');
+                debugger;
+                $.each(wards, function (i, ward) {
+                    $("#ward").append('<option value="' + ward.Value + '">' + ward.Text + '</option>');
+                    // here we are adding option for States
+                });
+            },
+            error: function (ex) {
+                alert('No Wards for the selected Sub County exist' + ex);
+            }
+        });
+    }
+</script>
+
+<div class="row">
+    <div class="col-lg-12">
+        <div class="ibox float-e-margins">
+
+            <div class="ibox-title">
+                <h5> Add New User</h5>
+                <div class="ibox-tools">
+                    <a class="collapse-link">
+                        <i class="fa fa-chevron-up"></i>
+                    </a>
+                </div>
+            </div>
+
+            <div class="ibox-content" style="padding-left:35px;">
+
+                @using (Html.BeginForm("Register", "Account", FormMethod.Post, new { @class = "form-horizontal", role = "form" }))
+                {
+                    @Html.AntiForgeryToken()
+                    @Html.ValidationSummary("", new { @class = "text-danger" })
+
+                    <div class="row">
+                        <div class="col-md-4">
+                            <div class="form-group">
+                                <label>Name</label><br />
+                                <div class="col-md-12" style="padding-left:0px;">
+                                    @Html.TextBoxFor(m => m.name, new { @class = "form-control" })
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <div class="col-md-4">
+                            <div class="form-group">
+                                <label>Phone Number</label><br />
+                                <div class="col-md-12" style="padding-left:0px;">
+                                    @Html.TextBoxFor(m => m.phone_number, new { @class = "form-control" , @required=true })
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-md-4">
+                            <div class="form-group">
+                                <label>Email</label><br />
+                                <div class="col-md-12" style="padding-left:0px;">
+                                    @Html.TextBoxFor(m => m.Email, new { @class = "form-control", @required = true })
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="row" style="margin-top:15px;">
+
+                        <div class="col-md-4">
+                            <div class="form-group">
+                                <label>County</label><br />
+                                <div class="col-md-10" style="padding-left:0px;">
+                                    @Html.DropDownListFor(model => model.county, new SelectList(counties, "id", "name"), new { @class = "form-control", @onchange = "getSubCounties()" })
+                                    @Html.ValidationMessageFor(model => model.county, "", new { @class = "text-danger" })
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-md-4">
+                            <div class="form-group">
+                                <label>Sub County</label><br />
+                                <div class="col-md-10" style="padding-left:0px;">
+                                    @Html.DropDownListFor(model => model.sub_county, new SelectList(string.Empty, "id", "name"), new { @class = "form-control", @onchange = "getWards()" })
+                                    @*@Html.ValidationMessageFor(model => model.county, "", new { @class = "text-danger" })*@
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-md-4">
+                            <div class="form-group">
+                                <label>Ward</label><br />
+                                <div class="col-md-10" style="padding-left:0px;">
+                                    @Html.DropDownListFor(model => model.ward, new SelectList(string.Empty, "id", "name"), new { @class = "form-control" })
+                                    @Html.ValidationMessageFor(model => model.ward, "", new { @class = "text-danger" })
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <div class="col-md-4">
+                            <div class="form-group">
+                                <label>Role</label><br />
+                                <div class="col-md-12" style="padding-left:0px;">
+                                    @Html.DropDownListFor(model => model.role, new SelectList(roles), new { @class = "form-control" })
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <div class="form-group">
+                            <div class="col-md-10">
+                                <input type="submit" class="btn btn-primary" value="Submit" />
+                            </div>
+                        </div>
+                    </div>
+                }
+            </div>
+
+        </div>
+    </div>
+</div>

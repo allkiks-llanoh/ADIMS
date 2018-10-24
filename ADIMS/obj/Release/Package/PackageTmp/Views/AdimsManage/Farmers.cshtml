@@ -1,0 +1,51 @@
+﻿
+@{
+    ViewBag.Title = "Manage Farmers";
+
+    ViewBag.Action = "Farmers";
+    ViewBag.Controller = "Manage";
+
+    Layout = "~/Views/Shared/_AdimsLayout.cshtml";
+}
+
+<div class="row">
+
+    <div class="col-lg-3">
+        <div class="contact-box center-version">
+            <a href="">
+
+                <img alt="image" src="~/icons/ui/search_farmer.png">
+                <h3 class="m-b-xs"><strong>Search Farmers</strong></h3>
+
+                <div class="font-bold">Find farmers by parameters</div>
+            </a>
+            <div class="contact-box-footer" style="background-color:#1ab394;">
+                <div class="m-t-xs btn-group">
+                    <a href="/farmers/search" class="btn btn-xs btn-white"> Navigate <i class="fa fa-angle-double-right"></i></a>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+    <div class="col-lg-3">
+        <div class="contact-box center-version">
+            <a href="">
+
+                <img alt="image" src="~/icons/ui/list_farmers.png">
+                <h3 class="m-b-xs"><strong>List Farmers</strong></h3>
+
+                <div class="font-bold">Show all farmers</div>
+            </a>
+            <div class="contact-box-footer" style="background-color:#1ab394;">
+                <div class="m-t-xs btn-group">
+                    <a href="/farmers/list" class="btn btn-xs btn-white"> Navigate <i class="fa fa-angle-double-right"></i></a>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+
+
+</div>

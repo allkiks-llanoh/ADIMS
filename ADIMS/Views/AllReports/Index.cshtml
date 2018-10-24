@@ -1,0 +1,83 @@
+﻿@{
+    ViewBag.Action = "Reports List";
+    ViewBag.Controller = "Reports";
+    ViewBag.Title = "Reports List"; 
+
+    Layout = "~/Views/Shared/_AdimsLayout.cshtml";
+}
+
+<style>
+    .item-row {
+        font-size: large;
+    }
+</style>
+
+<div class="row">
+    <div class="col-lg-12">
+        <div class="ibox float-e-margins">
+            <div class="ibox-title">
+                <h5>View Reports</h5>
+                <div class="ibox-tools">
+                    @*<a href="/farmers/newfarmingentity" style="color:white;" class="btn btn-primary btn-rounded">&nbsp;Add Farmer&nbsp;</a>*@
+                </div>
+            </div>
+            <div class="ibox-content">
+
+                <div class="table-responsive">
+                    <table class="table table-striped">
+                        <thead>
+                            <tr>
+                                <th>Report Name</th>
+                                <th>Action</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td class="item-row">County Weather Data</td>
+                                <td><a href="/CropProductionReports/CountyWeatherDataReport" class="btn btn-rounded btn-primary">View Report</a></td>
+                            </tr>
+                            <tr>
+                                <td class="item-row">Crop Production Statistics</td>
+                                <td><a href="/CropProductionReports/CropProductionStatisticsReport" class="btn btn-rounded btn-primary">View Report</a></td>
+                            </tr>
+                            <tr>
+                                <td class="item-row">Disaster Warning Data</td>
+                                <td><a href="/CropProductionReports/DisasterWarningDataReport" class="btn btn-rounded btn-primary">View Report</a></td>
+                            </tr>
+                            <tr>
+                                <td class="item-row">Early Warning Data</td>
+                                <td><a href="/CropProductionReports/EarlyWarningReport" class="btn btn-rounded btn-primary">View Report</a></td>
+                            </tr>
+                            <tr>
+                                <td class="item-row">Food Stocks Data</td>
+                                <td><a href="/CropProductionReports/FoodStocksDataReport" class="btn btn-rounded btn-primary">View Report</a></td>
+                            </tr>
+                            <tr>
+                                <td class="item-row">Govt Subsidized Fertilizer</td>
+                                <td><a href="/CropProductionReports/GovtSubsidizedFertilizerReport" class="btn btn-rounded btn-primary">View Report</a></td>
+                            </tr>
+                            <tr>
+                                <td class="item-row">Input Cost Availability</td>
+                                <td><a href="/CropProductionReports/InputCostAvailabilityReport" class="btn btn-rounded btn-primary">View Report</a></td>
+                            </tr>
+                            <tr>
+                                <td class="item-row">Planting Fertilizer</td>
+                                <td><a href="/CropProductionReports/PlantingFertilizerReport" class="btn btn-rounded btn-primary">View Report</a></td>
+                            </tr>
+                            <tr>
+                                <td class="item-row">Price Trend</td>
+                                <td><a href="/CropProductionReports/PriceTrendReport" class="btn btn-rounded btn-primary">View Report</a></td>
+                            </tr>
+                            <tr>
+                                <td class="item-row">Top Dressing Fertilizer</td>
+                                <td><a href="/CropProductionReports/TopDressingFertilizerReport" class="btn btn-rounded btn-primary">View Report</a></td>
+                            </tr>
+                        </tbody>
+                        
+                    </table>
+                </div>
+
+            </div>
+        </div>
+    </div>
+</div>

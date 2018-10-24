@@ -1,0 +1,138 @@
+﻿@using ADIMS.Models
+@model LoginViewModel
+@{
+    ViewBag.Title = "Log in";
+    Layout = null;
+}
+
+<html>
+<head>
+    <title>ADIMS | Login</title>
+    <link rel="stylesheet" title="R3CSS" type="text/css" href="/loginres/login.css">
+</head>
+<body uitheme="Web">
+    <div style="height: 40px;"></div>
+    <div id="shellTD" class="centerParent" style="width: 100%;">
+        <div id="shellTBL" class="center" style="width: 935px;">
+            <div class="centerParent">
+                <div id="mainTD" class="center" style="width: 895px;">
+                    <div id="brandModeTD" class="floatLeft" style="width: 475px;">
+                        <div id="productTD" style="width: 475px;">
+                            <iframe runat="server" id="i0278" height="490" width="475" frameborder="0" marginheight="0" marginwidth="0px" scrolling="no" src="/loginres/EN-GB(1).html"></iframe>
+                        </div>
+                    </div>
+                    <div id="signInTD" class="floatLeft" style="width: 420px; position: relative;">
+                        <div style="height: 40px;"></div>
+                        <div id="i0272" class="signInHeader">
+                            <iframe id="i0277" height="100" width="320" frameborder="0" marginheight="0" marginwidth="0" scrolling="no" src="/loginres/EN-GB.html"></iframe>
+                        </div>
+                        <div style="height: 30px;"></div>
+                        <div class="floatLeft" style="width: 100px; height: 370px;"></div>
+                        <div class="floatLeft" style="width: 320px;">
+                            <div id="rightTD">
+
+                                @using (Html.BeginForm("Login", "Account", new { ReturnUrl = ViewBag.ReturnUrl }, FormMethod.Post, new { @class = "form-horizontal", role = "form" }))
+                                {
+                                    @Html.AntiForgeryToken()
+                                    
+                                            <div class="section">
+                                                <div id="idTd_Tile_Error" aria-live="assertive" aria-relevant="text" aria-atomic="true" style="display: none;">
+
+                                                    <div class="errorDiv first" id="idTd_Tile_ErrorMsg_Login"></div>
+                                                </div>
+                                                <div id="idTd_PWD_Error" aria-live="assertive" aria-relevant="text" aria-atomic="true" style="display: none;">
+                                                    <div class="errorDiv first" id="idTd_PWD_ErrorMsg_Username">
+                                                        @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+                                                    </div>
+                                                </div>
+                                                <div id="idTd_PWD_UsernameLbl" class="row label">
+                                                    @*<span id="idLbl_PWD_Username" role="heading">ADIMS Account <a id="idA_MSAccLearnMore" href="" target="_blank">Authentication</a></span>*@
+                                                </div>
+                                                <div id="idDiv_PWD_UsernameTb" class="row textbox">
+                                                    <div style="position: relative; width: 100%;">
+
+                                                       @* <%--<input type="email" placeholder="e.g me@somewhere.com" maxlength="113" lang="en" class="ltr_override lg">--%>*@
+                                                        @*<asp:TextBox runat="server" ID="txtUserName" CssClass="ltr_override lg" TextMode="Email" Text="" />*@
+                                                        @Html.TextBoxFor(m => m.Email, new { @class = "ltr_override lg", @placeholder = "e.g me@somewhere.org" })
+                                                    </div>
+                                                </div>
+                                                <div id="idTd_PWD_Error_Password" aria-live="assertive" aria-relevant="text" aria-atomic="true" style="display: none;">
+                                                    <div class="errorDiv" id="idTd_PWD_ErrorMsg_Password"></div>
+                                                </div>
+                                                <div id="idDiv_PWD_PasswordTb" class="row textbox">
+                                                    <div style="position: relative; width: 100%;">
+                                                        @*<%--<input name="passwd" placeholder="Password" class="ltr_override" type="password" autocomplete="off" aria-labelledby="idDiv_PWD_PasswordExample">--%>*@
+                                                        @*<asp:TextBox runat="server" ID="txtPassword" CssClass="ltr_override lg" TextMode="Password" />*@
+                                                        @Html.PasswordFor(m => m.Password, new { @class = "ltr_override lg", @placeholder = "Password" })
+                                                    </div>
+                                                </div>
+                                                <div id="idTd_PWD_KMSI_Cb">
+
+                                                    <div runat="server" id="lblError">
+                                                        <p style="color: red; font-weight: bold;">
+                                                            @*<%: LoginErrorMessage %>*@
+                                                        <p>
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                            <div id="idTd_PWD_SubmitCancelTbl" class="section">
+
+                                                <p><a href="mailto:adims@kilimo.go.ke">Need any Assistance?</a></p>
+                                                <p><a href="/account/forgotpassword">Forgot Password?</a></p>
+                                                @*<%--<input type="submit" name="SI" id="idSIButton9" value="Sign in" class="default">--%>*@
+                                            </div>
+
+                        @*//< asp:Button runat = "server" ID = "btnLogin" OnClick = "btnLogin_Click" CssClass = "default" Text = "Log in" />*@
+                  <button type = "submit" class="default">Login</button>
+                   <br/>
+                   <br/>
+                   <p>c:
+                                ADIMS  </p>
+                                }
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div style="height: 50px; clear: both;"></div>
+        </div>
+    </div>
+    <div id="evDiv" class="footerHeight">
+        <img id="ev" alt="" height="0" style="visibility: hidden;">
+    </div>
+    <div id="footerTD" class="footer centerParent" style="clear: both; margin-left: 0px;">
+        <div class="center" style="width: 895px;">
+            <div id="idDiv_MSLogo" class="mslogo"></div>
+        </div>
+        <div class="center" style="width: 895px; clear: both;">
+            <table class="footer" cellpadding="0" cellspacing="0">
+                <tbody>
+                    <tr>
+                        <td align="right">
+                            <table cellpadding="0" cellspacing="0">
+                                <tbody>
+                                    <tr>
+                                        <td style="text-align: right;"><span></span></td>
+                                        <td class="footerspace" aria-hidden="true">&nbsp;</td>
+                                        <td class="footerspace" aria-hidden="true">&nbsp;</td>
+                                        <td style="text-align: right;"><a href="" class="footerlink" id="ftrFdbk">Contact Us</a></td>
+                                        <td class="footerspace" aria-hidden="true">&nbsp;</td>
+                                        <td class="footerspace" aria-hidden="true">&nbsp;</td>
+                                        <td style="text-align: right;"><a href="" class="footerlink" id="ftrTerms">Terms of Use</a></td>
+
+                                        <td class="footerspace" aria-hidden="true">&nbsp;</td>
+                                        <td style="text-align: right;"><span>ADIMS</span></td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+</body>
+
+</html>

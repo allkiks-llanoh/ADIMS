@@ -1,0 +1,181 @@
+﻿@model ADIMS.ViewModels.CreateQueueViewModel
+@{
+    ViewBag.Title = "Create Queue";
+    Layout = "~/Views/Shared/_AdimsLayout.cshtml";
+    var counties = (List<ADIMS.Models.county>)ViewBag.counties;
+    var seasons = (List<ADIMS.Models.season>)ViewBag.seasons;
+    var uais = (List<ADIMS.Models.uai>)ViewBag.uais;
+
+    ViewBag.Controller = "Crop Insurance";
+    ViewBag.Action = "Add Queue";
+}
+
+<script>
+    function getSubCounties() {
+        $("#sub_county").empty();
+        $.ajax({
+            type: 'POST',
+            url: '@Url.Action("GetSubCounties","Counties")',
+            datatype: 'json',
+            data: { id: $("#county").val() },
+            success: function (subcounties) {
+                $("#sub_county").append('<option value="' + "0" + '">' + "Select Sub County" + '</option>');
+                debugger;
+                $.each(subcounties, function (i, subcounty) {
+                    $("#sub_county").append('<option value="' + subcounty.Value + '">' + subcounty.Text + '</option>');
+                    // here we are adding option for States
+                });
+            },
+            error: function (ex) {
+                alert('No Sub Counties for the selected counties exist' + ex);
+            }
+        });
+    }
+
+    function getWards() {
+        $("#ward").empty();
+        $.ajax({
+            type: 'POST',
+            url: '@Url.Action("GetWards", "Counties")',
+            datatype: 'json',
+            data: { id: $("#sub_county").val() },
+            success: function (wards) {
+                $("#ward").append('<option value="' + "0" + '">' + "Select Ward" + '</option>');
+                debugger;
+                $.each(wards, function (i, ward) {
+                    $("#ward").append('<option value="' + ward.Value + '">' + ward.Text + '</option>');
+                    // here we are adding option for States
+                });
+            },
+            error: function (ex) {
+                alert('No Wards for the selected Sub County exist' + ex);
+            }
+        });
+    }
+
+    function getUAIs() {
+        $("#uai").empty();
+        $.ajax({
+            type: 'POST',
+            url: '@Url.Action("GetUAIs", "COunties")',
+            datatype: 'json',
+            data: { id: $("#ward").val() },
+            success: function (wards) {
+                $("#uai").append('<option value="' + "0" + '">' + "Select UAI" + '</option>');
+                debugger;
+                $.each(wards, function (i, ward) {
+                    $("#uai").append('<option value="' + ward.Value + '">' + ward.Text + '</option>');
+                    // here we are adding option for States
+                });
+            },
+            error: function (ex) {
+                alert('No Wards for the selected Sub County exist' + ex);
+            }
+        });
+    }
+</script>
+
+<div class="row">
+    <div class="col-lg-12">
+        <div class="ibox">
+            <div class="ibox-title">
+                @*<h5><img height="30" width="30" src="~/icons/user_icon.png" /> &nbsp; &nbsp;  Add New Season</h5>*@
+                <div class="ibox-tools">
+                    <a class="collapse-link">
+                        <i class="fa fa-chevron-up"></i>
+                    </a>
+
+                </div>
+            </div>
+            <div class="ibox-content">
+
+                @using (Html.BeginForm())
+                {
+                    @Html.AntiForgeryToken()
+                    <div class="row">
+                        <div class="col-md-4">
+                            <div class="form-group">
+                                <label>County</label><br />
+                                <div class="col-md-10" style="padding-left:0px;">
+                                    @Html.DropDownListFor(model => model.county, new SelectList(counties, "id", "name"), new { @class = "form-control", @onchange = "getSubCounties()" })
+                                    @Html.ValidationMessageFor(model => model.county, "", new { @class = "text-danger" })
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-md-4">
+                            <div class="form-group">
+                                <label>Sub County</label><br />
+                                <div class="col-md-10" style="padding-left:0px;">
+                                    @Html.DropDownListFor(model => model.sub_county, new SelectList(string.Empty, "id", "name"), new { @class = "form-control", @onchange = "getWards()" })
+                                    @*@Html.ValidationMessageFor(model => model.county, "", new { @class = "text-danger" })*@
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-md-4">
+                            <div class="form-group">
+                                <label>Ward</label><br />
+                                <div class="col-md-10" style="padding-left:0px;">
+                                    @Html.DropDownListFor(model => model.ward, new SelectList(string.Empty, "id", "name"), new { @class = "form-control", @onchange = "getUAIs()" })
+                                   
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <div class="col-md-4">
+                            <div class="form-group">
+                                <label>UAI</label><br />
+                                <div class="col-md-10" style="padding-left:0px;">
+                                    @Html.DropDownListFor(model => model.uai, new SelectList(uais, "id", "name"), new { @class = "form-control" })
+                                    
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <div class="col-md-4">
+                            <div class="form-group">
+                                <label>Queue Name</label><br />
+                                <div class="col-md-10" style="padding-left:0px;">
+                                    @Html.TextBoxFor(model => model.name, new { @class = "form-control" })
+                                    @Html.ValidationMessageFor(model => model.name, "", new { @class = "text-danger" })
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-md-4">
+                            <div class="form-group">
+                                <label>Season</label><br />
+                                <div class="col-md-10" style="padding-left:0px;">
+                                    @Html.DropDownListFor(model => model.season, new SelectList(seasons, "id", "name"), new { @class = "form-control" })
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-md-4">
+                            <div class="form-group">
+                                <label>Year</label><br />
+                                <div class="col-md-12" style="padding-left:0px;">
+                                    @Html.TextBoxFor(model => model.year, new { @class = "form-control" })
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <div class="form-group" style="margin-top:15px;">
+                            <div class="col-md-10">
+                                <input type="submit" value="Submit" class="btn btn-primary" />
+                            </div>
+                        </div>
+                    </div>
+                }
+
+            </div>
+        </div>
+    </div>
+</div>

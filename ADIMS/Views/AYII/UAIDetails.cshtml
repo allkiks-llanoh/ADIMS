@@ -1,0 +1,189 @@
+﻿@model ADIMS.Models.uai
+@{
+    ViewBag.Title = "UAI Details";
+
+    ViewBag.Action = "Details";
+    ViewBag.Controller = "AYII";
+
+    string county = (string)ViewBag.county;
+    string subcounty = (string)ViewBag.subcounty;
+
+    Layout = "~/Views/Shared/_AdimsLayout.cshtml";
+}
+
+<div class="row">
+    <div class="col-lg-12">
+        <div class="ibox float-e-margins">
+            <div class="ibox-title">
+                <h5>UAI Details</h5>
+                <div class="ibox-tools">
+
+                </div>
+            </div>
+            <div class="ibox-content">
+
+                <div class="row">
+                    <div class="col-md-12">
+                        <div class="row">
+
+                            <div class="col-md-4">
+                                <div class="form-group">
+                                    <label>Name:</label>
+                                    <span class="col-md-12" style="padding-left:0px;font-size:20px;font-weight:bold;color:#1ab394;">
+                                        @Model.name
+                                    </span>
+                                </div>
+                            </div>
+
+                            <div class="col-md-4">
+                                <div class="form-group">
+                                    <label style="font-weight:bold;">UAI Code:</label><br />
+                                    <span class="col-md-12" style="padding-left:0px;font-size:20px;">
+                                        @Model.code
+                                    </span>
+                                </div>
+                            </div>
+
+                        </div>
+
+                        <div class="row" style="margin-top:15px;">
+                            <div class="col-md-4">
+                                <div class="form-group">
+                                    <label style="font-weight:bold;">County:</label><br />
+                                    <span class="col-md-12" style="padding-left:0px;font-size:20px;">
+                                        @county
+                                    </span>
+                                </div>
+                            </div>
+
+                            <div class="col-md-4">
+                                <div class="form-group">
+                                    <label style="font-weight:bold;">Sub County:</label><br />
+                                    <span class="col-md-12" style="padding-left:0px;font-size:20px;">
+                                        @subcounty
+                                    </span>
+                                </div>
+                            </div>
+
+                            <div class="col-md-4">
+                                <div class="form-group">
+                                    <label style="font-weight:bold;">Ward:</label><br />
+                                    <span class="col-md-12" style="padding-left:0px;font-size:20px;">
+                                        @Model.ward1.name
+                                    </span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="row" style="margin-top:15px;">
+
+                            <div class="col-md-4">
+                                <div class="form-group">
+                                    <label style="font-weight:bold;">Total Insured Farms:</label><br />
+                                    <span class="col-md-12" style="padding-left:0px;font-size:20px;">
+                                        @Model.ayii_policy.Count
+                                    </span>
+                                </div>
+                            </div>
+
+                        </div>
+                        @*<div class="row">
+                                <a href="/ayii/updateuaivariables?uai=@Model.id" class="btn btn-primary">Update Variables</a>
+                            </div>*@
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<div class="row">
+    <div class="col-lg-12">
+        <div class="ibox float-e-margins">
+            <div class="ibox-title">
+                <h5>UAI Variables</h5>
+                <div class="ibox-tools">
+                    <a href="/ayii/updateuaivariables?uai=@Model.id" style="color:white;" class="btn btn-primary btn-rounded">&nbsp;Update&nbsp;</a>
+                    <a href="/ayii/uaihistory?uai=@Model.id" style="color:white;" class="btn btn-primary btn-rounded">&nbsp;History&nbsp;</a>
+                </div>
+            </div>
+            <div class="ibox-content">
+
+                <div>
+                    <table class="table table-striped">
+                        <thead>
+                            <tr>
+                                <th>Season</th>
+                                <th>Year</th>
+                                @*<th>Hist. Avg. (Bags/Acre)</th>*@
+                                <th>Avg. Yield (Bags/Acre)</th>
+                                <th>Trigger Value (Bags/Acre)</th>
+                                <th>Unit Value (Kshs/Kg)</th>
+                                <th>Loss Assessment</th>
+                                <th>Compensation (Kshs/Acre)</th>
+                                <th>Actions</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            @{ 
+                                const double kg_per_bag = 90;
+                                const double acres_per_ha = 2.47105;
+                                double multiplier = acres_per_ha / kg_per_bag;
+                            }
+                            @foreach (var variableset in Model.uai_variables.OrderByDescending(x => x.id).Take(1))
+                            {
+
+                                <tr>
+                                    <td>@(variableset.season1?.name)</td>
+                                    <td>@variableset.year</td>
+                                    @*<td>@( Math.Round(variableset.historical_average.Value * multiplier,2)) </td>*@
+                                    <td>@( variableset.average_yield.Value )</td>
+                                    <td>
+                                        @{
+                                            //var _triggerValue = variableset.historical_average * (variableset.coverage / 100);
+                                            var _triggerValue = variableset.historical_average.Value ;
+                                            <span>@( _triggerValue ) </span>
+                                        }
+                                    </td>
+                                    <td>@variableset.unitvalue</td>
+                                    <td>
+                                        @{
+                                            var result = _triggerValue - variableset.average_yield;
+                                            if (result < 0)
+                                            {
+                                                result = 0;
+                                            }
+
+                                            if (result > 0)
+                                            {
+                                                <span>Shortfall: @(result) Bags</span>
+                                                <span><i class="fa fa-check-circle text-success"></i> Claims Valid</span>
+                                            }
+                                            else
+                                            {
+                                                <span><i class="fa fa-ban text-danger"></i> Claims Invalid</span>
+                                            }
+                                        }
+                                    </td>
+                                    <td>
+                                        @{ 
+                                            var compensation = result * 90 * (variableset.unitvalue ?? 22);
+                                        }
+                                        Kshs. <span>@compensation</span>
+                                    </td>
+                                    <td>
+                                        <a href="/ayii/insuredfarms?uai=@variableset.uai&season=@variableset.season" class="btn btn-primary btn-rounded">Insured Farms</a>
+                                    </td>
+                                </tr>
+                            }
+
+                        <tbody>
+                    </table>
+                </div>
+
+            </div>
+        </div>
+    </div>
+</div>

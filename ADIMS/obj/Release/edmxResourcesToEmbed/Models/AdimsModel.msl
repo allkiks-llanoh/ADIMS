@@ -1,0 +1,198 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="adimsModelStoreContainer" CdmEntityContainer="Entities">
+    <EntitySetMapping Name="counties">
+      <EntityTypeMapping TypeName="adimsModel.county">
+        <MappingFragment StoreEntitySet="county">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="name" ColumnName="name" />
+          <ScalarProperty Name="code" ColumnName="code" />
+          <ScalarProperty Name="createdby" ColumnName="createdby" />
+          <ScalarProperty Name="createdon" ColumnName="createdon" />
+          <ScalarProperty Name="status" ColumnName="status" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="crops">
+      <EntityTypeMapping TypeName="adimsModel.crop">
+        <MappingFragment StoreEntitySet="crop">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="name" ColumnName="name" />
+          <ScalarProperty Name="icon" ColumnName="icon" />
+          <ScalarProperty Name="localnames" ColumnName="localnames" />
+          <ScalarProperty Name="maturityperiod" ColumnName="maturityperiod" />
+          <ScalarProperty Name="unitmeasure" ColumnName="unitmeasure" />
+          <ScalarProperty Name="createdby" ColumnName="createdby" />
+          <ScalarProperty Name="createdon" ColumnName="createdon" />
+          <ScalarProperty Name="status" ColumnName="status" />
+          <ScalarProperty Name="plantingmethod" ColumnName="plantingmethod" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="cropacreages">
+      <EntityTypeMapping TypeName="adimsModel.cropacreage">
+        <MappingFragment StoreEntitySet="cropacreage">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="farmid" ColumnName="farmid" />
+          <ScalarProperty Name="cropid" ColumnName="cropid" />
+          <ScalarProperty Name="variety" ColumnName="variety" />
+          <ScalarProperty Name="acreage" ColumnName="acreage" />
+          <ScalarProperty Name="createdby" ColumnName="createdby" />
+          <ScalarProperty Name="createdon" ColumnName="createdon" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="cropvarieties">
+      <EntityTypeMapping TypeName="adimsModel.cropvariety">
+        <MappingFragment StoreEntitySet="cropvariety">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="name" ColumnName="name" />
+          <ScalarProperty Name="cropid" ColumnName="cropid" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="farms">
+      <EntityTypeMapping TypeName="adimsModel.farm">
+        <MappingFragment StoreEntitySet="farm">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="name" ColumnName="name" />
+          <ScalarProperty Name="farmerid" ColumnName="farmerid" />
+          <ScalarProperty Name="area" ColumnName="area" />
+          <ScalarProperty Name="countyid" ColumnName="countyid" />
+          <ScalarProperty Name="wardid" ColumnName="wardid" />
+          <ScalarProperty Name="soiltype" ColumnName="soiltype" />
+          <ScalarProperty Name="lrnumber" ColumnName="lrnumber" />
+          <ScalarProperty Name="topography" ColumnName="topography" />
+          <ScalarProperty Name="status" ColumnName="status" />
+          <ScalarProperty Name="createdby" ColumnName="createdby" />
+          <ScalarProperty Name="createdon" ColumnName="createdon" />
+          <ScalarProperty Name="farmingmethod" ColumnName="farmingmethod" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="farmcoordinates">
+      <EntityTypeMapping TypeName="adimsModel.farmcoordinate">
+        <MappingFragment StoreEntitySet="farmcoordinate">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="farmid" ColumnName="farmid" />
+          <ScalarProperty Name="latitude" ColumnName="latitude" />
+          <ScalarProperty Name="longitude" ColumnName="longitude" />
+          <ScalarProperty Name="altitude" ColumnName="altitude" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="farmers">
+      <EntityTypeMapping TypeName="adimsModel.farmer">
+        <MappingFragment StoreEntitySet="farmer">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="adimsid" ColumnName="adimsid" />
+          <ScalarProperty Name="idnumber" ColumnName="idnumber" />
+          <ScalarProperty Name="passportno" ColumnName="passportno" />
+          <ScalarProperty Name="krapin" ColumnName="krapin" />
+          <ScalarProperty Name="phoneno" ColumnName="phoneno" />
+          <ScalarProperty Name="firstname" ColumnName="firstname" />
+          <ScalarProperty Name="middlename" ColumnName="middlename" />
+          <ScalarProperty Name="lastname" ColumnName="lastname" />
+          <ScalarProperty Name="dob" ColumnName="dob" />
+          <ScalarProperty Name="photo" ColumnName="photo" />
+          <ScalarProperty Name="address" ColumnName="address" />
+          <ScalarProperty Name="gender" ColumnName="gender" />
+          <ScalarProperty Name="maritalstatus" ColumnName="maritalstatus" />
+          <ScalarProperty Name="nextofkinname" ColumnName="nextofkinname" />
+          <ScalarProperty Name="nexofkintype" ColumnName="nexofkintype" />
+          <ScalarProperty Name="county" ColumnName="county" />
+          <ScalarProperty Name="ward" ColumnName="ward" />
+          <ScalarProperty Name="status" ColumnName="status" />
+          <ScalarProperty Name="createdon" ColumnName="createdon" />
+          <ScalarProperty Name="createdby" ColumnName="createdby" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="farmingmethods">
+      <EntityTypeMapping TypeName="adimsModel.farmingmethod">
+        <MappingFragment StoreEntitySet="farmingmethod">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="name" ColumnName="name" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="images">
+      <EntityTypeMapping TypeName="adimsModel.image">
+        <MappingFragment StoreEntitySet="image">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="link" ColumnName="link" />
+          <ScalarProperty Name="metadata" ColumnName="metadata" />
+          <ScalarProperty Name="createdon" ColumnName="createdon" />
+          <ScalarProperty Name="createdby" ColumnName="createdby" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="plantingmethods">
+      <EntityTypeMapping TypeName="adimsModel.plantingmethod">
+        <MappingFragment StoreEntitySet="plantingmethod">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="name" ColumnName="name" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="seasons">
+      <EntityTypeMapping TypeName="adimsModel.season">
+        <MappingFragment StoreEntitySet="season">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="name" ColumnName="name" />
+          <ScalarProperty Name="startdate" ColumnName="startdate" />
+          <ScalarProperty Name="enddate" ColumnName="enddate" />
+          <ScalarProperty Name="createdby" ColumnName="createdby" />
+          <ScalarProperty Name="createdon" ColumnName="createdon" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="soiltypes">
+      <EntityTypeMapping TypeName="adimsModel.soiltype">
+        <MappingFragment StoreEntitySet="soiltype">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="name" ColumnName="name" />
+          <ScalarProperty Name="description" ColumnName="description" />
+          <ScalarProperty Name="createdby" ColumnName="createdby" />
+          <ScalarProperty Name="createdon" ColumnName="createdon" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="subcounties">
+      <EntityTypeMapping TypeName="adimsModel.subcounty">
+        <MappingFragment StoreEntitySet="subcounty">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="name" ColumnName="name" />
+          <ScalarProperty Name="code" ColumnName="code" />
+          <ScalarProperty Name="countyid" ColumnName="countyid" />
+          <ScalarProperty Name="createdby" ColumnName="createdby" />
+          <ScalarProperty Name="createdon" ColumnName="createdon" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="unitofmeasures">
+      <EntityTypeMapping TypeName="adimsModel.unitofmeasure">
+        <MappingFragment StoreEntitySet="unitofmeasure">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="name" ColumnName="name" />
+          <ScalarProperty Name="weight" ColumnName="weight" />
+          <ScalarProperty Name="packaging" ColumnName="packaging" />
+          <ScalarProperty Name="createdby" ColumnName="createdby" />
+          <ScalarProperty Name="createdon" ColumnName="createdon" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="wards">
+      <EntityTypeMapping TypeName="adimsModel.ward">
+        <MappingFragment StoreEntitySet="ward">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="name" ColumnName="name" />
+          <ScalarProperty Name="code" ColumnName="code" />
+          <ScalarProperty Name="subcounty" ColumnName="subcounty" />
+          <ScalarProperty Name="createdon" ColumnName="createdon" />
+          <ScalarProperty Name="createdby" ColumnName="createdby" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

@@ -1,0 +1,159 @@
+﻿@{
+    ViewBag.Action = "Insurance";
+    ViewBag.Controller = "Dashboard";
+    ViewBag.Title = "Insurance Dashboard";
+    Layout = "~/Views/Shared/_AdimsLayout.cshtml";
+
+    //var farmers = (int)ViewBag.farmers;
+    //var farms = (int)ViewBag.farms;
+}
+
+<div class="row">
+
+    <div class="col-lg-3">
+        <div class="ibox">
+            <div class="ibox-content">
+                <h5>Insured Farmers</h5>
+                <h1 class="no-margins">300,478</h1>
+                <div class="stat-percent font-bold text-navy"> <i class="fa fa-bolt"></i></div>
+                <small>Total Insured Farmers</small>
+            </div>
+        </div>
+    </div>
+    <div class="col-lg-3">
+        <div class="ibox">
+            <div class="ibox-content">
+                <h5>Premiums</h5>
+                <h1 class="no-margins">3,556,992</h1>
+                <div class="stat-percent font-bold text-navy"> <i class="fa fa-bolt"></i></div>
+                <small>Total Payments</small>
+            </div>
+        </div>
+    </div>
+    
+    
+</div>
+
+<div class="row">
+    <div class="col-lg-3">
+        <div class="ibox">
+            <div class="ibox-content">
+                <h5>Total Reported Claims</h5>
+                <h1 class="no-margins">400,500</h1>
+                <div class="stat-percent font-bold text-navy"> <i class="fa fa-bolt"></i></div>
+                <small>Total Claims</small>
+            </div>
+        </div>
+    </div>
+
+    <div class="col-lg-3">
+        <div class="ibox">
+            <div class="ibox-content">
+                <h5>Total Claims Amount</h5>
+                <h1 class="no-margins">790,504,500</h1>
+                <div class="stat-percent font-bold text-navy"> <i class="fa fa-bolt"></i></div>
+                <small>Total Claims Amount</small>
+            </div>
+        </div>
+    </div>
+
+    <div class="col-lg-3">
+        <div class="ibox">
+            <div class="ibox-content">
+                <h5>Total Awarded Subsidies</h5>
+                <h1 class="no-margins">650,500</h1>
+                <div class="stat-percent font-bold text-navy"> <i class="fa fa-bolt"></i></div>
+                <small>Total Claims</small>
+            </div>
+        </div>
+    </div>
+
+    <div class="col-lg-3">
+        <div class="ibox">
+            <div class="ibox-content">
+                <h5>Total Subsidies Amount</h5>
+                <h1 class="no-margins">90,504,500</h1>
+                <div class="stat-percent font-bold text-navy"> <i class="fa fa-bolt"></i></div>
+                <small>Total Claims Amount</small>
+            </div>
+        </div>
+    </div>
+
+</div>
+
+<div class="row">
+    
+
+</div>
+
+<div class="row">
+    
+    <div class="row">
+        <div class="col-lg-12">
+            <div class="ibox float-e-margins">
+                <div class="ibox-content">
+                    <div>
+                        <span class="pull-right text-right">
+                            <small>Average value of Premiums in the past month in: <strong>All Counties</strong></small>
+                            <br />
+                            Total : 13,000
+                        </span>
+                        <h1 class="m-b-xs">3,556,992</h1>
+                        <h3 class="font-bold no-margins">
+                            Half-year margin
+                        </h3>
+                        <small>Crop Insurance.</small>
+                    </div>
+
+                    <div>
+                        <canvas id="lineChart" height="70"></canvas>
+                    </div>
+
+                    <div class="m-t-md">
+                        <small class="pull-right">
+                            <i class="fa fa-clock-o"> </i>
+                            Update on @DateTime.Now.ToShortDateString()
+                        </small>
+                        <small>
+                            <strong>Analysis of Premium:</strong>
+                        </small>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>                           
+
+</div>
+
+<div class="row">
+
+</div>
+
+<script>
+        $(document).ready(function() {
+
+            var lineData = {
+                labels: ["January", "February", "March", "April", "May", "June", "July"],
+                datasets: [
+                    {
+                        label: "Year's Subsidies (Millions)",
+                        backgroundColor: "rgba(26,179,148,0.5)",
+                        borderColor: "rgba(26,179,148,0.7)",
+                        pointBackgroundColor: "rgba(26,179,148,1)",
+                        pointBorderColor: "#fff",
+                        data: [28, 48, 40, 19, 86, 27, 90]
+                    }
+                ]
+            };
+
+            var lineOptions = {
+                responsive: true
+            };
+
+
+            var ctx = document.getElementById("lineChart").getContext("2d");
+            new Chart(ctx, {type: 'line', data: lineData, options:lineOptions});
+
+        });
+</script>

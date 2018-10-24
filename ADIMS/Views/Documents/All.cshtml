@@ -1,0 +1,60 @@
+﻿@model List<ADIMS.Models.document>
+@{
+    ViewBag.Action = "All";
+    ViewBag.Controller = "Documents";
+    ViewBag.Title = "All";
+    Layout = "~/Views/Shared/_AdimsLayout.cshtml";
+}
+
+<div class="wrapper wrapper-content">
+    <div class="row">
+        <div class="col-lg-3">
+            <div class="ibox float-e-margins">
+                <div class="ibox-content">
+                    <div class="file-manager">
+                        <h5>Show:</h5>
+                        <a href="#" class="file-control active">All</a>
+                        
+                        <div class="hr-line-dashed"></div>
+                        <a href="/Documents/Upload" class="btn btn-primary btn-block">Upload Files</a>
+                        <div class="hr-line-dashed"></div>
+                        <h5>Folders</h5>
+                        <ul class="folder-list" style="padding: 0">
+                            <li><a href="/Documents/All"><i class="fa fa-folder"></i> Files</a></li>
+                        </ul>
+                        <div class="clearfix"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-lg-9 animated fadeInRight">
+            <div class="row">
+                <div class="col-lg-12">
+
+                    @foreach (var item in Model)
+                    {
+                        <div class="file-box">
+                            <div class="file">
+                                <a href="#">
+                                    <span class="corner"></span>
+
+                                    <div class="icon">
+                                        <i class="fa fa-file"></i>
+                                    </div>
+                                    <div class="file-name">
+                                        <a href="@item.url">@item.name</a> 
+                                        <br />
+                                        <small>@item.dateadded.Value.ToShortDateString()</small>
+                                    </div>
+                                </a>
+                            </div>
+                        </div>
+                    }
+
+
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+

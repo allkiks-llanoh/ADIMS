@@ -1,0 +1,150 @@
+﻿@model ADIMS.Models.farmer
+@{
+    ViewBag.Title = "Farmer Policies";
+    Layout = "~/Views/Shared/_AdimsLayout.cshtml";
+
+    ViewBag.Controller = "Crop Insurance";
+    ViewBag.Action = "Policies";
+}
+
+<div class="row">
+    <div class="col-lg-12">
+        <div class="ibox">
+            <div class="ibox-title">
+                <h5> Farm Insurance Policies</h5>
+                <div class="ibox-tools">
+                    @*<a href="/farms/add/?farmer=@Model.id" style="color:white;" class="btn btn-primary btn-rounded">&nbsp;Add Farm&nbsp;</a>*@
+                </div>
+            </div>
+            <div class="ibox-content">
+                <div class="row">
+                    <div class="col-md-6">
+                        <div class="row">
+                            <div class="col-md-4">
+                                <div class="form-group">
+                                    <label>Registration No:</label>
+                                    <span class="col-md-12" style="padding-left:0px;font-size:20px;font-weight:bold;color:#1ab394;">
+                                        @Model.adimsid
+                                    </span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="row" style="margin-top:15px;">
+                            <div class="col-md-4">
+                                <div class="form-group">
+                                    <label style="font-weight:bold;">First Name</label><br />
+                                    <span class="col-md-12" style="padding-left:0px;font-size:20px;">
+                                        @Model.firstname
+                                    </span>
+                                </div>
+                            </div>
+                            <div class="col-md-4">
+                                <div class="form-group">
+                                    <label>Middle Name</label><br />
+                                    <span class="col-md-12" style="padding-left:0px;font-size:20px;">
+                                        @Model.middlename
+                                    </span>
+                                </div>
+                            </div>
+                            <div class="col-md-4">
+                                <div class="form-group">
+                                    <label>Last Name</label><br />
+                                    <span class="col-md-12" style="padding-left:0px;font-size:20px;">
+                                        @Model.lastname
+                                    </span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="row" style="margin-top:15px;">
+                            <div class="col-md-4">
+                                <div class="form-group">
+                                    <label>ID Number</label><br />
+                                    <span class="col-md-12" style="padding-left:0px;font-size:20px;">
+                                        @Model.idnumber
+                                    </span>
+                                </div>
+                            </div>
+                            <div class="col-md-4">
+                                <div class="form-group">
+                                    <label>Age</label><br />
+                                    <span class="col-md-12" style="padding-left:0px;font-size:20px;">
+                                        @{var age = ((DateTime.Now.Year - Model.dob?.Year));}@age
+                                    </span>
+                                </div>
+                            </div>
+                            <div class="col-md-4">
+                                <div class="form-group">
+                                    <label>Gender</label><br />
+                                    <span class="col-md-12" style="padding-left:0px;font-size:20px;">
+                                        @Model.gender
+                                    </span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="row" style="margin-top:15px;">
+                            <div class="col-md-4">
+                                <div class="form-group">
+                                    <label>County</label><br />
+                                    <span class="col-md-12" style="padding-left:0px;font-size:20px;">
+                                        @Model.county1.name
+                                    </span>
+                                </div>
+                            </div>
+                            <div class="col-md-4">
+                                <div class="form-group">
+                                    <label>Ward</label><br />
+                                    <span class="col-md-12" style="padding-left:0px;font-size:20px;">
+                                        @Model.ward1.name
+                                    </span>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+
+                    <div class="col-md-6">
+                        @* Some simple analytics here *@
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="row">
+    <div class="col-lg-12">
+        <div class="ibox">
+            <div class="ibox-title">
+                <h5> Farm Insurance Policies</h5>
+                <div class="ibox-tools">
+                    @*<a href="/farms/add/?farmer=@Model.id" style="color:white;" class="btn btn-primary btn-rounded">&nbsp;Add Farm&nbsp;</a>*@
+                </div>
+            </div>
+            <div class="ibox-content">
+                <div>
+                    <table class="table table-striped">
+                        <tbody>
+                            @foreach (var policy in Model.farms.SelectMany(x => x.farm_policy))
+                            {
+                                <tr>
+                                    <td><img height="30px" width="30px" src="~/icons/field.png" /></td>
+                                    <td style="vertical-align:middle;font-weight:bold;">@policy.policy_number</td>
+                                    <td style="vertical-align:middle;">@policy.insurance_company.name</td>
+                                    <td style="vertical-align:middle;">@policy.farm.name @policy.farm.area (Ha)</td>
+                                    <td style="vertical-align:middle;">@policy.crop.name </td>
+                                    <td style="vertical-align:middle;">@policy.sum_insured</td>
+                                    <td> <a href="/cropinsurance/claimrequest/?id=@policy.id" class="btn btn-info btn-rounded btn-sm pull-right">&nbsp;Make Claim&nbsp;</a> </td>
+                                </tr>
+                            }
+
+                        <tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

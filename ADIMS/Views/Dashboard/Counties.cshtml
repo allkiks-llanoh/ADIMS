@@ -1,0 +1,78 @@
+﻿
+@{
+    ViewBag.Title = "Counties Dashboard";
+    ViewBag.Controller = "Dashboard";
+    ViewBag.Action = "Counties";
+    Layout = "~/Views/Shared/_AdimsLayout.cshtml";
+}
+
+
+<script src="~/js/demo/chartjs-demo.js"></script>
+<div class="row">
+
+    <div class="col-lg-3">
+        <div class="ibox">
+            <div class="ibox-content">
+                <h5>Total Farmers</h5>
+                <h1 class="no-margins">300,478</h1>
+                <div class="stat-percent font-bold text-navy"> <i class="fa fa-bolt"></i></div>
+                <small>Total Farmers</small>
+            </div>
+        </div>
+    </div>
+
+    <div class="col-lg-3">
+        <div class="ibox">
+            <div class="ibox-content">
+                <h5>Average Yield Index</h5>
+                <h1 class="no-margins">3,556,992</h1>
+                <div class="stat-percent font-bold text-navy"> <i class="fa fa-bolt"></i></div>
+                <small>Total Payments</small>
+            </div>
+        </div>
+    </div>
+
+
+</div>
+
+
+<div class="row">
+    <div class="col-lg-6">
+        <div class="ibox float-e-margins">
+            <div class="ibox-title">
+                <h5>Simple pie chart</h5>
+            </div>
+            <div class="ibox-content">
+                <canvas id="doughnutChart" height="140"></canvas>
+            </div>
+        </div>
+    </div>
+
+    <div class="col-lg-6">
+        <div class="ibox float-e-margins">
+            <div class="ibox-title">
+                <h5>Horizontal bar chart </h5>
+            </div>
+            <div class="ibox-content">
+                <canvas id="barChart" height="140"></canvas>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="row">
+
+</div>
+
+<div class="row">
+
+</div>
+
+<script>
+        $(document).ready(function() {
+
+           
+
+
+        });
+</script>

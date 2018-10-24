@@ -1,0 +1,149 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="80add56f2d1d44b6868cd8247b44e660" Name="Diagram1">
+        <EntityTypeShape EntityType="adimsModel.actual_cropcutting_exercise" Width="1.5" PointX="5.25" PointY="97" IsExpanded="true" />
+        <EntityTypeShape EntityType="adimsModel.auditlog" Width="1.5" PointX="0.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="adimsModel.ayii_policy" Width="1.5" PointX="13.5" PointY="62.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="adimsModel.cce_queue_farms" Width="1.5" PointX="16.5" PointY="84" IsExpanded="true" />
+        <EntityTypeShape EntityType="adimsModel.claimrequest" Width="1.5" PointX="8.25" PointY="54.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="adimsModel.county" Width="1.5" PointX="0.75" PointY="57.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="adimsModel.county_weather_data" Width="1.5" PointX="8.25" PointY="99.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="adimsModel.crop" Width="1.5" PointX="9" PointY="48.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="adimsModel.crop_cutting_queue" Width="1.5" PointX="8.25" PointY="104.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="adimsModel.crop_production_statistics" Width="1.5" PointX="8.25" PointY="94.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="adimsModel.cropacreage" Width="1.5" PointX="8.25" PointY="62.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="adimsModel.cropvariety" Width="1.5" PointX="6" PointY="65" IsExpanded="true" />
+        <EntityTypeShape EntityType="adimsModel.disaster_warning_data" Width="1.5" PointX="11.25" PointY="99.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="adimsModel.document" Width="1.5" PointX="2.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="adimsModel.early_warning" Width="1.5" PointX="11.25" PointY="104.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="adimsModel.farm" Width="1.5" PointX="3" PointY="57.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="adimsModel.farm_actual_cropcutting_exercise" Width="1.5" PointX="10.5" PointY="83" IsExpanded="true" />
+        <EntityTypeShape EntityType="adimsModel.farm_policy" Width="1.5" PointX="11.25" PointY="57.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="adimsModel.farm_policy_premium" Width="1.5" PointX="13.5" PointY="58.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="adimsModel.farm_preliminary_cropcutting_exercise" Width="1.5" PointX="16.5" PointY="78.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="adimsModel.farmcoordinate" Width="1.5" PointX="5.25" PointY="74" IsExpanded="true" />
+        <EntityTypeShape EntityType="adimsModel.farmer" Width="1.5" PointX="6" PointY="56" IsExpanded="true" />
+        <EntityTypeShape EntityType="adimsModel.farmer_insurance" Width="1.5" PointX="8.25" PointY="58.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="adimsModel.farmer_photo" Width="1.5" PointX="11.25" PointY="53.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="adimsModel.farmingmethod" Width="1.5" PointX="0.75" PointY="54.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="adimsModel.fertilizer" Width="1.5" PointX="4.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="adimsModel.foodstocks_data" Width="1.5" PointX="11.25" PointY="94" IsExpanded="true" />
+        <EntityTypeShape EntityType="adimsModel.govt_subsidized_fertilizer" Width="1.5" PointX="5.25" PointY="106.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="adimsModel.input_cost_and_availability" Width="1.5" PointX="5.25" PointY="91.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="adimsModel.insurance_company" Width="1.5" PointX="9" PointY="67.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="adimsModel.photo" Width="1.5" PointX="9" PointY="44.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="adimsModel.planting_fertilizer" Width="1.5" PointX="14.25" PointY="99.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="adimsModel.plantingmethod" Width="1.5" PointX="6.75" PointY="48.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="adimsModel.preliminary_cropcutting_exercise" Width="1.5" PointX="14.25" PointY="87.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="adimsModel.premium_rate" Width="1.5" PointX="0.75" PointY="4.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="adimsModel.price_trend" Width="1.5" PointX="14.25" PointY="104.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="adimsModel.season" Width="1.5" PointX="11.25" PointY="64.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="adimsModel.setting" Width="1.5" PointX="2.75" PointY="4.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="adimsModel.soiltype" Width="1.5" PointX="0.75" PointY="63.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="adimsModel.subcounty" Width="1.5" PointX="3" PointY="140.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="adimsModel.top_dressing_fertilizer" Width="1.5" PointX="14.25" PointY="109.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="adimsModel.uai" Width="1.5" PointX="11.25" PointY="69.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="adimsModel.uai_variables" Width="1.5" PointX="13.5" PointY="70.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="adimsModel.uai_yield" Width="1.5" PointX="13.5" PointY="54.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="adimsModel.unitofmeasure" Width="1.5" PointX="6.75" PointY="50.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="adimsModel.ward" Width="1.5" PointX="3.75" PointY="52.25" IsExpanded="true" />
+        <AssociationConnector Association="adimsModel.FK_actual_cropcutting_exercise_county" ManuallyRouted="false" />
+        <AssociationConnector Association="adimsModel.FK_actual_cropcutting_exercise_subcounty" ManuallyRouted="false" />
+        <AssociationConnector Association="adimsModel.FK_actual_cropcutting_exercise_ward" ManuallyRouted="false" />
+        <AssociationConnector Association="adimsModel.fk_ccqactual" ManuallyRouted="false" />
+        <AssociationConnector Association="adimsModel.FK_farm_actual_cropcutting_exercise_actual_cropcutting_exercise" ManuallyRouted="false" />
+        <AssociationConnector Association="adimsModel.fk_cropacreage_ayii_policy" ManuallyRouted="false" />
+        <AssociationConnector Association="adimsModel.fk_farmer_ayii_policy" ManuallyRouted="false" />
+        <AssociationConnector Association="adimsModel.fk_season_ayii_policy" ManuallyRouted="false" />
+        <AssociationConnector Association="adimsModel.fk_uai_ayii_policy" ManuallyRouted="false" />
+        <AssociationConnector Association="adimsModel.fk_cce_queue_farms_queue" ManuallyRouted="false" />
+        <AssociationConnector Association="adimsModel.fk_ccqfarm" ManuallyRouted="false" />
+        <AssociationConnector Association="adimsModel.fk_ccqpreliminary" ManuallyRouted="false" />
+        <AssociationConnector Association="adimsModel.FK_claimrequest_farm" ManuallyRouted="false" />
+        <AssociationConnector Association="adimsModel.FK_claimrequest_farm_policy" ManuallyRouted="false" />
+        <AssociationConnector Association="adimsModel.fk_ccqcounty" ManuallyRouted="false" />
+        <AssociationConnector Association="adimsModel.fk_countycps" ManuallyRouted="false" />
+        <AssociationConnector Association="adimsModel.fk_countycwd" ManuallyRouted="false" />
+        <AssociationConnector Association="adimsModel.fk_countydwd" ManuallyRouted="false" />
+        <AssociationConnector Association="adimsModel.fk_countyew" ManuallyRouted="false" />
+        <AssociationConnector Association="adimsModel.fk_countyfd" ManuallyRouted="false" />
+        <AssociationConnector Association="adimsModel.fk_countygsf" ManuallyRouted="false" />
+        <AssociationConnector Association="adimsModel.fk_countyica" ManuallyRouted="false" />
+        <AssociationConnector Association="adimsModel.fk_countypf" ManuallyRouted="false" />
+        <AssociationConnector Association="adimsModel.fk_countypt" ManuallyRouted="false" />
+        <AssociationConnector Association="adimsModel.fk_countytdf" ManuallyRouted="false" />
+        <AssociationConnector Association="adimsModel.FK_farm_county" ManuallyRouted="false" />
+        <AssociationConnector Association="adimsModel.FK_farmer_county" ManuallyRouted="false" />
+        <AssociationConnector Association="adimsModel.FK_preliminary_cropcutting_exercise_county" ManuallyRouted="false" />
+        <AssociationConnector Association="adimsModel.FK_subcounty_county" ManuallyRouted="false" />
+        <AssociationConnector Association="adimsModel.fk_seasoncwd" ManuallyRouted="false" />
+        <AssociationConnector Association="adimsModel.fk_subcountycwd" ManuallyRouted="false" />
+        <AssociationConnector Association="adimsModel.FK_crop_plantingmethod" ManuallyRouted="false" />
+        <AssociationConnector Association="adimsModel.FK_crop_unitofmeasure" ManuallyRouted="false" />
+        <AssociationConnector Association="adimsModel.FK_cropacreage_crop" ManuallyRouted="false" />
+        <AssociationConnector Association="adimsModel.FK_cropvariety_crop" ManuallyRouted="false" />
+        <AssociationConnector Association="adimsModel.fk_farm_policy_crop" ManuallyRouted="false" />
+        <AssociationConnector Association="adimsModel.FK_preliminary_cropcutting_exercise_crop" ManuallyRouted="false" />
+        <AssociationConnector Association="adimsModel.FK_uai_yield_crop" ManuallyRouted="false" />
+        <AssociationConnector Association="adimsModel.fk_ccqseason" ManuallyRouted="false" />
+        <AssociationConnector Association="adimsModel.fk_ccqsubcounty" ManuallyRouted="false" />
+        <AssociationConnector Association="adimsModel.fk_ccqward" ManuallyRouted="false" />
+        <AssociationConnector Association="adimsModel.FK_crop_cutting_queue_uai" ManuallyRouted="false" />
+        <AssociationConnector Association="adimsModel.fk_seasoncps" ManuallyRouted="false" />
+        <AssociationConnector Association="adimsModel.fk_subcountycps" ManuallyRouted="false" />
+        <AssociationConnector Association="adimsModel.FK_cropacreage_cropvariety" ManuallyRouted="false" />
+        <AssociationConnector Association="adimsModel.FK_cropacreage_farm" ManuallyRouted="false" />
+        <AssociationConnector Association="adimsModel.FK_farm_actual_cropcutting_exercise_farm" ManuallyRouted="false" />
+        <AssociationConnector Association="adimsModel.FK_farm_preliminary_cropcutting_exercise_farm" ManuallyRouted="false" />
+        <AssociationConnector Association="adimsModel.fk_seasondwd" ManuallyRouted="false" />
+        <AssociationConnector Association="adimsModel.fk_subcountydwd" ManuallyRouted="false" />
+        <AssociationConnector Association="adimsModel.fk_seasonew" ManuallyRouted="false" />
+        <AssociationConnector Association="adimsModel.fk_subcountyew" ManuallyRouted="false" />
+        <AssociationConnector Association="adimsModel.FK_farm_farmer" ManuallyRouted="false" />
+        <AssociationConnector Association="adimsModel.FK_farm_farmingmethod" ManuallyRouted="false" />
+        <AssociationConnector Association="adimsModel.FK_farm_soiltype" ManuallyRouted="false" />
+        <AssociationConnector Association="adimsModel.FK_farm_ward" ManuallyRouted="false" />
+        <AssociationConnector Association="adimsModel.FK_farmcoordinate_farm" ManuallyRouted="false" />
+        <AssociationConnector Association="adimsModel.fk_farmid" ManuallyRouted="false" />
+        <AssociationConnector Association="adimsModel.FK_farm_actual_cropcutting_exercise_season" ManuallyRouted="false" />
+        <AssociationConnector Association="adimsModel.fk_farm_policy_premium" ManuallyRouted="false" />
+        <AssociationConnector Association="adimsModel.fk_insurancecompany" ManuallyRouted="false" />
+        <AssociationConnector Association="adimsModel.fk_farmer_policypremium" ManuallyRouted="false" />
+        <AssociationConnector Association="adimsModel.FK_farm_preliminary_cropcutting_exercise_preliminary_cropcutting_exercise" ManuallyRouted="false" />
+        <AssociationConnector Association="adimsModel.FK_farm_preliminary_cropcutting_exercise_season" ManuallyRouted="false" />
+        <AssociationConnector Association="adimsModel.fk_farmer_farmerinsurance" ManuallyRouted="false" />
+        <AssociationConnector Association="adimsModel.FK_farmer_ward" ManuallyRouted="false" />
+        <AssociationConnector Association="adimsModel.fk_farmerid" ManuallyRouted="false" />
+        <AssociationConnector Association="adimsModel.fk_photoid" ManuallyRouted="false" />
+        <AssociationConnector Association="adimsModel.fk_seasonfd" ManuallyRouted="false" />
+        <AssociationConnector Association="adimsModel.fk_subcountyfd" ManuallyRouted="false" />
+        <AssociationConnector Association="adimsModel.fk_seasongsf" ManuallyRouted="false" />
+        <AssociationConnector Association="adimsModel.fk_subcountygsf" ManuallyRouted="false" />
+        <AssociationConnector Association="adimsModel.fk_seasonica" ManuallyRouted="false" />
+        <AssociationConnector Association="adimsModel.fk_subcountyica" ManuallyRouted="false" />
+        <AssociationConnector Association="adimsModel.fk_seasonpf" ManuallyRouted="false" />
+        <AssociationConnector Association="adimsModel.fk_subcountypf" ManuallyRouted="false" />
+        <AssociationConnector Association="adimsModel.FK_preliminary_cropcutting_exercise_subcounty" ManuallyRouted="false" />
+        <AssociationConnector Association="adimsModel.FK_preliminary_cropcutting_exercise_ward" ManuallyRouted="false" />
+        <AssociationConnector Association="adimsModel.fk_seasonpt" ManuallyRouted="false" />
+        <AssociationConnector Association="adimsModel.fk_subcountypt" ManuallyRouted="false" />
+        <AssociationConnector Association="adimsModel.fk_seasontdf" ManuallyRouted="false" />
+        <AssociationConnector Association="adimsModel.FK_uai_yield_season" ManuallyRouted="false" />
+        <AssociationConnector Association="adimsModel.fk_subcountytdf" ManuallyRouted="false" />
+        <AssociationConnector Association="adimsModel.fk_uai_uai_variables" ManuallyRouted="false" />
+        <AssociationConnector Association="adimsModel.fk_uai_ward" ManuallyRouted="false" />
+        <AssociationConnector Association="adimsModel.FK_uai_yield_ward" ManuallyRouted="false" />
+        <AssociationConnector Association="adimsModel.FK_uai_variables_season" />
+        <EntityTypeShape EntityType="adimsModel.farmer_corp_progress" Width="1.5" PointX="5.375" PointY="3.75" />
+        <EntityTypeShape EntityType="adimsModel.farmer_grp_progress" Width="1.5" PointX="5.375" PointY="6.75" />
+        <EntityTypeShape EntityType="adimsModel.farmer_ind_progress" Width="1.5" PointX="7.375" PointY="0.75" />
+        <EntityTypeShape EntityType="adimsModel.cce_actual_progress" Width="1.5" PointX="0.75" PointY="7.75" />
+        <EntityTypeShape EntityType="adimsModel.cce_pre_progress" Width="1.5" PointX="2.75" PointY="7.75" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>

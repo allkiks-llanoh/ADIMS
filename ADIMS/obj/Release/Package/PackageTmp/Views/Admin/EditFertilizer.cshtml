@@ -1,0 +1,65 @@
+﻿@model ADIMS.ViewModels.AddFertilizerViewModel
+@{
+    ViewBag.Title = "Edit Fertilizer";
+
+    ViewBag.Action = "Fertilizer";
+    ViewBag.Controller = "Admin";
+
+    Layout = "~/Views/Shared/_AdimsLayout.cshtml";
+    var plantingTypes = new List<string>() { "Planting", "TopDressing" };
+}
+
+<div class="row">
+    <div class="col-lg-12">
+        <div class="ibox float-e-margins">
+
+            <div class="ibox-title">
+                <h5><img style="height:30px;width:30px;" src="~/icons/field.png" />  Edit Fertilizer</h5>
+                <div class="ibox-tools">
+                    <a class="collapse-link">
+                        <i class="fa fa-chevron-up"></i>
+                    </a>
+                </div>
+            </div>
+
+            <div class="ibox-content">
+
+                @using (Html.BeginForm("EditFertilizer", "Admin", FormMethod.Post))
+                {
+                    @Html.AntiForgeryToken()
+
+                    <div class="form-horizontal">
+
+                        <div class="col-lg-12">
+
+                            <div class="col-md-4">
+                                <div class="form-group">
+                                    <label>Fertilizer Name</label><br />
+                                    <div class="col-md-12" style="padding-left:0px;">
+                                        @Html.TextBoxFor(model => model.name, "", new { @class = "form-control" })
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="col-md-4">
+                                <div class="form-group">
+                                    <label>Application Method</label><br />
+                                    <div class="col-md-12" style="padding-left:0px;">
+                                        @Html.DropDownListFor(model => model.application_method, new SelectList(plantingTypes), "Select an item", new { @class = "form-control" })
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <div class="col-md-10">
+                                <input type="submit" value="Submit" class="btn btn-primary" />
+                            </div>
+                        </div>
+                    </div>
+                }
+            </div>
+
+        </div>
+    </div>
+</div>

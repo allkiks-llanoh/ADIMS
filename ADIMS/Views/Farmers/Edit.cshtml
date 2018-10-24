@@ -1,0 +1,408 @@
+﻿@model ADIMS.ViewModels.EditFarmerViewModel
+
+@{
+    ViewBag.Title = "Edit";
+
+    ViewBag.Action = "Edit";
+    ViewBag.Controller = "Farmers";
+
+    Layout = "~/Views/Shared/_AdimsLayout.cshtml";
+
+    var genders = new List<string>() { "Male", "Female" };
+    var maritalstatus = new List<string>() { "Single", "Married", "Divorced", "Deceased" };
+    var nextofkintypes = new List<string>() { "Parent", "Child", "Spouse", "Sibling", "Grand Parent", "Other" };
+
+    var counties = (List<ADIMS.Models.county>)ViewBag.counties;
+    var wards = (List<ADIMS.Models.ward>)ViewBag.wards;
+}
+
+<link href="~/css/plugins/datapicker/datepicker3.css" rel="stylesheet">
+<link href="~/css/plugins/iCheck/custom.css" rel="stylesheet">
+<link href="~/css/plugins/steps/jquery.steps.css" rel="stylesheet">
+
+<script>
+
+    function getSubCounties() {
+        $("#subcounty").empty();
+        $.ajax({
+            type: 'POST',
+            url: '@Url.Action("GetSubCounties","Counties")',
+            datatype: 'json',
+            data: { id: $("#county").val() },
+            success: function (subcounties) {
+                $("#subcounty").append('<option value="' + "0" + '">' + "Select Sub County" + '</option>');
+                debugger;
+                $.each(subcounties, function (i, subcounty) {
+                    $("#subcounty").append('<option value="' + subcounty.Value + '">' + subcounty.Text + '</option>');
+                    // here we are adding option for States
+                });
+            },
+            error: function (ex) {
+                alert('No Sub Counties for the selected counties exist' + ex);
+            }
+        });
+    }
+
+    function getWards() {
+        $("#ward").empty();
+        $.ajax({
+            type: 'POST',
+            url: '@Url.Action("GetWards", "Counties")',
+            datatype: 'json',
+            data: { id: $("#subcounty").val() },
+            success: function (wards) {
+                $("#ward").append('<option value="' + "0" + '">' + "Select Ward" + '</option>');
+                debugger;
+                $.each(wards, function (i, ward) {
+                    $("#ward").append('<option value="' + ward.Value + '">' + ward.Text + '</option>');
+                    // here we are adding option for States
+                });
+            },
+            error: function (ex) {
+                alert('No Wards for the selected Sub County exist' + ex);
+            }
+        });
+    }
+
+
+</script>
+
+<div class="row">
+    <div class="col-lg-12">
+        <div class="ibox">
+            <div class="ibox-title">
+                <h5><img height="30px" width="30px" src="~/icons/user_icon.png" /> &nbsp; &nbsp;  Edit Farmer</h5>
+                <div class="ibox-tools">
+                    <a class="collapse-link">
+                        <i class="fa fa-chevron-up"></i>
+                    </a>
+
+                </div>
+            </div>
+            <div class="ibox-content">
+
+                @*<div class="progress progress-striped active">
+                        <div id="progress" style="width: 25%" aria-valuemax="100" aria-valuemin="0" aria-valuenow="75" role="progressbar" class="progress-bar progress-bar-success">
+                            <span class="sr-only">25% Complete (success)</span>
+                        </div>
+                    </div>*@
+
+                @*<form id="form" action="#" class="wizard-big">*@
+                @using (Html.BeginForm("Edit", "Farmers", FormMethod.Post, new { @class = "wizard-big", @id = "form" }))
+                {
+                    <h1>Basic Info</h1>
+                    <fieldset>
+
+                        <div class="row col-lg-12">
+                            <div>
+                                @Html.HiddenFor(x => x.id)
+                            </div>
+
+                            <div class="col-md-4">
+                                <div class="form-group">
+                                    <label>First Name</label><br />
+                                    <div class="col-md-12" style="padding-left:0px;">
+                                        @Html.TextBoxFor(model => model.firstname, new { @class = "form-control" })
+                                        @Html.ValidationMessageFor(model => model.firstname, "", new { @class = "text-danger" })
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="col-md-4">
+                                <div class="form-group">
+                                    <label>Middle Name</label><br />
+                                    <div class="col-md-12" style="padding-left:0px;">
+                                        @Html.TextBoxFor(model => model.middlename, new { @class = "form-control" })
+                                        @Html.ValidationMessageFor(model => model.middlename, "", new { @class = "text-danger" })
+                                    </div>
+                                </div>
+
+                            </div>
+
+                            <div class="col-md-4">
+                                <div class="form-group">
+                                    <label>Last Name</label><br />
+                                    <div class="col-md-12" style="padding-left:0px;">
+                                        @Html.TextBoxFor(model => model.lastname, new { @class = "form-control" })
+                                        @Html.ValidationMessageFor(model => model.lastname, "", new { @class = "text-danger" })
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+
+                        <div class="row col-lg-12" style="margin-top:15px;">
+
+                            <div class="col-md-4">
+                                <div class="form-group">
+                                    <label>Gender</label><br />
+                                    <div class="col-md-12" style="padding-left:0px;">
+                                        @Html.DropDownListFor(model => model.gender, new SelectList(genders, 0), new { @class = "form-control" })
+                                        @Html.ValidationMessageFor(model => model.gender, "", new { @class = "text-danger" })
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="col-md-4">
+                                <div class="form-group">
+                                    <label>Marital Status</label><br />
+                                    <div class="col-md-12" style="padding-left:0px;">
+                                        @Html.DropDownListFor(model => model.maritalstatus, new SelectList(maritalstatus, 0), new { @class = "form-control" })
+                                        @Html.ValidationMessageFor(model => model.maritalstatus, "", new { @class = "text-danger" })
+                                    </div>
+                                </div>
+                            </div>
+
+
+                        </div>
+
+                        <div class="row col-lg-12" style="margin-top:15px;">
+                            <div class="col-md-4">
+                                <div class="form-group">
+                                    <label>Phone Number</label><br />
+                                    <div class="col-md-12" style="padding-left:0px;">
+                                        @Html.TextBoxFor(model => model.phoneno, new { @class = "form-control", @maxlength="10" })
+                                        @Html.ValidationMessageFor(model => model.phoneno, "", new { @class = "text-danger" })
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="col-md-4">
+                                <div class="form-group">
+                                    <label>Year of Birth</label><br />
+                                    <div class="col-md-12" style="padding-left:0px;">
+                                        @Html.TextBoxFor(model => model.dob, new { @class = "form-control", @id = "data_1",@type="number" })
+                                        @Html.ValidationMessageFor(model => model.dob, "", new { @class = "text-danger" })
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                    </fieldset>
+
+                    <h1>Identification</h1>
+                    <fieldset>
+
+                        <div class="row col-lg-12">
+
+                            <div class="col-md-4">
+                                <div class="form-group">
+                                    <label>ID Number</label><br />
+                                    <div class="col-md-10" style="padding-left:0px;">
+                                        @Html.TextBoxFor(model => model.idnumber, new { @class = "form-control", @maxlength="8" })
+                                        @Html.ValidationMessageFor(model => model.idnumber, "", new { @class = "text-danger" })
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="col-md-4">
+                                <div class="form-group">
+                                    <label>PassPort</label><br />
+                                    <div class="col-md-10" style="padding-left:0px;">
+                                        @Html.TextBoxFor(model => model.passportno, new { @class = "form-control" })
+                                        @Html.ValidationMessageFor(model => model.passportno, "", new { @class = "text-danger" })
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="col-md-4">
+
+                                <div class="form-group">
+                                    <label>KRA Pin</label><br />
+                                    <div class="col-md-10" style="padding-left:0px;">
+                                        @Html.TextBoxFor(model => model.krapin, new { @class = "form-control" })
+                                        @Html.ValidationMessageFor(model => model.krapin, "", new { @class = "text-danger" })
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+
+
+                    </fieldset>
+                    <h1>Next of Kin</h1>
+                    <fieldset>
+
+                        <div class="row col-lg-12">
+
+                            <div class="col-md-4">
+                                <div class="form-group">
+                                    <label>Next of Kin</label><br />
+                                    <div class="col-md-12" style="padding-left:0px;">
+                                        @Html.TextBoxFor(model => model.nextofkinname, new { @class = "form-control" })
+                                        @Html.ValidationMessageFor(model => model.nextofkinname, "", new { @class = "text-danger" })
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="col-md-4">
+                                <div class="form-group">
+                                    <label>Next of Kin Type</label><br />
+                                    <div class="col-md-12" style="padding-left:0px;">
+                                        @Html.DropDownListFor(model => model.nexofkintype, new SelectList(nextofkintypes), new { @class = "form-control" })
+                                        @Html.ValidationMessageFor(model => model.nexofkintype, "", new { @class = "text-danger" })
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+
+                    </fieldset>
+                    <h1>Location</h1>
+                    <fieldset>
+
+                        <div class="row col-lg-12">
+
+                            <div class="col-md-4">
+                                <div class="form-group">
+                                    <label>Address</label><br />
+                                    <div class="col-md-10" style="padding-left:0px;">
+                                        @Html.TextBoxFor(model => model.address, new { @class = "form-control" })
+                                        @Html.ValidationMessageFor(model => model.address, "", new { @class = "text-danger" })
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="row col-lg-12" style="margin-top:10px;">
+
+                                <div class="col-md-4">
+                                    <div class="form-group">
+                                        <label>County</label><br />
+                                        <div class="col-md-10" style="padding-left:0px;">
+                                            @Html.DropDownListFor(model => model.county, new SelectList(counties, "id", "name"), new { @class = "form-control", @onchange = "getSubCounties()" })
+                                            @Html.ValidationMessageFor(model => model.county, "", new { @class = "text-danger" })
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="col-md-4">
+                                    <div class="form-group">
+                                        <label>Sub County</label><br />
+                                        <div class="col-md-10" style="padding-left:0px;">
+                                            @Html.DropDownList("subcounty", new SelectList(string.Empty, "id", "name"), new { @class = "form-control", @onchange = "getWards()" })
+                                            @*@Html.ValidationMessageFor(model => model.county, "", new { @class = "text-danger" })*@
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="col-md-4">
+                                    <div class="form-group">
+                                        <label>Ward</label><br />
+                                        <div class="col-md-10" style="padding-left:0px;">
+                                            @Html.DropDownListFor(model => model.ward, new SelectList(string.Empty, "id", "name"), new { @class = "form-control" })
+                                            @Html.ValidationMessageFor(model => model.ward, "", new { @class = "text-danger" })
+                                        </div>
+                                    </div>
+                                </div>
+
+                            </div>
+
+
+                        </div>
+
+                    </fieldset>
+                }
+                @*</form>*@
+            </div>
+        </div>
+    </div>
+</div>
+
+<script src="~/js/plugins/datapicker/bootstrap-datepicker.js"></script>
+<!-- Steps -->
+<script src="~/js/plugins/staps/jquery.steps.min.js"></script>
+<!-- Jquery Validate -->
+<script src="~/js/plugins/validate/jquery.validate.min.js"></script>
+
+<script>
+        $(document).ready(function(){
+
+            $('#data_1 .input-group.date').datepicker({
+                todayBtn: "linked",
+                keyboardNavigation: false,
+                forceParse: false,
+                calendarWeeks: true,
+                autoclose: true
+            });
+
+            $("#wizard").steps();
+            $("#form").steps({
+                bodyTag: "fieldset",
+                onStepChanging: function (event, currentIndex, newIndex)
+                {
+                    // Always allow going backward even if the current step contains invalid fields!
+                    if (currentIndex > newIndex)
+                    {
+
+                        return true;
+                    }
+
+                    // Forbid suppressing "Warning" step if the user is to young
+                    if (newIndex === 3 && Number($("#age").val()) < 18)
+                    {
+                        return false;
+                    }
+
+                    var form = $(this);
+
+                    // Clean up if user went backward before
+                    if (currentIndex < newIndex)
+                    {
+
+                        // To remove error styles
+                        $(".body:eq(" + newIndex + ") label.error", form).remove();
+                        $(".body:eq(" + newIndex + ") .error", form).removeClass("error");
+                    }
+
+                    // Disable validation on fields that are disabled or hidden.
+                    form.validate().settings.ignore = ":disabled,:hidden";
+
+                    // Start validation; Prevent going forward if false
+                    return form.valid();
+                },
+                onStepChanged: function (event, currentIndex, priorIndex)
+                {
+                    //$("#progress").width( (currentIndex) / 4 * 100 % + "%");
+                    // Suppress (skip) "Warning" step if the user is old enough.
+                    if (currentIndex === 2 && Number($("#age").val()) >= 18)
+                    {
+                        $(this).steps("next");
+                    }
+
+                    // Suppress (skip) "Warning" step if the user is old enough and wants to the previous step.
+                    if (currentIndex === 2 && priorIndex === 3)
+                    {
+                        $(this).steps("previous");
+                    }
+                },
+                onFinishing: function (event, currentIndex)
+                {
+                    var form = $(this);
+
+                    // Disable validation on fields that are disabled.
+                    // At this point it's recommended to do an overall check (mean ignoring only disabled fields)
+                    form.validate().settings.ignore = ":disabled";
+
+                    // Start validation; Prevent form submission if false
+                    return form.valid();
+                },
+                onFinished: function (event, currentIndex)
+                {
+                    var form = $(this);
+
+                    // Submit form input
+                    form.submit();
+                }
+            }).validate({
+                        errorPlacement: function (error, element)
+                        {
+                            element.before(error);
+                        },
+                        rules: {
+                            confirm: {
+                                equalTo: "#password"
+                            }
+                        }
+                    });
+       });
+</script>

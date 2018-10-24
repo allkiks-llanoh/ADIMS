@@ -1,0 +1,18 @@
+C:\Users\ERNEST\Documents\Visual Studio 2017\Projects\ADIMS\ADIMSTest\bin\Debug\ADIMSTest.dll
+C:\Users\ERNEST\Documents\Visual Studio 2017\Projects\ADIMS\ADIMSTest\bin\Debug\ADIMSTest.pdb
+C:\Users\ERNEST\Documents\Visual Studio 2017\Projects\ADIMS\ADIMSTest\obj\Debug\ADIMSTest.csprojResolveAssemblyReference.cache
+C:\Users\ERNEST\Documents\Visual Studio 2017\Projects\ADIMS\ADIMSTest\obj\Debug\ADIMSTest.dll
+C:\Users\ERNEST\Documents\Visual Studio 2017\Projects\ADIMS\ADIMSTest\obj\Debug\ADIMSTest.pdb
+C:\Users\ERNEST\Documents\Visual Studio 2017\Projects\ADIMS\ADIMSTest\obj\Debug\ADIMSTest.csproj.CoreCompileInputs.cache
+C:\Users\collo\source\repos\ADIMS\ADIMSTest\bin\Debug\ADIMSTest.dll
+C:\Users\collo\source\repos\ADIMS\ADIMSTest\bin\Debug\ADIMSTest.pdb
+C:\Users\collo\source\repos\ADIMS\ADIMSTest\obj\Debug\ADIMSTest.csprojResolveAssemblyReference.cache
+C:\Users\collo\source\repos\ADIMS\ADIMSTest\obj\Debug\ADIMSTest.csproj.CoreCompileInputs.cache
+C:\Users\collo\source\repos\ADIMS\ADIMSTest\obj\Debug\ADIMSTest.dll
+C:\Users\collo\source\repos\ADIMS\ADIMSTest\obj\Debug\ADIMSTest.pdb
+C:\Users\LLANOH\source\repos\ADIMS\ADIMSTest\bin\Debug\ADIMSTest.dll
+C:\Users\LLANOH\source\repos\ADIMS\ADIMSTest\bin\Debug\ADIMSTest.pdb
+C:\Users\LLANOH\source\repos\ADIMS\ADIMSTest\obj\Debug\ADIMSTest.csprojResolveAssemblyReference.cache
+C:\Users\LLANOH\source\repos\ADIMS\ADIMSTest\obj\Debug\ADIMSTest.csproj.CoreCompileInputs.cache
+C:\Users\LLANOH\source\repos\ADIMS\ADIMSTest\obj\Debug\ADIMSTest.dll
+C:\Users\LLANOH\source\repos\ADIMS\ADIMSTest\obj\Debug\ADIMSTest.pdb

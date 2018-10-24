@@ -1,0 +1,96 @@
+﻿@using ADIMS.Models
+@model List<auditlog>
+@{
+    ViewBag.Action = "List";
+    ViewBag.Controller = "Farmers";
+    ViewBag.Title = "AuditLogs";
+    Layout = "~/Views/Shared/_AdimsLayout.cshtml";
+}
+
+<link href="~/css/plugins/dataTables/datatables.min.css" rel="stylesheet">
+<script src="~/js/plugins/dataTables/datatables.min.js"></script>
+
+<div class="row">
+    <div class="col-lg-12">
+        <div class="ibox float-e-margins">
+            <div class="ibox-title">
+                <h5>Audit Logs</h5>
+                <div class="ibox-tools">
+                    <a href="/farmers/newfarmingentity" style="color:white;" class="btn btn-primary btn-rounded">&nbsp;Add Farmer&nbsp;</a>
+                </div>
+            </div>
+            <div class="ibox-content">
+
+                <div class="table-responsive">
+                    <table class="table table-striped table-bordered table-hover dataTables-example">
+                        <thead>
+                            <tr>
+                                <td>id</td>
+                                <th>User</th>
+                                <th>Date</th>
+                                <th>Activity</th>
+                                <th>Details</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            @foreach (var item in Model)
+                            {
+                                <tr class="gradeX">
+                                    <td>@item.id</td>
+                                    <td>@item.email</td>
+                                    <td>@item.date_created.GetValueOrDefault().ToShortDateString()</td>
+                                    <td>@item.activity</td>
+                                    <td>@item.description</td>
+                                </tr>
+                            }
+
+                        </tbody>
+                        <tfoot>
+                            <tr>
+                                <th>id</th>
+                                <th>User</th>
+                                <th>Date</th>
+                                <th>Activity</th>
+                                <th>Details</th>
+                            </tr>
+                        </tfoot>
+                    </table>
+                </div>
+
+            </div>
+        </div>
+    </div>
+</div>
+
+<script>
+        $(document).ready(function(){
+            $('.dataTables-example').DataTable({
+                pageLength: 25,
+                order: [[0, "desc"]],
+                columnDefs: [{ targets: [0], visible: false, searchable: false }],
+                responsive: true,
+                dom: '<"html5buttons"B>lTfgitp',
+                buttons: [
+                    { extend: 'copy'},
+                    {extend: 'csv'},
+                    {extend: 'excel', title: 'AuditLogs'},
+                    {extend: 'pdf', title: 'AuditLogs'},
+
+                    {extend: 'print',
+                     customize: function (win){
+                            $(win.document.body).addClass('white-bg');
+                            $(win.document.body).css('font-size', '10px');
+
+                            $(win.document.body).find('table')
+                                    .addClass('compact')
+                                    .css('font-size', 'inherit');
+                    }
+                    }
+                ]
+
+            });
+
+        });
+
+</script>
+

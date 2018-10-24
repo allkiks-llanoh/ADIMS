@@ -1,0 +1,113 @@
+﻿@using ADIMS.Models
+@model LoginViewModel
+@{
+    ViewBag.Title = "Log in";
+    Layout = null;
+}
+
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>ADIMS - Login</title>
+
+    <link href="~/css/bootstrap.min.css" rel="stylesheet">
+    <link href="~/font-awesome/css/font-awesome.css" rel="stylesheet">
+
+    <link href="~/css/animate.css" rel="stylesheet">
+    <link href="~/css/style.css" rel="stylesheet">
+    <link href="~/css/critical.css" rel="stylesheet" />
+</head>
+<body ng-app="loginApp">
+    <div class="background-element">
+        <div id="login-panel" class="login-panel" style="display:block;">
+                    <div class="login-panel-inner">
+                        <div class="panel panel-more">
+                            <div class="panel-title">
+                                <center id="page-loading">
+                                    <div class="spinner">
+                                        <div class="bounce1"></div>
+                                        <div class="bounce2"></div>
+                                        <div class="bounce3"></div>
+                                    </div>
+                                </center>
+                                <div ng-view>
+                                    
+
+                                </div>
+                            </div>
+                            <div class="panel-footer footer footer-more">
+                                <div class="col-sm-8 footer-inner" style="height:100%;">
+                                    <div class="copyright-area">
+                                        <h4>&copy; @DateTime.Now.Year ADIMS</h4>
+
+                                        <ul class="list-inline">
+                                            <li class="list-group-item list-group-item-more">
+                                                <a href="">
+                                                    Terms &amp; Conditions
+                                                </a>
+                                            </li>
+                                            <li class="list-group-item list-group-item-more">
+                                                <a href="" >
+                                                    Privacy &amp; Cookies
+                                                </a>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                    
+                                </div>
+                                <div class="col-sm-4">
+                                    <img class="img-responsive govt-logo" src="~/icons/COA_edited_2.png" />
+
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+               
+        </div>
+
+        <div class="bg-info login-side-main">
+            <div class="container container-more">
+                <div class="outer">
+                    <div class="middle">
+                        <div class="inner">
+
+                            <h1>Ministry of Agriculture, Livestock and Fisheries.</h1>
+                            <br />
+                            <h4 style="font-style:italic;">Fun fact - wheat</h4>
+                            <br />
+                            <blockquote class="col-md-5">
+                                Never refrigerate any bread product. 
+                                Bread products go stale up to six times 
+                                faster in the refrigerator. Leave these products at 
+                                room temperature or freeze them.
+                            </blockquote>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script type="text/javascript">
+        document.addEventListener("DOMContentLoaded", function(event) {
+            /*VANILLA JAVASCRIPT*/
+            var element = document.getElementById("page-loading");
+            element.parentNode.removeChild(element);
+            /* OR WITH jQuery*/
+            $('#page-loading')
+                .fadeOut('slow');
+        });
+    </script>
+    <script src="~/js/angular.js"></script>
+    <script src="~/js/angular-route.js"></script>
+
+    <script src="~/js/angular-resource.js"></script>
+    <script src="~/app/loginApp.js"></script>
+    <script src="~/app/accountsService.js"></script>
+
+    <script src="~/app/accountsController.js"></script>
+</body>
+</html>

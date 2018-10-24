@@ -1,0 +1,357 @@
+﻿@using ADIMS.Models;
+
+@model ADIMS.ViewModels.DataCapture_CropProduction.AddEarlyWarningViewModel
+@{
+    ViewBag.Title = "Early Warning Indicator Levels";
+    ViewBag.Action = "Add Early Warning";
+    ViewBag.Controller = "Crop Production";
+    var user = ViewBag.userinfo as Tuple<string, county, subcounty>;
+    var crops = (List<ADIMS.Models.crop>)ViewBag.crops;
+
+    var seasons = (List<season>)ViewBag.seasons;
+
+    Layout = "~/Views/Shared/_AdimsLayout.cshtml";
+    string[] months = "January,February,March,April,May,June,July,August,September,October,November,December".Split(',');
+}
+<div class="ibox ibox-more">
+
+    <div class="ibox-title">
+        <h5><i class="fa fa-warning" style="font-size:18px;"></i> Early Warning Indicators</h5>
+        <div class="ibox-tools">
+            <a class="collapse-link">
+                <i class="fa fa-chevron-up"></i>
+            </a>
+        </div>
+    </div>
+
+    <div class="ibox-content">
+
+        @using (Html.BeginForm("AddEarlyWarning", "CropProduction", FormMethod.Post, new { @class = "" }))
+
+        {
+            @Html.AntiForgeryToken()
+            <div class="row">
+                <div class="form-group col-md-4">
+                    <label>County</label>
+                    @Html.HiddenFor(model => model.county)
+                    @Html.TextBox("countyid", @user.Item2.name, new { @class = "form-control", @readonly = true })
+                </div>
+                <div class="form-group col-md-4">
+                    <label>Sub-County</label>
+                    @Html.HiddenFor(model => model.sub_county)
+                    @Html.TextBox("subcountyid", @user.Item2.name, new { @class = "form-control", @readonly = true })
+                </div>               
+                <div class="form-group col-md-3">
+                    <label>Month</label>
+                    <select class="form-control">
+                        <option value="null">Select an item</option>
+                        @{
+                            for (int i = 0; i < months.Length; i++)
+                            {
+                                <option value="@i">@months[i]</option>
+                            }
+                        }
+                    </select>
+                </div>
+                <div class="col-md-3">
+                    <div class="form-group">
+                        <label>Season</label><br />
+                        <div class="col-md-12" style="padding-left:0px;">
+                            @Html.DropDownListFor(model => model.season, new SelectList(seasons, "id", "name"), new { @class = "form-control" })
+
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <br />
+            <div class="row">
+                <div class="col-md-4">
+                    <div class="form-group">
+                        <label>Food Crop</label>
+
+                        @Html.DropDownListFor(x => x.crop, new SelectList(crops,"id","name"), new { @class="form-control"})
+                        
+                    </div>
+                </div>
+            </div>
+            <br/>
+                <div class="row">
+                    <div class="form-group">
+                        <div class="col-md-3">
+                            <h4>Crop Growth Rate</h4>
+                        </div>
+                        <div class="col-md-2">
+                            <div class="radio radio-info radio-inline">
+                                @Html.RadioButtonFor(x => x.crop_growth_stage,"0",new { @id= "crop_growth_stage_normal" })
+                                <label for="crop_growth_stage_normal">
+                                    Normal
+                                </label>
+                            </div>
+                        </div>
+                        <div class="col-md-2">
+                            <div class="radio radio-warning radio-inline">
+                                @Html.RadioButtonFor(x => x.crop_growth_stage, "1", new { @id = "crop_growth_stage_alert" })
+                                <label for="crop_growth_stage_alert">
+                                    Alarm/Alert
+                                </label>
+                            </div>
+                        </div>
+                        <div class="col-md-2">
+                            <div class="radio radio-danger radio-inline">
+                                @Html.RadioButtonFor(x => x.crop_growth_stage, "2", new { @id = "crop_growth_stage_danger" })
+                                <label for="crop_growth_stage_danger">
+                                    Emergency
+                                </label>
+                            </div>
+                        </div>
+                        
+
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="form-group">
+                        <div class="col-md-3">
+                            <h4>Rainfall Perfomance</h4>
+                        </div>
+                        <div class="col-md-2">
+                            <div class="radio radio-info radio-inline">
+                                @Html.RadioButtonFor(x => x.rainfall_perfomance, "0", new { @id = "rainfall_perfomance_normal" })
+                                <label for="rainfall_perfomance_normal">
+                                    Normal
+                                </label>
+                            </div>
+                        </div>
+                        <div class="col-md-2">
+                            <div class="radio radio-warning radio-inline">
+                                @Html.RadioButtonFor(x => x.rainfall_perfomance, "1", new { @id = "rainfall_perfomance_alert" })
+                                <label for="rainfall_perfomance_alert">
+                                    Alarm/Alert
+                                </label>
+                            </div>
+                        </div>
+                        <div class="col-md-2">
+                            <div class="radio radio-danger radio-inline">
+                                @Html.RadioButtonFor(x => x.rainfall_perfomance, "2", new { @id = "rainfall_perfomance_danger" })
+                                <label for="rainfall_perfomance_danger">
+                                    Emergency
+                                </label>
+                            </div>
+                        </div>
+
+
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="form-group">
+                        <div class="col-md-3">
+                            <h4>Achieved Acreage</h4>
+                        </div>
+                        <div class="col-md-2">
+                            <div class="radio radio-info radio-inline">
+                                @Html.RadioButtonFor(x => x.achieved_acreage, "0", new { @id = "achieved_acreage_normal" })
+                                <label for="achieved_acreage_normal">
+                                    Normal
+                                </label>
+                            </div>
+                        </div>
+                        <div class="col-md-2">
+                            <div class="radio radio-warning radio-inline">
+                                @Html.RadioButtonFor(x => x.achieved_acreage, "1", new { @id = "achieved_acreage_alert" })
+                                <label for="achieved_acreage_alert">
+                                    Alarm/Alert
+                                </label>
+                            </div>
+                        </div>
+                        <div class="col-md-2">
+                            <div class="radio radio-danger radio-inline">
+                                @Html.RadioButtonFor(x => x.achieved_acreage, "2", new { @id = "achieved_acreage_danger" })
+                                <label for="achieved_acreage_danger">
+                                    Emergency
+                                </label>
+                            </div>
+                        </div>
+
+
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="form-group">
+                        <div class="col-md-3">
+                            <h4>Time of Planting</h4>
+                        </div>
+                        <div class="col-md-2">
+                            <div class="radio radio-info radio-inline">
+                                @Html.RadioButtonFor(x => x.time_of_planting, "0", new { @id = "time_of_planting_normal" })
+                                <label for="time_of_planting_normal">
+                                    Normal
+                                </label>
+                            </div>
+                        </div>
+                        <div class="col-md-2">
+                            <div class="radio radio-warning radio-inline">
+                                @Html.RadioButtonFor(x => x.time_of_planting, "1", new { @id = "time_of_planting_alert" })
+                                <label for="time_of_planting_alert">
+                                    Alarm/Alert
+                                </label>
+                            </div>
+                        </div>
+                        <div class="col-md-2">
+                            <div class="radio radio-danger radio-inline">
+                                @Html.RadioButtonFor(x => x.time_of_planting, "2", new { @id = "time_of_planting_danger" })
+                                <label for="time_of_planting_danger">
+                                    Emergency
+                                </label>
+                            </div>
+                        </div>
+
+
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="form-group">
+                        <div class="col-md-3">
+                            <h4>Crop Condition</h4>
+                        </div>
+                        <div class="col-md-2">
+                            <div class="radio radio-info radio-inline">
+                                @Html.RadioButtonFor(x => x.crop_condition, "0", new { @id = "crop_condition_normal" })
+                                <label for="crop_condition_normal">
+                                    Normal
+                                </label>
+                            </div>
+                        </div>
+                        <div class="col-md-2">
+                            <div class="radio radio-warning radio-inline">
+                                @Html.RadioButtonFor(x => x.crop_condition, "1", new { @id = "crop_condition_alert" })
+                                <label for="crop_condition_alert">
+                                    Alarm/Alert
+                                </label>
+                            </div>
+                        </div>
+                        <div class="col-md-2">
+                            <div class="radio radio-danger radio-inline">
+                                @Html.RadioButtonFor(x => x.crop_condition, "2", new { @id = "crop_condition_danger" })
+                                <label for="crop_condition_danger">
+                                    Emergency
+                                </label>
+                            </div>
+                        </div>
+
+
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="form-group">
+                        <div class="col-md-3">
+                            <h4>Water availability at critical crop stage</h4>
+                        </div>
+                        <div class="col-md-2">
+                            <div class="radio radio-info radio-inline">
+                                @Html.RadioButtonFor(x => x.water_availability, "0", new { @id = "water_availability_normal" })
+                                <label for="water_availability_normal">
+                                    Normal
+                                </label>
+                            </div>
+                        </div>
+                        <div class="col-md-2">
+                            <div class="radio radio-warning radio-inline">
+                                @Html.RadioButtonFor(x => x.water_availability, "1", new { @id = "water_availability_alert" })
+                                <label for="water_availability_alert">
+                                    Alarm/Alert
+                                </label>
+                            </div>
+                        </div>
+                        <div class="col-md-2">
+                            <div class="radio radio-danger radio-inline">
+                                @Html.RadioButtonFor(x => x.water_availability, "2", new { @id = "water_availability_danger" })
+                                <label for="water_availability_danger">
+                                    Emergency
+                                </label>
+                            </div>
+                        </div>
+
+
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="form-group">
+                        <div class="col-md-3">
+                            <h4>Expected Yield Compared to LTA</h4>
+                        </div>
+                        <div class="col-md-2">
+                            <div class="radio radio-info radio-inline">
+                                @Html.RadioButtonFor(x => x.expected_yield_compared_to_LTA, "0", new { @id = "expected_yield_compared_to_LTA_normal" })
+                                <label for="expected_yield_compared_to_LTA_normal">
+                                    Normal
+                                </label>
+                            </div>
+                        </div>
+                        <div class="col-md-2">
+                            <div class="radio radio-warning radio-inline">
+                                @Html.RadioButtonFor(x => x.expected_yield_compared_to_LTA, "1", new { @id = "expected_yield_compared_to_LTA_alert" })
+                                <label for="expected_yield_compared_to_LTA_alert">
+                                    Alarm/Alert
+                                </label>
+                            </div>
+                        </div>
+                        <div class="col-md-2">
+                            <div class="radio radio-danger radio-inline">
+                                @Html.RadioButtonFor(x => x.expected_yield_compared_to_LTA, "2", new { @id = "expected_yield_compared_to_LTA_danger" })
+                                <label for="expected_yield_compared_to_LTA_danger">
+                                    Emergency
+                                </label>
+                            </div>
+                        </div>
+
+
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="form-group">
+                        <div class="col-md-3">
+                            <h4>Food Stocks available for consumption
+                                compared to normal consumtion.
+                            </h4>
+                        </div>
+                        <div class="col-md-2">
+                            <div class="radio radio-info radio-inline">
+                                @Html.RadioButtonFor(x => x.foodstocks_available_compared_toNormal, "0", new { @id = "foodstocks_available_compared_toNormal_normal" })
+                                <label for="foodstocks_available_compared_toNormal_normal">
+                                    Normal
+                                </label>
+                            </div>
+                        </div>
+                        <div class="col-md-2">
+                            <div class="radio radio-warning radio-inline">
+                                @Html.RadioButtonFor(x => x.foodstocks_available_compared_toNormal, "1", new { @id = "foodstocks_available_compared_toNormal_alert" })
+                                <label for="foodstocks_available_compared_toNormal_alert">
+                                    Alarm/Alert
+                                </label>
+                            </div>
+                        </div>
+                        <div class="col-md-2">
+                            <div class="radio radio-danger radio-inline">
+                                @Html.RadioButtonFor(x => x.foodstocks_available_compared_toNormal, "2", new { @id = "foodstocks_available_compared_toNormal_danger" })
+                                <label for="foodstocks_available_compared_toNormal_danger">
+                                    Emergency
+                                </label>
+                            </div>
+                        </div>
+
+
+                    </div>
+                </div>
+
+                <br />
+                <div class="col-md-4">
+                    <div class="form-group">
+                        <input type="submit" value="Submit" class="btn btn-primary" />
+                    </div>
+                </div>
+                <br /><br />
+                            }
+    </div>
+</div>

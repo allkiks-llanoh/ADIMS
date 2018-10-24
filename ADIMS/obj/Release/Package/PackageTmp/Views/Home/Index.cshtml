@@ -1,0 +1,157 @@
+﻿@{
+    ViewBag.Title = "Home";
+    ViewBag.Action = "Index";
+    ViewBag.Controller = "Modules";
+    Layout = "~/Views/Shared/_AdimsLayout.cshtml";
+}
+
+<div class="row">
+
+    <div class="col-lg-3">
+        <div class="contact-box center-version">
+            <a href="/dashboard/index" title="Visualisation of data about farmers, farms, crops, counties and yield">
+
+                <img alt="image" src="~/icons/dashboard/dashboard.png">
+                <h3 class="m-b-xs"><strong>Dashboard</strong></h3>
+
+                <div class="font-bold">Simple Analytics</div>
+            </a>
+            <div class="contact-box-footer" style="background-color:#1ab394;">
+                <div class="m-t-xs btn-group">
+                    <a href="/dashboard/index" class="btn btn-xs btn-white"> Navigate <i class="fa fa-angle-double-right"></i></a>
+            </div>
+
+        </div>
+        </div>
+    </div>
+    @if (User.IsInRole("Extension Officer"))
+    {
+        <div class="col-lg-3">
+            <div class="contact-box center-version">
+                <a href="/datacapture/index" title="Add data about farmers, farms, insurance, yield, and counties">
+
+                    <img alt="image" src="~/icons/dashboard/data_capture.png">
+                    <h3 class="m-b-xs"><strong>Data Capture</strong></h3>
+
+                    <div class="font-bold">Add Information</div>
+                </a>
+                <div class="contact-box-footer" style="background-color:#1ab394;">
+                    <div class="m-t-xs btn-group">
+                        <a href="/datacapture/index" class="btn btn-xs btn-white"> Navigate <i class="fa fa-angle-double-right"></i></a>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    }
+  
+    @if (User.IsInRole("Ministry Official"))
+    {
+        <div class="col-lg-3">
+            <div class="contact-box center-version">
+                <a href="/cropinsurance/cce" title="Enter data from crop cutting exercises">
+
+                    <img alt="image" src="~/icons/dashboard/insurance.png">
+                    <h3 class="m-b-xs"><strong>AYII</strong></h3>
+
+                    <div class="font-bold">Insure crops and yield</div>
+                </a>
+                <div class="contact-box-footer" style="background-color:#1ab394;">
+                    <div class="m-t-xs btn-group">
+                        <a href="/cropinsurance/ccequeue" class="btn btn-xs btn-white"> Navigate <i class="fa fa-angle-double-right"></i></a>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    }
+  
+    @if (User.IsInRole("Extension Officer"))
+    {
+        <div class="col-lg-3">
+            <div class="contact-box center-version">
+                <a href="/adimsmanage/index" title="Update information about farmers, crops, and insurers">
+
+                    <img alt="image" src="~/icons/dashboard/settings.png">
+                    <h3 class="m-b-xs"><strong>Manage</strong></h3>
+
+                    <div class="font-bold">Edit Information</div>
+                </a>
+                <div class="contact-box-footer" style="background-color:#1ab394;">
+                    <div class="m-t-xs btn-group">
+                        <a href="/adimsmanage/index" class="btn btn-xs btn-white"> Navigate <i class="fa fa-angle-double-right"></i></a>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    }
+  
+</div>
+
+<div class="row">
+
+    @if (User.IsInRole("Ministry Officer"))
+    {
+        <div class="col-lg-3">
+            <div class="contact-box center-version">
+                <a href="">
+
+                    <img alt="image" src="~/icons/dashboard/report.png">
+                    <h3 class="m-b-xs"><strong>Reports</strong></h3>
+
+                    <div class="font-bold">Simple Analytics</div>
+                </a>
+                <div class="contact-box-footer" style="background-color:#1ab394;">
+                    <div class="m-t-xs btn-group">
+                        <a href="" class="btn btn-xs btn-white"> Navigate <i class="fa fa-angle-double-right"></i></a>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    }
+
+    @if (User.IsInRole("Ministry Officer"))
+    {
+        <div class="col-lg-3">
+            <div class="contact-box center-version">
+                <a href="/documents/all" title="Documents management, adding and editing.">
+
+                    <img alt="image" src="~/icons/dashboard/data_capture.png">
+                    <h3 class="m-b-xs"><strong>Documents</strong></h3>
+
+                    <div class="font-bold">Document Management</div>
+                </a>
+                <div class="contact-box-footer" style="background-color:#1ab394;">
+                    <div class="m-t-xs btn-group">
+                        <a href="/documents/all" class="btn btn-xs btn-white"> Navigate <i class="fa fa-angle-double-right"></i></a>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    }
+    
+    @if (User.IsInRole("Administrator"))
+    {
+        <div class="col-lg-3">
+            <div class="contact-box center-version">
+                <a href="/admin/settings" title="Update subsidy rates and unit sum insured.">
+
+                    <img alt="image" src="~/icons/dashboard/manage.png">
+                    <h3 class="m-b-xs"><strong>Admin</strong></h3>
+
+                    <div class="font-bold">System Settings and Variables</div>
+                </a>
+                <div class="contact-box-footer" style="background-color:#1ab394;">
+                    <div class="m-t-xs btn-group">
+                        <a href="/admin/settings" class="btn btn-xs btn-white"> Navigate <i class="fa fa-angle-double-right"></i></a>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    }
+   
+</div>
